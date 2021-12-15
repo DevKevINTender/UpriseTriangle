@@ -29,10 +29,16 @@
             <e p="SessionLevelControler.cs" t="Include" />
           </e>
           <e p="Core" t="Include">
+            <e p="ChooseLevelCore.cs" t="Include" />
             <e p="EffectStorageCore.cs" t="Include" />
             <e p="MainMenuCore.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
+            <e p="ChooseLevel" t="Include">
+              <e p="LevelPanelListView.cs" t="Include" />
+              <e p="LevelPanelView.cs" t="Include" />
+              <e p="LevelPosPanelView.cs" t="Include" />
+            </e>
             <e p="EffectStorage" t="Include">
               <e p="EffectStoragePanelView.cs" t="Include" />
               <e p="EffectStoragePosPanelView.cs" t="Include" />

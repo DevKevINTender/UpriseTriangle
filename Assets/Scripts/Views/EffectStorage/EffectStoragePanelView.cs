@@ -34,11 +34,11 @@ namespace Views.EffectStorage
             {
                 BuyBtn.SetActive(false);
                 PlayBtn.GetComponent<Image>().color = new Color32(255,255,255, 255);
-                EffectCost.text = $"{EffectStorageCoreObj.EffectListSO.List[EffectStorageCoreObj.CurrentEffectShowId].Cost}";
             }
             else
             {
                 BuyBtn.SetActive(true);
+                EffectCost.text = $"{EffectStorageCoreObj.EffectListSO.List[EffectStorageCoreObj.CurrentEffectShowId].Cost}";
                 PlayBtn.GetComponent<Image>().color = new Color32(36,38,46, 255);
             }
         }

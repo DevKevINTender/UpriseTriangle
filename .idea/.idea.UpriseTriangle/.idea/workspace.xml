@@ -20,24 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/EffectStorageListComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/EffectStorageListComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ChooseLevelCore.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ChooseLevelCore.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelListView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelListView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPosPanelView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPosPanelView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/EffectSotrageUI/PosItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/EffectSotrageUI/PosItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/EffectScrObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/EffectScrObj.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/Items/EffectSO 0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/Items/EffectSO 0.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/Items/EffectSO 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/Items/EffectSO 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/Items/EffectSO 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/Items/EffectSO 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/EffectStorage/ItemPos/Ресурс 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/EffectStorage/ItemPos/Ресурс 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/EffectStorage/ItemPos/Ресурс 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/EffectStorage/ItemPos/Ресурс 2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EffectStorage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EffectStorage.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SessionLevelChoose.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SessionLevelChoose.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/CoinsControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/CoinsControler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/EffectStorageContoler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/EffectStorageContoler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/EffectStorageCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/EffectStorageCore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/SessionLevelControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/SessionLevelControler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePosPanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePosPanelView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,22 +54,26 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/SessionLevelControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScriptableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/EffectScrObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/EffectListScrObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListScrObj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelPosView.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/EffectScrObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/CoinsControler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/EffectStorageContoler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/EffectStorageListComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/InfoPanel/InfoPanelView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/EffectStorageCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePosPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/EffectStorageContoler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/SessionLevelControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPosPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelListView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ChooseLevelCore.cs" />
       </list>
     </option>
   </component>
@@ -114,6 +119,7 @@
       <updated>1639564685164</updated>
       <workItem from="1639564689546" duration="6494000" />
       <workItem from="1639574911273" duration="6403000" />
+      <workItem from="1639591748138" duration="6192000" />
     </task>
     <servers />
   </component>
@@ -132,6 +138,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

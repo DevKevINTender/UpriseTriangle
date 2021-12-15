@@ -22,4 +22,9 @@ public class MainMenuCore : MonoBehaviour
     {
         SceneManager.LoadScene(id);
     }
+
+    public void AddCoins()
+    {
+        CoinsControler.UpcreaseCoins(150);
+    }
 }
