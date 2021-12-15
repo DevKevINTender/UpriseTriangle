@@ -12,6 +12,9 @@ namespace Views.EffectStorage
         [SerializeField] private Sprite ActivePosItemImage;
         [SerializeField] private Sprite UnactivePosItemImage;
         [SerializeField] private Transform ItemPanelPos;
+
+        [SerializeField] private Text currentItemPos;
+        [SerializeField] private Text maxItemPos;
         
         [SerializeField] private List<Image> PostItemList = new List<Image>();
         
@@ -20,12 +23,15 @@ namespace Views.EffectStorage
         public void InitView(EffectListScrObj EffectListSO)
         {
             this.EffectListSO = EffectListSO;
-
+            currentItemPos.text = $"{EffectListSO.CurrentEffectId + 1}";
+            maxItemPos.text = $"{EffectListSO.List.Count}";
             GeneratePosItem();
         }
 
         public void UpdateView(int CurrentShowId)
         {
+            currentItemPos.text = $"{CurrentShowId + 1}";
+
             foreach (var item in EffectListSO.List)
             {
                 Image newItemPos = PostItemList[item.Id];

@@ -1,5 +1,6 @@
 ﻿using ScriptableObjects;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Controlers
 {
@@ -23,6 +24,18 @@ namespace Controlers
             }
 
             return false;
+        }
+
+        public static void OpenPerson(int Id)
+        {
+            EffectListSO.OpenedEffectIdList.Add(Id);
+            EffectListSO.Save();
+        }
+
+        public static void SetCurrentEffect(int Id)
+        {
+            EffectListSO.CurrentEffectId = Id;
+            EffectListSO.Save();
         }
     }
 }

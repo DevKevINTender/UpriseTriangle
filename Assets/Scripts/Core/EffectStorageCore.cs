@@ -1,6 +1,8 @@
-﻿using Controlers;
+﻿using Components;
+using Controlers;
 using ScriptableObjects;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Views.EffectStorage;
 
@@ -8,18 +10,25 @@ namespace Core
 {
     public class EffectStorageCore : MonoBehaviour
     {
-        [SerializeField] private EffectListScrObj EffectListSO;
-        
+        [SerializeField] public EffectListScrObj EffectListSO;
+        [SerializeField] public Text StorageCoins;
 
         [SerializeField] private EffectStoragePanelView EffectStoragePanelViewObj;
         [SerializeField] private EffectStoragePosPanelView EffectStoragePosPanelViewObj;
+        [SerializeField] private EffectStorageListComponent EffectStorageListComponent;
+
+        [SerializeField] private InfoPanelView InfoPanelPb;
+        [SerializeField] private Transform infoPanelPos;
 
         public int CurrentEffectShowId;
         public void Start()
         {
+            StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";
             EffectListSO.Load();
+            CurrentEffectShowId = EffectListSO.CurrentEffectId;
             EffectStoragePanelViewObj.InitView(this);
             EffectStoragePosPanelViewObj.InitView(EffectListSO);
+            EffectStorageListComponent.InitComponent(EffectListSO);
         }
 
         public void ShowNextEffect()
@@ -28,6 +37,8 @@ namespace Core
             {
                 CurrentEffectShowId++;
                 EffectStoragePosPanelViewObj.UpdateView(CurrentEffectShowId);
+                EffectStorageListComponent.MoveToNewPos(CurrentEffectShowId);
+                EffectStoragePanelViewObj.UpdateView();
             }
         }
 
@@ -37,12 +48,47 @@ namespace Core
             {
                 CurrentEffectShowId--;
                 EffectStoragePosPanelViewObj.UpdateView(CurrentEffectShowId);
+                EffectStorageListComponent.MoveToNewPos(CurrentEffectShowId);
+                EffectStoragePanelViewObj.UpdateView();
             }
         }
 
+        public void BuyEffect()
+        {
+            if (CoinsControler.BuyEffect(EffectListSO.List[CurrentEffectShowId].Cost))
+            {
+                EffectStorageContoler.OpenPerson(CurrentEffectShowId);
+                
+                StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";
+                
+                EffectStoragePosPanelViewObj.UpdateView(CurrentEffectShowId);
+                EffectStorageListComponent.MoveToNewPos(CurrentEffectShowId);
+                EffectStoragePanelViewObj.UpdateView();
+            }
+            else
+            {
+                InfoPanelView newInfoPanel = Instantiate(InfoPanelPb, infoPanelPos);
+                newInfoPanel.InitView("Cash", "You havent money");
+            }
+            
+        }
         public void StartSession()
         {
-            
+            if (EffectStorageContoler.ItemIsOpened(CurrentEffectShowId))
+            {
+                EffectStorageContoler.SetCurrentEffect(CurrentEffectShowId);
+                SceneManager.LoadScene(1);
+            }
+            else
+            {
+                InfoPanelView newInfoPanel = Instantiate(InfoPanelPb, infoPanelPos);
+                newInfoPanel.InitView("Exist", "What you try to do ? Am ?");
+            }
+        }
+        
+        public void BackToMenu()
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }

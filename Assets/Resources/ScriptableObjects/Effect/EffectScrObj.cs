@@ -6,6 +6,9 @@ namespace ScriptableObjects
     public class EffectScrObj : ScriptableObject
     {
         public int Id;
+        public int Cost;
+        public string EffectName;
+        public string EffectSlogan;
         public GameObject EffectPb;
     }
 }

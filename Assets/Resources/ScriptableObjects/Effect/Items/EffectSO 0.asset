@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: EffectSO 0
   m_EditorClassIdentifier: 
   Id: 0
+  Cost: 250
+  EffectName: Lucki
+  EffectSlogan: for unlucki
   EffectPb: {fileID: 4875350541974320638, guid: 3dbeba4bc7000e6499d87f098d69cbf6, type: 3}

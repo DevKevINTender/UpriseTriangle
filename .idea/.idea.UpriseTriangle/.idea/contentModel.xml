@@ -20,6 +20,9 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Components" t="Include">
+            <e p="EffectStorageListComponent.cs" t="Include" />
+          </e>
           <e p="Controlers" t="Include">
             <e p="CoinsControler.cs" t="Include" />
             <e p="EffectStorageContoler.cs" t="Include" />
@@ -33,6 +36,9 @@
             <e p="EffectStorage" t="Include">
               <e p="EffectStoragePanelView.cs" t="Include" />
               <e p="EffectStoragePosPanelView.cs" t="Include" />
+            </e>
+            <e p="InfoPanel" t="Include">
+              <e p="InfoPanelView.cs" t="Include" />
             </e>
           </e>
         </e>

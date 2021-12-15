@@ -1,4 +1,5 @@
-﻿using Core;
+﻿using Controlers;
+using Core;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,6 +12,8 @@ namespace Views.EffectStorage
         
         public Text EffectName;
         public Text EffectSlogan;
+
+        public Text EffectCost;
         
         public GameObject BuyBtn;
         public GameObject PlayBtn;
@@ -19,11 +22,40 @@ namespace Views.EffectStorage
         public void InitView(EffectStorageCore EffectStorageCoreObj)
         {
             this.EffectStorageCoreObj = EffectStorageCoreObj;
+            UpdateView();
         }
 
-        public void UpdateView()    
+        public void UpdateView()
         {
-            
+            EffectName.text = $"{EffectStorageCoreObj.EffectListSO.List[EffectStorageCoreObj.CurrentEffectShowId].EffectName}";
+            EffectSlogan.text = $"{EffectStorageCoreObj.EffectListSO.List[EffectStorageCoreObj.CurrentEffectShowId].EffectSlogan}";
+
+            if (EffectStorageContoler.ItemIsOpened(EffectStorageCoreObj.CurrentEffectShowId))
+            {
+                BuyBtn.SetActive(false);
+                PlayBtn.GetComponent<Image>().color = new Color32(255,255,255, 255);
+                EffectCost.text = $"{EffectStorageCoreObj.EffectListSO.List[EffectStorageCoreObj.CurrentEffectShowId].Cost}";
+            }
+            else
+            {
+                BuyBtn.SetActive(true);
+                PlayBtn.GetComponent<Image>().color = new Color32(36,38,46, 255);
+            }
+        }
+
+        public void BuyEffect()
+        {
+            EffectStorageCoreObj.BuyEffect();
+        }
+
+        public void StartSession()
+        {
+            EffectStorageCoreObj.StartSession();
+        }
+
+        public void BackToMenu()
+        {
+            EffectStorageCoreObj.BackToMenu();
         }
         
         public void OnDrag(PointerEventData eventData)

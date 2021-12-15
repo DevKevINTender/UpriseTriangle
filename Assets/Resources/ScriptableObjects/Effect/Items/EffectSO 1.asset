@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: EffectSO 1
   m_EditorClassIdentifier: 
   Id: 1
+  Cost: 350
+  EffectName: IFRIT
+  EffectSlogan: test it
   EffectPb: {fileID: 4875350541974320638, guid: a5c5b10c873757d44adcc8860dd28a90, type: 3}

@@ -24,10 +24,19 @@ namespace Controlers
         {
             return StorageCoins;
         }
-        public static void BuyEffect(int cost)
+        public static bool BuyEffect(int cost)
         {
-            Debug.Log("Cost " + cost);
-            DecreaseCoins(cost);
+            if (StorageCoins >= cost)
+            {
+                Debug.Log("Cost " + cost);
+                DecreaseCoins(cost);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
         public static void BuySessionLevel(int cost)
         {
