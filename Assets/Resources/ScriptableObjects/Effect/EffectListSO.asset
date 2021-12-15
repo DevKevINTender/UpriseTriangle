@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2a461f087a644918bcff5081668e3ec, type: 3}
+  m_Name: EffectListSO
+  m_EditorClassIdentifier: 
+  SavePath: EffectList.Json
+  CurrentEffectId: 2
+  OpenedEffectIdList: 0000000002000000
+  List:
+  - {fileID: 11400000, guid: 4931f0a507fb93045a4cf5ae26d0b071, type: 2}
+  - {fileID: 11400000, guid: 6f5db8bc33518e340b897841ac62b72b, type: 2}
+  - {fileID: 11400000, guid: e5510f13d3c1937478392cd5c73a991e, type: 2}

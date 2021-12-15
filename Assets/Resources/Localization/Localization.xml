@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Keys>
+  <Key>
+      <Name>Test</Name>
+      <Translates>
+           <en-us>en</en-us>
+           <ru>ru</ru>
+           <ua>ua</ua>
+      </Translates>
+  </Key>
+  <Key>
+      <Name>Test2</Name>
+      <Translates>
+           <en-us>en</en-us>
+           <ru>ru</ru>
+           <ua>ua</ua>
+      </Translates>
+  </Key>
+</Keys>
