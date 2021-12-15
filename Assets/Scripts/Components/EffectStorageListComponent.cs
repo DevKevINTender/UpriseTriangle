@@ -14,7 +14,7 @@ namespace Components
         {
             this.EffectListSO = EffectListSO;
             GenerateList();
-            currentPos = new Vector3(- EffectListSO.CurrentEffectId * 3, 0,0);
+            currentPos = new Vector3(- EffectListSO.CurrentEffectId * 3, 0, 0);
 
         }
 
@@ -22,13 +22,13 @@ namespace Components
         {
             foreach (var item in EffectListSO.List)
             {
-                Instantiate(item.EffectPb, new Vector3(item.Id * 3, 0, 0), Quaternion.identity, ListTarget);
+                Instantiate(item.EffectPb, new Vector3(item.Id * 3, 0, 0), Quaternion.Euler(90, 0, 0), ListTarget) ;
             }
         }
 
         public void MoveToNewPos(int id)
         {
-            currentPos = new Vector3(- id * 3, 0,0);
+            currentPos = new Vector3(- id * 3, 0, 0);
         }
 
         public void FixedUpdate()

@@ -33,13 +33,19 @@ namespace Views.EffectStorage
             if (EffectStorageContoler.ItemIsOpened(EffectStorageCoreObj.CurrentEffectShowId))
             {
                 BuyBtn.SetActive(false);
-                PlayBtn.GetComponent<Image>().color = new Color32(255,255,255, 255);
+                //PlayBtn.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                PlayBtn.GetComponentInChildren<Text>().color = new Color32(255, 255, 255, 255);
+                PlayBtn.transform.GetChild(1).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                PlayBtn.transform.GetChild(2).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
                 EffectCost.text = $"{EffectStorageCoreObj.EffectListSO.List[EffectStorageCoreObj.CurrentEffectShowId].Cost}";
             }
             else
             {
                 BuyBtn.SetActive(true);
-                PlayBtn.GetComponent<Image>().color = new Color32(36,38,46, 255);
+                //PlayBtn.GetComponent<Image>().color = new Color32(36, 38, 46, 255);
+                PlayBtn.GetComponentInChildren<Text>().color = new Color32(36, 38, 46, 255);
+                PlayBtn.transform.GetChild(1).GetComponent<Image>().color = new Color32(36, 38, 46, 255);
+                PlayBtn.transform.GetChild(2).GetComponent<Image>().color = new Color32(36, 38, 46, 255);
             }
         }
 
