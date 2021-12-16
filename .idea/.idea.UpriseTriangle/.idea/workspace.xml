@@ -20,25 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ChooseLevelCore.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ChooseLevelCore.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelListView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelListView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPosPanelView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPosPanelView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/TrainLevel.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/TrainLevel/TrainingLevelListScrObj.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/TrainLevel/TrainingLevelListScrObj.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/TrainLevel/TrainingLevelScrObj.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/TrainLevel/TrainingLevelScrObj.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/TrainingLevelControler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/TrainingLevelControler.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ChooseTrainingCore.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ChooseTrainingCore.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseTraining.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseTraining/TrainingPanelView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseTraining/TrainingPanelView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseTraining/TrainingPosPanelView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/ChooseTraining/TrainingPosPanelView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SessionLevelChoose.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SessionLevelChoose.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/EffectStorageContoler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/EffectStorageContoler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/SessionLevelControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/SessionLevelControler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Session.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Session.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TngLevelChoose.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TngLevelChoose.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +79,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPosPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelListView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ChooseLevelCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/TrainLevel/TrainingLevelScrObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/TrainLevel/TrainingLevelListScrObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseTraining/TrainingPosPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseTraining/TrainingPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseTraining/TrainingPanelListView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ChooseTrainingCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/TrainingLevelControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs" />
       </list>
     </option>
   </component>
@@ -120,6 +134,8 @@
       <workItem from="1639564689546" duration="6494000" />
       <workItem from="1639574911273" duration="6403000" />
       <workItem from="1639591748138" duration="6192000" />
+      <workItem from="1639655694768" duration="911000" />
+      <workItem from="1639656629084" duration="13297000" />
     </task>
     <servers />
   </component>
@@ -144,9 +160,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="769" y="221" key="RiderGenerateDialog" timestamp="1639569538535">
+    <state x="769" y="221" key="RiderGenerateDialog" timestamp="1639660244281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="221" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1639569538535" />
+    <state x="769" y="221" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1639660244281" />
   </component>
 </project>

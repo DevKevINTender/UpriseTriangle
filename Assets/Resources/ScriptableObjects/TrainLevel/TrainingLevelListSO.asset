@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ae724060bc4a028e3774a623351a89, type: 3}
+  m_Name: TrainingLevelListSO
+  m_EditorClassIdentifier: 
+  SavePath: TrainingLevel
+  CurrentTrainigLevelId: 0
+  OpenedTrainingLevelIdList: 00000000
+  List:
+  - {fileID: 11400000, guid: 85dfbb7f24a534a43bb8f92693e93087, type: 2}
+  - {fileID: 11400000, guid: 051320e7975e79c42ab935b89b711f0a, type: 2}
+  - {fileID: 11400000, guid: e8a44f135e82fed47981aef8403356d3, type: 2}
