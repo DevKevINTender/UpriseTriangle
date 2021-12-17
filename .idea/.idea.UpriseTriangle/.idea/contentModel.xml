@@ -17,21 +17,31 @@
               <e p="SessionLevelListScrObj.cs" t="Include" />
               <e p="SessionLevelScrObj.cs" t="Include" />
             </e>
+            <e p="TrainLevel" t="Include">
+              <e p="TrainingLevelListScrObj.cs" t="Include" />
+              <e p="TrainingLevelScrObj.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="Components" t="Include">
             <e p="EffectStorageListComponent.cs" t="Include" />
+            <e p="Session" t="Include">
+              <e p="PersonComponent.cs" t="Include" />
+            </e>
           </e>
           <e p="Controlers" t="Include">
             <e p="CoinsControler.cs" t="Include" />
             <e p="EffectStorageContoler.cs" t="Include" />
             <e p="SessionLevelControler.cs" t="Include" />
+            <e p="TrainingLevelControler.cs" t="Include" />
           </e>
           <e p="Core" t="Include">
             <e p="ChooseLevelCore.cs" t="Include" />
+            <e p="ChooseTrainingCore.cs" t="Include" />
             <e p="EffectStorageCore.cs" t="Include" />
             <e p="MainMenuCore.cs" t="Include" />
+            <e p="SessionCore.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
             <e p="ChooseLevel" t="Include">
@@ -39,12 +49,20 @@
               <e p="LevelPanelView.cs" t="Include" />
               <e p="LevelPosPanelView.cs" t="Include" />
             </e>
+            <e p="ChooseTraining" t="Include">
+              <e p="TrainingPanelListView.cs" t="Include" />
+              <e p="TrainingPanelView.cs" t="Include" />
+              <e p="TrainingPosPanelView.cs" t="Include" />
+            </e>
             <e p="EffectStorage" t="Include">
               <e p="EffectStoragePanelView.cs" t="Include" />
               <e p="EffectStoragePosPanelView.cs" t="Include" />
             </e>
             <e p="InfoPanel" t="Include">
               <e p="InfoPanelView.cs" t="Include" />
+            </e>
+            <e p="Session" t="Include">
+              <e p="SessionPanelView.cs" t="Include" />
             </e>
           </e>
         </e>
