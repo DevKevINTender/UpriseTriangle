@@ -38,15 +38,18 @@ namespace Views.ChooseLevel
             
             if(SessionLevelControler.LevelIsOpened(ChooseLevelCore.CurrentLevelShowId))
             {
-                PlayBtn.GetComponent<Image>().color = new Color32(255,255,255, 255);
                 BuyBtn.SetActive(false);
-                
+                PlayBtn.transform.GetChild(0).GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                PlayBtn.transform.GetChild(1).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                PlayBtn.transform.GetChild(2).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
             }
             else
             {
                 LevelCost.text = $"{SessionLevelListScrObj.List[ChooseLevelCore.CurrentLevelShowId].Cost}";
-                PlayBtn.GetComponent<Image>().color = new Color32(36,38,46, 255);
                 BuyBtn.SetActive(true);
+                PlayBtn.transform.GetChild(0).GetComponent<Text>().color = new Color32(36, 38, 46, 255);
+                PlayBtn.transform.GetChild(1).GetComponent<Image>().color = new Color32(36, 38, 46, 255);
+                PlayBtn.transform.GetChild(2).GetComponent<Image>().color = new Color32(36, 38, 46, 255);
             }
         }
 
@@ -56,15 +59,18 @@ namespace Views.ChooseLevel
             
             if(SessionLevelControler.LevelIsOpened(ChooseLevelCore.CurrentLevelShowId))
             {
-                PlayBtn.GetComponent<Image>().color = new Color32(255,255,255, 255);
                 BuyBtn.SetActive(false);
-                
+                PlayBtn.transform.GetChild(0).GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                PlayBtn.transform.GetChild(1).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                PlayBtn.transform.GetChild(2).GetComponent<Image>().color = new Color32(255, 255, 255, 255);   
             }
             else
             {
                 LevelCost.text = $"{SessionLevelListScrObj.List[ChooseLevelCore.CurrentLevelShowId].Cost}";
-                PlayBtn.GetComponent<Image>().color = new Color32(36,38,46, 255);
                 BuyBtn.SetActive(true);
+                PlayBtn.transform.GetChild(0).GetComponent<Text>().color = new Color32(36, 38, 46, 255);
+                PlayBtn.transform.GetChild(1).GetComponent<Image>().color = new Color32(36, 38, 46, 255);
+                PlayBtn.transform.GetChild(2).GetComponent<Image>().color = new Color32(36, 38, 46, 255);
             }
         }
 
