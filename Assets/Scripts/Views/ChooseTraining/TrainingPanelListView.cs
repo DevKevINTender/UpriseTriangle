@@ -37,11 +37,15 @@ namespace Views.ChooseTraining
             
             if(TrainingLevelControler.TrainingElementIsOpened(ChooseTrainingCore.CurrentTrainigLevelShowId))
             {
-                PlayBtn.GetComponent<Image>().color = new Color32(255,255,255, 255);
+                PlayBtn.transform.GetChild(0).GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                PlayBtn.transform.GetChild(1).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                PlayBtn.transform.GetChild(2).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
             }
             else
             {
-                PlayBtn.GetComponent<Image>().color = new Color32(36,38,46, 255);
+                PlayBtn.transform.GetChild(0).GetComponent<Text>().color = new Color32(36, 38, 46, 255);
+                PlayBtn.transform.GetChild(1).GetComponent<Image>().color = new Color32(36, 38, 46, 255);
+                PlayBtn.transform.GetChild(2).GetComponent<Image>().color = new Color32(36, 38, 46, 255);
             }
         }
 
@@ -51,11 +55,15 @@ namespace Views.ChooseTraining
             
             if(TrainingLevelControler.TrainingElementIsOpened(ChooseTrainingCore.CurrentTrainigLevelShowId))
             {
-                PlayBtn.GetComponent<Image>().color = new Color32(255,255,255, 255);
+                PlayBtn.transform.GetChild(0).GetComponent<Text>().color = new Color32(255, 255, 255, 255);
+                PlayBtn.transform.GetChild(1).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+                PlayBtn.transform.GetChild(2).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
             }
             else
             {
-                PlayBtn.GetComponent<Image>().color = new Color32(36,38,46, 255);
+                PlayBtn.transform.GetChild(0).GetComponent<Text>().color = new Color32(36, 38, 46, 255);
+                PlayBtn.transform.GetChild(1).GetComponent<Image>().color = new Color32(36, 38, 46, 255);
+                PlayBtn.transform.GetChild(2).GetComponent<Image>().color = new Color32(36, 38, 46, 255);
             }
         }
         

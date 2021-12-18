@@ -20,11 +20,18 @@ public class MainMenuCore : MonoBehaviour
 
     public void LoadScene(int id)
     {
-        SceneManager.LoadScene(id);
+        StartCoroutine(WaitUntil(1.3f, id)); //Магическое число для ожидания конца анимации перехода
+        //SceneManager.LoadScene(id);
     }
 
     public void AddCoins()
     {
         CoinsControler.UpcreaseCoins(150);
+    }
+
+    private IEnumerator WaitUntil(float time, int id)
+    {
+        yield return new WaitForSeconds(time);    
+        SceneManager.LoadScene(id);
     }
 }

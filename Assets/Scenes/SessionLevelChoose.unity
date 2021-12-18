@@ -2578,7 +2578,7 @@ MonoBehaviour:
   LevelPanelViewPb: {fileID: 2193580291325169669, guid: ef64cfc23dd98d948a8a3c39c4596232, type: 3}
   LevelPanelViewListTarget: {fileID: 201111850}
   currentPos: {x: 0, y: 0, z: 0}
-  BuyBtn: {fileID: 1888138228}
+  BuyBtn: {fileID: 2135040042}
   LevelCost: {fileID: 135376617}
   PlayBtn: {fileID: 399818815}
 --- !u!1 &2056291202
