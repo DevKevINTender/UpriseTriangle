@@ -1,18 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PersonComponent : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private SessionCore SessionCore;
+    public void InitComponent(SessionCore SessionCore)
     {
-        
+        this.SessionCore = SessionCore;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.GetComponent<ObstacleComponent>())
+        {
+            SessionCore.LoseSession();
+        }
     }
 }

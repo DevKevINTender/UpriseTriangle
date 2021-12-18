@@ -27,6 +27,7 @@
           <e p="Components" t="Include">
             <e p="EffectStorageListComponent.cs" t="Include" />
             <e p="Session" t="Include">
+              <e p="ObstacleComponent.cs" t="Include" />
               <e p="PersonComponent.cs" t="Include" />
             </e>
           </e>

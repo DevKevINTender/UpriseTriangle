@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: EffectListSO
   m_EditorClassIdentifier: 
   SavePath: EffectList.Json
-  CurrentEffectId: 0
-  OpenedEffectIdList: 0000000002000000
+  CurrentEffectId: 2
+  OpenedEffectIdList: 000000000100000002000000
   List:
   - {fileID: 11400000, guid: 4931f0a507fb93045a4cf5ae26d0b071, type: 2}
   - {fileID: 11400000, guid: 6f5db8bc33518e340b897841ac62b72b, type: 2}
