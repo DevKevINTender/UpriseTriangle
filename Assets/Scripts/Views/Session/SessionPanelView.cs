@@ -1,81 +1,71 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace Views.Session
 {
-    public class SessionPanelView : MonoBehaviour
+    public class SessionPanelView : MonoBehaviour, IDragHandler,IBeginDragHandler,IEndDragHandler
     {
         [SerializeField] private GameObject PersonObj;
         [SerializeField] private Vector3 newPos;
         [SerializeField] private bool isStart;
         [SerializeField] private Vector3 currentPos;
 
-        private int tochesCount;
-        public void FixedUpdate()
+        [SerializeField]
+        int touchCount;
+
+        private int lastFingerIndex = 0;
+        private int lastIndex = 0;
+
+        [SerializeField]
+        private SessionCore SessionCore;
+        public void InitView( )
         {
-            if (Input.touchCount == 1)
-            {
-                Touch touch = Input.GetTouch(0);
-                
-                if (touch.phase == TouchPhase.Began)
-                {
-                    tochesCount++;
-                    newPos = Camera.main.ScreenToWorldPoint(touch.position);
-                    currentPos = Camera.main.ScreenToWorldPoint(touch.position);
-                }
 
-                if (touch.phase == TouchPhase.Moved)
-                {
-                    newPos = Camera.main.ScreenToWorldPoint(touch.position);
-                    if (Vector3.Distance(currentPos, newPos) > 0.01f)
-                    {
-                        if (newPos != new Vector3(0, 0, 0))
-                        {
-                            PersonObj.transform.position += new Vector3((newPos.x - currentPos.x),(newPos.y - currentPos.y),0);
-                            currentPos = newPos;
-                        }
-
-                    }
-                }
-               
-            }
         }
-
-/*
         public void OnBeginDrag(PointerEventData eventData)
         {
-            
-            if (Input.touchCount == 1) 
+            if (SessionCore.isStart)
             {
-                currentPos = eventData.pointerCurrentRaycast.worldPosition;
+                transform.GetComponent<Image>().color = new Color32(26, 27, 33, 0);
+                SessionCore.StopPause();
             }
-            
         }
 
         public void OnDrag(PointerEventData eventData)
         {
-            if (Input.touchCount == 1)
+            if (SessionCore.isStart)
             {
-                newPos = eventData.pointerCurrentRaycast.worldPosition;
-
-                if (Vector3.Distance(currentPos, newPos) > 0.01f)
+                if (touchCount != Input.touchCount)
                 {
-                    if (newPos != new Vector3(0, 0, 0))
+                    touchCount = Input.touchCount;
+                    currentPos = eventData.pointerCurrentRaycast.worldPosition;
+                }
+            
+                if (Input.touchCount == 1)
+                {
+                    newPos = eventData.pointerCurrentRaycast.worldPosition;
+                    if (Vector3.Distance(currentPos, newPos) > 0.01f)
                     {
                         PersonObj.transform.position += newPos - currentPos;
                         currentPos = newPos;
                     }
-
                 }
             }
-
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
-           
+            if (SessionCore.isStart)
+            {
+                if (Input.touchCount == 1)
+                {
+                    transform.GetComponent<Image>().color = new Color32(26, 27, 33, 200);
+                    SessionCore.StartPause();
+                }
+                touchCount = 0;
+            }
         }
-        */
     }
 }
