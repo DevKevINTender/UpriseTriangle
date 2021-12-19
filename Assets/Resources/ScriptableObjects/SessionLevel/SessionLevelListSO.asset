@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ae76cd0e4ee4b94a1a3a713750921a8, type: 3}
   m_Name: SessionLevelListSO
   m_EditorClassIdentifier: 
-  SavePath: LevelList
+  SavePath: SessionLevel.Json
   CurrentSessionLevelId: 0
   OpenedSessionLevelIdList: 00000000
   List:

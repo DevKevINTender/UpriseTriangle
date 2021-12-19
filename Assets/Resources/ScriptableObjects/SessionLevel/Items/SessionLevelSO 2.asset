@@ -16,7 +16,8 @@ MonoBehaviour:
   MusicName: Lustra
   MusicCreator: Dot Kirt
   MusicTime: 3:45
-  DeadCount: 0
+  DeadCount: 25
   CoinsCollectCount: 0
   CompletePercent: 0
   Cost: 600
+  SessionLevelPb: {fileID: 0}

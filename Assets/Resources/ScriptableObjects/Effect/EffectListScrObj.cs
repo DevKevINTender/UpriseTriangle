@@ -48,6 +48,7 @@ namespace ScriptableObjects
             
         }    
     }
+    
     public class EffectListScrObjSave
     {
         public int CurrentEffectId;

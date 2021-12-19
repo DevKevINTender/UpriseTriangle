@@ -20,16 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/MainMenu/NameOfTheGame.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/MainMenu/NameOfTheGame.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/EffectListSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/EffectListSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Session.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Session.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/EffectListScrObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/EffectListScrObj.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListScrObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListScrObj.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +46,6 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScriptableObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/EffectScrObj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/EffectListScrObj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListScrObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelPosView.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/EffectScrObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/CoinsControler.cs" />
@@ -58,7 +53,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/InfoPanel/InfoPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/EffectStorageCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePosPanelView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/EffectStorageContoler.cs" />
@@ -78,6 +72,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs" />
+        <option value="$USER_HOME$/AppData/LocalLow/DefaultCompany/UpriseTriangle/LevelList" />
+        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/EffectListScrObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListScrObj.cs" />
+        <option value="$USER_HOME$/AppData/LocalLow/DefaultCompany/UpriseTriangle/LevelList.json" />
+        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" />
       </list>
     </option>
   </component>
@@ -128,6 +127,7 @@
       <workItem from="1639656629084" duration="13297000" />
       <workItem from="1639762922392" duration="761000" />
       <workItem from="1639825230268" duration="571000" />
+      <workItem from="1639901805105" duration="3689000" />
     </task>
     <servers />
   </component>

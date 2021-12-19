@@ -15,5 +15,7 @@ namespace ScriptableObjects.SessionLevel
         public int CompletePercent;
 
         public int Cost;
+
+        public GameObject SessionLevelPb;
     }
 }
