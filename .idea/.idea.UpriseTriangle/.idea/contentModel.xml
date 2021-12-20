@@ -23,12 +23,15 @@
             </e>
           </e>
         </e>
+        <e p="RingElementComponent.cs" t="Include" />
+        <e p="RingElementSectionComponent.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Components" t="Include">
             <e p="EffectStorageListComponent.cs" t="Include" />
             <e p="Session" t="Include">
               <e p="ObstacleComponent.cs" t="Include" />
               <e p="PersonComponent.cs" t="Include" />
+              <e p="WayObstacleComponent.cs" t="Include" />
             </e>
           </e>
           <e p="Controlers" t="Include">
