@@ -9,7 +9,6 @@ namespace Views.Session
     {
         [SerializeField] private GameObject PersonObj;
         [SerializeField] private Vector3 newPos;
-        [SerializeField] private bool isStart;
         [SerializeField] private Vector3 currentPos;
 
         [SerializeField]
@@ -64,8 +63,9 @@ namespace Views.Session
                     transform.GetComponent<Image>().color = new Color32(26, 27, 33, 200);
                     SessionCore.StartPause();
                 }
-                touchCount = 0;
+               
             }
+            touchCount = 0;
         }
     }
 }

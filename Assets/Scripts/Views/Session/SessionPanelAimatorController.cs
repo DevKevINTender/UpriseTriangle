@@ -13,17 +13,18 @@ public class SessionPanelAimatorController : MonoBehaviour
     {
         StartCoroutine(Wait(2f));
     }
-
-    private IEnumerator WaitAnimationStartEnd(float _time)
-    {
-        yield return new WaitForSeconds(_time);
-        panelStart.SetActive(false);
-    }
+    
     private IEnumerator Wait(float _time)
     {
         yield return new WaitForSeconds(_time);
         animator.SetBool("StartGame", true);
         float clipLenght = animator.runtimeAnimatorController.animationClips[1].length;
         StartCoroutine(WaitAnimationStartEnd(clipLenght));
+    }
+    
+    private IEnumerator WaitAnimationStartEnd(float _time)
+    {
+        yield return new WaitForSeconds(_time);
+        panelStart.SetActive(false);
     }
 }
