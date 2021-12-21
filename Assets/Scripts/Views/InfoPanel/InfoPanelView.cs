@@ -7,6 +7,7 @@ public class InfoPanelView : MonoBehaviour
 {
     public Text Header;
     public Text Description;
+    public Animator animator;
 
     public void InitView(string Header, string Description)
     {
@@ -16,6 +17,13 @@ public class InfoPanelView : MonoBehaviour
 
     public void ClosePanel()
     {
+        animator.Play("CloseAnim");
+        StartCoroutine(WaitAnimationStartEnd(animator.runtimeAnimatorController.animationClips[1].length));  
+    }
+
+    private IEnumerator WaitAnimationStartEnd(float _time)
+    {
+        yield return new WaitForSeconds(_time);
         Destroy(this.gameObject);
     }
 }
