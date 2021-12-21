@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Views.EffectStorage;
+using System.Collections;
 
 namespace Core
 {
@@ -19,6 +20,8 @@ namespace Core
 
         [SerializeField] private InfoPanelView InfoPanelPb;
         [SerializeField] private Transform infoPanelPos;
+
+        [SerializeField] private Transform EffectStorageComponent;
 
         public int CurrentEffectShowId;
         public void Start()
@@ -77,7 +80,7 @@ namespace Core
             if (EffectStorageContoler.ItemIsOpened(CurrentEffectShowId))
             {
                 EffectStorageContoler.SetCurrentEffect(CurrentEffectShowId);
-                SceneManager.LoadScene(1);
+                LaunchPlayer();
             }
             else
             {
@@ -90,5 +93,23 @@ namespace Core
         {
             SceneManager.LoadScene(0);
         }
+
+
+        public void LaunchPlayer()
+        {
+            foreach (Transform child in EffectStorageComponent)
+            {
+                child.GetComponent<Animation>().CrossFade("Togame");
+               // StartCoroutine(WaitAnimationEnd(child.GetComponent<Animation>().clip.length));
+            }
+        }
+
+
+        private IEnumerator WaitAnimationEnd(float _time)
+        {
+            yield return new WaitForSeconds(_time);
+            SceneManager.LoadScene(1);
+        }
+
     }
 }

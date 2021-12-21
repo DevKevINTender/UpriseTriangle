@@ -323,6 +323,7 @@ MonoBehaviour:
   EffectStorageListComponent: {fileID: 1022597139}
   InfoPanelPb: {fileID: 5360590824163358342, guid: 39261f34063ae6b428499533f800edfc, type: 3}
   infoPanelPos: {fileID: 1766097847}
+  EffectStorageComponent: {fileID: 1022597138}
   CurrentEffectShowId: 0
 --- !u!1 &280186354
 GameObject:

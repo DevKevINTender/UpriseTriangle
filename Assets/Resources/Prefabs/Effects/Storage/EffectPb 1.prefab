@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 505891530499718255}
   - component: {fileID: 3221572370273263533}
   - component: {fileID: 2394964566445800665}
+  - component: {fileID: -5861508504604337597}
   m_Layer: 6
   m_Name: EffectPb 1
   m_TagString: Untagged
@@ -4932,3 +4933,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!111 &-5861508504604337597
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4875350541974320638}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0b8efba353f902348a62bb08679f64c5, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0b8efba353f902348a62bb08679f64c5, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0

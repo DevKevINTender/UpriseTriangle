@@ -49,7 +49,7 @@ public class SessionCore : MonoBehaviour
     public IEnumerator StartSessionCur()
     {
         float timerAnim = Animator.runtimeAnimatorController.animationClips[1].length;
-        float timer = 0.25f;
+        float timer = 2.5f;
         while (timer > 0)
         {
             timer -= Time.deltaTime;

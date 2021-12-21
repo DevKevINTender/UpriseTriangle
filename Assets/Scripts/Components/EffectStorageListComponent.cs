@@ -35,5 +35,6 @@ namespace Components
         {
             ListTarget.transform.position = Vector3.Lerp(ListTarget.transform.position, currentPos, Time.deltaTime * 15);
         }
+
     }
 }
