@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SessionCore : MonoBehaviour
 {
-    [SerializeField] private Animation SessionAnimation;
+    //[SerializeField] private Animation SessionAnimation;
     private bool isPause;
     public bool isStart;
     void Start()
@@ -27,8 +27,8 @@ public class SessionCore : MonoBehaviour
     {
         if (isPause)
         {
-            SessionAnimation.Play("StopPause");
-            SessionAnimation["StopPause"].speed = 1;
+            //SessionAnimation.Play("StopPause");
+            //SessionAnimation["StopPause"].speed = 1;
             Time.timeScale = 1;
             isPause = false;
         }
@@ -37,8 +37,8 @@ public class SessionCore : MonoBehaviour
     {
         if (isStart)
         {
-            SessionAnimation.Play("StartPause");
-            SessionAnimation["StartPause"].speed = 10;
+            //SessionAnimation.Play("StartPause");
+            //SessionAnimation["StartPause"].speed = 10;
             Time.timeScale = 0.1f;
             isPause = true;
         }
@@ -52,7 +52,7 @@ public class SessionCore : MonoBehaviour
             timer -= Time.deltaTime;
             yield return null;
         }
-        SessionAnimation.Play("StopPause");
+        //SessionAnimation.Play("StopPause");
         isStart = true;
         if (!isPause)
         {
