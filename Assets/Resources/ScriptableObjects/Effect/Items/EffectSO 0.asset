@@ -16,4 +16,5 @@ MonoBehaviour:
   Cost: 250
   EffectName: Lucki
   EffectSlogan: for unlucki
-  EffectPb: {fileID: 4875350541974320638, guid: 3dbeba4bc7000e6499d87f098d69cbf6, type: 3}
+  EffectSessionPb: {fileID: 8483748989600547566, guid: 99f5dc63d07a5ba46811d037818d9fd5, type: 3}
+  EffectStoragePb: {fileID: 4875350541974320638, guid: 3dbeba4bc7000e6499d87f098d69cbf6, type: 3}

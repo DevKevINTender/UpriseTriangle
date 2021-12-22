@@ -25,7 +25,7 @@ namespace Views.Session
         }
         public void OnBeginDrag(PointerEventData eventData)
         {
-            if (SessionCore.isStart)
+            //if (SessionCore.isStart)
             {
                 transform.GetComponent<Image>().color = new Color32(26, 27, 33, 0);
                 SessionCore.StopPause();
@@ -34,7 +34,7 @@ namespace Views.Session
 
         public void OnDrag(PointerEventData eventData)
         {
-            if (SessionCore.isStart)
+            //if (SessionCore.isStart)
             {
                 if (touchCount != Input.touchCount)
                 {
@@ -47,8 +47,13 @@ namespace Views.Session
                     newPos = eventData.pointerCurrentRaycast.worldPosition;
                     if (Vector3.Distance(currentPos, newPos) > 0.01f)
                     {
-                        PersonObj.transform.position += newPos - currentPos;
-                        currentPos = newPos;
+                        Vector3 distanceChange = newPos - currentPos;
+                        Vector3 personPos = PersonObj.transform.position;
+                        Vector3 checkFilterPos = personPos + distanceChange;                       
+                        if (checkFilterPos.y < -4.5f) distanceChange = new Vector3(distanceChange.x, 0, 0);
+                        if (checkFilterPos.y > 4.5f) distanceChange = new Vector3(distanceChange.x, 0, 0);
+                        PersonObj.transform.position += distanceChange;
+                        currentPos = newPos;         
                     }
                 }
             }
@@ -56,7 +61,7 @@ namespace Views.Session
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            if (SessionCore.isStart)
+            //if (SessionCore.isStart)
             {
                 if (Input.touchCount == 1)
                 {

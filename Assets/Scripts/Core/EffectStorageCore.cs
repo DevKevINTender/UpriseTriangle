@@ -42,6 +42,7 @@ namespace Core
                 EffectStoragePosPanelViewObj.UpdateView(CurrentEffectShowId);
                 EffectStorageListComponent.MoveToNewPos(CurrentEffectShowId);
                 EffectStoragePanelViewObj.UpdateView();
+                EffectStorageContoler.SetCurrentEffect(CurrentEffectShowId);
             }
         }
 
@@ -53,6 +54,7 @@ namespace Core
                 EffectStoragePosPanelViewObj.UpdateView(CurrentEffectShowId);
                 EffectStorageListComponent.MoveToNewPos(CurrentEffectShowId);
                 EffectStoragePanelViewObj.UpdateView();
+                EffectStorageContoler.SetCurrentEffect(CurrentEffectShowId);
             }
         }
 
@@ -63,7 +65,7 @@ namespace Core
                 EffectStorageContoler.OpenPerson(CurrentEffectShowId);
                 
                 StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";
-                
+              
                 EffectStoragePosPanelViewObj.UpdateView(CurrentEffectShowId);
                 EffectStorageListComponent.MoveToNewPos(CurrentEffectShowId);
                 EffectStoragePanelViewObj.UpdateView();
@@ -79,7 +81,6 @@ namespace Core
         {
             if (EffectStorageContoler.ItemIsOpened(CurrentEffectShowId))
             {
-                EffectStorageContoler.SetCurrentEffect(CurrentEffectShowId);
                 LaunchPlayer();
             }
             else

@@ -16,4 +16,5 @@ MonoBehaviour:
   Cost: 550
   EffectName: Ibis
   EffectSlogan: for good luck
-  EffectPb: {fileID: 4875350541974320638, guid: 529468a31ebcff848ae259fe12d8e3a9, type: 3}
+  EffectSessionPb: {fileID: 1439297170117739870, guid: 0931655f892f70e4db6c97032680a149, type: 3}
+  EffectStoragePb: {fileID: 4875350541974320638, guid: 529468a31ebcff848ae259fe12d8e3a9, type: 3}

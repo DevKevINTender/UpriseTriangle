@@ -10,9 +10,14 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private GameObject PausePanel;
     private bool isPause;
     public bool isStart;
+
+    private IEnumerator startCoroutine;
     void Start()
     {
-        StartCoroutine(StartSessionCur());
+        Time.timeScale = 1;
+        startCoroutine = StartSessionCur();
+        StartCoroutine(startCoroutine);
+        isStart = true;
     }
     
     void Update()
@@ -48,25 +53,41 @@ public class SessionCore : MonoBehaviour
 
     public IEnumerator StartSessionCur()
     {
-        float timerAnim = Animator.runtimeAnimatorController.animationClips[1].length;
-        float timer = 2.5f;
+        float timer = 2f;
         while (timer > 0)
         {
+            if (Animator.GetBool("Pause"))
+                EmergencyStop();
             timer -= Time.deltaTime;
             yield return null;
         }
         Animator.SetBool("StartGame", true);
-        StartCoroutine(WaitAnimationStartEnd(timerAnim));
-       
+        StartCoroutine(WaitAnimationStartEnd());
     }
-    private IEnumerator WaitAnimationStartEnd(float _time)
+    private IEnumerator WaitAnimationStartEnd()
+    {
+        while (!Animator.GetCurrentAnimatorStateInfo(0).IsName("New State 0"))
+        {
+            yield return null;
+        }
+        StartPanel.SetActive(false);
+        StartCoroutine(WaitStart(1f));
+    }
+
+    private IEnumerator WaitStart(float _time)
     {
         yield return new WaitForSeconds(_time);
-        StartPanel.SetActive(false);
         isStart = true;
     }
-    
-    
+
+
+    public void EmergencyStop()
+    {
+        StopCoroutine(startCoroutine);
+        Animator.SetBool("StartGame", true);
+        StartCoroutine(WaitAnimationStartEnd());
+    }
+
     public void BackToMenu()
     {
         Time.timeScale = 1;

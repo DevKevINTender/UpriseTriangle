@@ -16,4 +16,5 @@ MonoBehaviour:
   Cost: 350
   EffectName: IFRIT
   EffectSlogan: test it
-  EffectPb: {fileID: 4875350541974320638, guid: a5c5b10c873757d44adcc8860dd28a90, type: 3}
+  EffectSessionPb: {fileID: 6271383954696124610, guid: a208d1c04b233c14c93942542ccb5d74, type: 3}
+  EffectStoragePb: {fileID: 4875350541974320638, guid: a5c5b10c873757d44adcc8860dd28a90, type: 3}

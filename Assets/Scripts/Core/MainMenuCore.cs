@@ -21,7 +21,7 @@ public class MainMenuCore : MonoBehaviour
     
     public void LoadScene(int id)
     {
-        SceneManager.LoadScene(id);
+        StartCoroutine(WaitUntil(1, id));
     }
 
     public void AddCoins()

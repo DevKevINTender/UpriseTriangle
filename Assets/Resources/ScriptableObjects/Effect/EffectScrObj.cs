@@ -9,6 +9,7 @@ namespace ScriptableObjects
         public int Cost;
         public string EffectName;
         public string EffectSlogan;
-        public GameObject EffectPb;
+        public GameObject EffectSessionPb;
+        public GameObject EffectStoragePb;
     }
 }

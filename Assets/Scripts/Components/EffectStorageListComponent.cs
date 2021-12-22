@@ -22,7 +22,7 @@ namespace Components
         {
             foreach (var item in EffectListSO.List)
             {
-                Instantiate(item.EffectPb, new Vector3(item.Id * 3, 0, 0), Quaternion.Euler(90, 0, 0), ListTarget) ;
+                Instantiate(item.EffectStoragePb, new Vector3(item.Id * 3, 0, 0), Quaternion.Euler(90, 0, 0), ListTarget) ;
             }
         }
 
