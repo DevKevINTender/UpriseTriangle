@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d47343a9e3a42518f877be515994f56, type: 3}
+  m_Name: EffectSO 5
+  m_EditorClassIdentifier: 
+  Id: 5
+  Cost: 550
+  EffectName: Ibis
+  EffectSlogan: for good luck
+  EffectSessionPb: {fileID: 1010757998378330704, guid: 2bdbaf62caa9de04ebbefdd3ac066c14, type: 3}
+  EffectStoragePb: {fileID: 1010757998378330704, guid: 67ca0e3be9aabea4783ba422dee6dbb2, type: 3}
