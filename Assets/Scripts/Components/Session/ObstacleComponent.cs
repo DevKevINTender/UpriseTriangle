@@ -13,6 +13,7 @@ public class ObstacleComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.y < 15) GetComponent<EdgeCollider2D>().enabled = true;
         transform.position += new Vector3(0,-moveSpeed * Time.deltaTime,0);
     }
 }

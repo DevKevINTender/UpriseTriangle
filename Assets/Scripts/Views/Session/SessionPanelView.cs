@@ -42,7 +42,7 @@ namespace Views.Session
                     currentPos = eventData.pointerCurrentRaycast.worldPosition;
                 }
             
-                if (Input.touchCount == 1)
+                //if (Input.touchCount == 1)
                 {
                     newPos = eventData.pointerCurrentRaycast.worldPosition;
                     if (Vector3.Distance(currentPos, newPos) > 0.01f)
