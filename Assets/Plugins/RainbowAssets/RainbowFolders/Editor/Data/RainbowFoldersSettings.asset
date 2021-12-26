@@ -427,3 +427,12 @@ MonoBehaviour:
     BackgroundType: 200
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 1
+  - Type: 1
+    Key: Assets/Resources/Music
+    IconType: 50
+    SmallIcon: {fileID: 0}
+    LargeIcon: {fileID: 0}
+    IsIconRecursive: 0
+    BackgroundType: 50
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0

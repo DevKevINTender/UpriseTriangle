@@ -2,19 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SessionCore : MonoBehaviour
 {
     [SerializeField] private Animator Animator;
     [SerializeField] private GameObject StartPanel;
     [SerializeField] private GameObject PausePanel;
+    [SerializeField] private AudioSource Music;
+    private float timer;
+    public Text time;
+
     private bool isPause;
     public bool isStart;
+    public float TimeToMusic; 
+    
 
-    private IEnumerator startCoroutine;
+    private IEnumerator startCoroutine; // переменная для остановки ожидания старта
+
     void Start()
     {
         Time.timeScale = 1;
+        StartCoroutine(WaitToStartMusic(TimeToMusic));
         startCoroutine = StartSessionCur();
         StartCoroutine(startCoroutine);
         isStart = true;
@@ -22,7 +31,8 @@ public class SessionCore : MonoBehaviour
     
     void Update()
     {
-        
+        timer += Time.deltaTime;
+        time.text = timer.ToString("F2");
     }
 
     public void LoseSession()
@@ -30,6 +40,7 @@ public class SessionCore : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
+
     public void StopPause()
     {
         if (isPause)
@@ -51,6 +62,7 @@ public class SessionCore : MonoBehaviour
         }
     }
 
+    // таймер для ожидания конца анимации старта или её прерывания
     public IEnumerator StartSessionCur()
     {
         float timer = 2f;
@@ -64,6 +76,7 @@ public class SessionCore : MonoBehaviour
         Animator.SetBool("StartGame", true);
         StartCoroutine(WaitAnimationStartEnd());
     }
+
     private IEnumerator WaitAnimationStartEnd()
     {
         while (!Animator.GetCurrentAnimatorStateInfo(0).IsName("New State 0"))
@@ -80,6 +93,18 @@ public class SessionCore : MonoBehaviour
         isStart = true;
     }
 
+    //время начала музыки
+    public IEnumerator WaitToStartMusic(float _time)
+    {
+        float timer = _time;
+        while (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+        Music.Play();
+    }
+
 
     public void EmergencyStop()
     {
@@ -93,4 +118,5 @@ public class SessionCore : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
+
 }

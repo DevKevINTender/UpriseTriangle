@@ -5,11 +5,12 @@ using UnityEngine;
 public class WayObstacleComponent : MonoBehaviour
 {
     [SerializeField] private GameObject obstacle;
-    [SerializeField] private Vector3 Target;
+    [SerializeField] private float Target;
+    private Vector3 targetPos;
     
     [SerializeField] private float TimerStart;
     [SerializeField] private float TimeStartMove;
-    //[SerializeField] private float DestroyTimer;
+    [SerializeField] private float DestroyTime;
     
     private float Timer;
     
@@ -19,9 +20,10 @@ public class WayObstacleComponent : MonoBehaviour
     
     void Start()
     {
+        targetPos = new Vector3(0, Target, 0);
         waySprite.color = new Color32(36,38,46,0);
         StartCoroutine(TimeStartCor());
-        StartCoroutine(TimeStartMoveCor());
+        
     }
     
     IEnumerator TimeStartCor()
@@ -33,7 +35,7 @@ public class WayObstacleComponent : MonoBehaviour
             yield return null;
         }
         waySprite.color = new Color32(36,38,46,255);
-        
+        StartCoroutine(TimeStartMoveCor());
     }
     IEnumerator TimeStartMoveCor()
     {
@@ -48,12 +50,23 @@ public class WayObstacleComponent : MonoBehaviour
     }
     IEnumerator TimeMoveCor()
     {
-        while (obstacle.transform.localPosition != Target)
+        while (obstacle.transform.localPosition != targetPos)
         {
-            obstacle.transform.localPosition = Vector3.MoveTowards(obstacle.transform.localPosition, Target, Time.deltaTime * obstacleSpeed);
+            obstacle.transform.localPosition = Vector3.MoveTowards(obstacle.transform.localPosition, targetPos, Time.deltaTime * obstacleSpeed);
 
             yield return null;
         }
-        Destroy(gameObject);
+        StartCoroutine(TimeToDestroy(DestroyTime));
+
+        IEnumerator TimeToDestroy(float _time)
+        {
+            float timer = _time;
+            while (timer >= 0)
+            {
+                timer -= Time.deltaTime;
+                yield return null;
+            }
+            Destroy(gameObject);
+        }
     }
 }
