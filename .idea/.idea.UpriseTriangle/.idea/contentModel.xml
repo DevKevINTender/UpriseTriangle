@@ -29,8 +29,12 @@
           <e p="Components" t="Include">
             <e p="EffectStorageListComponent.cs" t="Include" />
             <e p="Session" t="Include">
+              <e p="Destroyer.cs" t="Include" />
+              <e p="FPSMaker.cs" t="Include" />
+              <e p="GateObstacleComponent.cs" t="Include" />
               <e p="ObstacleComponent.cs" t="Include" />
               <e p="PersonComponent.cs" t="Include" />
+              <e p="RotateObstacleComponent.cs" t="Include" />
               <e p="WayObstacleComponent.cs" t="Include" />
             </e>
           </e>

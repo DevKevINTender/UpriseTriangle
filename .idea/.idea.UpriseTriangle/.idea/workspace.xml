@@ -20,14 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/GateObstacleComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/GateObstacleComponent.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/Session/InfoPanels.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/Session/InfoPanels.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/Session/StartPause.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/Session/StartPause.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Session.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Session.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EffectStorage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EffectStorage.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelAimatorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelAimatorController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/InfoPanel/InfoPanelView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/ObstacleComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/BulletInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/BulletInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -55,7 +55,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/EffectStorageCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePosPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/EffectStorageContoler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/SessionLevelControler.cs" />
@@ -81,7 +80,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/WayObstacleComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelAimatorController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/GateObstacleComponent.cs" />
       </list>
     </option>
   </component>
@@ -136,6 +137,8 @@
       <workItem from="1639934123140" duration="2915000" />
       <workItem from="1639996193722" duration="3608000" />
       <workItem from="1640111224835" duration="3484000" />
+      <workItem from="1640697614411" duration="17000" />
+      <workItem from="1640697655512" duration="6519000" />
     </task>
     <servers />
   </component>

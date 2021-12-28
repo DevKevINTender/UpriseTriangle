@@ -10,6 +10,7 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private GameObject StartPanel;
     [SerializeField] private GameObject PausePanel;
     [SerializeField] private AudioSource Music;
+    [SerializeField] private GameObject ControlerPanel;
     private float timer;
     public Text time;
 
@@ -37,8 +38,8 @@ public class SessionCore : MonoBehaviour
 
     public void LoseSession()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        StartCoroutine(LooseSessionCur());
+        
     }
 
     public void StopPause()
@@ -60,8 +61,34 @@ public class SessionCore : MonoBehaviour
             Time.timeScale = 0.1f;
             isPause = true;
         }
+    }    
+    // таймер смерти игрока
+    public IEnumerator LooseSessionCur()
+    {
+        ControlerPanel.SetActive(false);
+        //Time.timeScale = 0.1f;
+        float timer = 0.5f;
+        while (Time.timeScale >= 0.1)
+        {
+            Time.timeScale -= Time.deltaTime * 2;
+            yield return null;
+        }
+        Time.timeScale = 1;
+        SceneManager.LoadScene(1);
     }
-
+    public IEnumerator LooseSessionCurSec()
+    {
+        ControlerPanel.SetActive(false);
+        Time.timeScale = 0.1f;
+        float timer = 0.5f;
+        while (timer >= 0)
+        {
+            timer -= Time.deltaTime * 2;
+            yield return null;
+        }
+        Time.timeScale = 1;
+        SceneManager.LoadScene(1);
+    }
     // таймер для ожидания конца анимации старта или её прерывания
     public IEnumerator StartSessionCur()
     {

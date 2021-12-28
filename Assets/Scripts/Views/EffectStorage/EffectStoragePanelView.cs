@@ -19,6 +19,9 @@ namespace Views.EffectStorage
         public GameObject PlayBtn;
         public GameObject BackBtn;
 
+        public Vector3 startDragVector;
+        public Vector3 endDragVector;
+        
         public void InitView(EffectStorageCore EffectStorageCoreObj)
         {
             this.EffectStorageCoreObj = EffectStorageCoreObj;
@@ -69,13 +72,13 @@ namespace Views.EffectStorage
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            
+            startDragVector = eventData.pointerCurrentRaycast.worldPosition;
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
-     
-                if (eventData.delta.x > 0)
+            endDragVector = eventData.pointerCurrentRaycast.worldPosition;
+                if (endDragVector.x > startDragVector.x)
                 {
                     EffectStorageCoreObj.ShowPreviousEffect();
                 }
