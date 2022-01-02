@@ -11,6 +11,7 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private GameObject PausePanel;
     [SerializeField] private AudioSource Music;
     [SerializeField] private GameObject ControlerPanel;
+    public int restartSessionNum;
     private float timer;
     public Text time;
 
@@ -74,7 +75,7 @@ public class SessionCore : MonoBehaviour
             yield return null;
         }
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(restartSessionNum);
     }
     public IEnumerator LooseSessionCurSec()
     {
@@ -87,7 +88,7 @@ public class SessionCore : MonoBehaviour
             yield return null;
         }
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(restartSessionNum);
     }
     // таймер для ожидания конца анимации старта или её прерывания
     public IEnumerator StartSessionCur()

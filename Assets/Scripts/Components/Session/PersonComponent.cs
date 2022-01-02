@@ -12,7 +12,7 @@ public class PersonComponent : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<ObstacleComponent>())
+        //if (other.GetComponent<ObstacleComponent>())
         {
             SessionCore.LoseSession();
         }
