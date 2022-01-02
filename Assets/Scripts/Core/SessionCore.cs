@@ -11,6 +11,8 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private GameObject PausePanel;
     [SerializeField] private AudioSource Music;
     [SerializeField] private GameObject ControlerPanel;
+
+    [SerializeField] private SpawnBlockControler SpawnBlockControler;
     public int restartSessionNum;
     private float timer;
     public Text time;
@@ -28,6 +30,9 @@ public class SessionCore : MonoBehaviour
         StartCoroutine(WaitToStartMusic(TimeToMusic));
         startCoroutine = StartSessionCur();
         StartCoroutine(startCoroutine);
+        
+        if(SpawnBlockControler) SpawnBlockControler.InitControler(0);
+        
         isStart = true;
     }
     

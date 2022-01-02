@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627f4b4e347348ccb961126d2d0831c8, type: 3}
+  m_Name: SessionLevelSO Test
+  m_EditorClassIdentifier: 
+  LevelId: 0
+  MusicName: Mistake
+  MusicCreator: Alex job
+  MusicTime: 2:23
+  DeadCount: 0
+  CoinsCollectCount: 0
+  CompletePercent: 0
+  Cost: 500
+  SessionLevelBlockList:
+  - SpawnBlockPb: {fileID: 4575953252573043395, guid: 62c0f54e2826cc54d9b12d7218aa6737, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 2492226232545882983, guid: e06222f704644484faff8cd54387f4af, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 8408520706810813814, guid: da56311988a8c51468da9ac8a6f39e6b, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 8994569314381663366, guid: 8af2d406e44a57244a7cdd5d7421c0d6, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 5116463574256802219, guid: ce5eb6f6e7833f44587e2bea806631e9, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 5216838136101372790, guid: e01d3621cc7c6594eac6fa087cb847be, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 8315634803139450642, guid: 66f9db04d51f12b44a8eda2c209e425a, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 3370101973191271991, guid: f67bee3021138f8468d1dd6c1e5aced9, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 1907349425850685510, guid: 7a5fb1efc23f70a4b819b4bbbd09709b, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 6405751498523909352, guid: eef6f0a87f85d8b4ea5c5b5583d3e763, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 5139837750983906387, guid: fb7b6cb8e5a10a344bf9aa4a8762824e, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 8621789669935270627, guid: 9c119a9bb742e6c4ba86bef6973114fd, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 2567377299082147539, guid: 6966312c2ef186c4b8bfa1d44edc0fc9, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 4577224975987944888, guid: 5d19448be92985a4192476c5acd6ec13, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 7954648022337449283, guid: 516ab901a14c96640a70b0eef09a0fe2, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 45760925777474312, guid: 9b1c7e3e624d211419d60386cad4911b, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 5290424588092543053, guid: 8913133cd3378b84598c30abaec26aa4, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 5699383395683009328, guid: 4dc3ec08f5f124c45a4c14552a3e2a35, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 5911912748268667457, guid: 6066f144119d5c544be14426d48da6df, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 5738507742620612095, guid: 78543255951a5694c9be302d5e48146b, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 7904178704527001347, guid: 9b2ab6b343d033946968b5cda74982a9, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 7621780878550769309, guid: 8eb94a8f8ecdb5f48a7a6191ca76a40a, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 5752829622759276688, guid: 208d1ea2654e1784fb073e53f7f57c95, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0
+  - SpawnBlockPb: {fileID: 4766547176425965481, guid: a72850cea79f9104e9f0ded6cf3f13ab, type: 3}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0

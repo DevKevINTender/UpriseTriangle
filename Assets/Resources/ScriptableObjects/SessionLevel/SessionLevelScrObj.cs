@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using Controlers;
+using UnityEngine;
 
 namespace ScriptableObjects.SessionLevel
 {
@@ -16,6 +19,14 @@ namespace ScriptableObjects.SessionLevel
 
         public int Cost;
 
-        public GameObject SessionLevelPb;
+        public List<SessionLevelBlock> SessionLevelBlockList;
+    }
+
+    [Serializable]
+    public class SessionLevelBlock
+    {
+        public GameObject SpawnBlockPb;
+        public Vector3 SpawnPos;
+        public float SpawnTime;
     }
 }
