@@ -55,6 +55,8 @@ public class SessionCore : MonoBehaviour
             Animator.SetBool("Pause", false);
             Animator.speed = 1;
             Time.timeScale = 1;
+            Music.pitch = 1;
+            Music.volume = 1;
             isPause = false;
         }
     }
@@ -65,23 +67,23 @@ public class SessionCore : MonoBehaviour
             Animator.SetBool("Pause", true);
             Animator.speed = 10;
             Time.timeScale = 0.1f;
+            Music.pitch = 0.1f;
+            Music.volume = 0;
             isPause = true;
         }
     }    
+
     // таймер смерти игрока
     public IEnumerator LooseSessionCur()
     {
         ControlerPanel.SetActive(false);
-        //Time.timeScale = 0.1f;
-        float timer = 0.5f;
-        while (Time.timeScale >= 0.1)
-        {
-            Time.timeScale -= Time.deltaTime * 2;
-            yield return null;
-        }
+        Music.volume = 0;
+        Time.timeScale = 0.1f;
+        yield return new WaitForSecondsRealtime(1);
         Time.timeScale = 1;
         SceneManager.LoadScene(restartSessionNum);
     }
+
     public IEnumerator LooseSessionCurSec()
     {
         ControlerPanel.SetActive(false);
