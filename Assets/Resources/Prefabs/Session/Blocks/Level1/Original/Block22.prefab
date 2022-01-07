@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: TimerStart
-      value: 89.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: DestroyTime
@@ -159,7 +159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: TimerStart
-      value: 87
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: DestroyTime
@@ -249,7 +249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: TimerStart
-      value: 89.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: DestroyTime
@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: TimerStart
-      value: 89.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: DestroyTime
@@ -429,7 +429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: TimerStart
-      value: 87.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: DestroyTime
@@ -519,7 +519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: TimerStart
-      value: 89
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: DestroyTime
@@ -609,7 +609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: TimerStart
-      value: 87.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: DestroyTime
@@ -699,7 +699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: TimerStart
-      value: 87.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: DestroyTime
@@ -789,7 +789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: TimerStart
-      value: 89.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: DestroyTime
@@ -879,7 +879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: TimerStart
-      value: 87.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151945317375594877, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
       propertyPath: DestroyTime

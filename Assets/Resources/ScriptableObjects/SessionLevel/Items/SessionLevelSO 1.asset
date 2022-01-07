@@ -20,3 +20,7 @@ MonoBehaviour:
   CoinsCollectCount: 0
   CompletePercent: 0
   Cost: 550
+  SessionLevelBlockList:
+  - SpawnBlockPb: {fileID: 0}
+    SpawnPos: {x: 0, y: 0, z: 0}
+    SpawnTime: 0

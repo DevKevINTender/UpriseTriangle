@@ -8,7 +8,6 @@ public class SessionCore : MonoBehaviour
 {
     [SerializeField] private Animator Animator;
     [SerializeField] private GameObject StartPanel;
-    [SerializeField] private GameObject PausePanel;
     [SerializeField] private AudioSource Music;
     [SerializeField] private GameObject ControlerPanel;
 
@@ -19,20 +18,24 @@ public class SessionCore : MonoBehaviour
 
     private bool isPause;
     public bool isStart;
-    public float TimeToMusic; 
+    public float TimeToMusic;
+
+    private float musicTime; // общая продолжительность музыки
+
     
 
     private IEnumerator startCoroutine; // переменная для остановки ожидания старта
 
     void Start()
     {
+        musicTime = Music.clip.length;
+        Debug.Log(musicTime);
         Time.timeScale = 1;
         StartCoroutine(WaitToStartMusic(TimeToMusic));
         startCoroutine = StartSessionCur();
         StartCoroutine(startCoroutine);
         
-        if(SpawnBlockControler) SpawnBlockControler.InitControler(0);
-        
+        if(SpawnBlockControler) SpawnBlockControler.InitControler(0);        
         isStart = true;
     }
     
@@ -44,8 +47,7 @@ public class SessionCore : MonoBehaviour
 
     public void LoseSession()
     {
-        StartCoroutine(LooseSessionCur());
-        
+        StartCoroutine(LooseSessionCur());    
     }
 
     public void StopPause()

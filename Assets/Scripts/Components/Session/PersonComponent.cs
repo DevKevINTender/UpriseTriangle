@@ -15,10 +15,13 @@ public class PersonComponent : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
-        deathEffect.SetActive(true);
-        effect.SetActive(false);
-        transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
-        deathSong.PlayOneShot(deathSong.clip);
-        SessionCore.LoseSession();
+        if (!other.CompareTag("FinishLine"))
+        {
+            deathEffect.SetActive(true);
+            effect.SetActive(false);
+            transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
+            deathSong.PlayOneShot(deathSong.clip);
+            SessionCore.LoseSession();
+        }
     }
 }

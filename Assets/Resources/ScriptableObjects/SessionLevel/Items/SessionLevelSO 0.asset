@@ -65,7 +65,7 @@ MonoBehaviour:
     SpawnTime: 4
   - SpawnBlockPb: {fileID: 1907349425850685510, guid: 954f70c8c215354468ee376f7dba3a66, type: 3}
     SpawnPos: {x: 0, y: 6, z: 0}
-    SpawnTime: 7
+    SpawnTime: 9
   - SpawnBlockPb: {fileID: 6405751498523909352, guid: 445904085c2fb284cbeaa9b095d8f76d, type: 3}
     SpawnPos: {x: 0, y: 6, z: 0}
     SpawnTime: 8
