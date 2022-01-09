@@ -45,9 +45,9 @@ public class SessionCore : MonoBehaviour
         time.text = timer.ToString("F2");
     }
 
-    public void LoseSession()
+    public void LoseSession(float _time)
     {
-        StartCoroutine(LooseSessionCur());    
+        StartCoroutine(LooseSessionCur(_time));    
     }
 
     public void StopPause()
@@ -76,26 +76,21 @@ public class SessionCore : MonoBehaviour
     }    
 
     // таймер смерти игрока
-    public IEnumerator LooseSessionCur()
+    public IEnumerator LooseSessionCur(float _time)
     {
         ControlerPanel.SetActive(false);
         Music.volume = 0;
         Time.timeScale = 0.1f;
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSecondsRealtime(_time);
         Time.timeScale = 1;
         SceneManager.LoadScene(restartSessionNum);
     }
 
-    public IEnumerator LooseSessionCurSec()
+    public IEnumerator LooseSessionCurSec(float _time)
     {
         ControlerPanel.SetActive(false);
         Time.timeScale = 0.1f;
-        float timer = 0.5f;
-        while (timer >= 0)
-        {
-            timer -= Time.deltaTime * 2;
-            yield return null;
-        }
+        yield return new WaitForSecondsRealtime(_time);
         Time.timeScale = 1;
         SceneManager.LoadScene(restartSessionNum);
     }

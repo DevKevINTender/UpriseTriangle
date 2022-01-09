@@ -7,12 +7,16 @@ public class SpawnBlockControler : MonoBehaviour
 {
     public SessionLevelListScrObj SessionLevelListSO;
     public SessionLevelScrObj SessionLevelSO;
+    public GameObject winerPanel;
     public int CurrentLevel;
     public int NextBlockID;
     public float NextBlockTime;
 
     public bool isStart;
     private float timer;
+
+    private GameObject spawningObj;
+    private Vector3 spawningPos;
     public void InitControler(int Currentlevel)
     {
         NextBlockID = 0;
@@ -20,7 +24,22 @@ public class SpawnBlockControler : MonoBehaviour
         isStart = true;
     }
 
-    // Update is called once per frame
+    public void SetWinnerPanelToFinish(GameObject _ChekingObj)
+    {
+        if (_ChekingObj.GetComponent<FinishLineComponent>() != null)
+            _ChekingObj.GetComponent<FinishLineComponent>().SetWinPanel(winerPanel);
+    }
+
+    public void SpawnNewElement()
+    {
+        spawningObj = SessionLevelSO.SessionLevelBlockList[NextBlockID].SpawnBlockPb;
+        spawningPos = SessionLevelSO.SessionLevelBlockList[NextBlockID].SpawnPos;
+        GameObject spawnedObj = Instantiate(spawningObj, spawningPos, Quaternion.identity);
+        SetWinnerPanelToFinish(spawnedObj);
+        NextBlockID++;
+        NextBlockTime = SessionLevelSO.SessionLevelBlockList[NextBlockID].SpawnTime;
+    }
+
     void FixedUpdate()
     {
         timer += Time.deltaTime;
@@ -28,11 +47,9 @@ public class SpawnBlockControler : MonoBehaviour
         {
             if (timer >= NextBlockTime)
             {
-                if (NextBlockID < SessionLevelSO.SessionLevelBlockList.Count - 1)
+                if (NextBlockID <= SessionLevelSO.SessionLevelBlockList.Count)
                 {
-                    Instantiate(SessionLevelSO.SessionLevelBlockList[NextBlockID].SpawnBlockPb, SessionLevelSO.SessionLevelBlockList[NextBlockID].SpawnPos, Quaternion.identity);
-                    NextBlockID++;
-                    NextBlockTime = SessionLevelSO.SessionLevelBlockList[NextBlockID].SpawnTime;
+                    SpawnNewElement();
                     timer = 0;
                 }
             }
