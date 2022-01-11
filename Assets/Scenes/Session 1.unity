@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 695215608}
+  playerAnimator: {fileID: 254623108}
   StartPanel: {fileID: 197862477}
   Music: {fileID: 170932568}
   ControlerPanel: {fileID: 1514129489}
@@ -875,6 +876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8637925060cb0814b93d09e9bc9e1353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 0}
   SessionCore: {fileID: 21330597}
   deathSong: {fileID: 254623106}
 --- !u!95 &254623108

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SessionCore : MonoBehaviour
 {
     [SerializeField] private Animator Animator;
+    [SerializeField] private Animator playerAnimator;
     [SerializeField] private GameObject StartPanel;
     [SerializeField] private AudioSource Music;
     [SerializeField] private GameObject ControlerPanel;
@@ -54,6 +55,7 @@ public class SessionCore : MonoBehaviour
     {
         if (isPause)
         {
+            playerAnimator.SetBool("IsPause", false);
             Animator.SetBool("Pause", false);
             Animator.speed = 1;
             Time.timeScale = 1;
@@ -66,6 +68,7 @@ public class SessionCore : MonoBehaviour
     {
         if (isStart)
         {
+            playerAnimator.SetBool("IsPause", true);
             Animator.SetBool("Pause", true);
             Animator.speed = 10;
             Time.timeScale = 0.1f;

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PersonComponent : MonoBehaviour
 {
+    [SerializeField] private Animator playerAnimator;
     [SerializeField] private SessionCore SessionCore;
     [SerializeField] private AudioSource deathSong;
     public void InitComponent(SessionCore SessionCore)
@@ -18,7 +19,7 @@ public class PersonComponent : MonoBehaviour
             deathSong.PlayOneShot(deathSong.clip);
             transform.GetComponent<Animator>().SetBool("Death", true);
             SessionCore.LoseSession(transform.GetComponent<Animator>().runtimeAnimatorController.animationClips[0].length);
-            Debug.Log(transform.GetComponent<Animator>().runtimeAnimatorController.animationClips[0].length);
+            playerAnimator.SetBool("Death", true);
         }
     }
 }
