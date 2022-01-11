@@ -42,7 +42,7 @@ namespace Views.Session
                     currentPos = eventData.pointerCurrentRaycast.worldPosition;
                 }
             
-                //if (Input.touchCount == 1)
+                if (Input.touchCount == 1) // комментится если необходимо тестировать игру в unity
                 {
                     newPos = eventData.pointerCurrentRaycast.worldPosition;
                     if (Vector3.Distance(currentPos, newPos) > 0.01f)
@@ -68,7 +68,6 @@ namespace Views.Session
                     transform.GetComponent<Image>().color = new Color32(26, 27, 33, 200);
                     SessionCore.StartPause();
                 }
-               
             }
             touchCount = 0;
         }
