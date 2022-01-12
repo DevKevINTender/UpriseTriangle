@@ -30,7 +30,6 @@ public class SessionCore : MonoBehaviour
     void Start()
     {
         musicTime = Music.clip.length;
-        Debug.Log(musicTime);
         Time.timeScale = 1;
         StartCoroutine(WaitToStartMusic(TimeToMusic));
         startCoroutine = StartSessionCur();
