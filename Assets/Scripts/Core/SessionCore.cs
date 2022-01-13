@@ -34,7 +34,7 @@ public class SessionCore : MonoBehaviour
         StartCoroutine(WaitToStartMusic(TimeToMusic));
         startCoroutine = StartSessionCur();
         StartCoroutine(startCoroutine);
-        
+       
         if(SpawnBlockControler) SpawnBlockControler.InitControler(0);        
         isStart = true;
     }
@@ -83,11 +83,13 @@ public class SessionCore : MonoBehaviour
         ControlerPanel.SetActive(false);
         Music.volume = 0;
         Time.timeScale = 0.1f;
+        Handheld.Vibrate();
         yield return new WaitForSecondsRealtime(_time);
         Time.timeScale = 1;
         SceneManager.LoadScene(restartSessionNum);
     }
 
+    // Бесполезный кусок нигде не используется
     public IEnumerator LooseSessionCurSec(float _time)
     {
         ControlerPanel.SetActive(false);
@@ -96,6 +98,7 @@ public class SessionCore : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(restartSessionNum);
     }
+
     // таймер для ожидания конца анимации старта или её прерывания
     public IEnumerator StartSessionCur()
     {
