@@ -715,7 +715,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254623102}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -3320,6 +3320,7 @@ MonoBehaviour:
   PersonObj: {fileID: 254623102}
   newPos: {x: 0, y: 0, z: 0}
   currentPos: {x: 0, y: 0, z: 0}
+  sensitivity: 1.3
   touchCount: 0
   SessionCore: {fileID: 21330597}
 --- !u!114 &1514129492

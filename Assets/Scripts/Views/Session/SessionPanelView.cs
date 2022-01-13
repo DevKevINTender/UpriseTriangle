@@ -10,6 +10,7 @@ namespace Views.Session
         [SerializeField] private GameObject PersonObj;
         [SerializeField] private Vector3 newPos;
         [SerializeField] private Vector3 currentPos;
+        [SerializeField] private float sensitivity;
 
         [SerializeField]
         int touchCount;
@@ -52,7 +53,7 @@ namespace Views.Session
                         Vector3 checkFilterPos = personPos + distanceChange;                       
                         if (checkFilterPos.y < -4.5f) distanceChange = new Vector3(distanceChange.x, 0, 0);
                         if (checkFilterPos.y > 4.5f) distanceChange = new Vector3(distanceChange.x, 0, 0);
-                        PersonObj.transform.position += distanceChange;
+                        PersonObj.transform.position += distanceChange * sensitivity;
                         currentPos = newPos;         
                     }
                 }
