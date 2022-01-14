@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/DeathRegistrationControler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/DeathRegistrationControler.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Exvalaizer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Exvalaizer.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Session.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Session.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/TimeLineService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/TimeLineService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/InfoPanel/InfoPanelView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/6b/f4a11f59/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/CameraService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/ObstacleComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/41/f0482457/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/5a/a7559593/Object.cs" root0="SKIP_HIGHLIGHTING" />
@@ -72,7 +74,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ChooseTrainingCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/TrainingLevelControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/ObstacleComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" />
         <option value="$USER_HOME$/AppData/LocalLow/DefaultCompany/UpriseTriangle/LevelList" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Effect/EffectListScrObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListScrObj.cs" />
@@ -81,7 +82,6 @@
         <option value="$PROJECT_DIR$/Assets/RingElementComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/WayObstacleComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelAimatorController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/GateObstacleComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" />
@@ -89,7 +89,10 @@
         <option value="$PROJECT_DIR$/Assets/SpawnBlockControler.cs" />
         <option value="$PROJECT_DIR$/Assets/EqualizerCopmonent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/DeathRegistrationControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/CameraService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/TimeLineService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" />
       </list>
     </option>
@@ -151,6 +154,7 @@
       <workItem from="1641561174127" duration="7164000" />
       <workItem from="1641889254177" duration="5273000" />
       <workItem from="1642103375100" duration="4583000" />
+      <workItem from="1642152261415" duration="5051000" />
     </task>
     <servers />
   </component>

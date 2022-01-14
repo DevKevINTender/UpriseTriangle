@@ -9,7 +9,13 @@ public class TimeLineService : MonoBehaviour
     private GameObject TimeElementPB;
     [SerializeField]
     private List<GameObject> TimeList = new List<GameObject>();
-  
+
+    [ContextMenu("Load")]
+    public void CreateTime()
+    {
+        
+    }
+    
     void Awake()
     {
        

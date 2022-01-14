@@ -57,6 +57,7 @@
           </e>
           <e p="Services" t="Include">
             <e p="AudioSspectrService.cs" t="Include" />
+            <e p="CameraService.cs" t="Include" />
             <e p="TimeLineService.cs" t="Include" />
           </e>
           <e p="Views" t="Include">

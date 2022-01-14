@@ -12,14 +12,20 @@ public class PersonComponent : MonoBehaviour
     {
         this.SessionCore = SessionCore;
     }
+
+    public void Update()
+    {
+        transform.position += new Vector3(0,5*Time.deltaTime,0);
+    }
+
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("FinishLine"))
         {
-            deathSong.PlayOneShot(deathSong.clip);
-            transform.GetComponent<Animator>().SetBool("Death", true);
-            SessionCore.LoseSession(transform.GetComponent<Animator>().runtimeAnimatorController.animationClips[0].length);
-            playerAnimator.SetBool("Death", true);
+            //deathSong.PlayOneShot(deathSong.clip);
+            //transform.GetComponent<Animator>().SetBool("Death", true);
+            //SessionCore.LoseSession(transform.GetComponent<Animator>().runtimeAnimatorController.animationClips[0].length);
+            //playerAnimator.SetBool("Death", true);
         }
     }
 }

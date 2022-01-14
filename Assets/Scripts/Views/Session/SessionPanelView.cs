@@ -45,14 +45,15 @@ namespace Views.Session
             
                 if (Input.touchCount == 1) // комментится если необходимо тестировать игру в unity
                 {
+                    Debug.Log("test");
                     newPos = eventData.pointerCurrentRaycast.worldPosition;
                     if (Vector3.Distance(currentPos, newPos) > 0.01f)
                     {
                         Vector3 distanceChange = newPos - currentPos;
                         Vector3 personPos = PersonObj.transform.position;
                         Vector3 checkFilterPos = personPos + distanceChange;                       
-                        if (checkFilterPos.y < -4.5f) distanceChange = new Vector3(distanceChange.x, 0, 0);
-                        if (checkFilterPos.y > 4.5f) distanceChange = new Vector3(distanceChange.x, 0, 0);
+                        //if (checkFilterPos.y < -4.5f) distanceChange = new Vector3(distanceChange.x, 0, 0);
+                        //if (checkFilterPos.y > 4.5f) distanceChange = new Vector3(distanceChange.x, 0, 0);
                         PersonObj.transform.position += distanceChange * sensitivity;
                         currentPos = newPos;         
                     }

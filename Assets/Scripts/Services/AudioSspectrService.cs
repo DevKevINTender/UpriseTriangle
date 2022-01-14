@@ -30,6 +30,7 @@ public class AudioSspectrService : MonoBehaviour
         {
             for (int i = 0; i <= 63; i++)
             {
+    
                 ListValue.Add(Instantiate(ValuePb, new Vector3(-i, tick, 0), Quaternion.identity));
                 ListValue[i].GetComponent<TextMesh>().text = $"{Math.Round(spectrum[i] , 2)}";
                 if (spectrum[i] > 0.05)
@@ -66,7 +67,7 @@ public class AudioSspectrService : MonoBehaviour
 
     IEnumerator tickTime()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.1f);
         canSpawn = true;
     }
 }
