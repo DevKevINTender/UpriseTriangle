@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SessionCore : MonoBehaviour
 {
     [SerializeField] private Animator Animator;
+    [SerializeField] private Animator playerAnimator;
     [SerializeField] private GameObject StartPanel;
     [SerializeField] private AudioSource Music;
     [SerializeField] private GameObject ControlerPanel;
@@ -29,12 +30,11 @@ public class SessionCore : MonoBehaviour
     void Start()
     {
         musicTime = Music.clip.length;
-        Debug.Log(musicTime);
         Time.timeScale = 1;
         StartCoroutine(WaitToStartMusic(TimeToMusic));
         startCoroutine = StartSessionCur();
         StartCoroutine(startCoroutine);
-        
+       
         if(SpawnBlockControler) SpawnBlockControler.InitControler(0);        
         isStart = true;
     }
@@ -54,6 +54,7 @@ public class SessionCore : MonoBehaviour
     {
         if (isPause)
         {
+            playerAnimator.SetBool("IsPause", false);
             Animator.SetBool("Pause", false);
             Animator.speed = 1;
             Time.timeScale = 1;
@@ -66,6 +67,7 @@ public class SessionCore : MonoBehaviour
     {
         if (isStart)
         {
+            playerAnimator.SetBool("IsPause", true);
             Animator.SetBool("Pause", true);
             Animator.speed = 10;
             Time.timeScale = 0.1f;
@@ -81,11 +83,13 @@ public class SessionCore : MonoBehaviour
         ControlerPanel.SetActive(false);
         Music.volume = 0;
         Time.timeScale = 0.1f;
+        Handheld.Vibrate();
         yield return new WaitForSecondsRealtime(_time);
         Time.timeScale = 1;
         SceneManager.LoadScene(restartSessionNum);
     }
 
+    // Бесполезный кусок нигде не используется
     public IEnumerator LooseSessionCurSec(float _time)
     {
         ControlerPanel.SetActive(false);
@@ -94,6 +98,7 @@ public class SessionCore : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(restartSessionNum);
     }
+
     // таймер для ожидания конца анимации старта или её прерывания
     public IEnumerator StartSessionCur()
     {

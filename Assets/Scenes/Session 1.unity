@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 695215608}
+  playerAnimator: {fileID: 254623108}
   StartPanel: {fileID: 197862477}
   Music: {fileID: 170932568}
   ControlerPanel: {fileID: 1514129489}
@@ -244,11 +245,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 112025813918594083, guid: c1c0abf6825ad314c8a741d45f26025a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 112025813918594083, guid: c1c0abf6825ad314c8a741d45f26025a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.227
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 112025813918594083, guid: c1c0abf6825ad314c8a741d45f26025a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -289,6 +290,10 @@ PrefabInstance:
     - target: {fileID: 3043839923112318945, guid: c1c0abf6825ad314c8a741d45f26025a, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043839923112318945, guid: c1c0abf6825ad314c8a741d45f26025a, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3043839923112318945, guid: c1c0abf6825ad314c8a741d45f26025a, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -875,6 +880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8637925060cb0814b93d09e9bc9e1353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 254623108}
   SessionCore: {fileID: 21330597}
   deathSong: {fileID: 254623106}
 --- !u!95 &254623108
@@ -889,7 +895,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 65e53eeec86556e4cb336f6fc4eb0a74, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -3314,6 +3320,7 @@ MonoBehaviour:
   PersonObj: {fileID: 254623102}
   newPos: {x: 0, y: 0, z: 0}
   currentPos: {x: 0, y: 0, z: 0}
+  sensitivity: 1.3
   touchCount: 0
   SessionCore: {fileID: 21330597}
 --- !u!114 &1514129492

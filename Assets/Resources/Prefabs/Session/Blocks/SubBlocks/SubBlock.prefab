@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2666992085044293522}
+  - component: {fileID: 1282357186}
   m_Layer: 0
   m_Name: SubBlock
   m_TagString: Untagged
@@ -35,6 +36,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1282357186
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5687124333443539594}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.00025200844, y: -0.27201867}
+  - {x: -0.30317092, y: 0.26449776}
+  - {x: -0.3048694, y: 3.2755442}
+  - {x: 0.3079958, y: 3.2755103}
+  - {x: 0.311018, y: 0.26769495}
+  - {x: -0.00023841858, y: -0.27212548}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1001 &3435186805710212087
 PrefabInstance:
   m_ObjectHideFlags: 0
