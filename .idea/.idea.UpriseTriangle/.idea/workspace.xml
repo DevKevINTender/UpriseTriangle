@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/DeathRegistrationControler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/DeathRegistrationControler.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Exvalaizer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Exvalaizer.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +36,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/InfoPanel/InfoPanelView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/6b/f4a11f59/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/ObstacleComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/41/f0482457/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/5a/a7559593/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/d0/85ed47d7/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/BulletInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -79,6 +88,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
         <option value="$PROJECT_DIR$/Assets/SpawnBlockControler.cs" />
         <option value="$PROJECT_DIR$/Assets/EqualizerCopmonent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/DeathRegistrationControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/TimeLineService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" />
       </list>
     </option>
   </component>
@@ -137,6 +149,8 @@
       <workItem from="1640697655512" duration="6519000" />
       <workItem from="1641141490246" duration="5815000" />
       <workItem from="1641561174127" duration="7164000" />
+      <workItem from="1641889254177" duration="5273000" />
+      <workItem from="1642103375100" duration="4583000" />
     </task>
     <servers />
   </component>
