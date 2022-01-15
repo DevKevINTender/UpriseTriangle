@@ -55,6 +55,7 @@ namespace Views.Session
                         //if (checkFilterPos.y < -4.5f) distanceChange = new Vector3(distanceChange.x, 0, 0);
                         //if (checkFilterPos.y > 4.5f) distanceChange = new Vector3(distanceChange.x, 0, 0);
                         PersonObj.transform.position += distanceChange * sensitivity;
+                        PersonObj.transform.rotation = Quaternion.Euler(0, 0, PersonObj.transform.position.x * 3);
                         currentPos = newPos;         
                     }
                 }

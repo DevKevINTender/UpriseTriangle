@@ -15,7 +15,7 @@ public class PersonComponent : MonoBehaviour
 
     public void Update()
     {
-        transform.position += new Vector3(0,5*Time.deltaTime,0);
+        //transform.position += new Vector3(0,5*Time.deltaTime,0);
     }
 
     public void OnTriggerEnter2D(Collider2D other)

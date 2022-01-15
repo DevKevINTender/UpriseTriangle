@@ -23,33 +23,31 @@ public class AudioSspectrService : MonoBehaviour
     {
         float[] spectrum = new float[64];
        
-        AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
-        Debug.Log(spectrum.Length);
+        AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.Blackman);
         ListValue.Clear();
         if (canSpawn)
         {
             for (int i = 0; i <= 63; i++)
             {
-    
-                ListValue.Add(Instantiate(ValuePb, new Vector3(-i, tick, 0), Quaternion.identity));
-                ListValue[i].GetComponent<TextMesh>().text = $"{Math.Round(spectrum[i] , 2)}";
-                if (spectrum[i] > 0.05)
-                {
-                    ListValue[i].GetComponent<TextMesh>().color = Color.red;
-                }
-                if (spectrum[i] > 0.1)
-                {
-                    ListValue[i].GetComponent<TextMesh>().color = Color.yellow;
-                }
-                if (spectrum[i] > 0.2)
-                {
-                    ListValue[i].GetComponent<TextMesh>().color = Color.blue;
-                }
-                if (spectrum[i] > 0.5)
-                {
-                    ListValue[i].GetComponent<TextMesh>().color = Color.green;
-                }
-                if(i == 63) ListValue[i].GetComponent<TextMesh>().text = $"t:{tick}";
+                    ListValue.Add(Instantiate(ValuePb, new Vector3(-i, tick, 0), Quaternion.identity));
+                    ListValue[i].GetComponent<TextMesh>().text = $"{Math.Round(spectrum[i], 2)}";
+                    if (spectrum[i] > 0.05)
+                    {
+                        ListValue[i].GetComponent<TextMesh>().color = Color.cyan;
+                    }
+                    if (spectrum[i] > 0.1)
+                    {
+                        ListValue[i].GetComponent<TextMesh>().color = Color.green;
+                    }
+                    if (spectrum[i] > 0.2)
+                    {
+                        ListValue[i].GetComponent<TextMesh>().color = Color.yellow;
+                    }
+                    if (spectrum[i] > 0.5)
+                    {
+                        ListValue[i].GetComponent<TextMesh>().color = Color.red;
+                    }
+                    if (i == 63) ListValue[i].GetComponent<TextMesh>().text = $"t:{tick}";
             }
 
             canSpawn = false;
@@ -67,7 +65,8 @@ public class AudioSspectrService : MonoBehaviour
 
     IEnumerator tickTime()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return null;
+        //yield return new WaitForSeconds(0.05f);
         canSpawn = true;
     }
 }

@@ -19,8 +19,9 @@ public class SessionCore : MonoBehaviour
 
     private bool isPause;
     public bool isStart;
-    public float TimeToMusic;
 
+    public float TimeToMusic;
+    private float musicVolume;
     private float musicTime; // общая продолжительность музыки
 
     
@@ -29,6 +30,7 @@ public class SessionCore : MonoBehaviour
 
     void Start()
     {
+        musicVolume = Music.volume;
         musicTime = Music.clip.length;
         Time.timeScale = 1;
         StartCoroutine(WaitToStartMusic(TimeToMusic));
@@ -56,10 +58,9 @@ public class SessionCore : MonoBehaviour
         {
             playerAnimator.SetBool("IsPause", false);
             Animator.SetBool("Pause", false);
-            Animator.speed = 1;
             Time.timeScale = 1;
             Music.pitch = 1;
-            Music.volume = 1;
+            Music.volume = musicVolume;
             isPause = false;
         }
     }
@@ -69,7 +70,6 @@ public class SessionCore : MonoBehaviour
         {
             playerAnimator.SetBool("IsPause", true);
             Animator.SetBool("Pause", true);
-            Animator.speed = 10;
             Time.timeScale = 0.1f;
             Music.pitch = 0.1f;
             Music.volume = 0;
