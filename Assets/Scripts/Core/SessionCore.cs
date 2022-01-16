@@ -22,9 +22,6 @@ public class SessionCore : MonoBehaviour
 
     public float TimeToMusic;
     private float musicVolume;
-    private float musicTime; // общая продолжительность музыки
-
-    
 
     private IEnumerator startCoroutine; // переменная для остановки ожидания старта
 
@@ -36,7 +33,6 @@ public class SessionCore : MonoBehaviour
     void Start()
     {
         musicVolume = Music.volume;
-        musicTime = Music.clip.length;
         Time.timeScale = 1;
         StartCoroutine(WaitToStartMusic(TimeToMusic));
         startCoroutine = StartSessionCur();
@@ -70,6 +66,7 @@ public class SessionCore : MonoBehaviour
             isPause = false;
         }
     }
+
     public void StartPause()
     {
         if (isStart)
@@ -118,12 +115,7 @@ public class SessionCore : MonoBehaviour
             yield return null;
         }
         StartPanel.SetActive(false);
-        StartCoroutine(WaitStart(1f));
-    }
-
-    private IEnumerator WaitStart(float _time)
-    {
-        yield return new WaitForSeconds(_time);
+        yield return new WaitForSecondsRealtime(1);
         isStart = true;
     }
 

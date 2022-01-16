@@ -44,12 +44,12 @@ namespace Views.Session
                     {
                         Vector3 distanceChange = newPos - currentPos;
                         Vector3 personPos = PersonObj.transform.position;
-                        Vector3 checkFilterPos = personPos + distanceChange;                       
+                        Vector3 checkFilterPos = personPos + distanceChange;
                         if (checkFilterPos.x < -2.0f) distanceChange = new Vector3(0, distanceChange.y, 0);
                         if (checkFilterPos.x > 2.0f) distanceChange = new Vector3(0, distanceChange.y, 0);
                         PersonObj.transform.position += distanceChange * sensitivity;
                         PersonObj.transform.rotation = Quaternion.Euler(0, 0, PersonObj.transform.position.x * 3);
-                        currentPos = newPos;         
+                        currentPos = newPos;
                     }
                 }
             }

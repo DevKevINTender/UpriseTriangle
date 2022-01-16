@@ -26,7 +26,6 @@ public class PersonComponent : MonoBehaviour
             //transform.GetComponent<Animator>().SetBool("Death", true);
             playerAnimator.SetBool("Death", true);
             SessionCore.LoseSession(transform.GetComponent<Animator>().runtimeAnimatorController.animationClips[0].length);
-            
         }
     }
 }
