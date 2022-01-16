@@ -24,8 +24,9 @@ public class PersonComponent : MonoBehaviour
         {
             //deathSong.PlayOneShot(deathSong.clip);
             //transform.GetComponent<Animator>().SetBool("Death", true);
-            //SessionCore.LoseSession(transform.GetComponent<Animator>().runtimeAnimatorController.animationClips[0].length);
-            //playerAnimator.SetBool("Death", true);
+            playerAnimator.SetBool("Death", true);
+            SessionCore.LoseSession(transform.GetComponent<Animator>().runtimeAnimatorController.animationClips[0].length);
+            
         }
     }
 }

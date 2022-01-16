@@ -28,6 +28,11 @@ public class SessionCore : MonoBehaviour
 
     private IEnumerator startCoroutine; // переменная для остановки ожидания старта
 
+    public void OnApplicationPause(bool pause)
+    {
+        StartPause();
+    }
+
     void Start()
     {
         musicVolume = Music.volume;
@@ -56,6 +61,7 @@ public class SessionCore : MonoBehaviour
     {
         if (isPause)
         {
+            ControlerPanel.transform.GetComponent<Image>().color = new Color32(26, 27, 33, 0);
             playerAnimator.SetBool("IsPause", false);
             Animator.SetBool("Pause", false);
             Time.timeScale = 1;
@@ -68,6 +74,7 @@ public class SessionCore : MonoBehaviour
     {
         if (isStart)
         {
+            ControlerPanel.transform.GetComponent<Image>().color = new Color32(26, 27, 33, 200);
             playerAnimator.SetBool("IsPause", true);
             Animator.SetBool("Pause", true);
             Time.timeScale = 0.1f;
@@ -84,16 +91,6 @@ public class SessionCore : MonoBehaviour
         Music.volume = 0;
         Time.timeScale = 0.1f;
         Handheld.Vibrate();
-        yield return new WaitForSecondsRealtime(_time);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(restartSessionNum);
-    }
-
-    // Бесполезный кусок нигде не используется
-    public IEnumerator LooseSessionCurSec(float _time)
-    {
-        ControlerPanel.SetActive(false);
-        Time.timeScale = 0.1f;
         yield return new WaitForSecondsRealtime(_time);
         Time.timeScale = 1;
         SceneManager.LoadScene(restartSessionNum);
@@ -133,12 +130,7 @@ public class SessionCore : MonoBehaviour
     //время начала музыки
     public IEnumerator WaitToStartMusic(float _time)
     {
-        float timer = _time;
-        while (timer > 0)
-        {
-            timer -= Time.deltaTime;
-            yield return null;
-        }
+        yield return new WaitForSecondsRealtime(_time);
         Music.Play();
     }
 
