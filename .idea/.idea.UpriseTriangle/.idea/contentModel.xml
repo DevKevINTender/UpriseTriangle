@@ -36,6 +36,9 @@
               <e p="GateObstacleComponent.cs" t="Include" />
               <e p="ObstacleComponent.cs" t="Include" />
               <e p="PersonComponent.cs" t="Include" />
+              <e p="PTElevatorComponent.cs" t="Include" />
+              <e p="PTMovePointComponent.cs" t="Include" />
+              <e p="PTPersonComponent.cs" t="Include" />
               <e p="RotateObstacle.cs" t="Include" />
               <e p="TimerToApear.cs" t="Include" />
               <e p="WayObstacleComponent.cs" t="Include" />
@@ -45,6 +48,7 @@
             <e p="CoinsControler.cs" t="Include" />
             <e p="DeathRegistrationControler.cs" t="Include" />
             <e p="EffectStorageContoler.cs" t="Include" />
+            <e p="PTSpawnBlockControler.cs" t="Include" />
             <e p="SessionLevelControler.cs" t="Include" />
             <e p="TrainingLevelControler.cs" t="Include" />
           </e>
@@ -53,11 +57,13 @@
             <e p="ChooseTrainingCore.cs" t="Include" />
             <e p="EffectStorageCore.cs" t="Include" />
             <e p="MainMenuCore.cs" t="Include" />
+            <e p="PrototypeSessionCore.cs" t="Include" />
             <e p="SessionCore.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
             <e p="AudioSspectrService.cs" t="Include" />
             <e p="CameraService.cs" t="Include" />
+            <e p="SelfDestroy.cs" t="Include" />
             <e p="TimeLineService.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
@@ -80,6 +86,7 @@
             </e>
             <e p="Session" t="Include">
               <e p="LoosePanelView.cs" t="Include" />
+              <e p="PTSessionPanelView.cs" t="Include" />
               <e p="SessionPanelAimatorController.cs" t="Include" />
               <e p="SessionPanelView.cs" t="Include" />
             </e>

@@ -72,11 +72,14 @@ public class SessionCore : MonoBehaviour
         if (isStart)
         {
             ControlerPanel.transform.GetComponent<Image>().color = new Color32(26, 27, 33, 200);
+            
             playerAnimator.SetBool("IsPause", true);
             Animator.SetBool("Pause", true);
-            Time.timeScale = 0.1f;
+            
             Music.pitch = 0.1f;
             Music.volume = 0;
+            
+            Time.timeScale = 0.1f;
             isPause = true;
         }
     }    
