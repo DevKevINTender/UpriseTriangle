@@ -7,7 +7,6 @@ public class SessionPanelAimatorController : MonoBehaviour
     [SerializeField]
     private Animator animator;
     public GameObject panelStart;
-    public GameObject panelPause;
 
     void Start()
     {
@@ -19,12 +18,8 @@ public class SessionPanelAimatorController : MonoBehaviour
         yield return new WaitForSeconds(_time);
         animator.SetBool("StartGame", true);
         float clipLenght = animator.runtimeAnimatorController.animationClips[1].length;
-        StartCoroutine(WaitAnimationStartEnd(clipLenght));
+        yield return new WaitForSeconds(clipLenght);
+        //panelStart.SetActive(false);
     }
     
-    private IEnumerator WaitAnimationStartEnd(float _time)
-    {
-        yield return new WaitForSeconds(_time);
-        panelStart.SetActive(false);
-    }
 }

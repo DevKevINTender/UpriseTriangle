@@ -25,7 +25,7 @@ public class SessionCore : MonoBehaviour
 
     private IEnumerator startCoroutine; // переменная для остановки ожидания старта
 
-    public void OnApplicationPause(bool pause)
+    public void OnApplicationPause()
     {
         StartPause();
     }

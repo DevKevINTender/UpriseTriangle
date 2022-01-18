@@ -20,6 +20,7 @@ namespace Views.Session
         {
 
         }
+
         public void OnBeginDrag(PointerEventData eventData)
         {
             //if (SessionCore.isStart)
@@ -28,27 +29,23 @@ namespace Views.Session
             }
         }
 
+
         public void OnDrag(PointerEventData eventData)
         {
             touchPoint = eventData.pointerCurrentRaycast.screenPosition;
             float resolution = (MainCamera.pixelHeight / (2 * MainCamera.orthographicSize));
-            float testValue = 5;
             //if (SessionCore.isStart)
             {
                 if (touchCount != Input.touchCount)
                 {
                     touchCount = Input.touchCount;
                     currentPos = new Vector3(touchPoint.x / resolution, touchPoint.y / resolution, 0); 
-                    Debug.Log("CUR POS:" + currentPos);
-                        
                 }
             
                 if (Input.touchCount == 1) // комментится если необходимо тестировать игру в unity
                 {
                     //newPos = new Vector3(touchPoint.x /192, touchPoint.y / 192 , 0);
-                    newPos = new Vector3(touchPoint.x/ resolution, touchPoint.y / resolution  , 0); 
-
-                    Debug.Log("NEW POS:" + newPos);
+                    newPos = new Vector3(touchPoint.x / resolution, touchPoint.y / resolution  , 0); 
                     if (Vector3.Distance(currentPos, newPos) > 0.01f)
                     {
                         Vector3 distanceChange = (newPos - currentPos);
@@ -62,7 +59,6 @@ namespace Views.Session
                 }
             }
         }
-
         public void OnEndDrag(PointerEventData eventData)
         {
             //if (SessionCore.isStart)

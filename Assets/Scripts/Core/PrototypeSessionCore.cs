@@ -5,22 +5,47 @@ using UnityEngine;
 
 public class PrototypeSessionCore : MonoBehaviour
 {
+    [Header("Controllers")]
     [SerializeField] private PTSpawnBlockControler SpawnBlockControler;
-    [SerializeField] private AudioSource AudioSource;
-    [SerializeField] private float startTime;
-    [SerializeField] private GameObject PersonObj;
+    [SerializeField] private AudioController audioController; // музыка уровня
+    [SerializeField] private PTMovePointComponent movePoint;
+    [SerializeField] private PTPersonComponent pTPersonComponent;
+    [Header("Game values")]
+    [SerializeField] private float timeSlow;
+    [SerializeField] private float gameSpeed;
+    [Header("Player transfer")]
+    [SerializeField] private float timeTransfer; // время старта игры
 
-    [SerializeField] private float GameSpeed;
-    void Start()
+    public float GetGameSpeed()
     {
-        SpawnBlockControler.Init();
-        AudioSource.time = startTime;
-        PersonObj.transform.position = new Vector3(0,1 * startTime * GameSpeed);
+        return gameSpeed;
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        pTPersonComponent.InitComponent(PersonDeath);
+        SpawnBlockControler.Init(); // загрузка уровня
+        if (timeTransfer != 0)
+        {
+            audioController.TimeTransfer(timeTransfer); // старт музыки с заданного времени
+            movePoint.TimeTransfer(timeTransfer, gameSpeed);
+        }
+    }
+
+    public void PersonDeath()
+    {
+
+    }
+
+
+    public void StartPause()
+    {
+        audioController.StartPause(timeSlow);
+        Time.timeScale = timeSlow;
+    }
+
+    public void OnApplicationPause()
+    {
+        StartPause();
     }
 }
