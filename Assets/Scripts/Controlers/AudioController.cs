@@ -5,9 +5,15 @@ using UnityEngine;
 public class AudioController : MonoBehaviour
 {
     [SerializeField] private AudioSource audiosource;
-    void Start()
+
+    private float musicVolume;
+    void Awake()
     {
-        
+        musicVolume = audiosource.volume;
+    }
+    public void Play(float _delay)
+    {
+        StartCoroutine(WaitToStartMusic(_delay));
     }
 
     // старт с заданного времени
@@ -16,7 +22,6 @@ public class AudioController : MonoBehaviour
         audiosource.time = _time;
     }
 
-
     public void StartPause(float _timeSlow)
     {
         audiosource.pitch = _timeSlow;
@@ -24,9 +29,20 @@ public class AudioController : MonoBehaviour
     }
 
 
-    public void StopPause(float _musicVolume)
+    public void EndPause()
     {
         audiosource.pitch = 1;
-        audiosource.volume = _musicVolume;
+        audiosource.volume = musicVolume;
+    }
+
+    public void PersonDeath()
+    {
+        audiosource.volume = 0;
+    }
+
+    public IEnumerator WaitToStartMusic(float _delay)
+    {
+        yield return new WaitForSecondsRealtime(_delay);
+        audiosource.Play();
     }
 }

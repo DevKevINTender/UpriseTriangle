@@ -8,8 +8,11 @@ using UnityEngine.UI;
 public class MainMenuCore : MonoBehaviour
 {
     [SerializeField] private Text CoinsCountText;
+    AsyncOperation async;
     void Start()
     {
+        async = SceneManager.LoadSceneAsync(7);
+        async.allowSceneActivation = false;
         CoinsCountText.text = $"{CoinsControler.GetCoinsCount()}";
     }
     
@@ -32,6 +35,7 @@ public class MainMenuCore : MonoBehaviour
     private IEnumerator WaitUntil(float time, int id)
     {
         yield return new WaitForSeconds(time);    
-        SceneManager.LoadScene(id);
+        //SceneManager.LoadScene(id);
+        async.allowSceneActivation = true;
     }
 }

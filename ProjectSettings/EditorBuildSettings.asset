@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Session 1.unity
     guid: dc5e0a6bc578cc6449a210c1bbbd4ed5
+  - enabled: 1
+    path: Assets/Scenes/PrototypeSession.unity
+    guid: 0f1f6b8106685214fb5a821bfcf92ba0
   m_configObjects: {}
