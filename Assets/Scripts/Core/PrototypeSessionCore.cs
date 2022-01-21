@@ -8,7 +8,7 @@ public class PrototypeSessionCore : MonoBehaviour
 {
     [Header("Controllers")]
     [SerializeField] private PTSpawnBlockControler spawnBlockControler;
-    [SerializeField] private AudioController audioController; // музыка уровня
+    [SerializeField] private AudioController audioController; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     [SerializeField] private PTMovePointComponent movePointController;
     [SerializeField] private PersonMoveController personMoveController; 
     [SerializeField] private PTPersonComponent pTPersonComponent;
@@ -19,7 +19,7 @@ public class PrototypeSessionCore : MonoBehaviour
     [SerializeField] private float timeSlow;
     [SerializeField] private float gameSpeed;
     [Header("Player transfer")]
-    [SerializeField] private float timeTransfer; // время старта игры
+    [SerializeField] private float timeTransfer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 
     public float GetGameSpeed()
     {
@@ -30,12 +30,12 @@ public class PrototypeSessionCore : MonoBehaviour
     {
         audioController.Play(musicTimeStart);
         pTPersonComponent.SetCanMove(true); 
-        pTPersonComponent.InitComponent(PersonDeath); // подписка на событие смерти игрока
-        personMoveController.InitComponent(StartPause, EndPause);// подписка на событие паузы
-        spawnBlockControler.Init(); // загрузка уровня
+        pTPersonComponent.InitComponent(PersonDeath); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+        personMoveController.InitComponent(StartPause, EndPause);// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+        //spawnBlockControler.Init(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         if (timeTransfer != 0)
         {
-            audioController.TimeTransfer(timeTransfer); // старт музыки с заданного времени
+            audioController.TimeTransfer(timeTransfer); // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             movePointController.TimeTransfer(timeTransfer, gameSpeed);
         }
     }

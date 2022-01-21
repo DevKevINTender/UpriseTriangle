@@ -32,6 +32,7 @@
             <e p="Session" t="Include">
               <e p="Destroyer.cs" t="Include" />
               <e p="ElevatorComponent.cs" t="Include" />
+              <e p="EnergyBarierComponent.cs" t="Include" />
               <e p="FinishLineComponent.cs" t="Include" />
               <e p="FPSMaker.cs" t="Include" />
               <e p="GateObstacleComponent.cs" t="Include" />
@@ -46,11 +47,14 @@
             </e>
           </e>
           <e p="Controlers" t="Include">
+            <e p="AnimationController.cs" t="Include" />
+            <e p="AudioController.cs" t="Include" />
             <e p="CoinsControler.cs" t="Include" />
             <e p="DeathRegistrationControler.cs" t="Include" />
             <e p="EffectStorageContoler.cs" t="Include" />
             <e p="PTSpawnBlockControler.cs" t="Include" />
             <e p="SessionLevelControler.cs" t="Include" />
+            <e p="SessionUIController.cs" t="Include" />
             <e p="TrainingLevelControler.cs" t="Include" />
           </e>
           <e p="Core" t="Include">
@@ -87,8 +91,7 @@
             </e>
             <e p="Session" t="Include">
               <e p="LoosePanelView.cs" t="Include" />
-              <e p="PTSessionPanelView.cs" t="Include" />
-              <e p="SessionPanelAimatorController.cs" t="Include" />
+              <e p="PersonMoveController.cs" t="Include" />
               <e p="SessionPanelView.cs" t="Include" />
             </e>
           </e>
