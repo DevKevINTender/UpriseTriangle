@@ -1,19 +1,15 @@
-﻿using Components.Session;
-using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine;
 
-public class PersonMoveController : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
-{
+public class PersonMoveController : MonoBehaviour
+{ 
     [SerializeField] private PTPersonComponent PersonObj;
     [SerializeField] private float sensitivity;
     [SerializeField] private Camera MainCamera;
 
-    int touchCount;
     float resolution;
     private Vector3 newPos;
     private Vector3 currentPos;
 
-    private Vector3 touchPoint;
     Vector3 distanceChange;
     Vector3 personPos;
     Vector3 checkFilterPos;
@@ -21,37 +17,27 @@ public class PersonMoveController : MonoBehaviour, IDragHandler, IBeginDragHandl
     private bool crackLeft;
     private bool crackRight;
 
-    public delegate void PauseDelegate();
-    private PauseDelegate startPause;
-    private PauseDelegate endPause;
+    private int curTouchCount;
 
     public void Start()
     {
+        curTouchCount = 0;
         resolution = (MainCamera.pixelHeight / (2 * MainCamera.orthographicSize));
-        Debug.Log(resolution);
     }
 
-    public void InitComponent(PauseDelegate startpause, PauseDelegate endPause)
+    public void SetTouchCount(int _touchCount)
     {
-        this.startPause = startpause;
-        this.endPause = endPause;
+        curTouchCount = _touchCount;
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
+    public void PlayerMove(Vector3 touchPoint, int _touchCount)
     {
-        endPause?.Invoke();
-    }
-
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        touchPoint = eventData.pointerCurrentRaycast.screenPosition;
-        if (touchCount != Input.touchCount)
+        if (curTouchCount != _touchCount)
         {
-            touchCount = Input.touchCount;
+            curTouchCount = _touchCount;
             currentPos = new Vector3(touchPoint.x / resolution, touchPoint.y / resolution, 0);
         }
-        if (Input.touchCount == 1)
+        if (_touchCount == 1)
         {
             newPos = new Vector3(touchPoint.x / resolution, touchPoint.y / resolution, 0);
             if (Vector3.Distance(currentPos, newPos) > 0.01f)
@@ -60,8 +46,8 @@ public class PersonMoveController : MonoBehaviour, IDragHandler, IBeginDragHandl
                 personPos = PersonObj.transform.localPosition;
                 checkFilterPos = personPos + distanceChange * sensitivity;
                 distanceChange = CheckBorders(ref checkFilterPos, ref distanceChange);
-                PersonObj.Move(distanceChange * sensitivity);
                 currentPos = newPos;
+                PersonObj.Move(distanceChange * sensitivity);
             }
         }
     }
@@ -86,12 +72,4 @@ public class PersonMoveController : MonoBehaviour, IDragHandler, IBeginDragHandl
         return _distanceChange;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        if (Input.touchCount == 1)
-        {
-            startPause?.Invoke();
-        }
-        touchCount = 0;
-    }
 }

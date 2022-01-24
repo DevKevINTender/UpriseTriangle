@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using Controlers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class PrototypeSessionCore : MonoBehaviour
 {
     [Header("Controllers")]
+    [SerializeField] private SessionPanelView sessionPanelView;
     [SerializeField] private PTSpawnBlockControler spawnBlockControler;
     [SerializeField] private AudioController audioController; // музыка уровня
     [SerializeField] private PTMovePointComponent movePointController;
-    [SerializeField] private PersonMoveController personMoveController; 
     [SerializeField] private PTPersonComponent pTPersonComponent;
     [SerializeField] private AnimationController animationController;
     [Header("Game values")]
@@ -31,7 +30,7 @@ public class PrototypeSessionCore : MonoBehaviour
         audioController.Play(musicTimeStart);
         pTPersonComponent.SetCanMove(true); 
         pTPersonComponent.InitComponent(PersonDeath); // подписка на событие смерти игрока
-        personMoveController.InitComponent(StartPause, EndPause);// подписка на событие паузы
+        sessionPanelView.Init(StartPause, EndPause);// подписка на событие паузы
         spawnBlockControler.Init(); // загрузка уровня
         if (timeTransfer != 0)
         {

@@ -1,70 +1,40 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
-namespace Views.Session
+public class SessionPanelView : MonoBehaviour, IDragHandler,IBeginDragHandler,IEndDragHandler
 {
-    public class SessionPanelView : MonoBehaviour, IDragHandler,IBeginDragHandler,IEndDragHandler
+    public delegate void PauseDelegate();
+    private PauseDelegate startPause;
+    private PauseDelegate endPause;
+
+    [SerializeField] private PersonMoveController personMoveController;
+    private int touchCount;
+    private Vector3 touchPoint;
+
+    public void Init(PauseDelegate startpause, PauseDelegate endPause)
     {
-        [SerializeField] private GameObject PersonObj;
-        [SerializeField] private float sensitivity;
-        
-        int touchCount;
-        private Vector3 newPos;
-        private Vector3 currentPos;
+        this.startPause = startpause;
+        this.endPause = endPause;
+    }
 
-        [SerializeField] private SessionCore SessionCore;
-        public void InitView( )
-        {
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        endPause?.Invoke();
+    }
 
-        }
-        public void OnBeginDrag(PointerEventData eventData)
-        {
-            //if (SessionCore.isStart)
-            {
-                SessionCore.StopPause();
-            }
-        }
+    public void OnDrag(PointerEventData eventData)
+    {
+        touchPoint = eventData.pointerCurrentRaycast.screenPosition;
+        touchCount = Input.touchCount;
+        personMoveController.PlayerMove(touchPoint, touchCount);
+    }
 
-        public void OnDrag(PointerEventData eventData)
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        if (Input.touchCount == 1)
         {
-            //if (SessionCore.isStart)
-            {
-                if (touchCount != Input.touchCount)
-                {
-                    touchCount = Input.touchCount;
-                    currentPos = eventData.pointerCurrentRaycast.worldPosition;
-                }
-            
-                if (Input.touchCount == 1) // комментится если необходимо тестировать игру в unity
-                {
-                    newPos = eventData.pointerCurrentRaycast.worldPosition;
-                    if (Vector3.Distance(currentPos, newPos) > 0.01f)
-                    {
-                        Vector3 distanceChange = newPos - currentPos;
-                        Vector3 personPos = PersonObj.transform.position;
-                        Vector3 checkFilterPos = personPos + distanceChange;
-                        if (checkFilterPos.x < -2.0f) distanceChange = new Vector3(0, distanceChange.y, 0);
-                        if (checkFilterPos.x > 2.0f) distanceChange = new Vector3(0, distanceChange.y, 0);
-                        PersonObj.transform.position += distanceChange * sensitivity;
-                        PersonObj.transform.rotation = Quaternion.Euler(0, 0, PersonObj.transform.position.x * 3);
-                        currentPos = newPos;
-                    }
-                }
-            }
+            startPause?.Invoke();
         }
-
-        public void OnEndDrag(PointerEventData eventData)
-        {
-            //if (SessionCore.isStart)
-            {
-                if (Input.touchCount == 1)
-                {
-                    SessionCore.StartPause();
-                }
-            }
-            touchCount = 0;
-        }
+        personMoveController.SetTouchCount(0);
     }
 }

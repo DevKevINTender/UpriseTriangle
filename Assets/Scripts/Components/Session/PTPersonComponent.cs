@@ -42,7 +42,7 @@ public class PTPersonComponent : MonoBehaviour
        
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("FinishLine"))
+        if (other.GetComponent<ObstacleComponent>())
         {
             personDeathTrigger?.Invoke();
         }
