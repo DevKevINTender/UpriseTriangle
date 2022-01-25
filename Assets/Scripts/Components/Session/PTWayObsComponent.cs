@@ -2,78 +2,69 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Components.Session
+public class PTWayObsComponent : MonoBehaviour
 {
-    public class PTWayObsComponent : MonoBehaviour
+    [SerializeField] private GameObject obstacle;
+    [SerializeField] private float Target = -7;
+    private Vector3 targetPos;
+            
+    [SerializeField] private float TimerStart;
+    [SerializeField] private float timeWay;
+    [SerializeField] private float colorChangeTime;
+    [SerializeField] private float TimeStartMove = 1;
+    [SerializeField] private float DestroyTime = 0.5f;
+
+    [SerializeField] private Color32 colorRed;
+    [SerializeField] private SpriteRenderer waySprite;
+    [SerializeField] private float obstacleSpeed = 10;
+        
+    public void OnEnable()
     {
-       [SerializeField] private GameObject obstacle;
-       [SerializeField] private float Target;
-        private Vector3 targetPos;
-            
-        [SerializeField] private float TimerStart;
-        [SerializeField] private float TimeStartMove;
-        [SerializeField] private float DestroyTime;
-            
-        private float Timer;
-            
-        [SerializeField] private SpriteRenderer waySprite;
-        [SerializeField] private float obstacleSpeed;
-        [SerializeField] private bool isStartObstacle;
+        waySprite.color = new Color32(36,38,46,0);
+    }
         
-        public void OnEnable()
+    public void ObstacleInit()
+    {
+        targetPos = new Vector3(0, Target, 0);
+        StartCoroutine(TimeStartCor());
+    }
+
+    IEnumerator TimeStartCor()
+    {
+        float timer = TimerStart;
+        while (timer > 0)
         {
-            waySprite.color = new Color32(36,38,46,0);
+            timer -= Time.deltaTime;
+            yield return null;
         }
-        
-        public void ObstacleInit()
+        waySprite.color = new Color32(36,38,46,255);
+        yield return new WaitForSecondsRealtime(1);
+        StartCoroutine(ChangeColor());
+    }
+
+    IEnumerator ChangeColor()
+    {
+        Color startColor = waySprite.color;
+        float ElapsedTime = 0.0f;
+        while (ElapsedTime < colorChangeTime)
         {
-            targetPos = new Vector3(0, Target, 0);
-            //waySprite.color = new Color32(36,38,46,0);
-            StartCoroutine(TimeStartCor());
+            ElapsedTime += Time.deltaTime;
+            waySprite.color = Color.Lerp(startColor, colorRed, (ElapsedTime / colorChangeTime));
+            yield return null;
         }
+        StartCoroutine(TimeMoveCor());
+    }
 
-   
 
-        IEnumerator TimeStartCor()
+    IEnumerator TimeMoveCor()
+    {
+        while (obstacle.transform.localPosition != targetPos)
         {
-            float timer = TimerStart;
-            while (timer > 0)
-            {
-                timer -= Time.deltaTime;
-                yield return null;
-            }
-            waySprite.color = new Color32(36,38,46,255);
-            StartCoroutine(TimeStartMoveCor());
+            obstacle.transform.localPosition = Vector3.MoveTowards(obstacle.transform.localPosition, targetPos,
+                Time.deltaTime * obstacleSpeed);
+            yield return null;
         }
-        IEnumerator TimeStartMoveCor()
-        {
-            yield return new WaitForSecondsRealtime(TimeStartMove);
-            StartCoroutine(TimeMoveCor());
-        }
-
-        IEnumerator TimeMoveCor()
-        {
-            while (obstacle.transform.localPosition != targetPos)
-            {
-                obstacle.transform.localPosition = Vector3.MoveTowards(obstacle.transform.localPosition, targetPos,
-                    Time.deltaTime * obstacleSpeed);
-
-                yield return null;
-            }
-
-            StartCoroutine(TimeToDestroy(DestroyTime));
-        }
-
-        IEnumerator TimeToDestroy(float _time)
-        {
-            float timer = _time;
-            while (timer >= 0)
-            {
-                timer -= Time.deltaTime;
-                yield return null;
-            }
-
-            Destroy(gameObject);
-        }
+        yield return new WaitForSecondsRealtime(DestroyTime);
+        Destroy(gameObject);
     }
 }

@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &8108821686588952891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f8d29baaa92944586898c162628300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!68 &5793193978137453409
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -104,7 +103,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8108821686588952890}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -113,10 +112,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.30281472, y: 0.26023388}
-  - {x: 0.0018071532, y: -0.26023483}
-  - {x: 0.30923492, y: 0.26118279}
-  - {x: -0.30106217, y: 0.26023388}
+  - {x: -0.2795993, y: 0.14544106}
+  - {x: -0.0018824935, y: -0.33771706}
+  - {x: 0.27971798, y: 0.14864922}
+  - {x: -0.27338988, y: 0.14933872}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0

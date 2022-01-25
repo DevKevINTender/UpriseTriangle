@@ -6,14 +6,12 @@ using UnityEngine.UI;
 
 public class SessionUIController : MonoBehaviour
 {
+    [SerializeField] private Text curTime;
+    private float curTimer;
+
 
     [SerializeField] private Text coinsText;
     [SerializeField] private Text curPercentText;
-
-    void Start()
-    {
-        
-    }
 
     public void UpdateCoinsText(int _coins)
     {
@@ -30,5 +28,13 @@ public class SessionUIController : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
+    }
+
+
+
+    public void Update()
+    {
+        curTimer += Time.deltaTime;
+        curTime.text = curTimer.ToString("F2");
     }
 }
