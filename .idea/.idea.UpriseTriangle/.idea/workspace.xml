@@ -20,17 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/ElevatorComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTWayObsComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTWayObsComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/EnergyBarierComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/EnergyBarierComponent.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Levels/Level0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Levels/Level0.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PrototypeSession.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PrototypeSession.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTElevatorComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTElevatorComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/ElevatorComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/PTSpawnBlockControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/PTSpawnBlockControler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/TimePoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/TimePoint.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTPersonComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTPersonComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/PrototypeSessionCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/PrototypeSessionCore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelAimatorController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelAimatorController.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/CoinsControler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/EffectStorageListComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/InfoPanel/InfoPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/EffectStorageCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePosPanelView.cs" />
@@ -96,9 +92,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/PTSession{anelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/SpawnBlockControler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/PrototypeSessionCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/TimeLineService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTPersonComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTMovePointComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/PTSessionPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTLaserBlock.cs" />
@@ -106,6 +100,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/PTSpawnBlockControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTElevatorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/ElevatorComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/PrototypeSessionCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/EnergyBarierComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTPersonComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/PersonMoveController.cs" />
       </list>
     </option>
   </component>
@@ -169,6 +167,7 @@
       <workItem from="1642152261415" duration="5051000" />
       <workItem from="1642407992252" duration="15229000" />
       <workItem from="1642493847155" duration="5599000" />
+      <workItem from="1642755557394" duration="4897000" />
     </task>
     <servers />
   </component>
