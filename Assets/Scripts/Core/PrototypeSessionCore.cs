@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using Controlers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class PrototypeSessionCore : MonoBehaviour
 {
     [Header("Controllers")]
+    [SerializeField] private SessionPanelView sessionPanelView;
     [SerializeField] private PTSpawnBlockControler spawnBlockControler;
-    [SerializeField] private AudioController audioController; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    [SerializeField] private AudioController audioController; // музыка уровня
     [SerializeField] private PTMovePointComponent movePointController;
-    [SerializeField] private PersonMoveController personMoveController; 
     [SerializeField] private PTPersonComponent pTPersonComponent;
     [SerializeField] private AnimationController animationController;
     [Header("Game values")]
@@ -19,7 +18,7 @@ public class PrototypeSessionCore : MonoBehaviour
     [SerializeField] private float timeSlow;
     [SerializeField] private float gameSpeed;
     [Header("Player transfer")]
-    [SerializeField] private float timeTransfer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+    [SerializeField] private float timeTransfer; // время старта игры
 
     public float GetGameSpeed()
     {
@@ -30,12 +29,12 @@ public class PrototypeSessionCore : MonoBehaviour
     {
         audioController.Play(musicTimeStart);
         pTPersonComponent.SetCanMove(true); 
-        pTPersonComponent.InitComponent(PersonDeath); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
-        personMoveController.InitComponent(StartPause, EndPause);// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
-        //spawnBlockControler.Init(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+        pTPersonComponent.InitComponent(PersonDeath); // подписка на событие смерти игрока
+        sessionPanelView.Init(StartPause, EndPause);// подписка на событие паузы
+        spawnBlockControler.Init(); // загрузка уровня
         if (timeTransfer != 0)
         {
-            audioController.TimeTransfer(timeTransfer); // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            audioController.TimeTransfer(timeTransfer); // старт музыки с заданного времени
             movePointController.TimeTransfer(timeTransfer, gameSpeed);
         }
     }

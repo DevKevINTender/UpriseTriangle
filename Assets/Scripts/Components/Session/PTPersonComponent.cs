@@ -1,5 +1,4 @@
-﻿using Components.Session;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PTPersonComponent : MonoBehaviour
 {
@@ -43,7 +42,7 @@ public class PTPersonComponent : MonoBehaviour
        
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("FinishLine") || !other.GetComponent<EnergyBarierComponent>())
+        if (other.GetComponent<ObstacleComponent>())
         {
             personDeathTrigger?.Invoke();
         }
