@@ -14,8 +14,8 @@ public class TimeLineService : MonoBehaviour
     {
         for (int i = 0; i < MusicTime / 0.5f; i++)
         {
-            TimeList.Add(Instantiate(TimeElementPB, new Vector3(-3.5f, 5 + (0.5f * i * GameSpeed), 0), Quaternion.identity, transform));
-            TimeList[i].GetComponent<TextMesh>().text = $"T {0.5f * i}";
+            TimeList.Add(Instantiate(TimeElementPB, new Vector3(-4.5f, (0.5f * i * GameSpeed), 0), Quaternion.identity, transform));
+            TimeList[i].GetComponent<TextMesh>().text = $"T {0.5f * i}" + " - " + (0.5f * i * GameSpeed).ToString();
         }
        
     }

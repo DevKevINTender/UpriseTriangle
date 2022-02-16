@@ -19,7 +19,7 @@ public class AudioController : MonoBehaviour
     // старт с заданного времени
     public void TimeTransfer(float _time)
     {
-        audiosource.time = _time;
+        audiosource.time = _time - 1f; // кинул времянку потом обязательно убрать!!!!
     }
 
     public void StartPause(float _timeSlow)

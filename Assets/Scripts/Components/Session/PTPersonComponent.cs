@@ -9,6 +9,8 @@ public class PTPersonComponent : MonoBehaviour
     [SerializeField] private GameObject crackLeft;
     [SerializeField] private GameObject crackRight;
 
+    float timer;
+
     public void SetCrackLeftActive(bool _active)
     {
         crackLeft.SetActive(_active);
@@ -39,7 +41,6 @@ public class PTPersonComponent : MonoBehaviour
         }
     }
 
-       
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.GetComponent<ObstacleComponent>())

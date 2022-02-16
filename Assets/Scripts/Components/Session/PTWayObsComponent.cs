@@ -8,10 +8,9 @@ public class PTWayObsComponent : MonoBehaviour
     [SerializeField] private float Target = -7;
     private Vector3 targetPos;
             
-    [SerializeField] private float TimerStart;
-    [SerializeField] private float timeWay;
-    [SerializeField] private float colorChangeTime;
-    [SerializeField] private float TimeStartMove = 1;
+    [SerializeField] internal float TimerStart;
+    [SerializeField] internal float timeStartChangeColor;
+    [SerializeField] internal float colorChangeTime;
     [SerializeField] private float DestroyTime = 0.5f;
 
     [SerializeField] private Color32 colorRed;
@@ -38,7 +37,7 @@ public class PTWayObsComponent : MonoBehaviour
             yield return null;
         }
         waySprite.color = new Color32(36,38,46,255);
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSeconds(timeStartChangeColor);
         StartCoroutine(ChangeColor());
     }
 
@@ -64,7 +63,7 @@ public class PTWayObsComponent : MonoBehaviour
                 Time.deltaTime * obstacleSpeed);
             yield return null;
         }
-        yield return new WaitForSecondsRealtime(DestroyTime);
+        yield return new WaitForSeconds(DestroyTime);
         Destroy(gameObject);
     }
 }
