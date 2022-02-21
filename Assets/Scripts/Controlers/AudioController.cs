@@ -10,6 +10,7 @@ public class AudioController : MonoBehaviour
     void Awake()
     {
         musicVolume = audiosource.volume;
+        Debug.Log("AudioAwake " + Time.fixedTime);
     }
     public void Play(float _delay)
     {
@@ -19,7 +20,7 @@ public class AudioController : MonoBehaviour
     // старт с заданного времени
     public void TimeTransfer(float _time)
     {
-        audiosource.time = _time - 1f; // кинул времянку потом обязательно убрать!!!!
+        audiosource.time = _time;
     }
 
     public void StartPause(float _timeSlow)
@@ -43,6 +44,7 @@ public class AudioController : MonoBehaviour
     public IEnumerator WaitToStartMusic(float _delay)
     {
         yield return new WaitForSecondsRealtime(_delay);
+        Debug.Log("AudioPlay " + Time.fixedTime );
         audiosource.Play();
     }
 }

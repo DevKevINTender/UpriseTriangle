@@ -2,12 +2,12 @@
 
     public class PTMovePointComponent : MonoBehaviour
     {
-        [SerializeField] private PrototypeSessionCore prototypeSessionCore;
+        [SerializeField] private SerciceScreenResolution serciceScreenResolution;
         private float gameSpeed;
 
-        public void Awake()
+        public void Start()
         {
-            gameSpeed = prototypeSessionCore.GetGameSpeed();
+            gameSpeed = serciceScreenResolution.GetScaledGameSpeed();
         }
 
         public void Update()

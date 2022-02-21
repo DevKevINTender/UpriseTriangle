@@ -11,6 +11,10 @@ public class WayAllignService : MonoBehaviour
     [SerializeField] private int obsCount;
     [SerializeField] private float obsDist;
     [SerializeField] private string PrevCommand;
+
+    [SerializeField] private float startStep;
+    [SerializeField] private float appearStep;
+    
     [Range(-1, 1)]
     [SerializeField] private int side;
     [SerializeField] private Vector3 startPos = Vector3.zero;
@@ -20,9 +24,9 @@ public class WayAllignService : MonoBehaviour
     private List<SavedValues> savedValues = new List<SavedValues>();
     private struct SavedValues
     {
-        public float TimerStart { get; set; }
-        public float TimeStartChangeColor { get; set; }
-        public float ColorChangeTime { get; set; }
+        public float appeartime { get; set; }
+        public float obstacleSpeed { get; set; }
+        public float Target { get; set; }
     }
 
     public void Awake()
@@ -41,9 +45,9 @@ public class WayAllignService : MonoBehaviour
         {
             PTWayObsComponent pTWayObsComponent = transform.GetChild(i).GetComponent<PTWayObsComponent>();
             SavedValues oldSavedValues = new SavedValues();
-            oldSavedValues.TimerStart = pTWayObsComponent.TimerStart;
-            oldSavedValues.TimeStartChangeColor = pTWayObsComponent.timeStartChangeColor;
-            oldSavedValues.ColorChangeTime = pTWayObsComponent.colorChangeTime;
+            oldSavedValues.appeartime = pTWayObsComponent.appeartime;
+            oldSavedValues.obstacleSpeed = pTWayObsComponent.obstacleSpeed;
+            oldSavedValues.Target = pTWayObsComponent.Target;
             savedValues.Add(oldSavedValues);
         }
     }
@@ -53,9 +57,9 @@ public class WayAllignService : MonoBehaviour
         if (savedValues.Count > i)
         {
             PTWayObsComponent pTWayObsComponent = wayObj.GetComponent<PTWayObsComponent>();
-            pTWayObsComponent.TimerStart = savedValues[i].TimerStart;
-            pTWayObsComponent.timeStartChangeColor = savedValues[i].TimeStartChangeColor;
-            pTWayObsComponent.colorChangeTime = savedValues[i].ColorChangeTime;
+            pTWayObsComponent.appeartime = savedValues[i].appeartime;
+            pTWayObsComponent.Target = savedValues[i].Target;
+            pTWayObsComponent.obstacleSpeed = savedValues[i].obstacleSpeed;
         }
     }
 
@@ -67,29 +71,26 @@ public class WayAllignService : MonoBehaviour
     [ContextMenu("CreateObsLineX")]
     public void CreateObsLineX()
     {
-        resolution = (MainCamera.pixelHeight / (2 * MainCamera.orthographicSize)) / 100;
         DestroyChilds();
         for (int i = 0; i < obsCount; i++)
         {
             obsObj = Instantiate(obsPb, transform);
             obsObj.name = (1 + i).ToString();
             obsObj.transform.localPosition = startPos + new Vector3(obsDist, 0) * i * side;
-            obsObj.transform.localPosition += new Vector3(0, resolution + 0.3f);
+            obsObj.transform.localPosition += new Vector3(0, 5f);
             LoadOldWayValues(i, obsObj);
         }
         PrevCommand = "CreateObsLineX";
     }
 
-    [ContextMenu("CreateObsLineY")]
-    public void CreateObsLineY()
+    [ContextMenu("AutoAppearTime")]
+    public void AutoAppearTime()
     {
-        DestroyChilds();
         for (int i = 0; i < obsCount; i++)
         {
-            obsObj = Instantiate(obsPb, transform);
-            obsObj.transform.localPosition = startPos + new Vector3(0, obsDist) * i * side;
+            PTWayObsComponent pTWayObsComponent = transform.GetChild(i).GetComponent<PTWayObsComponent>();
+            pTWayObsComponent.appeartime = startStep + appearStep * i;
         }
-        PrevCommand = "CreateObsLineY";
     }
 
     [ContextMenu("UpdateCommand")]
@@ -98,10 +99,6 @@ public class WayAllignService : MonoBehaviour
         if (PrevCommand == "CreateObsLineX")
         {
             CreateObsLineX();
-        }
-        if (PrevCommand == "CreateObsLineY")
-        {
-            CreateObsLineY();
         }
     }
 

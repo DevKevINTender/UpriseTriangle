@@ -9,21 +9,22 @@ namespace Components.Session
     public class ElevatorComponent : MonoBehaviour
     {
         [SerializeField] private float elevatorTime;
-        [SerializeField] private Transform spectaclePoint; //точка слежения лифта // это та точка в пространсве, за которой едет лифт
         [SerializeField] private List<PTWayObsComponent> laserList = new List<PTWayObsComponent>();
+        [SerializeField] private SerciceScreenResolution serciceScreenResolution;
         private bool canMove;
+        [SerializeField] private float moveSpeed;
 
         public void Start()
         {
+            moveSpeed = serciceScreenResolution.GetScaledGameSpeed();
             canMove = false;
-            spectaclePoint = transform;
         }
 
 
         public void Update()
         {
             if(canMove)
-            transform.position += new Vector3(0, 4.1f * Time.deltaTime, 0);
+            transform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
         }
     
         public void AddToList(PTWayObsComponent _pTWayObsComponent)
@@ -36,7 +37,6 @@ namespace Components.Session
         {
             if (other.GetComponent<PTMovePointComponent>())
             {
-                spectaclePoint = other.transform;
                 ActivateElevator();
             }
         }
@@ -54,14 +54,13 @@ namespace Components.Session
         private IEnumerator ElevatorTimeCur()
         {
             canMove = true;
-            yield return new WaitForSecondsRealtime(elevatorTime);
+            yield return new WaitForSeconds(elevatorTime);
             StopElevator();
         }
 
         private void StopElevator()
         {
             canMove = false;
-            spectaclePoint = transform;
         }
     }
 }

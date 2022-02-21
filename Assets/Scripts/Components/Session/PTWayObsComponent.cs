@@ -5,65 +5,73 @@ using UnityEngine;
 public class PTWayObsComponent : MonoBehaviour
 {
     [SerializeField] private GameObject obstacle;
-    [SerializeField] private float Target = -7;
+    [SerializeField] private SpriteRenderer waySprite;
+    [SerializeField] internal float Target = -7;
     private Vector3 targetPos;
+    private Color startColor;
             
-    [SerializeField] internal float TimerStart;
-    [SerializeField] internal float timeStartChangeColor;
-    [SerializeField] internal float colorChangeTime;
+    [SerializeField] internal float appeartime;
+    [SerializeField] internal float scaleSpeed;
+
     [SerializeField] private float DestroyTime = 0.5f;
 
-    [SerializeField] private Color32 colorRed;
-    [SerializeField] private SpriteRenderer waySprite;
-    [SerializeField] private float obstacleSpeed = 10;
+    [SerializeField] internal float obstacleSpeed = 10;
         
     public void OnEnable()
     {
-        waySprite.color = new Color32(36,38,46,0);
+        startColor = waySprite.color;
+        transform.localScale = new Vector3(1, 0);
     }
         
     public void ObstacleInit()
     {
         targetPos = new Vector3(0, Target, 0);
-        StartCoroutine(TimeStartCor());
+        StartCoroutine(Appear());
     }
 
-    IEnumerator TimeStartCor()
+    IEnumerator Appear()
     {
-        float timer = TimerStart;
+        float timer = appeartime;
         while (timer > 0)
         {
             timer -= Time.deltaTime;
             yield return null;
         }
-        waySprite.color = new Color32(36,38,46,255);
-        yield return new WaitForSeconds(timeStartChangeColor);
-        StartCoroutine(ChangeColor());
+        StartCoroutine(Scalling());
     }
 
-    IEnumerator ChangeColor()
+    IEnumerator Scalling()
     {
-        Color startColor = waySprite.color;
-        float ElapsedTime = 0.0f;
-        while (ElapsedTime < colorChangeTime)
+        while (transform.localScale.y < 1)
         {
-            ElapsedTime += Time.deltaTime;
-            waySprite.color = Color.Lerp(startColor, colorRed, (ElapsedTime / colorChangeTime));
+            transform.localScale += new Vector3(0, Time.deltaTime * scaleSpeed, 0);
             yield return null;
         }
-        StartCoroutine(TimeMoveCor());
+        StartCoroutine(Move());
     }
 
 
-    IEnumerator TimeMoveCor()
+    IEnumerator Move()
     {
-        while (obstacle.transform.localPosition != targetPos)
+        while (obstacle.transform.localPosition.y > targetPos.y + 1f)
         {
-            obstacle.transform.localPosition = Vector3.MoveTowards(obstacle.transform.localPosition, targetPos,
+            obstacle.transform.localPosition = Vector3.Lerp(obstacle.transform.localPosition, targetPos,
                 Time.deltaTime * obstacleSpeed);
             yield return null;
         }
         yield return new WaitForSeconds(DestroyTime);
+        StartCoroutine(Disappear());
+    }
+
+    IEnumerator Disappear()
+    {
+        float t = 0;
+        while (t < 1)
+        { 
+            waySprite.color = Color.Lerp(startColor, new Color(startColor.r, startColor.g, startColor.b, 0), t);
+            t += Time.deltaTime * 2;
+            yield return null;
+        }     
         Destroy(gameObject);
     }
 }

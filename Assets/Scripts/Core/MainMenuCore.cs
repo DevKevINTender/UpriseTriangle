@@ -11,25 +11,14 @@ public class MainMenuCore : MonoBehaviour
     AsyncOperation async;
     void Start()
     {
-        async = SceneManager.LoadSceneAsync(7);
+        async = SceneManager.LoadSceneAsync(8);
         async.allowSceneActivation = false;
         CoinsCountText.text = $"{CoinsControler.GetCoinsCount()}";
     }
     
-    void Update()
-    {
-        
-    }
-
-    
     public void LoadScene(int id)
     {
         StartCoroutine(WaitUntil(1, id));
-    }
-
-    public void AddCoins()
-    {
-        CoinsControler.UpcreaseCoins(150);
     }
 
     private IEnumerator WaitUntil(float time, int id)

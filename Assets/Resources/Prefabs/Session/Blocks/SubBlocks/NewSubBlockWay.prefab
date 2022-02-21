@@ -44,9 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 0}
-  obsPb: {fileID: 6558545186234099725, guid: 3cfa8f66f73614342b3bf8d2b0d58d7d, type: 3}
+  obsPb: {fileID: 8151945317375594850, guid: e6a67b8b1e1e40246931d426b58e3954, type: 3}
   obsCount: 4
   obsDist: 2
   PrevCommand: 
+  startStep: 0
+  appearStep: 0
   side: 1
   startPos: {x: 0, y: 0, z: 0}

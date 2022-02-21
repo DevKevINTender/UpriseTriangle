@@ -12,11 +12,14 @@ public class PrototypeSessionCore : MonoBehaviour
     [SerializeField] private PTMovePointComponent movePointController;
     [SerializeField] private PTPersonComponent pTPersonComponent;
     [SerializeField] private AnimationController animationController;
+    [SerializeField] private SerciceScreenResolution serciceScreenResolution;
+
     [Header("Game values")]
     [SerializeField] float musicTimeStart;
     [SerializeField] private int currentSession;
     [SerializeField] private float timeSlow;
     [SerializeField] private float gameSpeed;
+
     [Header("Player transfer")]
     [SerializeField] private float timeTransfer; // время старта игры
 
@@ -25,8 +28,14 @@ public class PrototypeSessionCore : MonoBehaviour
         return gameSpeed;
     }
 
+    public void SetGameSpeed()
+    {
+        gameSpeed = serciceScreenResolution.GetScaledGameSpeed();
+    }
+
     void Start()
     {
+        SetGameSpeed();
         audioController.Play(musicTimeStart);
         pTPersonComponent.SetCanMove(true); 
         pTPersonComponent.InitComponent(PersonDeath); // подписка на событие смерти игрока
