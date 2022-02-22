@@ -12,16 +12,15 @@ public class CursorObstacleComponent : MonoBehaviour
     [SerializeField] Sprite spritePassive;
 
     [Header("Start")]
-    [SerializeField] float forvardMoveSpeed;
     [SerializeField] float startDelay;
+    float forvardMoveSpeed = 15;
 
-    [Header("Rotate")]
-    [SerializeField] float rotateSpeed = 10;
-    [SerializeField] float rotateDuration = 1;
-    [Header("Attack")]
-    [SerializeField] float attackDelay = 0.5f;
-    [SerializeField] float attackSpeed;
-    [SerializeField] float attackDuration;
+    float rotateSpeed = 10;
+    float rotateDuration = 1;
+
+    float attackDelay = 0.5f;
+    float attackSpeed = 5;
+    float attackDuration = 2;
 
     private Vector3 attachedTarget;
 

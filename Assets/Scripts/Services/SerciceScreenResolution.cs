@@ -14,6 +14,6 @@ public class SerciceScreenResolution : MonoBehaviour
 
     public float GetScaledGameSpeed()
     {
-        return 5 * transform.localScale.x;
+        return 0 * transform.localScale.x;
     }
 }
