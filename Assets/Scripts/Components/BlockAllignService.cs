@@ -15,7 +15,7 @@ public class BlockAllignService : MonoBehaviour
     private GameObject obsObj;   
 
     [ContextMenu("CreateObsLineX")]
-    public void CreateObsLineX()
+    public virtual void CreateObsLineX()
     {
         DestroyChilds();
         for (int i = 0; i < obsCount; i++)
@@ -27,7 +27,7 @@ public class BlockAllignService : MonoBehaviour
     }
 
     [ContextMenu("CreateObsLineY")]
-    public void CreateObsLineY()
+    public virtual void CreateObsLineY()
     {
         DestroyChilds();
         for (int i = 0; i < obsCount; i++)
@@ -39,7 +39,7 @@ public class BlockAllignService : MonoBehaviour
     }
 
     [ContextMenu("UpdateCommand")]
-    public void UpdateCommand()
+    public virtual void UpdateCommand()
     {
         if (PrevCommand == "CreateObsLineX")
         {
@@ -51,7 +51,7 @@ public class BlockAllignService : MonoBehaviour
         }
     }
 
-    public void DestroyChilds()
+    public virtual void DestroyChilds()
     {
         for (int i = this.transform.childCount; i > 0; --i)
             DestroyImmediate(this.transform.GetChild(0).gameObject);

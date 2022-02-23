@@ -4,28 +4,30 @@ using UnityEngine;
 
 public class CursorObstacleComponent : MonoBehaviour
 {
-    [SerializeField] GameObject target;
-    [SerializeField] Rigidbody2D cursorRB;
+    [SerializeField] internal GameObject target;
+    private Rigidbody2D cursorRB;
     [Header("Render")]
-    [SerializeField] SpriteRenderer spriteRenderer;
-    [SerializeField] Sprite spriteActive;
-    [SerializeField] Sprite spritePassive;
+    private SpriteRenderer spriteRenderer;
+    [SerializeField] internal Sprite spriteActive;
+    [SerializeField] internal Sprite spritePassive;
 
     [Header("Start")]
-    [SerializeField] float startDelay;
-    float forvardMoveSpeed = 15;
+    [SerializeField] internal float startDelay;
+    internal float forvardMoveSpeed = 15;
 
-    float rotateSpeed = 10;
-    float rotateDuration = 1;
+    internal float rotateSpeed = 500;
+    internal float rotateDuration = 1;
 
-    float attackDelay = 0.5f;
-    float attackSpeed = 5;
-    float attackDuration = 2;
+    internal float attackDelay = 0.5f;
+    internal float attackSpeed = 5;
+    internal float attackDuration = 2;
 
     private Vector3 attachedTarget;
 
     void Start()
     {
+        cursorRB = transform.GetComponent<Rigidbody2D>();
+        spriteRenderer = transform.GetComponent<SpriteRenderer>();
         StartCoroutine(StartDelay());
     }
 
@@ -47,21 +49,20 @@ public class CursorObstacleComponent : MonoBehaviour
         float time = rotateDuration;
         while (time >= 0)
         {
-            GetDirection();
-            time -= Time.deltaTime;
+            SetDirection();
+            time -= Time.deltaTime;           
             yield return null;
-        }
-        spriteRenderer.sprite = spriteActive;
-        attachedTarget = target.transform.position + (target.transform.position - transform.position).normalized * 1f;
+        }       
+        spriteRenderer.sprite = spriteActive;       
         yield return new WaitForSeconds(attackDelay);        
         StartCoroutine(Attack());
     }
 
     private IEnumerator Attack()
     {
-         while (Vector2.Distance(attachedTarget,transform.position) >= 0.02f)
+         while (Vector2.Distance(attachedTarget,transform.localPosition) >= 0.02f)
          {
-             transform.position = Vector3.Lerp(transform.position, attachedTarget, Time.deltaTime * attackSpeed);
+             transform.localPosition = Vector3.Lerp(transform.localPosition, attachedTarget, Time.deltaTime * attackSpeed);
              yield return null;
          }      
          yield return new WaitForSeconds(attackDuration);
@@ -69,11 +70,9 @@ public class CursorObstacleComponent : MonoBehaviour
          StartCoroutine(Rotate());
     }
 
-    public void GetDirection()
+    public void SetDirection()
     {
-        Vector3 vectorToTarget = target.transform.position - transform.position;
-        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
-        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * rotateSpeed);
+        transform.right = (Vector2)(target.transform.localPosition - transform.localPosition);
+        attachedTarget = target.transform.localPosition + (target.transform.localPosition - transform.localPosition).normalized * 1f;
     }
 }

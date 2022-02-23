@@ -9,11 +9,11 @@ public class SquareObstacleComponent : MonoBehaviour
     [SerializeField] float startTime;
     [SerializeField] float changeColorTime;
     [SerializeField] float boopTime;
-    [SerializeField] float boopScale;
     [SerializeField] float disappearTime;
     [Header("Colors")]
     [SerializeField] Color endColor;
     [SerializeField] Color boopColor;
+    [SerializeField] float boopScale;
     private Color startColor;
 
     void Start()
