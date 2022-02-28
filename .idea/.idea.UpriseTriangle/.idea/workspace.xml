@@ -20,15 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/EnergyBarierComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/EnergyBarierComponent.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PrototypeSession.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PrototypeSession.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTPersonComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTPersonComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/PrototypeSessionCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/PrototypeSessionCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelAimatorController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelAimatorController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,10 +34,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/MiniBlockGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/InfoPanel/InfoPanelView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/6b/f4a11f59/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/CameraService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/RotateBlockGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/ObstacleComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/41/f0482457/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/5a/a7559593/Object.cs" root0="SKIP_HIGHLIGHTING" />
@@ -53,9 +50,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/InfoPanel/InfoPanelView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/EffectStorageCore.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/EffectStoragePosPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/EffectStorageContoler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" />
@@ -86,7 +80,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/DeathRegistrationControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/CameraService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/SessionPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/PTSession{anelView.cs" />
@@ -104,6 +97,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/EnergyBarierComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTPersonComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/PersonMoveController.cs" />
+        <option value="$PROJECT_DIR$/Assets/MiniBlockGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/RotateBlockGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/MiniBlockGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" />
       </list>
     </option>
   </component>
@@ -119,7 +116,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -168,13 +165,18 @@
       <workItem from="1642407992252" duration="15229000" />
       <workItem from="1642493847155" duration="5599000" />
       <workItem from="1642755557394" duration="4897000" />
+      <workItem from="1645451166001" duration="40000" />
+      <workItem from="1645451238953" duration="3877000" />
+      <workItem from="1645645878007" duration="3048000" />
+      <workItem from="1645782772976" duration="2928000" />
+      <workItem from="1646028136930" duration="6032000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

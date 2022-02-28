@@ -28,6 +28,7 @@
         <e p="RingElementSectionComponent.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Components" t="Include">
+            <e p="BlockAllignService.cs" t="Include" />
             <e p="EffectStorageListComponent.cs" t="Include" />
             <e p="Session" t="Include">
               <e p="Destroyer.cs" t="Include" />
@@ -36,6 +37,10 @@
               <e p="FinishLineComponent.cs" t="Include" />
               <e p="FPSMaker.cs" t="Include" />
               <e p="GateObstacleComponent.cs" t="Include" />
+              <e p="Generator" t="Include">
+                <e p="MiniBlockGenerator.cs" t="Include" />
+                <e p="RotateBlockGenerator.cs" t="Include" />
+              </e>
               <e p="ObstacleComponent.cs" t="Include" />
               <e p="PersonComponent.cs" t="Include" />
               <e p="PTMovePointComponent.cs" t="Include" />
@@ -45,6 +50,8 @@
               <e p="TimerToApear.cs" t="Include" />
               <e p="WayObstacleComponent.cs" t="Include" />
             </e>
+            <e p="TimelyColliderController.cs" t="Include" />
+            <e p="WayAllignService.cs" t="Include" />
           </e>
           <e p="Controlers" t="Include">
             <e p="AnimationController.cs" t="Include" />
@@ -68,7 +75,9 @@
           <e p="Services" t="Include">
             <e p="AudioSspectrService.cs" t="Include" />
             <e p="CameraService.cs" t="Include" />
+            <e p="ScreenSizeService.cs" t="Include" />
             <e p="SelfDestroy.cs" t="Include" />
+            <e p="SerciceScreenResolution.cs" t="Include" />
             <e p="TimeLineService.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
