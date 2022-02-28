@@ -20,14 +20,18 @@ public class CursorObstacleComponent : MonoBehaviour
 
     internal float attackDelay = 0.5f;
     internal float attackSpeed = 5;
-    internal float attackDuration = 2;
+    internal float attackDuration = 1.5f;
 
     private Vector3 attachedTarget;
 
     void Start()
     {
         cursorRB = transform.GetComponent<Rigidbody2D>();
-        spriteRenderer = transform.GetComponent<SpriteRenderer>();
+        spriteRenderer = transform.GetComponent<SpriteRenderer>();        
+    }
+
+    public void Activate()
+    {
         StartCoroutine(StartDelay());
     }
 
@@ -40,7 +44,7 @@ public class CursorObstacleComponent : MonoBehaviour
     private IEnumerator StartAction()
     {
         cursorRB.AddForce(transform.right * forvardMoveSpeed);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
         StartCoroutine(Rotate());
     }
 
@@ -67,7 +71,7 @@ public class CursorObstacleComponent : MonoBehaviour
          }      
          yield return new WaitForSeconds(attackDuration);
          spriteRenderer.sprite = spritePassive;
-         StartCoroutine(Rotate());
+         Destroy(gameObject);
     }
 
     public void SetDirection()

@@ -96,7 +96,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2574751106023472906}
-  startTime: 0
-  changeColorTime: 2
-  endColor: {r: 0.95294124, g: 0.14117648, b: 0.3803922, a: 0}
-  pulseColor: {r: 0, g: 0, b: 0, a: 0}
+  startTime: 0.1
+  alertTime: 1
+  changeColorTime: 0.5
+  boopTime: 0.2
+  disappearTime: 0.5
+  endColor: {r: 0.95294124, g: 0.14117648, b: 0.3803922, a: 1}
+  boopColor: {r: 1, g: 1, b: 1, a: 1}
+  alertColor: {r: 0.95294124, g: 0.14117648, b: 0.3803922, a: 0.29803923}
+  boopScale: {x: 1.2, y: 1.2, z: 0}

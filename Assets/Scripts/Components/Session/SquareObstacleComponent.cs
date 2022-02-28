@@ -5,34 +5,54 @@ using UnityEngine;
 public class SquareObstacleComponent : MonoBehaviour
 {
     [SerializeField] SpriteRenderer spriteRenderer;
+    private SquareTimeService squareTimeService;
     [Header("Timings")]
     [SerializeField] float startTime;
+    [SerializeField] float alertTime;
     [SerializeField] float changeColorTime;
     [SerializeField] float boopTime;
     [SerializeField] float disappearTime;
     [Header("Colors")]
     [SerializeField] Color endColor;
     [SerializeField] Color boopColor;
-    [SerializeField] float boopScale;
-    private Color startColor;
+    [SerializeField] Color alertColor;
 
-    void Start()
+    [SerializeField] Vector3 boopScale;
+    private Color startColor;
+    private Vector3 startScale;
+
+    public void Start()
     {
+        squareTimeService = transform.parent.GetComponent<SquareTimeService>();
         startColor = spriteRenderer.color;
+        startScale = transform.localScale;
+        boopScale = new Vector3(startScale.x * boopScale.x, startScale.y * boopScale.y);
+    }
+
+    public void Active()
+    {       
         StartCoroutine(StartAction());
     }
 
     private IEnumerator StartAction()
     {
-        yield return new WaitForSeconds(startTime);
-        StartCoroutine(Coloring(startColor, endColor, changeColorTime));
+        StartCoroutine(Coloring(startColor, alertColor, startTime));
+        yield return new WaitForSeconds(alertTime);
+
+        StartCoroutine(Coloring(alertColor, endColor, changeColorTime));
         yield return new WaitForSeconds(changeColorTime);
+
         StartCoroutine(Coloring(endColor, boopColor, boopTime));
-        StartCoroutine(Scaling(boopScale, boopTime));
+        StartCoroutine(Scaling(boopScale, boopTime));        
         yield return new WaitForSeconds(boopTime);
+
         StartCoroutine(Coloring(boopColor, startColor, disappearTime));
-        StartCoroutine(Scaling(0, disappearTime));
+        StartCoroutine(Scaling(Vector3.zero, disappearTime));
         yield return new WaitForSeconds(disappearTime);
+
+        spriteRenderer.color = startColor;
+        transform.localScale = startScale;
+        squareTimeService.AddToList(transform.GetComponent<SquareObstacleComponent>());
     }
 
     private IEnumerator Coloring(Color startColor, Color endColor, float time)
@@ -46,13 +66,14 @@ public class SquareObstacleComponent : MonoBehaviour
         }     
     }
 
-    private IEnumerator Scaling(float boopScale, float time)
+    private IEnumerator Scaling(Vector3 boopScale, float time)
     {
         float stepTime = 0;
-        float stepScale = Time.fixedDeltaTime / (time / (boopScale - transform.localScale.x));
+        float stepScaleX = Time.fixedDeltaTime / (time / (boopScale.x - transform.localScale.x));
+        float stepScaleY = Time.fixedDeltaTime / (time / (boopScale.y - transform.localScale.y));
         while (stepTime < 1)
         {
-            transform.localScale += Vector3.one * stepScale;
+            transform.localScale += new Vector3(stepScaleX, stepScaleY);
             stepTime += Time.fixedDeltaTime / time;
             yield return null;
         }
