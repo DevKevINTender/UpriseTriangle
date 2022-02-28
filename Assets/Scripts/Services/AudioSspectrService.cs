@@ -10,12 +10,13 @@ public class AudioSspectrService : MonoBehaviour
     [SerializeField] List<GameObject> ListValue = new List<GameObject>();
     private bool canSpawn;
     private int tick;
+    [SerializeField] private int step;
     private void Start()
     {
         canSpawn = true;
         for (int i = 0; i <= 63; i++)
         {
-            //ListValue.Add(Instantiate(ValuePb, new Vector3(-i, -8, 0), Quaternion.identity));
+            ListValue.Add(Instantiate(ValuePb, new Vector3( transform.position.x + -i,transform.position.y, 0), Quaternion.identity, transform));
         }
     }
 
@@ -29,7 +30,7 @@ public class AudioSspectrService : MonoBehaviour
         {
             for (int i = 0; i <= 63; i++)
             {
-                    ListValue.Add(Instantiate(ValuePb, new Vector3(-i, tick, 0), Quaternion.identity));
+                    ListValue.Add(Instantiate(ValuePb, new Vector3( transform.position.x + -i  ,  transform.position.y + (step * tick), 0), Quaternion.identity, transform));
                     ListValue[i].GetComponent<TextMesh>().text = $"{Math.Round(spectrum[i], 2)}";
                     if (spectrum[i] > 0.05)
                     {
@@ -66,7 +67,7 @@ public class AudioSspectrService : MonoBehaviour
     IEnumerator tickTime()
     {
         yield return null;
-        //yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.25f);
         canSpawn = true;
     }
 }
