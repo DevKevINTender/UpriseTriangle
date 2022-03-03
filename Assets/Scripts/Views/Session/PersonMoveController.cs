@@ -54,18 +54,21 @@ public class PersonMoveController : MonoBehaviour
 
     public Vector3 CheckBorders(ref Vector3 _checkFilterPos, ref Vector3 _distanceChange)
     {
-        if (_checkFilterPos.y < -4.0f || _checkFilterPos.y > 4.0f) return new Vector3(_distanceChange.x, 0, 0);
-        if (_checkFilterPos.x > 1.8f)
+        if (_checkFilterPos.y < -5.5f || _checkFilterPos.y > 5.5f)
+        {
+            _distanceChange =  new Vector3(_distanceChange.x, 0, 0);
+        } 
+        if (_checkFilterPos.x > 2.5f)
         {
             crackRight = true;
             PersonObj.SetCrackRightActive(true);
-            return new Vector3(0, _distanceChange.y, 0);
+            _distanceChange =  new Vector3(0, _distanceChange.y, 0);
         }
-        if (_checkFilterPos.x < -1.8f)
+        if (_checkFilterPos.x < -2.5f)
         {
             crackLeft = true;
             PersonObj.SetCrackLeftActive(true);
-            return new Vector3(0, _distanceChange.y, 0);
+            _distanceChange = new Vector3(0, _distanceChange.y, 0);
         }
         if(crackLeft) PersonObj.SetCrackLeftActive(false);
         if (crackRight) PersonObj.SetCrackRightActive(false);

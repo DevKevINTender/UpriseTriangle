@@ -22,6 +22,7 @@ public class PrototypeSessionCore : MonoBehaviour
 
     [Header("Player transfer")]
     [SerializeField] private float timeTransfer; // время старта игры
+    private bool personWin;
 
     public float GetGameSpeed()
     {
@@ -38,7 +39,7 @@ public class PrototypeSessionCore : MonoBehaviour
         SetGameSpeed();
         audioController.Play(musicTimeStart);
         pTPersonComponent.SetCanMove(true); 
-        pTPersonComponent.InitComponent(PersonDeath); // подписка на событие смерти игрока
+        pTPersonComponent.InitComponent(PersonDeath, PersonWin); // подписка на событие смерти и выйгрыше игрока
         sessionPanelView.Init(StartPause, EndPause);// подписка на событие паузы
         spawnBlockControler.Init(); // загрузка уровня
         if (timeTransfer != 0)
@@ -47,7 +48,6 @@ public class PrototypeSessionCore : MonoBehaviour
             movePointController.TimeTransfer(timeTransfer, gameSpeed);
         }
     }
-
     public void RestartGame()
     {
         StartCoroutine(RestartTimer(animationController.GetPersonDeathAnimLength(), currentSession));
@@ -63,15 +63,24 @@ public class PrototypeSessionCore : MonoBehaviour
         RestartGame();
     }
 
+    public void PersonWin()
+    {
+        personWin = true;
+    }
+
     public void StartPause()
     {
-        animationController.StartPause();
-        audioController.StartPause(timeSlow);
-        Time.timeScale = timeSlow;
+        if (!personWin)
+        { 
+            animationController.StartPause();
+            audioController.StartPause(timeSlow);
+            Time.timeScale = timeSlow;
+        }
     }
 
     public void EndPause()
     {
+        
         animationController.EndPause();
         audioController.EndPause();
         Time.timeScale = 1f;

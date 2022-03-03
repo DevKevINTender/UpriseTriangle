@@ -2,8 +2,9 @@
 
 public class PTPersonComponent : MonoBehaviour
 {
-    public delegate void PersonDeathDelegate();
-    private PersonDeathDelegate personDeathTrigger;
+    public delegate void PersonDelegate();
+    private PersonDelegate personDeathTrigger;
+    private PersonDelegate personWinTrigger;
     private bool canMove;
 
     [SerializeField] private GameObject crackLeft;
@@ -27,9 +28,10 @@ public class PTPersonComponent : MonoBehaviour
         this.canMove = canMove;
     }
  
-    public void InitComponent(PersonDeathDelegate personDeathTrigger)
+    public void InitComponent(PersonDelegate personDeathTrigger, PersonDelegate personWinTrigger)
     {
         this.personDeathTrigger = personDeathTrigger;
+        this.personWinTrigger = personWinTrigger;
     }
 
     public void Move(Vector3 vector)
@@ -46,6 +48,10 @@ public class PTPersonComponent : MonoBehaviour
         if (other.GetComponent<ObstacleComponent>())
         {
             personDeathTrigger?.Invoke();
+        }
+        if (other.GetComponent<FinishLineComponent>())
+        {
+            personWinTrigger?.Invoke();
         }
     }
 }

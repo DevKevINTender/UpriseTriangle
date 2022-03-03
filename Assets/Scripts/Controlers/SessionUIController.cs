@@ -7,7 +7,11 @@ using UnityEngine.UI;
 public class SessionUIController : MonoBehaviour
 {
     [SerializeField] private Text curTime;
+    [SerializeField] private Text curfps;
+    [SerializeField] private Text curDeltaTime;
+    [SerializeField] private Text curFixedDeltaTime;
     private float curTimer;
+    private float fps;
 
 
     [SerializeField] private Text coinsText;
@@ -36,5 +40,9 @@ public class SessionUIController : MonoBehaviour
     {
         curTimer += Time.deltaTime;
         curTime.text = curTimer.ToString("F2");
+        fps = 1 / Time.unscaledDeltaTime;
+        curfps.text = fps.ToString("F2");
+        curDeltaTime.text = Time.deltaTime.ToString("F3");
+        curFixedDeltaTime.text = Time.fixedDeltaTime.ToString("F3");
     }
 }

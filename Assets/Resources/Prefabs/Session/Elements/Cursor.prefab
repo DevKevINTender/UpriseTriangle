@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6736112763486958761}
   - component: {fileID: 6736112763486958760}
+  - component: {fileID: 5523321363368645370}
   - component: {fileID: 6736112763486958758}
-  - component: {fileID: 6736112763486958763}
+  - component: {fileID: 5726112553983187656}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 92dc60b1be408ac43a1b8f81c2c1f15d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 68805ff8930dde449bbb0f0ea572dcd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,6 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5523321363368645370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6736112763486958762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f8d29baaa92944586898c162628300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6736112763486958758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,36 +109,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4d95d07d956874ea48e5cfe5b2d9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bpm: 125
   target: {fileID: 0}
-  cursorRB: {fileID: 6736112763486958763}
-  spriteRenderer: {fileID: 6736112763486958760}
-  spriteActive: {fileID: 21300000, guid: e734424a868685d41a6f6cb994014cc7, type: 3}
-  spritePassive: {fileID: 21300000, guid: 92dc60b1be408ac43a1b8f81c2c1f15d, type: 3}
-  forvardMoveSpeed: 15
-  startDelay: 0.5
-  rotateSpeed: 10
-  rotateDuration: 3
-  attackDelay: 0.5
-  attackSpeed: 5
-  attackDuration: 2
---- !u!50 &6736112763486958763
-Rigidbody2D:
-  serializedVersion: 4
+  spriteActive: {fileID: 21300000, guid: 0eb7e4c68c9be3747abe5a799f9db924, type: 3}
+  spritePassive: {fileID: 21300000, guid: 68805ff8930dde449bbb0f0ea572dcd3, type: 3}
+  startDelay: 0
+  circleCollider: {fileID: 5726112553983187656}
+--- !u!58 &5726112553983187656
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6736112763486958762}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.05
-  m_LinearDrag: 4
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_Enabled: 0
+  m_Density: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.08030891, y: -0.000000009573566}
+  serializedVersion: 2
+  m_Radius: 0.25969118

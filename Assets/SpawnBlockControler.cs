@@ -40,7 +40,7 @@ public class SpawnBlockControler : MonoBehaviour
         NextBlockTime = SessionLevelSO.SessionLevelBlockList[NextBlockID].SpawnTime;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         timer += Time.deltaTime;
         if (isStart)

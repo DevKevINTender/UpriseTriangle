@@ -13,6 +13,7 @@ namespace Services
                 return height;
             }
         }
+
         public static float GetScreenToWorldWidth
         {
             get

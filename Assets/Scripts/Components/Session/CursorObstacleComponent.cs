@@ -4,36 +4,39 @@ using UnityEngine;
 
 public class CursorObstacleComponent : MonoBehaviour
 {
-    [SerializeField] internal GameObject target;
-    private Rigidbody2D cursorRB;
+    [SerializeField] private float bpm = 125;
+    [SerializeField] internal GameObject target; // игрок берётся сам при генерации генератором
     [Header("Render")]
     private SpriteRenderer spriteRenderer;
     [SerializeField] internal Sprite spriteActive;
     [SerializeField] internal Sprite spritePassive;
-
     [Header("Start")]
-    [SerializeField] internal float startDelay;
-    internal float forvardMoveSpeed = 15;
+    [SerializeField] internal float startDelay; // время запуска курсора настраивается генератором
+    [SerializeField] private CircleCollider2D circleCollider;
 
-    internal float rotateSpeed = 500;
-    internal float rotateDuration = 1;
+    private float appearTime = 1;
+    internal float rotateDuration = 2;
+    internal float attackDelay = 1;
 
-    internal float attackDelay = 0.5f;
     internal float attackSpeed = 5;
-    internal float attackDuration = 1.5f;
+    internal float appearSpeed = 5;
 
     private Vector3 attachedTarget;
 
     void Start()
     {
-        cursorRB = transform.GetComponent<Rigidbody2D>();
-        spriteRenderer = transform.GetComponent<SpriteRenderer>();        
-    }
-
-    public void Activate()
-    {
+        rotateDuration = TempToTime(rotateDuration);
+        appearTime = TempToTime(appearTime);
+        attackDelay = TempToTime(attackDelay);
+        spriteRenderer = transform.GetComponent<SpriteRenderer>();
         StartCoroutine(StartDelay());
     }
+
+    public float TempToTime(float value)
+    {
+        return 60 / bpm * value;
+    }
+
 
     private IEnumerator StartDelay()
     {
@@ -43,8 +46,13 @@ public class CursorObstacleComponent : MonoBehaviour
 
     private IEnumerator StartAction()
     {
-        cursorRB.AddForce(transform.right * forvardMoveSpeed);
-        yield return new WaitForSeconds(1.5f);
+        float time = appearTime;
+        while (time > 0)
+        {
+            transform.localPosition += transform.right * Time.deltaTime * appearSpeed;
+            time -= Time.deltaTime / appearTime;
+            yield return null;
+        }
         StartCoroutine(Rotate());
     }
 
@@ -64,12 +72,12 @@ public class CursorObstacleComponent : MonoBehaviour
 
     private IEnumerator Attack()
     {
+        circleCollider.enabled = true;
          while (Vector2.Distance(attachedTarget,transform.localPosition) >= 0.02f)
          {
              transform.localPosition = Vector3.Lerp(transform.localPosition, attachedTarget, Time.deltaTime * attackSpeed);
              yield return null;
          }      
-         yield return new WaitForSeconds(attackDuration);
          spriteRenderer.sprite = spritePassive;
          Destroy(gameObject);
     }

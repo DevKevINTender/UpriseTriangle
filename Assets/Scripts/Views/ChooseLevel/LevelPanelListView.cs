@@ -74,7 +74,7 @@ namespace Views.ChooseLevel
             }
         }
 
-        public void FixedUpdate()
+        public void Update()
         {
             LevelPanelViewListTarget.transform.position = Vector3.Lerp(LevelPanelViewListTarget.transform.position, currentPos, Time.deltaTime * 15);
         }

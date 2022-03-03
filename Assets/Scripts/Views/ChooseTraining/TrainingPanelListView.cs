@@ -67,7 +67,7 @@ namespace Views.ChooseTraining
             }
         }
         
-        public void FixedUpdate()
+        public void Update()
         {
             TrainingPanelViewListTarget.transform.position = Vector3.Lerp(TrainingPanelViewListTarget.transform.position, currentPos, Time.deltaTime * 15);
         }

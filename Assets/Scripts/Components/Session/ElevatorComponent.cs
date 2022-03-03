@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class ElevatorComponent : MonoBehaviour
 {
-    [SerializeField] internal float elevatorTime;
+    [SerializeField] private float elevatorTime;
     [SerializeField] private List<PTWayObsComponent> laserList = new List<PTWayObsComponent>();
     [SerializeField] private SerciceScreenResolution serciceScreenResolution;
     private bool canMove;
     [SerializeField] private float moveSpeed;
-    private List<CursorAllignService> cursorAllignList = new List<CursorAllignService>();
+    [SerializeField] internal GameObject cursorAllignService;
     internal SquareTimeService squareTimeService;
 
     public void Start()
@@ -20,6 +20,20 @@ public class ElevatorComponent : MonoBehaviour
         canMove = false;
     }
 
+    public float GetMoveSpeed()
+    {
+        return moveSpeed;
+    }
+
+    public void SetElevatorTime(float time)
+    {
+        elevatorTime = time;
+    }
+
+    public float GetElevatorTime()
+    {
+        return elevatorTime;
+    }
 
     public void Update()
     {
@@ -30,11 +44,6 @@ public class ElevatorComponent : MonoBehaviour
     public void AddToList(PTWayObsComponent _pTWayObsComponent)
     {
         laserList.Add(_pTWayObsComponent);
-    }
-
-    public void AddToList(CursorAllignService _cursorAllignService)
-    {
-        cursorAllignList.Add(_cursorAllignService);
     }
 
 
@@ -49,8 +58,8 @@ public class ElevatorComponent : MonoBehaviour
     private void ActivateElevator()
     {
         StartCoroutine(ElevatorTimeCur());
-        squareTimeService.StartAction();
-        foreach (var item in cursorAllignList) item.ActivateCursors();
+        if(squareTimeService != null) squareTimeService.StartAction();
+        if (cursorAllignService != null) cursorAllignService.SetActive(true);
         //Activate Laser
         foreach (var item in laserList)
         {

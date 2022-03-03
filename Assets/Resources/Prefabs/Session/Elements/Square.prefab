@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2959372851219198879}
   - component: {fileID: 2574751106023472906}
+  - component: {fileID: 2103106445964924343}
   - component: {fileID: 3121183798191134261}
+  - component: {fileID: 786749592259994768}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -83,6 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2103106445964924343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2776734189738326072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f8d29baaa92944586898c162628300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3121183798191134261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,12 +110,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2574751106023472906}
+  boxCollider: {fileID: 786749592259994768}
   startTime: 0.1
   alertTime: 1
   changeColorTime: 0.5
-  boopTime: 0.2
-  disappearTime: 0.5
+  boopTime: 0.1
+  disappearTime: 0.3
   endColor: {r: 0.95294124, g: 0.14117648, b: 0.3803922, a: 1}
   boopColor: {r: 1, g: 1, b: 1, a: 1}
   alertColor: {r: 0.95294124, g: 0.14117648, b: 0.3803922, a: 0.29803923}
   boopScale: {x: 1.2, y: 1.2, z: 0}
+--- !u!61 &786749592259994768
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2776734189738326072}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

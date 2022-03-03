@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class SquareObstacleComponent : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private BoxCollider2D boxCollider;
     private SquareTimeService squareTimeService;
     [Header("Timings")]
-    [SerializeField] float startTime;
-    [SerializeField] float alertTime;
-    [SerializeField] float changeColorTime;
-    [SerializeField] float boopTime;
-    [SerializeField] float disappearTime;
+    [SerializeField] private float startTime;
+    [SerializeField] private float alertTime;
+    [SerializeField] private float changeColorTime;
+    [SerializeField] private float boopTime;
+    [SerializeField] private float disappearTime;
     [Header("Colors")]
-    [SerializeField] Color endColor;
-    [SerializeField] Color boopColor;
-    [SerializeField] Color alertColor;
+    [SerializeField] private Color endColor;
+    [SerializeField] private Color boopColor;
+    [SerializeField] private Color alertColor;
 
     [SerializeField] Vector3 boopScale;
     private Color startColor;
@@ -43,11 +44,13 @@ public class SquareObstacleComponent : MonoBehaviour
         yield return new WaitForSeconds(changeColorTime);
 
         StartCoroutine(Coloring(endColor, boopColor, boopTime));
-        StartCoroutine(Scaling(boopScale, boopTime));        
+        StartCoroutine(Scaling(boopScale, boopTime));
+        boxCollider.enabled = true;
         yield return new WaitForSeconds(boopTime);
 
         StartCoroutine(Coloring(boopColor, startColor, disappearTime));
         StartCoroutine(Scaling(Vector3.zero, disappearTime));
+        boxCollider.enabled = false;
         yield return new WaitForSeconds(disappearTime);
 
         spriteRenderer.color = startColor;
@@ -69,12 +72,12 @@ public class SquareObstacleComponent : MonoBehaviour
     private IEnumerator Scaling(Vector3 boopScale, float time)
     {
         float stepTime = 0;
-        float stepScaleX = Time.fixedDeltaTime / (time / (boopScale.x - transform.localScale.x));
-        float stepScaleY = Time.fixedDeltaTime / (time / (boopScale.y - transform.localScale.y));
+        float stepScaleX = Time.deltaTime / (time / (boopScale.x - transform.localScale.x));
+        float stepScaleY = Time.deltaTime / (time / (boopScale.y - transform.localScale.y));
         while (stepTime < 1)
         {
             transform.localScale += new Vector3(stepScaleX, stepScaleY);
-            stepTime += Time.fixedDeltaTime / time;
+            stepTime += Time.deltaTime / time;
             yield return null;
         }
     }

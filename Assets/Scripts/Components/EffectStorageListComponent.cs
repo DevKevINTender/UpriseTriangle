@@ -31,7 +31,7 @@ namespace Components
             currentPos = new Vector3(- id * 3, 0, 0);
         }
 
-        public void FixedUpdate()
+        public void Update()
         {
             ListTarget.transform.position = Vector3.Lerp(ListTarget.transform.position, currentPos, Time.deltaTime * 15);
         }

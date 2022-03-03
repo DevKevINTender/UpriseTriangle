@@ -9,12 +9,15 @@ using Random = UnityEngine.Random;
 // генератор коридора 1 линия
 public class MiniBlockGenerator : MonoBehaviour
 {
-    float BPM = 100; //2.08333333333 в секу 0.6
+    float BPM = 125; //2.08333333333 в секу 0.6
     float speed = 5f; // скорость перемещния игрока в зависимости от разрешения
+    [Header("Settings")]
+    [SerializeField] public float time;
+    [SerializeField] public List<float> tempList;
+    [Header("Info")]
     [SerializeField] public float lenght; // длина генерации
     [SerializeField] private float lenghtFill; // насколько заполнена длина
-    [SerializeField] public float temp;
-    [SerializeField] public List<float> tempList;//1, 0.5 , 0.25 , 2 , 4
+    //1, 0.5 , 0.25 , 2 , 4
     float start; // стартовая точка генерации
 
     [SerializeField] List<GameObject> blockPbList = new List<GameObject>();
@@ -25,7 +28,7 @@ public class MiniBlockGenerator : MonoBehaviour
     {
         start = transform.position.y; // задается через позицию генератора
         //GenerateFivePointsLine();
-        GenerateFivePointsLineTemp();
+        //GenerateFivePointsLineTemp();
         lenghtFill = CalculateTempList();
     }
 
@@ -50,10 +53,18 @@ public class MiniBlockGenerator : MonoBehaviour
 
         return lenghtSum;
     }
+
+    [ContextMenu("GenerateFivePointsLineTemp")]
     private void GenerateFivePointsLineTemp()
     {
+        lenght = time * speed;
+        BPM = 126;
+        DestroyChilds();
+        start = transform.position.y;
+        lenghtFill = CalculateTempList();
         int direction = Random.Range(0, blockPbList.Count);
         float step = speed / (BPM / 60); // 5 / 1.66 = 3
+        Debug.Log(step);
         float curLenght = 0;
         Vector2 spawnPos = new Vector2(0, start);
         bool generate = true;
@@ -76,19 +87,8 @@ public class MiniBlockGenerator : MonoBehaviour
             }
         }
     }
-    private void GenerateFivePointsLine()
-    {
-        int direction = Random.Range(0, blockPbList.Count);
-        float result = speed / (BPM / 60);
-        int curLenght = (int)(lenght / (result * temp));
-        Debug.Log(result);
-        for (int i = 0; i <= curLenght ; i++)
-        {
-            Vector2 spawnPos = new Vector2(0, start + i * result * temp);
-            Instantiate(blockPbList[direction], spawnPos, Quaternion.identity, transform);
-            direction = ChangeDirection(direction);
-        }
-    }
+
+
     private int ChangeDirection(int direction)
     {
         if (direction == 0)
@@ -102,5 +102,14 @@ public class MiniBlockGenerator : MonoBehaviour
         }
         
         return direction += (Random.Range(0,2) == 0 ) ? 1 : -1 ;
+    }
+
+    public void DestroyChilds()
+    {
+        if (transform.childCount > 0)
+            for (int i = transform.childCount; i > 0; --i)
+            {
+                DestroyImmediate(transform.GetChild(0).gameObject);
+            }
     }
 }
