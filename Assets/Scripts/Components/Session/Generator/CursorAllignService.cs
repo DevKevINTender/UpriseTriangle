@@ -26,7 +26,7 @@ public class CursorAllignService : MonoBehaviour
 
     public void Start()
     {
-        height = height * (5 / elevator.GetMoveSpeed());
+        height = height * (1 / transform.parent.parent.localScale.x);
         CreateObs();
     }
 
@@ -57,29 +57,29 @@ public class CursorAllignService : MonoBehaviour
 
     public void SetSpawnValues(GameObject _obsObj)
     {
-        float sapwnX = width - 1;
-        float sapwny = height - 1;
+        float spawnX = width - 1;
+        float spawnY = height - 1;
         switch (side)
         {
             case 0:
                 side += 2;
-                _obsObj.transform.localPosition =  new Vector3(-width, Random.Range(-sapwny, sapwny), 0);
+                _obsObj.transform.localPosition =  new Vector3(-width, Random.Range(-spawnY, spawnY), 0);
                 obsObj.transform.rotation = Quaternion.Euler(0, 0, 0);               
                 break;
             case 1:
                 side++;
-                _obsObj.transform.localPosition = new Vector3(Random.Range(-sapwnX, sapwnX), height, 0);
+                _obsObj.transform.localPosition = new Vector3(Random.Range(-spawnX, spawnX), height, 0);
                 obsObj.transform.rotation = Quaternion.Euler(0, 0, -90);
                 break;
             case 2:
                 side++;
                 side = 0;
-                _obsObj.transform.localPosition = new Vector3(width, Random.Range(-sapwny, sapwny), 0);
+                _obsObj.transform.localPosition = new Vector3(width, Random.Range(-spawnY, spawnY), 0);
                 obsObj.transform.rotation = Quaternion.Euler(0, 0, 180);
                 break;
             case 3:
                 side = 0;
-                _obsObj.transform.localPosition = new Vector3(Random.Range(-sapwnX, sapwnX), -height, 0);
+                _obsObj.transform.localPosition = new Vector3(Random.Range(-spawnX, spawnX), -height, 0);
                 obsObj.transform.rotation = Quaternion.Euler(0, 0, 90);
                 break;
         }
