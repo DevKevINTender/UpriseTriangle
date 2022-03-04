@@ -62,7 +62,7 @@ public class CursorAllignService : MonoBehaviour
         switch (side)
         {
             case 0:
-                side++;
+                side += 2;
                 _obsObj.transform.localPosition =  new Vector3(-width, Random.Range(-sapwny, sapwny), 0);
                 obsObj.transform.rotation = Quaternion.Euler(0, 0, 0);               
                 break;
@@ -73,6 +73,7 @@ public class CursorAllignService : MonoBehaviour
                 break;
             case 2:
                 side++;
+                side = 0;
                 _obsObj.transform.localPosition = new Vector3(width, Random.Range(-sapwny, sapwny), 0);
                 obsObj.transform.rotation = Quaternion.Euler(0, 0, 180);
                 break;

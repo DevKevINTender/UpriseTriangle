@@ -9,7 +9,7 @@ public class SquareTimeService : MonoBehaviour
     private List<float> timing;
     private bool canAction;
     private ElevatorComponent elevator;
-    private List<SquareObstacleComponent> squares = new List<SquareObstacleComponent>();
+    [SerializeField] private List<SquareObstacleComponent> squares = new List<SquareObstacleComponent>();
     private int timingIndex;
     
     void Start()
@@ -80,9 +80,10 @@ public class SquareTimeService : MonoBehaviour
 
     public IEnumerator SetActiveSquares(float _timing)
     {
+        int obstCountBuff = ObstCount;
         yield return new WaitForSeconds(_timing);
-        if (ObstCount > squares.Count) ObstCount = squares.Count;
-        for (int i = 0; i < ObstCount; i++)
+        if (obstCountBuff > squares.Count) obstCountBuff = squares.Count;
+        for (int i = 0; i < obstCountBuff; i++)
         {
             int randomIndex = Random.Range(0, squares.Count);
             squares[randomIndex].Active();

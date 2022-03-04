@@ -5,7 +5,7 @@ using UnityEngine.UI;
     {
         [SerializeField] private SerciceScreenResolution serciceScreenResolution;
         [SerializeField] private Text speed;
-        private float gameSpeed;
+        [SerializeField] private float gameSpeed;
 
         public void Start()
         {

@@ -56,7 +56,6 @@ public class SquareAllignService : MonoBehaviour
                 obsObj.transform.localScale = new Vector3(objScaleX, objScaleY) / screenScale;
                 currentPos = startPos + new Vector3((obsObj.transform.localScale.x * i), 0);
                 obsObj.transform.localPosition = currentPos;
-                Debug.Log(obsObj.transform.localScale);
             }
             startPos -= new Vector3(0, (obsObj.transform.localScale.y));
         }

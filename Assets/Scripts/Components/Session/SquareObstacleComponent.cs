@@ -76,7 +76,14 @@ public class SquareObstacleComponent : MonoBehaviour
         float stepScaleY = Time.deltaTime / (time / (boopScale.y - transform.localScale.y));
         while (stepTime < 1)
         {
-            transform.localScale += new Vector3(stepScaleX, stepScaleY);
+            if (transform.localScale.x + stepScaleX >= 0)
+            {
+                transform.localScale += new Vector3(stepScaleX, stepScaleY);                
+            }
+            else
+            {
+                transform.localScale = Vector3.zero;
+            }            
             stepTime += Time.deltaTime / time;
             yield return null;
         }
