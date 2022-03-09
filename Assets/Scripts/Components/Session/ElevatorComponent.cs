@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using ScriptableObjects.TrainLevel;
 using UnityEngine;
 
 public class ElevatorComponent : MonoBehaviour
 {
     [SerializeField] private float elevatorTime;
-    [SerializeField] private List<PTWayObsComponent> laserList = new List<PTWayObsComponent>();
     [SerializeField] private SerciceScreenResolution serciceScreenResolution;
     private bool canMove;
     [SerializeField] private float moveSpeed;
     [SerializeField] internal GameObject cursorAllignService;
-    internal SquareTimeService squareTimeService;
+    internal BoxTimeActivate BoxTimeActivate;
     private GameObject player;
 
     public void Start()
@@ -41,33 +39,23 @@ public class ElevatorComponent : MonoBehaviour
         if(canMove)
         transform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
     }
-    
-    public void AddToList(PTWayObsComponent _pTWayObsComponent)
-    {
-        laserList.Add(_pTWayObsComponent);
-    }
 
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<PTMovePointComponent>())
+        if (other.GetComponent<MovePointComponent>())
         {
             ActivateElevator();
             player = other.gameObject;
-            player.transform.GetChild(0).GetComponent<PTPersonComponent>().inElevator = true;
+            player.transform.GetChild(0).GetComponent<PersonComponent>().inElevator = true;
         }
     }
 
     private void ActivateElevator()
     {
         StartCoroutine(ElevatorTimeCur());
-        if(squareTimeService != null) squareTimeService.StartAction();
+        if(BoxTimeActivate != null) BoxTimeActivate.StartAction();
         if (cursorAllignService != null) cursorAllignService.SetActive(true);
-        //Activate Laser
-        foreach (var item in laserList)
-        {
-            item.ObstacleInit();
-        }           
     }
 
     private IEnumerator ElevatorTimeCur()
@@ -79,7 +67,7 @@ public class ElevatorComponent : MonoBehaviour
 
     private void StopElevator()
     {
-        player.transform.GetChild(0).GetComponent<PTPersonComponent>().inElevator = false;
+        player.transform.GetChild(0).GetComponent<PersonComponent>().inElevator = false;
         canMove = false;
     }
 }

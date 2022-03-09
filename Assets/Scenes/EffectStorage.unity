@@ -318,8 +318,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EffectListSO: {fileID: 11400000, guid: e1ff444f07e8d644d8b3f01f4a24fd3f, type: 2}
   StorageCoins: {fileID: 1096088218}
-  EffectStoragePanelViewObj: {fileID: 1939404616}
-  EffectStoragePosPanelViewObj: {fileID: 650425505}
+  esPanelViewObj: {fileID: 1939404616}
+  esPageViewObj: {fileID: 650425505}
   EffectStorageListComponent: {fileID: 1022597139}
   InfoPanelPb: {fileID: 5360590824163358342, guid: 39261f34063ae6b428499533f800edfc, type: 3}
   infoPanelPos: {fileID: 1766097847}

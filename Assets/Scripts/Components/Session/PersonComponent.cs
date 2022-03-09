@@ -1,31 +1,88 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class PersonComponent : MonoBehaviour
 {
-    [SerializeField] private Animator playerAnimator;
-    [SerializeField] private SessionCore SessionCore;
-    [SerializeField] private AudioSource deathSong;
-    public void InitComponent(SessionCore SessionCore)
+    public delegate void PersonDelegate();
+    private PersonDelegate personDeathTrigger;
+    private PersonDelegate personWinTrigger;
+    private PersonDelegate personEndWinTrigger;
+    private bool canMove;
+    internal bool inElevator;
+
+    [SerializeField] private float moveToCenterTime;
+    [SerializeField] private GameObject crackLeft;
+    [SerializeField] private GameObject crackRight;
+
+    float timer;
+
+    public void SetCrackLeftActive(bool _active)
     {
-        this.SessionCore = SessionCore;
+        crackLeft.SetActive(_active);
     }
 
-    public void Update()
+    public void SetCrackRightActive(bool _active)
     {
-        //transform.position += new Vector3(0,5*Time.deltaTime,0);
+        crackRight.SetActive(_active);
+    }
+
+
+    public void SetCanMove(bool canMove)
+    {
+        this.canMove = canMove;
+    }
+ 
+    public void InitComponent(PersonDelegate personDeathTrigger, PersonDelegate personWinTrigger, PersonDelegate personEndWinTrigger)
+    {
+        this.personDeathTrigger = personDeathTrigger;
+        this.personWinTrigger = personWinTrigger;
+        this.personEndWinTrigger = personEndWinTrigger;
+    }
+
+    public void MoveToCenter()
+    {
+        StartCoroutine(MoveToCenterCor());
+    }
+
+    public IEnumerator MoveToCenterCor()
+    {
+        transform.rotation = Quaternion.Euler(Vector3.zero);
+        yield return new WaitForSeconds(1f);
+        Vector3 velosity = Vector3.zero;
+        while (Vector3.Distance(transform.localPosition, Vector3.zero) > 0.1f)
+        {
+            transform.localPosition = Vector3.SmoothDamp(transform.localPosition, Vector3.zero, ref velosity, moveToCenterTime);
+            yield return null;
+        }
+        yield return new WaitForSeconds(0.5f);
+        personEndWinTrigger?.Invoke();
+        float time = 0;
+        while (time < 1)
+        {
+            transform.localPosition += Vector3.Lerp(Vector3.zero, Vector3.up * 8f, 2f * Time.deltaTime);
+            time += Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    public void Move(Vector3 vector)
+    {
+        if (canMove)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, transform.position.x * 3);
+            transform.position += vector;            
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("FinishLine"))
+        if (other.GetComponent<ObstacleComponent>())
         {
-            //deathSong.PlayOneShot(deathSong.clip);
-            //transform.GetComponent<Animator>().SetBool("Death", true);
-            playerAnimator.SetBool("Death", true);
-            SessionCore.LoseSession(transform.GetComponent<Animator>().runtimeAnimatorController.animationClips[0].length);
+            personDeathTrigger?.Invoke();
+        }
+        if (other.GetComponent<FinishLineComponent>())
+        {
+            personWinTrigger?.Invoke();
         }
     }
 }

@@ -1,146 +1,112 @@
 using System.Collections;
-using System.Collections.Generic;
+using Controlers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class SessionCore : MonoBehaviour
 {
-    [SerializeField] private Animator Animator;
-    [SerializeField] private Animator playerAnimator;
-    [SerializeField] private GameObject StartPanel;
-    [SerializeField] private AudioSource Music;
-    [SerializeField] private GameObject ControlerPanel;
+    [Header("Controllers")]
+    [SerializeField] private PlayerMovePanelView playerMovePanelView;
+    [SerializeField] private SessionAudioController audioController; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    [SerializeField] private MovePointComponent movePointController;
+    [SerializeField] private PersonComponent pTPersonComponent;
+    [SerializeField] private SessionAnimationController animationController;
+    [SerializeField] private SerciceScreenResolution serciceScreenResolution;
+    [SerializeField] private SessionUIController sessionUIController;
+    [SerializeField] private AttempCounterController attempCounterController;
 
-    [SerializeField] private SpawnBlockControler SpawnBlockControler;
-    public int restartSessionNum;
-    private float timer;
-    public Text time;
+    [Header("Game values")]
+    [SerializeField] float musicTimeStart;
+    [SerializeField] private int currentSession;
+    [SerializeField] private float timeSlow;
+    [SerializeField] private float gameSpeed;
 
-    private bool isPause;
-    public bool isStart;
+    [Header("Player transfer")]
+    [SerializeField] private float timeTransfer; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+    private bool personWin;
 
-    public float TimeToMusic;
-    private float musicVolume;
-
-    private IEnumerator startCoroutine; // переменная для остановки ожидания старта
-
-    public void OnApplicationPause()
+    public float GetGameSpeed()
     {
-        StartPause();
+        return gameSpeed;
+    }
+
+    public void SetGameSpeed()
+    {
+        gameSpeed = serciceScreenResolution.GetScaledGameSpeed();
     }
 
     void Start()
     {
-        musicVolume = Music.volume;
-        Time.timeScale = 1;
-        StartCoroutine(WaitToStartMusic(TimeToMusic));
-        startCoroutine = StartSessionCur();
-        StartCoroutine(startCoroutine);
-       
-        if(SpawnBlockControler) SpawnBlockControler.InitControler(0);        
-        isStart = true;
-    }
-    
-    void Update()
-    {
-        timer += Time.deltaTime;
-        time.text = timer.ToString("F2");
-    }
-
-    public void LoseSession(float _time)
-    {
-        StartCoroutine(LooseSessionCur(_time));    
-    }
-
-    public void StopPause()
-    {
-        if (isPause)
+        SetGameSpeed();
+        sessionUIController.ActiveAttempText(attempCounterController.GetAttemps());
+        audioController.Play(musicTimeStart);
+        pTPersonComponent.SetCanMove(true); 
+        pTPersonComponent.InitComponent(PersonDeath, PersonWin, PersonEndWin); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+        playerMovePanelView.Init(StartPause, EndPause);// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+        if (timeTransfer != 0)
         {
-            ControlerPanel.transform.GetComponent<Image>().color = new Color32(26, 27, 33, 0);
-            playerAnimator.SetBool("IsPause", false);
-            Animator.SetBool("Pause", false);
-            Time.timeScale = 1;
-            Music.pitch = 1;
-            Music.volume = musicVolume;
-            isPause = false;
+            audioController.TimeTransfer(timeTransfer); // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            movePointController.TimeTransfer(timeTransfer, gameSpeed);
         }
+    }
+    public void RestartGame()
+    {
+        StartCoroutine(RestartTimer(animationController.GetPersonDeathAnimLength(), currentSession));
+    }
+
+    public void PersonDeath()
+    {
+        attempCounterController.AddAttemp();
+        animationController.PersonDeath();
+        audioController.PersonDeath();
+        pTPersonComponent.SetCanMove(false);
+        Handheld.Vibrate();
+        Time.timeScale = timeSlow;
+        RestartGame();
+    }
+
+    public void PersonEndWin()
+    {
+        sessionUIController.ActivateWinPanel();
+    }
+
+    public void PersonWin()
+    {
+        personWin = true;
+        pTPersonComponent.SetCanMove(false);
+        pTPersonComponent.MoveToCenter();
+        animationController.PersonWin();      
     }
 
     public void StartPause()
     {
-        if (isStart)
-        {
-            ControlerPanel.transform.GetComponent<Image>().color = new Color32(26, 27, 33, 200);
-            
-            playerAnimator.SetBool("IsPause", true);
-            Animator.SetBool("Pause", true);
-            
-            Music.pitch = 0.1f;
-            Music.volume = 0;
-            
-            Time.timeScale = 0.1f;
-            isPause = true;
+        if (!personWin)
+        { 
+            animationController.StartPause();
+            audioController.StartPause(timeSlow);
+            Time.timeScale = timeSlow;
         }
-    }    
+    }
 
-    // таймер смерти игрока
-    public IEnumerator LooseSessionCur(float _time)
+    public void EndPause()
     {
-        ControlerPanel.SetActive(false);
-        Music.volume = 0;
-        Time.timeScale = 0.1f;
-        Handheld.Vibrate();
+        
+        animationController.EndPause();
+        audioController.EndPause();
+        Time.timeScale = 1f;
+    }
+
+    public void OnApplicationPause()
+    {
+        #if !UNITY_EDITOR
+        StartPause();
+        #endif
+    }
+
+    public IEnumerator RestartTimer(float _time, int currentSession)
+    {        
         yield return new WaitForSecondsRealtime(_time);
         Time.timeScale = 1;
-        SceneManager.LoadScene(restartSessionNum);
+        SceneManager.LoadScene(currentSession);
     }
-
-    // таймер для ожидания конца анимации старта или её прерывания
-    public IEnumerator StartSessionCur()
-    {
-        float timer = 2f;
-        while (timer > 0)
-        {
-            if (Animator.GetBool("Pause"))
-                EmergencyStop();
-            timer -= Time.deltaTime;
-            yield return null;
-        }
-        Animator.SetBool("StartGame", true);
-        StartCoroutine(WaitAnimationStartEnd());
-    }
-
-    private IEnumerator WaitAnimationStartEnd()
-    {
-        while (!Animator.GetCurrentAnimatorStateInfo(0).IsName("New State 0"))
-        {
-            yield return null;
-        }
-        StartPanel.SetActive(false);
-        yield return new WaitForSecondsRealtime(1);
-        isStart = true;
-    }
-
-    //время начала музыки
-    public IEnumerator WaitToStartMusic(float _time)
-    {
-        yield return new WaitForSecondsRealtime(_time);
-        Music.Play();
-    }
-
-
-    public void EmergencyStop()
-    {
-        StopCoroutine(startCoroutine);
-        Animator.SetBool("StartGame", true);
-        StartCoroutine(WaitAnimationStartEnd());
-    }
-
-    public void BackToMenu()
-    {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(0);
-    }
-
 }

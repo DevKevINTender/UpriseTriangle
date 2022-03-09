@@ -14,11 +14,11 @@ namespace Core
         [SerializeField] public EffectListScrObj EffectListSO;
         [SerializeField] public Text StorageCoins;
 
-        [SerializeField] private EffectStoragePanelView EffectStoragePanelViewObj;
-        [SerializeField] private EffectStoragePosPanelView EffectStoragePosPanelViewObj;
+        [SerializeField] private ESPanelView esPanelViewObj;
+        [SerializeField] private ESPageView esPageViewObj;
         [SerializeField] private EffectStorageListComponent EffectStorageListComponent;
 
-        [SerializeField] private InfoPanelView InfoPanelPb;
+        [SerializeField] private AlertPanelView alertPanelPb;
         [SerializeField] private Transform infoPanelPos;
 
         [SerializeField] private Transform EffectStorageComponent;
@@ -29,8 +29,8 @@ namespace Core
             StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";
             EffectListSO.Load();
             CurrentEffectShowId = EffectListSO.CurrentEffectId;
-            EffectStoragePanelViewObj.InitView(this);
-            EffectStoragePosPanelViewObj.InitView(EffectListSO);
+            esPanelViewObj.InitView(this);
+            esPageViewObj.InitView(EffectListSO);
             EffectStorageListComponent.InitComponent(EffectListSO);
         }
 
@@ -39,9 +39,9 @@ namespace Core
             if (CurrentEffectShowId < EffectListSO.List.Count - 1)
             {
                 CurrentEffectShowId++;
-                EffectStoragePosPanelViewObj.UpdateView(CurrentEffectShowId);
+                esPageViewObj.UpdateView(CurrentEffectShowId);
                 EffectStorageListComponent.MoveToNewPos(CurrentEffectShowId);
-                EffectStoragePanelViewObj.UpdateView();
+                esPanelViewObj.UpdateView();
                 EffectStorageContoler.SetCurrentEffect(CurrentEffectShowId);
             }
         }
@@ -51,9 +51,9 @@ namespace Core
             if (CurrentEffectShowId > 0)
             {
                 CurrentEffectShowId--;
-                EffectStoragePosPanelViewObj.UpdateView(CurrentEffectShowId);
+                esPageViewObj.UpdateView(CurrentEffectShowId);
                 EffectStorageListComponent.MoveToNewPos(CurrentEffectShowId);
-                EffectStoragePanelViewObj.UpdateView();
+                esPanelViewObj.UpdateView();
                 EffectStorageContoler.SetCurrentEffect(CurrentEffectShowId);
             }
         }
@@ -66,14 +66,14 @@ namespace Core
                 
                 StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";
               
-                EffectStoragePosPanelViewObj.UpdateView(CurrentEffectShowId);
+                esPageViewObj.UpdateView(CurrentEffectShowId);
                 EffectStorageListComponent.MoveToNewPos(CurrentEffectShowId);
-                EffectStoragePanelViewObj.UpdateView();
+                esPanelViewObj.UpdateView();
             }
             else
             {
-                InfoPanelView newInfoPanel = Instantiate(InfoPanelPb, infoPanelPos);
-                newInfoPanel.InitView("Cash", "You havent money");
+                AlertPanelView newAlertPanel = Instantiate(alertPanelPb, infoPanelPos);
+                newAlertPanel.InitView("Cash", "You havent money");
             }
             
         }
@@ -85,8 +85,8 @@ namespace Core
             }
             else
             {
-                InfoPanelView newInfoPanel = Instantiate(InfoPanelPb, infoPanelPos);
-                newInfoPanel.InitView("Exist", "What you try to do ? Am ?");
+                AlertPanelView newAlertPanel = Instantiate(alertPanelPb, infoPanelPos);
+                newAlertPanel.InitView("Exist", "What you try to do ? Am ?");
             }
         }
         

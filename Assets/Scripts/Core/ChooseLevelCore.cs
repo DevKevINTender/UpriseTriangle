@@ -11,11 +11,11 @@ namespace Core
     public class ChooseLevelCore : MonoBehaviour
     {
         public int CurrentLevelShowId;
-        [SerializeField] private LevelPosPanelView LevelPosPanelViewObj;
+        [SerializeField] private LSPageView lsPageViewObj;
         [SerializeField] private SessionLevelListScrObj SessionLevelListSO;
-        [SerializeField] private LevelPanelListView LevelPanelListViewObj;
+        [SerializeField] private LSPanelListView lsPanelListViewObj;
 
-        [SerializeField] private InfoPanelView InfoPanelViewPb;
+        [SerializeField] private AlertPanelView alertPanelViewPb;
         [SerializeField] private Transform InfoPanelTarget;
 
         [SerializeField] private Text StorageCoins;
@@ -24,8 +24,8 @@ namespace Core
             SessionLevelListSO.Load();
             CurrentLevelShowId = SessionLevelListSO.CurrentSessionLevelId;
             StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";
-            LevelPanelListViewObj.InitView(SessionLevelListSO, this);
-            LevelPosPanelViewObj.InitView(SessionLevelListSO);
+            lsPanelListViewObj.InitView(SessionLevelListSO, this);
+            lsPageViewObj.InitView(SessionLevelListSO);
         }
         
         public void ShowNextLevel()
@@ -33,8 +33,8 @@ namespace Core
             if (CurrentLevelShowId < SessionLevelListSO.List.Count - 1)
             {
                 CurrentLevelShowId++;
-                LevelPosPanelViewObj.UpdateView(CurrentLevelShowId);
-                LevelPanelListViewObj.UpdateView(CurrentLevelShowId);
+                lsPageViewObj.UpdateView(CurrentLevelShowId);
+                lsPanelListViewObj.UpdateView(CurrentLevelShowId);
             }
         }
 
@@ -43,39 +43,39 @@ namespace Core
             if (CurrentLevelShowId > 0)
             {
                 CurrentLevelShowId--;
-                LevelPosPanelViewObj.UpdateView(CurrentLevelShowId);
-                LevelPanelListViewObj.UpdateView(CurrentLevelShowId);
+                lsPageViewObj.UpdateView(CurrentLevelShowId);
+                lsPanelListViewObj.UpdateView(CurrentLevelShowId);
             }
         }
         public void BuyLevel()
         {
             if (CoinsControler.BuyEffect(SessionLevelListSO.List[CurrentLevelShowId].Cost))
             {
-                SessionLevelControler.OpenLevel(CurrentLevelShowId);
+                LevelChooseControler.OpenLevel(CurrentLevelShowId);
                 
                 StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";
                 
-                LevelPosPanelViewObj.UpdateView(CurrentLevelShowId);
-                LevelPanelListViewObj.UpdateView(CurrentLevelShowId);
+                lsPageViewObj.UpdateView(CurrentLevelShowId);
+                lsPanelListViewObj.UpdateView(CurrentLevelShowId);
             }
             else
             {
-                InfoPanelView newInfoPanel = Instantiate(InfoPanelViewPb, InfoPanelTarget);
-                newInfoPanel.InitView("Cash", "You havent money");
+                AlertPanelView newAlertPanel = Instantiate(alertPanelViewPb, InfoPanelTarget);
+                newAlertPanel.InitView("Cash", "You havent money");
             }
         }
 
         public void StartSession()
         {
-            if (SessionLevelControler.LevelIsOpened(CurrentLevelShowId))
+            if (LevelChooseControler.LevelIsOpened(CurrentLevelShowId))
             {
-                SessionLevelControler.SetCurrentLevel(CurrentLevelShowId);
+                LevelChooseControler.SetCurrentLevel(CurrentLevelShowId);
                 SceneManager.LoadScene(1);
             }
             else
             {
-                InfoPanelView newInfoPanel = Instantiate(InfoPanelViewPb, InfoPanelTarget);
-                newInfoPanel.InitView("Exist", "What you try to do ? Am ?");
+                AlertPanelView newAlertPanel = Instantiate(alertPanelViewPb, InfoPanelTarget);
+                newAlertPanel.InitView("Exist", "What you try to do ? Am ?");
             }
         }
 

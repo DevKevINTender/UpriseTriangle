@@ -9,30 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Session.unity
-    guid: 6204bfcb18f4f0b41881dc73d6e27389
-  - enabled: 1
-    path: Assets/Scenes/SessionLevelChoose.unity
+    path: Assets/Scenes/LevelChoose.unity
     guid: 15481840b3a27fe409a1947e99d8ecd6
-  - enabled: 1
-    path: Assets/Scenes/TngLevelChoose.unity
-    guid: ca4281df4021b7a4d8b7e4697527644a
-  - enabled: 1
-    path: Assets/Scenes/TngSession.unity
-    guid: 4727ebd3eeec33d48885ade68d87bf21
   - enabled: 1
     path: Assets/Scenes/EffectStorage.unity
     guid: 72d01d3e209bc864780be6a3a087bb50
   - enabled: 1
-    path: Assets/Scenes/Session 1.unity
-    guid: dc5e0a6bc578cc6449a210c1bbbd4ed5
-  - enabled: 1
-    path: Assets/Scenes/PrototypeSession.unity
-    guid: 0f1f6b8106685214fb5a821bfcf92ba0
-  - enabled: 1
-    path: Assets/Scenes/PrototypeSession 1.unity
+    path: Assets/Scenes/Session.unity
     guid: 6e6763a257b0e7446830e18735052f35
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: a84282de71aa1004a9795c5992192924
+    path: Assets/Scenes/Test/PrototypeSession.unity
+    guid: 0f1f6b8106685214fb5a821bfcf92ba0
   m_configObjects: {}

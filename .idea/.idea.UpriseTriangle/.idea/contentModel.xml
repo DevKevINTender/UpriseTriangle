@@ -4,7 +4,6 @@
     <e p="C:\Unity_Git\UpriseTriangle" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="EqualizerCopmonent.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="Localization" t="Include">
             <e p="Localization.xml" t="Include" />
@@ -18,14 +17,8 @@
               <e p="SessionLevelListScrObj.cs" t="Include" />
               <e p="SessionLevelScrObj.cs" t="Include" />
             </e>
-            <e p="TrainLevel" t="Include">
-              <e p="TrainingLevelListScrObj.cs" t="Include" />
-              <e p="TrainingLevelScrObj.cs" t="Include" />
-            </e>
           </e>
         </e>
-        <e p="RingElementComponent.cs" t="Include" />
-        <e p="RingElementSectionComponent.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Components" t="Include">
             <e p="EffectStorageListComponent.cs" t="Include" />
@@ -35,79 +28,85 @@
                 <e p="JumperBonusComponent.cs" t="Include" />
                 <e p="SavePointBonusComponent.cs" t="Include" />
               </e>
-              <e p="CursorObstacleComponent.cs" t="Include" />
-              <e p="Destroyer.cs" t="Include" />
+              <e p="DestroyerComponent.cs" t="Include" />
               <e p="ElevatorComponent.cs" t="Include" />
-              <e p="EnergyBarierComponent.cs" t="Include" />
               <e p="FinishLineComponent.cs" t="Include" />
-              <e p="GateObstacleComponent.cs" t="Include" />
               <e p="Generator" t="Include">
-                <e p="BlockAllignService.cs" t="Include" />
-                <e p="CursorAllignService.cs" t="Include" />
-                <e p="MiniBlockGenerator.cs" t="Include" />
+                <e p="BoxGenerator" t="Include">
+                  <e p="BoxPreGenerator.cs" t="Include" />
+                  <e p="BoxTimeActivate.cs" t="Include" />
+                </e>
                 <e p="RotateBlockGenerator.cs" t="Include" />
-                <e p="SquareAllignService.cs" t="Include" />
-                <e p="SquareTimeService.cs" t="Include" />
-                <e p="WayAllignService.cs" t="Include" />
+                <e p="StaticBlockGenerator.cs" t="Include" />
               </e>
-              <e p="ObstacleComponent.cs" t="Include" />
+              <e p="MovePointComponent.cs" t="Include" />
+              <e p="Obstacle" t="Include">
+                <e p="ArrowObstacleComponent.cs" t="Include" />
+                <e p="BoxObstacleComponent.cs" t="Include" />
+                <e p="ObstacleComponent.cs" t="Include" />
+                <e p="RotateObstacle.cs" t="Include" />
+              </e>
               <e p="PersonComponent.cs" t="Include" />
-              <e p="PTMovePointComponent.cs" t="Include" />
-              <e p="PTPersonComponent.cs" t="Include" />
-              <e p="PTWayObsComponent.cs" t="Include" />
-              <e p="RotateObstacle.cs" t="Include" />
-              <e p="SquareObstacleComponent.cs" t="Include" />
-              <e p="TimerToApear.cs" t="Include" />
+              <e p="PreGenerator" t="Include">
+                <e p="ArrowBlockPreGenerator.cs" t="Include" />
+                <e p="StaticLinePreGenerator.cs" t="Include" />
+              </e>
               <e p="WayObstacleComponent.cs" t="Include" />
             </e>
-            <e p="TimelyColliderController.cs" t="Include" />
+            <e p="Test" t="Include">
+              <e p="EqualizerCopmonent.cs" t="Include" />
+            </e>
           </e>
           <e p="Controlers" t="Include">
-            <e p="AnimationController.cs" t="Include" />
-            <e p="AudioController.cs" t="Include" />
-            <e p="CoinsControler.cs" t="Include" />
-            <e p="DeathRegistrationControler.cs" t="Include" />
-            <e p="EffectStorageContoler.cs" t="Include" />
-            <e p="PTSpawnBlockControler.cs" t="Include" />
-            <e p="SessionLevelControler.cs" t="Include" />
-            <e p="SessionUIController.cs" t="Include" />
-            <e p="TrainingLevelControler.cs" t="Include" />
+            <e p="EffectStorage" t="Include">
+              <e p="EffectStorageContoler.cs" t="Include" />
+            </e>
+            <e p="Global" t="Include">
+              <e p="CoinsControler.cs" t="Include" />
+              <e p="DeathRegistrationControler.cs" t="Include" />
+            </e>
+            <e p="LevelChoose" t="Include">
+              <e p="LevelChooseControler.cs" t="Include" />
+            </e>
+            <e p="Session" t="Include">
+              <e p="AttempCounterController.cs" t="Include" />
+              <e p="PersonMoveController.cs" t="Include" />
+              <e p="SessionAnimationController.cs" t="Include" />
+              <e p="SessionAudioController.cs" t="Include" />
+              <e p="UIControler" t="Include">
+                <e p="SessionBupTextController.cs" t="Include" />
+                <e p="SessionUIController.cs" t="Include" />
+              </e>
+            </e>
           </e>
           <e p="Core" t="Include">
             <e p="ChooseLevelCore.cs" t="Include" />
-            <e p="ChooseTrainingCore.cs" t="Include" />
             <e p="EffectStorageCore.cs" t="Include" />
             <e p="MainMenuCore.cs" t="Include" />
-            <e p="PrototypeSessionCore.cs" t="Include" />
             <e p="SessionCore.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
             <e p="AudioSspectrService.cs" t="Include" />
             <e p="BpmLineService.cs" t="Include" />
-            <e p="CameraService.cs" t="Include" />
-            <e p="FPSWall.cs" t="Include" />
             <e p="ScreenSizeService.cs" t="Include" />
             <e p="SelfDestroy.cs" t="Include" />
             <e p="SerciceScreenResolution.cs" t="Include" />
             <e p="TimeLineService.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
-            <e p="ChooseLevel" t="Include">
-              <e p="LevelPanelListView.cs" t="Include" />
-              <e p="LevelPanelView.cs" t="Include" />
-              <e p="LevelPosPanelView.cs" t="Include" />
-            </e>
-            <e p="ChooseTraining" t="Include">
-              <e p="TrainingPanelListView.cs" t="Include" />
-              <e p="TrainingPanelView.cs" t="Include" />
-              <e p="TrainingPosPanelView.cs" t="Include" />
-            </e>
             <e p="EffectStorage" t="Include">
-              <e p="EffectStoragePanelView.cs" t="Include" />
-              <e p="EffectStoragePosPanelView.cs" t="Include" />
+              <e p="ESPageView.cs" t="Include" />
+              <e p="ESPanelView.cs" t="Include" />
             </e>
-            <e p="InfoPanel" t="Include">
-              <e p="InfoPanelView.cs" t="Include" />
+            <e p="Global" t="Include">
+              <e p="InfoPanel" t="Include">
+                <e p="AlertPanelView.cs" t="Include" />
+              </e>
+            </e>
+            <e p="LevelChoose" t="Include">
+              <e p="LSPageView.cs" t="Include" />
+              <e p="LSPanelItemView.cs" t="Include" />
+              <e p="LSPanelListView.cs" t="Include" />
             </e>
             <e p="Session" t="Include">
               <e p="Bonuses" t="Include">
@@ -116,12 +115,10 @@
                 <e p="SavePointBonusPanelView.cs" t="Include" />
               </e>
               <e p="LoosePanelView.cs" t="Include" />
-              <e p="PersonMoveController.cs" t="Include" />
-              <e p="SessionPanelView.cs" t="Include" />
+              <e p="PlayerMovePanelView.cs" t="Include" />
             </e>
           </e>
         </e>
-        <e p="SpawnBlockControler.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
