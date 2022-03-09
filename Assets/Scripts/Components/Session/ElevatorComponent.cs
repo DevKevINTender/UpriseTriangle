@@ -13,6 +13,7 @@ public class ElevatorComponent : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] internal GameObject cursorAllignService;
     internal SquareTimeService squareTimeService;
+    private GameObject player;
 
     public void Start()
     {
@@ -52,6 +53,8 @@ public class ElevatorComponent : MonoBehaviour
         if (other.GetComponent<PTMovePointComponent>())
         {
             ActivateElevator();
+            player = other.gameObject;
+            player.transform.GetChild(0).GetComponent<PTPersonComponent>().inElevator = true;
         }
     }
 
@@ -76,6 +79,7 @@ public class ElevatorComponent : MonoBehaviour
 
     private void StopElevator()
     {
+        player.transform.GetChild(0).GetComponent<PTPersonComponent>().inElevator = false;
         canMove = false;
     }
 }

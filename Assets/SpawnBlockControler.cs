@@ -24,18 +24,11 @@ public class SpawnBlockControler : MonoBehaviour
         isStart = true;
     }
 
-    public void SetWinnerPanelToFinish(GameObject _ChekingObj)
-    {
-        if (_ChekingObj.GetComponent<FinishLineComponent>() != null)
-            _ChekingObj.GetComponent<FinishLineComponent>().SetWinPanel(winerPanel);
-    }
-
     public void SpawnNewElement()
     {
         spawningObj = SessionLevelSO.SessionLevelBlockList[NextBlockID].SpawnBlockPb;
         spawningPos = SessionLevelSO.SessionLevelBlockList[NextBlockID].SpawnPos;
         GameObject spawnedObj = Instantiate(spawningObj, spawningPos, Quaternion.identity);
-        SetWinnerPanelToFinish(spawnedObj);
         NextBlockID++;
         NextBlockTime = SessionLevelSO.SessionLevelBlockList[NextBlockID].SpawnTime;
     }
