@@ -22,8 +22,6 @@
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/EffectStorageContoler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/SessionLevelControler.cs" />
@@ -101,6 +98,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/RotateBlockGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/MiniBlockGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/CoinBonusComponent.cs" />
       </list>
     </option>
   </component>
@@ -170,6 +168,7 @@
       <workItem from="1645645878007" duration="3048000" />
       <workItem from="1645782772976" duration="2928000" />
       <workItem from="1646028136930" duration="6032000" />
+      <workItem from="1646828284495" duration="2561000" />
     </task>
     <servers />
   </component>
