@@ -4,7 +4,6 @@ using UnityEngine.UI;
     public class PTMovePointComponent : MonoBehaviour
     {
         [SerializeField] private SerciceScreenResolution serciceScreenResolution;
-        [SerializeField] private Text speed;
         [SerializeField] private float gameSpeed;
 
         public void Start()
@@ -15,7 +14,6 @@ using UnityEngine.UI;
         public void Update()
         {
             transform.position += new Vector3(0, gameSpeed * Time.deltaTime, 0);
-            speed.text = (gameSpeed * Time.deltaTime).ToString("F3");
         }
 
         // перемещение игрока к заданной точке

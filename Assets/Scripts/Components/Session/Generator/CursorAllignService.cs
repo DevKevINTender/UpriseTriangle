@@ -9,13 +9,17 @@ public class CursorAllignService : MonoBehaviour
     [SerializeField] private GameObject player;
     [Header("Settings")]
     [SerializeField] private int obsCount;
+    [SerializeField] private float spawnRound;
+    [Range(-1, 1)]
+    [SerializeField] private int sides;
     [Header("Time")]
     [SerializeField] private float time;
     [SerializeField] private float tempStart;
     [SerializeField] private float temp;
 
-    private float width = 3.2f;
-    private float height = 5.4f;
+    private float width;
+    private float height;
+    private float scaleHeight;
     private int side = 0;
     private float timeStart;
     private float timeStep;
@@ -26,9 +30,33 @@ public class CursorAllignService : MonoBehaviour
 
     public void Start()
     {
-        height = height * (1 / transform.parent.parent.localScale.x);
-        CreateObs();
+        MoveAtStart();
     }
+
+    public void StartValues()
+    {
+        width = 3.2f;
+        height = 5.4f;
+        scaleHeight = height * (1 / transform.parent.parent.localScale.x);
+    }
+
+    public void MoveAtStart()
+    {
+        StartValues();
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Transform child = transform.GetChild(i);
+            if (child.localPosition.y == height)
+            {
+                child.localPosition = new Vector3(child.localPosition.x, scaleHeight, 0);
+            }
+            if (child.localPosition.y == -height)
+            {
+                child.localPosition = new Vector3(child.localPosition.x, -scaleHeight, 0);
+            }
+        }
+    }
+
 
     public void TempToTiming()
     {
@@ -43,6 +71,8 @@ public class CursorAllignService : MonoBehaviour
     public void CreateObs()
     {       
         DestroyChilds();
+        if (sides == -1) side = 1;
+        StartValues();
         TempToTiming();
         for (int i = 0; i < obsCount; i++)
         {
@@ -62,31 +92,39 @@ public class CursorAllignService : MonoBehaviour
         switch (side)
         {
             case 0:
-                side += 2;
-                _obsObj.transform.localPosition =  new Vector3(-width, Random.Range(-spawnY, spawnY), 0);
+                side += 1 + sides;
+                _obsObj.transform.localPosition =  new Vector3(-width, Round(Random.Range(-spawnY, spawnY), spawnRound), 0);
                 obsObj.transform.rotation = Quaternion.Euler(0, 0, 0);               
                 break;
             case 1:
+                if (sides == -1) side++;
                 side++;
-                _obsObj.transform.localPosition = new Vector3(Random.Range(-spawnX, spawnX), height, 0);
+                _obsObj.transform.localPosition = new Vector3(Round(Random.Range(-spawnX, spawnX), spawnRound), height, 0);
                 obsObj.transform.rotation = Quaternion.Euler(0, 0, -90);
                 break;
             case 2:
                 side++;
-                side = 0;
-                _obsObj.transform.localPosition = new Vector3(width, Random.Range(-spawnY, spawnY), 0);
+                _obsObj.transform.localPosition = new Vector3(width, Round(Random.Range(-spawnY, spawnY), spawnRound), 0);
                 obsObj.transform.rotation = Quaternion.Euler(0, 0, 180);
+                if (sides == 1) side = 0;
                 break;
             case 3:
                 side = 0;
-                _obsObj.transform.localPosition = new Vector3(Random.Range(-spawnX, spawnX), -height, 0);
+                _obsObj.transform.localPosition = new Vector3(Round(Random.Range(-spawnX, spawnX), spawnRound), -height, 0);
                 obsObj.transform.rotation = Quaternion.Euler(0, 0, 90);
+                if (sides == -1) side = 1;
                 break;
         }
     }
 
+    public float Round(float num, float fraction)
+    {
+        return Mathf.Round(num / fraction) * fraction;
+    }
+
     public void DestroyChilds()
     {
+        side = 0;
         if (transform.childCount > 0)
         {
             for (int i = transform.childCount; i > 0; --i)

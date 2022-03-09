@@ -16,6 +16,11 @@ public class AnimationController : MonoBehaviour
         StartCoroutine(WaitUntilStart(2));
     }
 
+    public void PersonWin()
+    {
+        personAnimator.SetBool("Win", true);
+    }
+
     public void PersonDeath()
     {
         personAnimator.SetBool("Death", true);

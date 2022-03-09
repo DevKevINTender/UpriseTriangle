@@ -13,6 +13,8 @@ public class PrototypeSessionCore : MonoBehaviour
     [SerializeField] private PTPersonComponent pTPersonComponent;
     [SerializeField] private AnimationController animationController;
     [SerializeField] private SerciceScreenResolution serciceScreenResolution;
+    [SerializeField] private SessionUIController sessionUIController;
+    [SerializeField] private AttempCounter attempCounter;
 
     [Header("Game values")]
     [SerializeField] float musicTimeStart;
@@ -37,9 +39,10 @@ public class PrototypeSessionCore : MonoBehaviour
     void Start()
     {
         SetGameSpeed();
+        sessionUIController.ActiveAttempText(attempCounter.GetAttemps());
         audioController.Play(musicTimeStart);
         pTPersonComponent.SetCanMove(true); 
-        pTPersonComponent.InitComponent(PersonDeath, PersonWin); // подписка на событие смерти и выйгрыше игрока
+        pTPersonComponent.InitComponent(PersonDeath, PersonWin, PersonEndWin); // подписка на событие смерти и выйгрыше игрока
         sessionPanelView.Init(StartPause, EndPause);// подписка на событие паузы
         spawnBlockControler.Init(); // загрузка уровня
         if (timeTransfer != 0)
@@ -55,6 +58,7 @@ public class PrototypeSessionCore : MonoBehaviour
 
     public void PersonDeath()
     {
+        attempCounter.AddAttemp();
         animationController.PersonDeath();
         audioController.PersonDeath();
         pTPersonComponent.SetCanMove(false);
@@ -63,9 +67,17 @@ public class PrototypeSessionCore : MonoBehaviour
         RestartGame();
     }
 
+    public void PersonEndWin()
+    {
+        sessionUIController.ActivateWinPanel();
+    }
+
     public void PersonWin()
     {
         personWin = true;
+        pTPersonComponent.SetCanMove(false);
+        pTPersonComponent.MoveToCenter();
+        animationController.PersonWin();      
     }
 
     public void StartPause()
@@ -94,7 +106,7 @@ public class PrototypeSessionCore : MonoBehaviour
     }
 
     public IEnumerator RestartTimer(float _time, int currentSession)
-    {
+    {        
         yield return new WaitForSecondsRealtime(_time);
         Time.timeScale = 1;
         SceneManager.LoadScene(currentSession);
