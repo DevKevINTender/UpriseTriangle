@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Controlers;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private SerciceScreenResolution serciceScreenResolution;
     [SerializeField] private SessionUIController sessionUIController;
     [SerializeField] private AttempCounterController attempCounterController;
-
+    private DeathRegistrationControler deathRegistrationControler = new DeathRegistrationControler();
     [Header("Game values")]
     [SerializeField] float musicTimeStart;
     [SerializeField] private int currentSession;
@@ -60,6 +61,7 @@ public class SessionCore : MonoBehaviour
         animationController.PersonDeath();
         audioController.PersonDeath();
         pTPersonComponent.SetCanMove(false);
+        deathRegistrationControler.AddNewRecord(DateTime.Now,25);
         Handheld.Vibrate();
         Time.timeScale = timeSlow;
         RestartGame();

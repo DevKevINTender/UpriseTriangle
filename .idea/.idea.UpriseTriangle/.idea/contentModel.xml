@@ -24,6 +24,7 @@
             <e p="EffectStorageListComponent.cs" t="Include" />
             <e p="Session" t="Include">
               <e p="Bonuses" t="Include">
+                <e p="BonusControler.cs" t="Include" />
                 <e p="CoinBonusComponent.cs" t="Include" />
                 <e p="JumperBonusComponent.cs" t="Include" />
                 <e p="SavePointBonusComponent.cs" t="Include" />

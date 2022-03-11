@@ -9,7 +9,7 @@ namespace Controlers
     public class DeathRegistrationControler
     {
         private string SavePath = "DeathRecords.json";
-        public void AddNewRecord()
+        public void AddNewRecord(DateTime time, float perccentComplete)
         {
             DeathRecordList deathRecordList = new DeathRecordList();
             deathRecordList = GetRecordList();
@@ -18,6 +18,8 @@ namespace Controlers
             {
                 deathRecordList.List.RemoveAt(0);
             }
+            
+            DeathRecord newRecord = new DeathRecord(time,perccentComplete);
             
             string saveData = JsonUtility.ToJson(deathRecordList, true);
             BinaryFormatter bf = new BinaryFormatter();
@@ -54,6 +56,13 @@ namespace Controlers
     public class DeathRecord
     {
         public DateTime time;
-        public float percentComplete;
+        public float checkPoint;
+
+        public DeathRecord(DateTime time, float perccentComplete)
+        {
+            this.time = time;
+            this.checkPoint = perccentComplete;
+
+        }
     }
 }
