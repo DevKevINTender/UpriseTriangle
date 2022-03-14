@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Services;
 using UnityEngine;
+using UnityEditor;
 
 public class BoxPreGenerator : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class BoxPreGenerator : MonoBehaviour
         { 
             for (int i = 0; i < countX; i++)
             {
-                obsObj = Instantiate(obsPb, transform);
+                obsObj = PrefabUtility.InstantiatePrefab(obsPb, transform) as GameObject;
                 obsObj.transform.localScale = new Vector3(objScaleX, objScaleY) / screenScale;
                 currentPos = startPos + new Vector3((obsObj.transform.localScale.x * i), 0);
                 obsObj.transform.localPosition = currentPos;

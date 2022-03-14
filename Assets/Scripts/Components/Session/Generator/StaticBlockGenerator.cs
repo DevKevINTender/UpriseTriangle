@@ -19,6 +19,7 @@ public class StaticBlockGenerator : MonoBehaviour
     [SerializeField] private float lenghtFill; // насколько заполнена длина
     //1, 0.5 , 0.25 , 2 , 4
     float start; // стартовая точка генерации
+    GameObject obsObj;
 
     [SerializeField] List<GameObject> blockPbList = new List<GameObject>();
     
@@ -64,7 +65,6 @@ public class StaticBlockGenerator : MonoBehaviour
         lenghtFill = CalculateTempList();
         int direction = Random.Range(0, blockPbList.Count);
         float step = speed / (BPM / 60); // 5 / 1.66 = 3
-        Debug.Log(step);
         float curLenght = 0;
         Vector2 spawnPos = new Vector2(0, start);
         bool generate = true;
@@ -72,8 +72,8 @@ public class StaticBlockGenerator : MonoBehaviour
         {
             foreach (var tempItem in tempList)
             {
-                Instantiate(blockPbList[direction], spawnPos, Quaternion.identity, transform);
-                
+                obsObj = PrefabUtility.InstantiatePrefab(blockPbList[direction], transform) as GameObject;
+                obsObj.transform.position = spawnPos;
                 direction = ChangeDirection(direction);
                 spawnPos = new Vector2(0,  start + curLenght + (step * tempItem));
                 

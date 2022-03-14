@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class ArrowBlockPreGenerator : MonoBehaviour
 {
@@ -76,7 +77,7 @@ public class ArrowBlockPreGenerator : MonoBehaviour
         TempToTiming();
         for (int i = 0; i < obsCount; i++)
         {
-            obsObj = Instantiate(obsPb, transform);
+            obsObj = PrefabUtility.InstantiatePrefab(obsPb, transform) as GameObject;
             cursor = obsObj.GetComponent<ArrowObstacleComponent>();
             cursor.startDelay = timeStart + timeStep * i;
             cursor.target = player;

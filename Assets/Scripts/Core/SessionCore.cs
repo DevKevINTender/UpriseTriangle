@@ -1,5 +1,5 @@
 using System.Collections;
-using Controlers;
+using Services;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +11,6 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private MovePointComponent movePointController;
     [SerializeField] private PersonComponent pTPersonComponent;
     [SerializeField] private SessionAnimationController animationController;
-    [SerializeField] private SerciceScreenResolution serciceScreenResolution;
     [SerializeField] private SessionUIController sessionUIController;
     [SerializeField] private AttempCounterController attempCounterController;
 
@@ -19,20 +18,15 @@ public class SessionCore : MonoBehaviour
     [SerializeField] float musicTimeStart;
     [SerializeField] private int currentSession;
     [SerializeField] private float timeSlow;
-    [SerializeField] private float gameSpeed;
+    private float gameSpeed;
 
     [Header("Player transfer")]
     [SerializeField] private float timeTransfer; // ����� ������ ����
     private bool personWin;
 
-    public float GetGameSpeed()
-    {
-        return gameSpeed;
-    }
-
     public void SetGameSpeed()
     {
-        gameSpeed = serciceScreenResolution.GetScaledGameSpeed();
+        gameSpeed = ServiceScreenResolution.GetScaledGameSpeed();
     }
 
     void Start()

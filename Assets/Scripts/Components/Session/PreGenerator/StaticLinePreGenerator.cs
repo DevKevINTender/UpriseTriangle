@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 using Services;
 
 public class StaticLinePreGenerator : MonoBehaviour
@@ -25,7 +26,7 @@ public class StaticLinePreGenerator : MonoBehaviour
         }     
         for (int i = 0; i < obsCount; i++)
         {
-            obsObj = Instantiate(obsPb, transform);
+            obsObj = PrefabUtility.InstantiatePrefab(obsPb, transform) as GameObject;
             obsObj.transform.localPosition = startPos + new Vector3(obsDist, 0) * i * side;
         }
         PrevCommand = "CreateObsLineX";

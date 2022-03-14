@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Services;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,23 +6,19 @@ using UnityEngine;
 public class ElevatorComponent : MonoBehaviour
 {
     [SerializeField] private float elevatorTime;
-    [SerializeField] private SerciceScreenResolution serciceScreenResolution;
     private bool canMove;
-    [SerializeField] private float moveSpeed;
+    [SerializeField] private float gameSpeed;
     [SerializeField] internal GameObject cursorAllignService;
     internal BoxTimeActivate BoxTimeActivate;
     private GameObject player;
 
     public void Start()
     {
-        moveSpeed = serciceScreenResolution.GetScaledGameSpeed();
+        gameSpeed = ServiceScreenResolution.GetScaledGameSpeed();
         canMove = false;
     }
 
-    public float GetMoveSpeed()
-    {
-        return moveSpeed;
-    }
+
 
     public void SetElevatorTime(float time)
     {
@@ -37,7 +33,7 @@ public class ElevatorComponent : MonoBehaviour
     public void Update()
     {
         if(canMove)
-        transform.position += new Vector3(0, moveSpeed * Time.deltaTime, 0);
+        transform.position += new Vector3(0, gameSpeed * Time.deltaTime, 0);
     }
 
 
