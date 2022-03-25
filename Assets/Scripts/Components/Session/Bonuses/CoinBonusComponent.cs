@@ -7,11 +7,12 @@ public class CoinBonusComponent : MonoBehaviour
 {
     public CoinBonusPanelView coinBonusPanelView;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.GetComponent<PersonComponent>())
         {
-            
+            //coinBonusPanelView.gameObject.SetActive(true);
+            Destroy(gameObject);
         }
     }
 }

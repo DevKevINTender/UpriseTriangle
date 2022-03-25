@@ -2,5 +2,6 @@
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
     <file url="file://$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" charset="windows-1251" />
+    <file url="file://$USER_HOME$/AppData/LocalLow/DefaultCompany/UpriseTriangle/DeathRecords.json" charset="ISO-8859-1" />
   </component>
 </project>

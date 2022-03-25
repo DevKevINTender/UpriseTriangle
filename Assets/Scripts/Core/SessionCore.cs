@@ -15,7 +15,7 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private SerciceScreenResolution serciceScreenResolution;
     [SerializeField] private SessionUIController sessionUIController;
     [SerializeField] private AttempCounterController attempCounterController;
-    private DeathRegistrationControler deathRegistrationControler = new DeathRegistrationControler();
+    [SerializeField] private BonusCollectorComponent bonusCollectorComponent;
     [Header("Game values")]
     [SerializeField] float musicTimeStart;
     [SerializeField] private int currentSession;
@@ -44,11 +44,13 @@ public class SessionCore : MonoBehaviour
         pTPersonComponent.SetCanMove(true); 
         pTPersonComponent.InitComponent(PersonDeath, PersonWin, PersonEndWin); // �������� �� ������� ������ � �������� ������
         playerMovePanelView.Init(StartPause, EndPause);// �������� �� ������� �����
+        bonusCollectorComponent.InitComponent(StartPause, EndPause);
         if (timeTransfer != 0)
         {
             audioController.TimeTransfer(timeTransfer); // ����� ������ � ��������� �������
             movePointController.TimeTransfer(timeTransfer, gameSpeed);
         }
+       
     }
     public void RestartGame()
     {
@@ -61,7 +63,7 @@ public class SessionCore : MonoBehaviour
         animationController.PersonDeath();
         audioController.PersonDeath();
         pTPersonComponent.SetCanMove(false);
-        deathRegistrationControler.AddNewRecord(DateTime.Now,25);
+        DeathRegistrationControler.AddNewRecord(DateTime.Now,1);
         Handheld.Vibrate();
         Time.timeScale = timeSlow;
         RestartGame();
