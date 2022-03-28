@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Services;
 using UnityEngine;
@@ -13,7 +14,7 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private SessionAnimationController animationController;
     [SerializeField] private SessionUIController sessionUIController;
     [SerializeField] private AttempCounterController attempCounterController;
-
+    [SerializeField] private BonusCollectorComponent bonusCollectorComponent;
     [Header("Game values")]
     [SerializeField] float musicTimeStart;
     [SerializeField] private int currentSession;
@@ -37,11 +38,13 @@ public class SessionCore : MonoBehaviour
         pTPersonComponent.SetCanMove(true); 
         pTPersonComponent.InitComponent(PersonDeath, PersonWin, PersonEndWin); // �������� �� ������� ������ � �������� ������
         playerMovePanelView.Init(StartPause, EndPause);// �������� �� ������� �����
+        bonusCollectorComponent.InitComponent(StartPause, EndPause);
         if (timeTransfer != 0)
         {
             audioController.TimeTransfer(timeTransfer); // ����� ������ � ��������� �������
             movePointController.TimeTransfer(timeTransfer, gameSpeed);
         }
+       
     }
     public void RestartGame()
     {
@@ -54,6 +57,7 @@ public class SessionCore : MonoBehaviour
         animationController.PersonDeath();
         audioController.PersonDeath();
         pTPersonComponent.SetCanMove(false);
+        DeathRegistrationControler.AddNewRecord(DateTime.Now,1);
         Handheld.Vibrate();
         Time.timeScale = timeSlow;
         RestartGame();
