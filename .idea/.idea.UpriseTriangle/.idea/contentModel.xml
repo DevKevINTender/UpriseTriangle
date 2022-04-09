@@ -23,19 +23,23 @@
           <e p="Components" t="Include">
             <e p="EffectStorageListComponent.cs" t="Include" />
             <e p="Session" t="Include">
+              <e p="BeatRingComponent.cs" t="Include" />
               <e p="Bonuses" t="Include">
                 <e p="BonusCollectorComponent.cs" t="Include" />
                 <e p="CoinBonusComponent.cs" t="Include" />
                 <e p="MagnetBonusComponent.cs" t="Include" />
-                <e p="MCoinComponent.cs" t="Include" />
                 <e p="MultiplierBonusComponent.cs" t="Include" />
+                <e p="Person" t="Include">
+                  <e p="MagnetComponent.cs" t="Include" />
+                  <e p="MCoinComponent.cs" t="Include" />
+                  <e p="ShieldComponent.cs" t="Include" />
+                </e>
                 <e p="ShieldBonusComponent.cs" t="Include" />
               </e>
               <e p="CheckPointComponent.cs" t="Include" />
               <e p="Coin" t="Include">
                 <e p="CoinCollectorComponent.cs" t="Include" />
                 <e p="CoinComponent.cs" t="Include" />
-                <e p="MagnetComponent.cs" t="Include" />
               </e>
               <e p="DestroyerComponent.cs" t="Include" />
               <e p="ElevatorComponent.cs" t="Include" />
@@ -60,7 +64,6 @@
                 <e p="ArrowBlockPreGenerator.cs" t="Include" />
                 <e p="StaticLinePreGenerator.cs" t="Include" />
               </e>
-              <e p="ShieldComponent.cs" t="Include" />
               <e p="WayObstacleComponent.cs" t="Include" />
             </e>
             <e p="Test" t="Include">
@@ -80,7 +83,7 @@
             </e>
             <e p="Session" t="Include">
               <e p="AttempCounterController.cs" t="Include" />
-              <e p="BonusControler.cs" t="Include" />
+              <e p="BonusSpawnControler.cs" t="Include" />
               <e p="PersonMoveController.cs" t="Include" />
               <e p="SessionAnimationController.cs" t="Include" />
               <e p="SessionAudioController.cs" t="Include" />
@@ -123,6 +126,8 @@
               <e p="Bonuses" t="Include">
                 <e p="CoinBonusPanelView.cs" t="Include" />
                 <e p="MagnetBonusPanelView.cs" t="Include" />
+                <e p="MultiplierBonusPanelView.cs" t="Include" />
+                <e p="ShieldBonusPanelView.cs" t="Include" />
               </e>
               <e p="LoosePanelView.cs" t="Include" />
               <e p="PlayerMovePanelView.cs" t="Include" />

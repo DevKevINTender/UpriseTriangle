@@ -6,8 +6,9 @@ using UnityEngine;
 public class MagnetBonusPanelView : MonoBehaviour
 {
     private int BonusId = 2;
+    private int BonusCount = 1;
     
-    public delegate void GetBonusDel(int id);
+    public delegate void GetBonusDel(int id, int count);
     public delegate void ClosePanelDel();
     
     public GetBonusDel getBonus;
@@ -21,13 +22,13 @@ public class MagnetBonusPanelView : MonoBehaviour
     public void GetFreeBonus()
     {
         gameObject.SetActive(false);
-        getBonus?.Invoke(BonusId);
+        getBonus?.Invoke(BonusId, BonusCount);
     }
 
     public void GetAdsBonus()
     {
         gameObject.SetActive(false);
-        getBonus?.Invoke(BonusId);
+        getBonus?.Invoke(BonusId, BonusCount);
     }
 
     public void ClosePanel()
