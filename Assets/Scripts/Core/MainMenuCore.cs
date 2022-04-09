@@ -11,7 +11,7 @@ public class MainMenuCore : MonoBehaviour
     AsyncOperation async;
     void Start()
     {
-        async = SceneManager.LoadSceneAsync(8);
+        async = SceneManager.LoadSceneAsync(3);
         async.allowSceneActivation = false;
         CoinsCountText.text = $"{CoinsControler.GetCoinsCount()}";
     }

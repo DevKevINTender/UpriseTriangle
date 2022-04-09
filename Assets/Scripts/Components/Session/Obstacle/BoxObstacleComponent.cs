@@ -76,6 +76,7 @@ public class BoxObstacleComponent : MonoBehaviour
         float stepScaleY = Time.deltaTime / (time / (boopScale.y - transform.localScale.y));
         while (stepTime < 1)
         {
+            if(Time.timeScale > 0)
             if (transform.localScale.x + stepScaleX >= 0)
             {
                 transform.localScale += new Vector3(stepScaleX, stepScaleY);                
