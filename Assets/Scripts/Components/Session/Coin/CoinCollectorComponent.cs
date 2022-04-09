@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class CoinCollectorComponent : MonoBehaviour
 {
+    public BonusCollectorComponent BonusCollectorComponent;
+
+    public int coinWithOutMultiplier;
+    public int coinWithMultiplier;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +24,14 @@ public class CoinCollectorComponent : MonoBehaviour
     {
         if (other.GetComponent<CoinComponent>())
         {
-            CoinsControler.UpcreaseCoins(1);
+            if (BonusCollectorComponent.GetMultiplierBonusCount() > 0)
+            {
+                CoinsControler.UpcreaseCoins(coinWithOutMultiplier);
+            }
+            else
+            {
+                CoinsControler.UpcreaseCoins(coinWithMultiplier);
+            }
             Destroy(other.gameObject);
         }
     }

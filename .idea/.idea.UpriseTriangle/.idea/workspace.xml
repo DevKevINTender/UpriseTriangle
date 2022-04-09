@@ -20,27 +20,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusControler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MultiplierBonusPanelView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MultiplierBonusPanelView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/ShieldBonusPanelView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/ShieldBonusPanelView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Session.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Session.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/Level Test Bonus.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/Level Test Bonus.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusControler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusControler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusControler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/CoinBonusComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/CoinBonusComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/JumperBonusComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/JumperBonusComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/SavePointBonusComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/SavePointBonusComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/DeathRegistrationControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/DeathRegistrationControler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/CoinBonusComponent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/CoinBonusComponent.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/MagnetBonusComponent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/MagnetBonusComponent.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/MultiplierBonusComponent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/MultiplierBonusComponent.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/ShiledBonusComponent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/ShiledBonusComponent.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Elements/BlockSpace.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Elements/BlockSpace.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 13.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 14.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 15.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 17.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 18.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/LevelTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test/LevelTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/MCoinComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/MCoinComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/MCoinComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/MCoinComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/ShieldBonusComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/ShieldBonusComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/CoinCollectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/CoinCollectorComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/MagnetComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/MagnetComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/MagnetComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/MagnetComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/ShieldComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/ShieldComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/ShieldComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/ShieldComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusControler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusControler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionUIController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/JumperBonusPanelView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/JumperBonusPanelView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/SavePointBonusPanelView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/SavePointBonusPanelView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/CoinBonusPanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/CoinBonusPanelView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +72,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusControler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/6b/f4a11f59/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/Obstacle/ObstacleComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/41/f0482457/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
@@ -63,23 +83,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/Obstacle/BoxObstacleComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/ShieldComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/ShieldComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/Global/InfoPanel/AlertPanelView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/RotateBlockGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/86/f6a50962/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/5a/a7559593/Object.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/PersonMoveController.cs" />
-        <option value="$PROJECT_DIR$/Assets/MiniBlockGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/RotateBlockGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/MiniBlockGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/SessionAnimationController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/AudioController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/PrototypeSessionCore.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/LevelChooseControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ChooseLevelCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelListView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPosPanelView.cs" />
@@ -93,7 +105,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/BoxGenerator/BoxPreGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/BoxGenerator/BoxTimeActivate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/MovePointComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTWayObsComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionTextControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionBupTextController.cs" />
@@ -116,12 +127,22 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/ShieldComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/CoinComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/CoinCollectorComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/ShieldBonusComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/MultiplierBonusComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/ShieldBonusComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/ShieldComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusSpawnControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/ShieldBonusPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MultiplierBonusComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MultiplierBonusPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/CoinBonusPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/CoinCollectorComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionUIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/BeatRingComponent.cs" />
       </list>
     </option>
   </component>
@@ -198,6 +219,9 @@
       <workItem from="1647343775093" duration="17184000" />
       <workItem from="1648197196815" duration="14000" />
       <workItem from="1648197237916" duration="7632000" />
+      <workItem from="1649088755922" duration="771000" />
+      <workItem from="1649154544317" duration="14491000" />
+      <workItem from="1649260041535" duration="5135000" />
     </task>
     <servers />
   </component>

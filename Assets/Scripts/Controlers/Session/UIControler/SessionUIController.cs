@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Controlers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ public class SessionUIController : MonoBehaviour
     [SerializeField] private Text curTime;
     [SerializeField] private Text attempText;
     [SerializeField] private GameObject winPanel;
+    [SerializeField] private Text coinCount;
 
     private float curTimer;
 
@@ -39,6 +41,7 @@ public class SessionUIController : MonoBehaviour
 
     public void Update()
     {
+        coinCount.text = CoinsControler.GetCoinsCount().ToString();
         curTimer += Time.deltaTime;
         curTime.text = curTimer.ToString("F2");
     }

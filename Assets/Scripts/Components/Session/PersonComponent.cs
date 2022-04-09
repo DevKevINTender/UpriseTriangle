@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PersonComponent : MonoBehaviour
@@ -9,13 +10,16 @@ public class PersonComponent : MonoBehaviour
     private PersonDelegate personEndWinTrigger;
     private bool canMove;
     internal bool inElevator;
-
+    [SerializeField] private Rigidbody2D personRb;
     [SerializeField] private float moveToCenterTime;
     [SerializeField] private GameObject crackLeft;
     [SerializeField] private GameObject crackRight;
 
     float timer;
 
+    private float vectroToRotate;
+    private float targetvectroToRotate;
+    
     public void SetCrackLeftActive(bool _active)
     {
         crackLeft.SetActive(_active);
@@ -69,9 +73,20 @@ public class PersonComponent : MonoBehaviour
     {
         if (canMove)
         {
-            transform.rotation = Quaternion.Euler(0, 0, transform.position.x * 3);
+            //transform.rotation = Quaternion.Euler(0, 0, vector.normalized.x * -15);
+            //if (Mathf.Abs(vector.x) > 0.1)
+            {
+                vectroToRotate = vector.normalized.x * -15;
+            }
             transform.position += vector;            
         }
+    }
+
+    public void Update()
+    {
+        vectroToRotate = Mathf.MoveTowards(vectroToRotate, 0, Time.deltaTime * 60);
+        targetvectroToRotate = Mathf.MoveTowards(targetvectroToRotate, vectroToRotate, Time.deltaTime * 60);
+        transform.rotation = Quaternion.Euler( 0,0, targetvectroToRotate); 
     }
 
     public void OnTriggerEnter2D(Collider2D other)

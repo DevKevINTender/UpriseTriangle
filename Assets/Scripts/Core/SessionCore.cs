@@ -62,6 +62,7 @@ public class SessionCore : MonoBehaviour
         attempCounterController.AddAttemp();
         animationController.PersonDeath();
         audioController.PersonDeath();
+        bonusCollectorComponent.PersonDeath();
         pTPersonComponent.SetCanMove(false);
         DeathRegistrationControler.AddNewRecord(DateTime.Now,1);
         Handheld.Vibrate();
