@@ -39,7 +39,7 @@ public class SessionCore : MonoBehaviour
         pTPersonComponent.SetCanMove(true); 
         pTPersonComponent.InitComponent(PersonDeath, PersonWin, PersonEndWin); // �������� �� ������� ������ � �������� ������
         playerMovePanelView.Init(StartPause, EndPause);// �������� �� ������� �����
-        //bonusCollectorComponent.InitComponent(StartPause, EndPause);
+        bonusCollectorComponent.InitComponent(StartPause, EndPause);
         if (timeTransfer != 0)
         {
             audioController.TimeTransfer(timeTransfer); // ����� ������ � ��������� �������
