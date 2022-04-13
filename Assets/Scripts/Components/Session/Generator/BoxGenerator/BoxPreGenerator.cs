@@ -4,6 +4,7 @@ using Services;
 using UnityEngine;
 using UnityEditor;
 
+
 public class BoxPreGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject obsPb;
@@ -43,7 +44,7 @@ public class BoxPreGenerator : MonoBehaviour
         maxY = (screenSizeY / 2 - 0.5f * objScaleY) * (1 / screenScale);
         startPos = new Vector3(-maxX, maxY);
     }
-
+   
     [ContextMenu("Spawn")]
     public void Spawn()
     {
@@ -53,7 +54,7 @@ public class BoxPreGenerator : MonoBehaviour
         { 
             for (int i = 0; i < countX; i++)
             {
-                obsObj = PrefabUtility.InstantiatePrefab(obsPb, transform) as GameObject;
+                obsObj = Instantiate(obsPb, transform) as GameObject;
                 obsObj.transform.localScale = new Vector3(objScaleX, objScaleY) / screenScale;
                 currentPos = startPos + new Vector3((obsObj.transform.localScale.x * i), 0);
                 obsObj.transform.localPosition = currentPos;

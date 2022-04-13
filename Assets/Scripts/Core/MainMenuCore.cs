@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class MainMenuCore : MonoBehaviour
 {
     [SerializeField] private Text CoinsCountText;
+    [SerializeField] private Animator TransitionAnimator;
     AsyncOperation async;
     void Start()
     {
@@ -18,12 +19,15 @@ public class MainMenuCore : MonoBehaviour
     
     public void LoadScene(int id)
     {
-        StartCoroutine(WaitUntil(1, id));
+        TransitionAnimator.SetTrigger("IsOpen");
+       StartCoroutine(WaitUntil(1, id));
     }
 
     private IEnumerator WaitUntil(float time, int id)
     {
-        yield return new WaitForSeconds(time);    
+       
+        yield return new WaitForSeconds(time); 
+        
         //SceneManager.LoadScene(id);
         async.allowSceneActivation = true;
     }

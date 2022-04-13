@@ -45,34 +45,10 @@ public class PersonMoveController : MonoBehaviour
                 distanceChange = (newPos - currentPos);
                 personPos = PersonObj.transform.localPosition;
                 checkFilterPos = personPos + distanceChange * sensitivity;
-                distanceChange = CheckBorders(ref checkFilterPos, ref distanceChange);
                 currentPos = newPos;
                 PersonObj.Move(distanceChange * sensitivity);
             }
         }
-    }
-
-    public Vector3 CheckBorders(ref Vector3 _checkFilterPos, ref Vector3 _distanceChange)
-    {
-        if (_checkFilterPos.y < -5.5f || _checkFilterPos.y > 5.5f)
-        {
-            _distanceChange =  new Vector3(_distanceChange.x, 0, 0);
-        } 
-        if (_checkFilterPos.x > 2.5f)
-        {
-            crackRight = true;
-            PersonObj.SetCrackRightActive(true);
-            _distanceChange =  new Vector3(0, _distanceChange.y, 0);
-        }
-        if (_checkFilterPos.x < -2.5f)
-        {
-            crackLeft = true;
-            PersonObj.SetCrackLeftActive(true);
-            _distanceChange = new Vector3(0, _distanceChange.y, 0);
-        }
-        if(crackLeft) PersonObj.SetCrackLeftActive(false);
-        if (crackRight) PersonObj.SetCrackRightActive(false);
-        return _distanceChange;
     }
 
 }

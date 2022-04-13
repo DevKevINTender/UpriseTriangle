@@ -9,11 +9,12 @@ public class BonusSpawnControler : MonoBehaviour
 {
     [SerializeField] private List<GameObject> checkPointList = new List<GameObject>();
     [SerializeField] private List<GameObject> bonusesList = new List<GameObject>();
-
+    [SerializeField] private float coinPersent;
+    [SerializeField] private float multiPercent;
+    [SerializeField] private float magnetPercent;
     void Start()
     {
-        RandomSpawnBonuses();
-        //CheckDRList();
+        SpawnShieldBonus();
     }
     
     public void SpawnBonus(int checkPointId, int id)
@@ -29,31 +30,26 @@ public class BonusSpawnControler : MonoBehaviour
             Instantiate(bonusesList[id], checkPointList[i].transform);
         }
     }
-    
-    // тестовая функция проверки
-    private void CheckDRList()
-    {
-        List<DeathRecord> deathRecordList = DeathRegistrationControler.GetRecordList().List;
-        int countFit = 0;
-        DateTime lastTime;
-        int lastCheckPoint = deathRecordList.Last().checkPoint;
 
-        TimeSpan rez = DateTime.UtcNow - DateTime.FromFileTimeUtc(deathRecordList.Last().time);
-        Debug.Log(DateTime.FromFileTimeUtc(deathRecordList.Last().time));
-        Debug.Log(rez.TotalMinutes);
-        if (rez.TotalMinutes < 5)
+    public void SpawnShieldBonus()
+    {
+        List<GameObject> freeCheckPointList = new List<GameObject>();
+        freeCheckPointList = GetFreeCheckPoint();
+        Transform checkPoint = freeCheckPointList[UnityEngine.Random.Range(0, freeCheckPointList.Count)].transform;
+        Instantiate(bonusesList[0], checkPoint);
+    }
+
+    public List<GameObject> GetFreeCheckPoint()
+    {
+        List<GameObject> freeCheckPoint = new List<GameObject>();
+        foreach (var item in checkPointList)
         {
-            for (int i = deathRecordList.Count-1; i >= 0; i--)
+            if (item.transform.GetChildCount() == 0)
             {
-                deathRecordList[i].checkPoint = lastCheckPoint;
-                countFit++;
+                freeCheckPoint.Add(item);
             }
         }
 
-        if (countFit >= 3)
-        {
-            //SpawnBonus(lastCheckPoint, MultiplierBonusPb);
-        }
-
+        return freeCheckPoint;
     }
 }

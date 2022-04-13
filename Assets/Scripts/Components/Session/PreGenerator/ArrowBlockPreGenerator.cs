@@ -67,7 +67,7 @@ public class ArrowBlockPreGenerator : MonoBehaviour
         elevator.SetElevatorTime(obsCount * timeStep + (60f / 125f) * 3);
     }
 
-
+    #if (UNITY_EDITOR)
     [ContextMenu("CreateObs")]
     public void CreateObs()
     {       
@@ -84,7 +84,7 @@ public class ArrowBlockPreGenerator : MonoBehaviour
             SetSpawnValues(obsObj);
         }
     }
-
+    #endif
 
     public void SetSpawnValues(GameObject _obsObj)
     {

@@ -20,48 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MultiplierBonusPanelView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MultiplierBonusPanelView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/ShieldBonusPanelView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/ShieldBonusPanelView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticRainBlockGenerator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticRainBlockGenerator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Test/Levels.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Test/Levels.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/CoinBonusComponent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/CoinBonusComponent.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/MagnetBonusComponent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/MagnetBonusComponent.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/MultiplierBonusComponent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/MultiplierBonusComponent.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/ShiledBonusComponent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/ShiledBonusComponent.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Elements/BlockSpace.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Elements/BlockSpace.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 13.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 14.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 15.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 17.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Session/Objects/BlockSpace/Ресурс 18.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Player/Ресурс 29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Player/Ресурс 29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/LevelTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test/LevelTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/MCoinComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/MCoinComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/MCoinComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/MCoinComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/ShieldBonusComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/ShieldBonusComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/CoinCollectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/CoinCollectorComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/MagnetComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/MagnetComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/MagnetComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/MagnetComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/BeatRingComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/BeatRingComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/BoxGenerator/BoxPreGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/BoxGenerator/BoxPreGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/StaticBlockGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/StaticBlockGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/ShieldComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/ShieldComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/ShieldComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/ShieldComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusControler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusControler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/CoinBonusPanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/CoinBonusPanelView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/ArrowBlockPreGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/ArrowBlockPreGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticLinePreGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticLinePreGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusSpawnControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusSpawnControler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/PersonMoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/PersonMoveController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,17 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ChooseLevelCore.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPanelListView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/ChooseLevel/LevelPosPanelView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/ArrowBlockPreGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/DestroyerComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Obstacle/ArrowObstacleComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/ArrowBlockPreGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticLinePreGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/StaticBlockGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Obstacle/BoxObstacleComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/BoxGenerator/BoxPreGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/BoxGenerator/BoxTimeActivate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/MovePointComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTWayObsComponent.cs" />
@@ -133,16 +103,27 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/ShieldBonusComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/ShieldComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusSpawnControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/ShieldBonusPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MultiplierBonusComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MultiplierBonusPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/CoinBonusPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/CoinCollectorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionUIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/PersonMoveController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticLinePreGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/BoxGenerator/BoxPreGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/ArrowBlockPreGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/ServiceScreenResolution.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/BeatRingComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticRainPreGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/StaticBlockGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusSpawnControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticRainBlockGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Test/LevelEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Test/Levels.cs" />
       </list>
     </option>
   </component>
@@ -222,6 +203,8 @@
       <workItem from="1649088755922" duration="771000" />
       <workItem from="1649154544317" duration="14491000" />
       <workItem from="1649260041535" duration="5135000" />
+      <workItem from="1649681722015" duration="27195000" />
+      <workItem from="1649867025108" duration="3600000" />
     </task>
     <servers />
   </component>

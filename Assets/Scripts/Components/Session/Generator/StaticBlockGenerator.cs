@@ -33,28 +33,8 @@ public class StaticBlockGenerator : MonoBehaviour
         lenghtFill = CalculateTempList();
     }
 
-    public float CalculateTempList()
-    {
-        float lenghtSum = 0;
-        float step = speed / (BPM / 60); // if BPM 100 " (speed  5) / 1.66 = 3 " 
-        while (lenghtSum < lenght)
-        {
-            foreach (var tempItem in tempList)
-            {
-                if (lenghtSum + (step * tempItem) < lenght)
-                {
-                    lenghtSum += tempItem * step;
-                }
-                else
-                {
-                    return lenghtSum;
-                }
-            }
-        }
 
-        return lenghtSum;
-    }
-
+    #if (UNITY_EDITOR)
     [ContextMenu("GenerateFivePointsLineTemp")]
     private void GenerateFivePointsLineTemp()
     {
@@ -87,8 +67,30 @@ public class StaticBlockGenerator : MonoBehaviour
             }
         }
     }
+    #endif
+    
+    private float CalculateTempList()
+    {
+        float lenghtSum = 0;
+        float step = speed / (BPM / 60); // if BPM 100 " (speed  5) / 1.66 = 3 " 
+        while (lenghtSum < lenght)
+        {
+            foreach (var tempItem in tempList)
+            {
+                if (lenghtSum + (step * tempItem) < lenght)
+                {
+                    lenghtSum += tempItem * step;
+                }
+                else
+                {
+                    return lenghtSum;
+                }
+            }
+        }
 
-
+        return lenghtSum;
+    }
+    
     private int ChangeDirection(int direction)
     {
         if (direction == 0)
@@ -104,7 +106,8 @@ public class StaticBlockGenerator : MonoBehaviour
         return direction += (Random.Range(0,2) == 0 ) ? 1 : -1 ;
     }
 
-    public void DestroyChilds()
+    [ContextMenu("Clear")]
+    private void DestroyChilds()
     {
         if (transform.childCount > 0)
             for (int i = transform.childCount; i > 0; --i)

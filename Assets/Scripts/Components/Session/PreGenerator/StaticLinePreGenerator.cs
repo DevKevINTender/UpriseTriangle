@@ -13,8 +13,9 @@ public class StaticLinePreGenerator : MonoBehaviour
     [SerializeField] private int side;
 
     private Vector3 startPos;
-    private GameObject obsObj;   
-
+    private GameObject obsObj; 
+    
+    #if (UNITY_EDITOR)
     [ContextMenu("CreateObsLineX")]
     public virtual void CreateObsLineX()
     {
@@ -31,7 +32,7 @@ public class StaticLinePreGenerator : MonoBehaviour
         }
         PrevCommand = "CreateObsLineX";
     }
-
+ 
     [ContextMenu("CreateObsLineY")]
     public virtual void CreateObsLineY()
     {
@@ -56,7 +57,7 @@ public class StaticLinePreGenerator : MonoBehaviour
             CreateObsLineY();
         }
     }
-
+    #endif
     public virtual void DestroyChilds()
     {
         for (int i = this.transform.childCount; i > 0; --i)
