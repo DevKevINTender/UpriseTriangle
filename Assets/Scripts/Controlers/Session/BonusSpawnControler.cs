@@ -15,8 +15,21 @@ public class BonusSpawnControler : MonoBehaviour
     void Start()
     {
         SpawnShieldBonus();
+        SpawnAnotherBonuses();
     }
-    
+
+    private void SpawnAnotherBonuses()
+    {
+        List<GameObject> freeCheckPointList = new List<GameObject>();
+        freeCheckPointList = GetFreeCheckPoint();
+
+        foreach (var item in freeCheckPointList)
+        {
+            int id = UnityEngine.Random.Range(0, bonusesList.Count);
+            Instantiate(bonusesList[id], item.transform);
+        }
+    }
+
     public void SpawnBonus(int checkPointId, int id)
     {
        
@@ -44,7 +57,7 @@ public class BonusSpawnControler : MonoBehaviour
         List<GameObject> freeCheckPoint = new List<GameObject>();
         foreach (var item in checkPointList)
         {
-            if (item.transform.GetChildCount() == 0)
+            if (item.transform.childCount == 0)
             {
                 freeCheckPoint.Add(item);
             }

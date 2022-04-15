@@ -56,6 +56,21 @@
               <e p="Consts.cs" t="Include" />
             </e>
           </e>
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModuleEPOOutline.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+          </e>
           <e p="RainbowAssets" t="Include">
             <e p="!Core" t="Include">
               <e p="NOTICES.txt" t="Include" />
@@ -167,6 +182,10 @@
             <e p="SelfDestroy.cs" t="Include" />
             <e p="ServiceScreenResolution.cs" t="Include" />
             <e p="TimeLineService.cs" t="Include" />
+          </e>
+          <e p="TestDoTween" t="Include">
+            <e p="MagnetBonusPanelAnimation.cs" t="Include" />
+            <e p="MoveDoTween.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
             <e p="EffectStorage" t="Include">

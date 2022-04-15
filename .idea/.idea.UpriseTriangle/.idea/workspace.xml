@@ -20,29 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticRainBlockGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticRainBlockGenerator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Test/Levels.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Test/Levels.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 25.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 26.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 27.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Bonuses/Ресурс 28.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Player/Ресурс 29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Global/Player/Ресурс 29.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/LevelTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test/LevelTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/BeatRingComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/BeatRingComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/BoxGenerator/BoxPreGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/BoxGenerator/BoxPreGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/StaticBlockGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/StaticBlockGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/ArrowBlockPreGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/ArrowBlockPreGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticLinePreGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticLinePreGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/CheckPointComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/CheckPointComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusSpawnControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusSpawnControler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/PersonMoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/PersonMoveController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +45,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/d0/85ed47d7/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/d4/dbbb6eb6/Camera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/BulletInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestDoTween/MagnetBonusPanelAnimation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/AudioSspectrService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/Obstacle/BoxObstacleComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -73,8 +58,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/BoxGenerator/BoxTimeActivate.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/MovePointComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PTWayObsComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionTextControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionBupTextController.cs" />
@@ -92,15 +75,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/DeathRegistrationControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/MagnetComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/CheckPointComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/CoinBonusComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/ShieldComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/CoinComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/CoinCollectorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/MultiplierBonusComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusControler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/ShieldBonusComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/ShieldComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/ShieldBonusPanelView.cs" />
@@ -120,10 +100,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticRainPreGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/StaticBlockGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusSpawnControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticRainBlockGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Test/LevelEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Test/Levels.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TestDoTween/MoveDoTween.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/CheckPointComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/BonusSpawnControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TestDoTween/MagnetBonusPanelAnimation.cs" />
       </list>
     </option>
   </component>
@@ -205,6 +190,9 @@
       <workItem from="1649260041535" duration="5135000" />
       <workItem from="1649681722015" duration="27195000" />
       <workItem from="1649867025108" duration="3600000" />
+      <workItem from="1649878181025" duration="895000" />
+      <workItem from="1649910397587" duration="5050000" />
+      <workItem from="1650013124406" duration="2999000" />
     </task>
     <servers />
   </component>

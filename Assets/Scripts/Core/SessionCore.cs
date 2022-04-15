@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Services;
 using Controlers;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -34,6 +35,7 @@ public class SessionCore : MonoBehaviour
     void Start()
     {
         SetGameSpeed();
+        DOTween.Init();
         sessionUIController.ActiveAttempText(attempCounterController.GetAttemps());
         audioController.Play(musicTimeStart);
         pTPersonComponent.SetCanMove(true); 
