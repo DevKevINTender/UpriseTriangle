@@ -10,10 +10,10 @@ public class Levels : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(list);
+        
         foreach (var item in listBool[0].GetCells())
        {
-           Debug.Log(item);
+           
        }
     
     }
