@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MagnetBonusPanelView : MonoBehaviour
 {
-    public MagnetBonusPanelAnimation MagnetBonusPanelAnimation;
+    public BonusPanelAnimation bonusPanelAnimation;
     private int BonusId = 2;
     private int BonusCount = 1;
     
@@ -18,17 +18,17 @@ public class MagnetBonusPanelView : MonoBehaviour
     {
         this.getBonus = getBonus;
         this.closePanel = closePanel;
-        MagnetBonusPanelAnimation.OpenPanelAnim();
+        bonusPanelAnimation.OpenPanelAnim();
     }
 
     public void GetFreeBonus()
     {
-        MagnetBonusPanelAnimation.GetFreeBonusAnim(BonusGeted);
+        bonusPanelAnimation.GetFreeBonusAnim(BonusGeted);
     }
     
     public void GetAdsBonus()
     {
-        MagnetBonusPanelAnimation.GetAdsBonusAnim(BonusGeted);
+        bonusPanelAnimation.GetAdsBonusAnim(BonusGeted);
     }
     
     public void BonusGeted()
@@ -39,6 +39,6 @@ public class MagnetBonusPanelView : MonoBehaviour
 
     public void ClosePanel()
     {
-        MagnetBonusPanelAnimation.ClosePanelAnim(closePanel);
+        bonusPanelAnimation.ClosePanelAnim(closePanel);
     }
 }

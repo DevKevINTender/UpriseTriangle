@@ -3,6 +3,7 @@ using System.Collections;
 using Services;
 using Controlers;
 using DG.Tweening;
+using DOTweenAnimation.Global;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +18,7 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private SessionUIController sessionUIController;
     [SerializeField] private AttempCounterController attempCounterController;
     [SerializeField] private BonusCollectorComponent bonusCollectorComponent;
+
     [Header("Game values")]
     [SerializeField] float musicTimeStart;
     [SerializeField] private int currentSession;
@@ -26,6 +28,11 @@ public class SessionCore : MonoBehaviour
     [Header("Player transfer")]
     [SerializeField] private float timeTransfer; // ����� ������ ����
     private bool personWin;
+    private bool personDeath;
+    
+    [Header("Animations")]
+    [SerializeField] private PausePanelAnimation PausePanelAnimation;
+    [SerializeField] private TransitionAnimation TransitionPanelAnimation;
 
     public void SetGameSpeed()
     {
@@ -38,6 +45,8 @@ public class SessionCore : MonoBehaviour
         DOTween.Init();
         sessionUIController.ActiveAttempText(attempCounterController.GetAttemps());
         audioController.Play(musicTimeStart);
+        TransitionPanelAnimation.gameObject.SetActive(true);
+        TransitionPanelAnimation.OpenSessionScene();
         pTPersonComponent.SetCanMove(true); 
         pTPersonComponent.InitComponent(PersonDeath, PersonWin, PersonEndWin); // �������� �� ������� ������ � �������� ������
         playerMovePanelView.Init(StartPause, EndPause);// �������� �� ������� �����
@@ -51,19 +60,22 @@ public class SessionCore : MonoBehaviour
     }
     public void RestartGame()
     {
-        StartCoroutine(RestartTimer(animationController.GetPersonDeathAnimLength(), currentSession));
+       // StartCoroutine(RestartTimer(animationController.GetPersonDeathAnimLength(), currentSession));
+        StartCoroutine(RestartTimer(2f,currentSession));
     }
 
     public void PersonDeath()
     {
+        personDeath = true;
         attempCounterController.AddAttemp();
-        animationController.PersonDeath();
+        //animationController.PersonDeath();
         audioController.PersonDeath();
         bonusCollectorComponent.PersonDeath();
         pTPersonComponent.SetCanMove(false);
         DeathRegistrationControler.AddNewRecord(DateTime.Now,1);
         Handheld.Vibrate();
         Time.timeScale = timeSlow;
+        TransitionPanelAnimation.CloseScene(0);
         RestartGame();
     }
 
@@ -82,9 +94,10 @@ public class SessionCore : MonoBehaviour
 
     public void StartPause()
     {
-        if (!personWin)
+        if (!personWin && !personDeath)
         { 
-            animationController.StartPause();
+            //animationController.StartPause();
+            PausePanelAnimation.OpenPanelAnim();
             audioController.StartPause(timeSlow);
             Time.timeScale = timeSlow;
         }
@@ -93,9 +106,11 @@ public class SessionCore : MonoBehaviour
     public void EndPause()
     {
         
-        animationController.EndPause();
+        //animationController.EndPause();
         audioController.EndPause();
+        PausePanelAnimation.ClosePanelAnim(0);
         Time.timeScale = 1f;
+
     }
 
     public void OnApplicationPause()
@@ -107,7 +122,7 @@ public class SessionCore : MonoBehaviour
 
     public IEnumerator RestartTimer(float _time, int currentSession)
     {        
-        yield return new WaitForSecondsRealtime(_time);
+        yield return new WaitForSecondsRealtime(1.25f);
         Time.timeScale = 1;
         SceneManager.LoadScene(currentSession);
     }

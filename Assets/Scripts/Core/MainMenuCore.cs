@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Controlers;
+using DOTweenAnimation.Global;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,19 +9,20 @@ using UnityEngine.UI;
 public class MainMenuCore : MonoBehaviour
 {
     [SerializeField] private Text CoinsCountText;
-    [SerializeField] private Animator TransitionAnimator;
+    [SerializeField] private TransitionAnimation TransitionAnimation;
     AsyncOperation async;
     void Start()
     {
-        async = SceneManager.LoadSceneAsync(3);
+        TransitionAnimation.OpenScene();
+        async = SceneManager.LoadSceneAsync(1);
         async.allowSceneActivation = false;
         CoinsCountText.text = $"{CoinsControler.GetCoinsCount()}";
     }
     
     public void LoadScene(int id)
     {
-        TransitionAnimator.SetTrigger("IsOpen");
-       StartCoroutine(WaitUntil(1, id));
+        TransitionAnimation.CloseScene(0);
+        StartCoroutine(WaitUntil(1.25f, id));
     }
 
     private IEnumerator WaitUntil(float time, int id)
