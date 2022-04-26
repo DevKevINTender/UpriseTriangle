@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Controlers;
 using UnityEngine;
+using UnityEngine.UI;
 using Views.Session.Bonuses;
 
 public class BonusCollectorComponent : MonoBehaviour
@@ -30,6 +31,10 @@ public class BonusCollectorComponent : MonoBehaviour
     public int ShieldBonusCount;
     public int MagnetBonusCount;
     public int MultiplierBonusCount;
+    [Header("BonusText")] 
+    public Text shieldBonusText;
+    public Text magnetBonusText;
+    public Text multiplierBonusText;
     public int GetShieldBonusCount()
     {
         return ShieldBonusCount;
@@ -170,10 +175,18 @@ public class BonusCollectorComponent : MonoBehaviour
         ShieldBonusCount = PlayerPrefs.GetInt("ShieldBonusCount");
         MagnetBonusCount = PlayerPrefs.GetInt("MagnetBonusCount");
         MultiplierBonusCount = PlayerPrefs.GetInt("MultiplierBonusCount");
+        
+        shieldBonusText.text = ShieldBonusCount + "";
+        magnetBonusText.text = MagnetBonusCount + "";
+        multiplierBonusText.text = MultiplierBonusCount + "";
     }
 
     private void SaveBonusesCount()
     {
+        shieldBonusText.text = ShieldBonusCount + "";
+        magnetBonusText.text = MagnetBonusCount + "";
+        multiplierBonusText.text = MultiplierBonusCount + "";
+        
         PlayerPrefs.SetInt("ShieldBonusCount", ShieldBonusCount);
         PlayerPrefs.SetInt("MagnetBonusCount", MagnetBonusCount);
         PlayerPrefs.SetInt("MultiplierBonusCount", MultiplierBonusCount);

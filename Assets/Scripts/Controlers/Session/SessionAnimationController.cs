@@ -13,7 +13,7 @@ public class SessionAnimationController : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine(WaitUntilStart(2));
+        //StartCoroutine(WaitUntilStart(2));
     }
 
     public void PersonWin()
