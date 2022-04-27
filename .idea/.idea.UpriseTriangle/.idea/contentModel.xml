@@ -180,6 +180,7 @@
             </e>
             <e p="Session" t="Include">
               <e p="BonusPanelAnimation.cs" t="Include" />
+              <e p="CameraShakeAnimation.cs" t="Include" />
               <e p="PausePanelAnimation.cs" t="Include" />
               <e p="WinnerPanelAnimation.cs" t="Include" />
             </e>

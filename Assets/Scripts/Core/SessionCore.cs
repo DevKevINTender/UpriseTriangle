@@ -13,8 +13,8 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private PlayerMovePanelView playerMovePanelView;
     [SerializeField] private SessionAudioController audioController; // ������ ������
     [SerializeField] private MovePointComponent movePointController;
-    [SerializeField] private PersonComponent pTPersonComponent;
-    [SerializeField] private SessionAnimationController animationController;
+    [SerializeField] private PersonComponent personComponent;
+    //[SerializeField] private SessionAnimationController animationController;
     [SerializeField] private SessionUIController sessionUIController;
     [SerializeField] private AttempCounterController attempCounterController;
     [SerializeField] private BonusCollectorComponent bonusCollectorComponent;
@@ -33,10 +33,12 @@ public class SessionCore : MonoBehaviour
     [Header("Animations")]
     [SerializeField] private PausePanelAnimation PausePanelAnimation;
     [SerializeField] private TransitionAnimation TransitionPanelAnimation;
+    [SerializeField] private WinnerPanelAnimation WinnerPanelAnimation;
 
     public void SetGameSpeed()
     {
         gameSpeed = ServiceScreenResolution.GetScaledGameSpeed();
+        Time.timeScale = 1;
     }
 
     void Start()
@@ -47,8 +49,8 @@ public class SessionCore : MonoBehaviour
         audioController.Play(musicTimeStart);
         TransitionPanelAnimation.gameObject.SetActive(true);
         TransitionPanelAnimation.OpenSessionScene();
-        pTPersonComponent.SetCanMove(true); 
-        pTPersonComponent.InitComponent(PersonDeath, PersonWin, PersonEndWin); // �������� �� ������� ������ � �������� ������
+        personComponent.SetCanMove(true); 
+        personComponent.InitComponent(PersonDeath, PersonWin); // �������� �� ������� ������ � �������� ������
         playerMovePanelView.Init(StartPause, EndPause);// �������� �� ������� �����
         bonusCollectorComponent.InitComponent(StartPause, EndPause);
         if (timeTransfer != 0)
@@ -58,11 +60,6 @@ public class SessionCore : MonoBehaviour
         }
        
     }
-    public void RestartGame()
-    {
-       // StartCoroutine(RestartTimer(animationController.GetPersonDeathAnimLength(), currentSession));
-        StartCoroutine(RestartTimer(2f,currentSession));
-    }
 
     public void PersonDeath()
     {
@@ -71,25 +68,20 @@ public class SessionCore : MonoBehaviour
         //animationController.PersonDeath();
         audioController.PersonDeath();
         bonusCollectorComponent.PersonDeath();
-        pTPersonComponent.SetCanMove(false);
+        personComponent.SetCanMove(false);
         DeathRegistrationControler.AddNewRecord(DateTime.Now,1);
         Handheld.Vibrate();
         Time.timeScale = timeSlow;
-        TransitionPanelAnimation.CloseScene(0);
-        RestartGame();
-    }
-
-    public void PersonEndWin()
-    {
-        sessionUIController.ActivateWinPanel();
+        TransitionPanelAnimation.CloseScene(0, currentSession);
     }
 
     public void PersonWin()
     {
         personWin = true;
-        pTPersonComponent.SetCanMove(false);
-        pTPersonComponent.MoveToCenter();
-        animationController.PersonWin();      
+        personComponent.SetCanMove(false);
+        Time.timeScale = timeSlow;
+        WinnerPanelAnimation.gameObject.SetActive(true);
+        WinnerPanelAnimation.OpenPanelAnim();
     }
 
     public void StartPause()
@@ -118,12 +110,5 @@ public class SessionCore : MonoBehaviour
         #if !UNITY_EDITOR
         StartPause();
         #endif
-    }
-
-    public IEnumerator RestartTimer(float _time, int currentSession)
-    {        
-        yield return new WaitForSecondsRealtime(1.25f);
-        Time.timeScale = 1;
-        SceneManager.LoadScene(currentSession);
     }
 }

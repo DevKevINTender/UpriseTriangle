@@ -30,20 +30,9 @@ public class WinnerPanelAnimation : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1;
         DOTween.defaultTimeScaleIndependent = true;
-        OpenPanelAnim();
-        TransitionAnimation.OpenScene();
-        //freeBonusStartPos = freeBonus.transform.localPosition;
-        //adsBonusStartPos = adsBonus.transform.localPosition;
-        
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     [ContextMenu("Open Menu")]
     public void OpenPanelAnim()
     {
@@ -91,13 +80,8 @@ public class WinnerPanelAnimation : MonoBehaviour
         winnerPanelAnim = DOTween.Sequence();
         winnerPanelAnim.AppendCallback(() =>
             {
-                TransitionAnimation.CloseScene(0);
+                TransitionAnimation.CloseScene(0, 0);
             });
-        winnerPanelAnim.AppendInterval(1.75f);
-        winnerPanelAnim.AppendCallback(() =>
-        {
-            SceneManager.LoadScene(0);
-        });
     }
 
     public void ChooseAdsBonus()

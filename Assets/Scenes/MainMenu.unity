@@ -444,7 +444,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -935,11 +935,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftPanel: {fileID: 849358840}
-  rightPanel: {fileID: 0}
   centerImage: {fileID: 1918016898}
-  leftColor: {fileID: 849358838}
-  rightColor: {fileID: 0}
   bgColor: {fileID: 849358838}
+  red:
+    serializedVersion: 2
+    rgba: 4284357631
+  green:
+    serializedVersion: 2
+    rgba: 4290903854
+  white:
+    serializedVersion: 2
+    rgba: 4294967295
+  greyDark:
+    serializedVersion: 2
+    rgba: 4279704346
 --- !u!114 &765170638
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,15 +16,10 @@ public class PausePanelAnimation : MonoBehaviour
     void Start()
     {
         DOTween.defaultTimeScaleIndependent = true;
-        
+        topPanel.anchoredPosition = new Vector2(0,1000);
+        bottomPanel.anchoredPosition = new Vector2(0,-1000);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     public void OpenPanelAnim()
     {
         pausePanelAnim.Kill();
@@ -34,12 +29,6 @@ public class PausePanelAnimation : MonoBehaviour
         pausePanelAnim.Append(mainPanelImage.DOColor(new Color32(26,27,33,175), 0.25f)).SetEase(Ease.OutExpo);
         pausePanelAnim.Join(bottomPanel.DOAnchorPos(Vector2.zero, 1)).SetEase(Ease.OutExpo);
         pausePanelAnim.Join(topPanel.DOAnchorPos(Vector2.zero, 1)).SetEase(Ease.OutExpo);
-        //Sequence openPanel = DOTween.Sequence();    
-        //openPanel.Append( transform.DOLocalMove(Vector3.zero, 1));
-        //openPanel.AppendInterval(0.25f);
-        //openPanel.Append( topPanel.DOLocalMove(Vector3.zero, 0.5f));
-        //openPanel.Append( bottomPanel.DOLocalMove(Vector3.zero, 0.5f));
-
     }
     
     public void ClosePanelAnim(float duration)
