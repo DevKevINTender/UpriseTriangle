@@ -20,20 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Elements/Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Elements/Box.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Elements/CheckPoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Elements/CheckPoint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/LevelTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test/LevelTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Global/TransitionAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Global/TransitionAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/PausePanelAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/PausePanelAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/WinnerPanelAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/WinnerPanelAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionUIController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +78,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MultiplierBonusPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/CoinBonusPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/CoinCollectorComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionUIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/PersonMoveController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PreGenerator/StaticLinePreGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/BoxGenerator/BoxPreGenerator.cs" />
@@ -116,6 +104,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/WinnerPanelAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Global/TransitionAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionUIController.cs" />
       </list>
     </option>
   </component>
@@ -206,6 +195,7 @@
       <workItem from="1650880728007" duration="13000" />
       <workItem from="1650881584030" duration="16173000" />
       <workItem from="1651051736812" duration="6923000" />
+      <workItem from="1651086096938" duration="1015000" />
     </task>
     <servers />
   </component>
