@@ -6,6 +6,8 @@ TagManager:
   tags:
   - FinishLine
   - Enemy
+  - Topper
+  - Top
   layers:
   - Default
   - TransparentFX
