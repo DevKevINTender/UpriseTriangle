@@ -57,8 +57,7 @@ public class SessionCore : MonoBehaviour
         {
             audioController.TimeTransfer(timeTransfer); // ����� ������ � ��������� �������
             movePointController.TimeTransfer(timeTransfer, gameSpeed);
-        }
-       
+        }        
     }
 
     public void PersonDeath()
@@ -97,12 +96,10 @@ public class SessionCore : MonoBehaviour
 
     public void EndPause()
     {
-        
         //animationController.EndPause();
         audioController.EndPause();
         PausePanelAnimation.ClosePanelAnim(0);
         Time.timeScale = 1f;
-
     }
 
     public void OnApplicationPause()

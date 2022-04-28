@@ -21,8 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/Session/Bonuses/Shield.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/Session/Bonuses/Shield.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/Session/Bonuses/ShieldCrackAnim.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/Session/Bonuses/ShieldCrackAnim.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/PersonComponent/ShieldComponent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/PersonComponent/ShieldComponent.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/LevelTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test/LevelTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/ShieldComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/ShieldComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +59,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/ESPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/EffectStorage/ESPageView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Global/InfoPanel/AlertPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LSPanelView.cs" />
@@ -96,15 +100,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TestDoTween/MagnetBonusPanelAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TestDoTween/BonusPanelAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/SessionAnimationController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/BonusPanelAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/PausePanelAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/WinnerPanelAnimation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Global/TransitionAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/UIControler/SessionUIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/ShieldComponent.cs" />
       </list>
     </option>
   </component>
@@ -196,6 +201,7 @@
       <workItem from="1650881584030" duration="16173000" />
       <workItem from="1651051736812" duration="6923000" />
       <workItem from="1651086096938" duration="1015000" />
+      <workItem from="1651123327585" duration="1735000" />
     </task>
     <servers />
   </component>

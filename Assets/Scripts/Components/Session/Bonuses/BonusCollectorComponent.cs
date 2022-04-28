@@ -35,6 +35,13 @@ public class BonusCollectorComponent : MonoBehaviour
     public Text shieldBonusText;
     public Text magnetBonusText;
     public Text multiplierBonusText;
+
+    private void Awake()
+    {
+        ShieldBonusCount = 10;
+        SaveBonusesCount();
+    }
+
     public int GetShieldBonusCount()
     {
         return ShieldBonusCount;
