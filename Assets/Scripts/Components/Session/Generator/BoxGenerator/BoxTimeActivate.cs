@@ -1,19 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using Array2DEditor;
 using UnityEngine;
 
 public class BoxTimeActivate : MonoBehaviour
 {
     [SerializeField] private int ObstCount;
     [SerializeField] private List<float> temp;
+    [SerializeField] private Levels levels;
     private List<float> timing;
     private bool canAction;
     private ElevatorComponent elevator;
     [SerializeField] private List<BoxObstacleComponent> squares = new List<BoxObstacleComponent>();
     private int timingIndex;
-    
+    int paintNum;
+
+
     void Start()
     {
+        ObstCount = levels.listBool[0].GridSize.y * levels.listBool[0].GridSize.x;
         elevator = transform.parent.GetComponent<ElevatorComponent>();
         elevator.BoxTimeActivate = this;
         Invoke("AddSquaresToList", 0.2f);
@@ -77,20 +82,35 @@ public class BoxTimeActivate : MonoBehaviour
         }
     }
 
-
     public IEnumerator SetActiveSquares(float _timing)
     {
-        int obstCountBuff = ObstCount;
+        bool[] listObst = GetPaint(paintNum);
         yield return new WaitForSeconds(_timing);
-        if (obstCountBuff > squares.Count) obstCountBuff = squares.Count;
-        for (int i = 0; i < obstCountBuff; i++)
+        for (int i = 0; i < ObstCount; i++)
         {
-            int randomIndex = Random.Range(0, squares.Count);
-            squares[randomIndex].Active();
-            DeleteFromList(squares[randomIndex]);
+            if (listObst[i])
+            { 
+                squares[i].Active();
+            }
         }
+        paintNum++;
+        if (paintNum > levels.listBool.Count) paintNum = 0;
         SetNextTiming();
     }
 
+    public bool[] GetPaint(int paint)
+    {
+        int k = 0;
+        bool[] buf = new bool[ObstCount];
+        for (int j = 0; j < levels.listBool[paint].GridSize.y; j++)
+        {
+            for (int i = 0; i < levels.listBool[paint].GridSize.x; i++)
+            {
+                buf[k] = levels.listBool[paint].GetCell(i,j);
+                k++;
+            }
+        }
+        return buf;
+    }
 
 }
