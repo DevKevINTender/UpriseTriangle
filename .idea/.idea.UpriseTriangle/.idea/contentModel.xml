@@ -109,6 +109,7 @@
                 </e>
                 <e p="ShieldBonusComponent.cs" t="Include" />
               </e>
+              <e p="BorderMagnetComponent.cs" t="Include" />
               <e p="CheckPointComponent.cs" t="Include" />
               <e p="Coin" t="Include">
                 <e p="CoinCollectorComponent.cs" t="Include" />
@@ -131,8 +132,10 @@
                 <e p="BoxObstacleComponent.cs" t="Include" />
                 <e p="ObstacleComponent.cs" t="Include" />
                 <e p="RotateObstacle.cs" t="Include" />
+                <e p="StaticComponent.cs" t="Include" />
               </e>
               <e p="PersonComponent.cs" t="Include" />
+              <e p="PersonSkinComponent.cs" t="Include" />
               <e p="PreGenerator" t="Include">
                 <e p="ArrowBlockPreGenerator.cs" t="Include" />
                 <e p="StaticLinePreGenerator.cs" t="Include" />
