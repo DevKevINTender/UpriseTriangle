@@ -111,11 +111,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2574751106023472906}
   boxCollider: {fileID: 786749592259994768}
-  startTime: 0.1
-  alertTime: 1
-  changeColorTime: 0.5
-  boopTime: 0.1
-  disappearTime: 0.3
+  startTemp: 0.25
+  alertTemp: 2
+  changeColorTemp: 1
+  boopTemp: 0.25
+  disappearTemp: 0.125
   endColor: {r: 0.95294124, g: 0.14117648, b: 0.3803922, a: 1}
   boopColor: {r: 1, g: 1, b: 1, a: 1}
   alertColor: {r: 0.95294124, g: 0.14117648, b: 0.3803922, a: 0.29803923}

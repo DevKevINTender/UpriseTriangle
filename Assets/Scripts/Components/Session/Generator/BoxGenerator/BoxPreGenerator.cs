@@ -26,10 +26,9 @@ public class BoxPreGenerator : MonoBehaviour
     private Vector3 startPos;
     private Vector3 currentPos;
 
-
     public void Start()
     {        
-        Spawn();
+        SetStartValues();
     }
 
     public void SetStartValues()
@@ -45,31 +44,17 @@ public class BoxPreGenerator : MonoBehaviour
         startPos = new Vector3(-maxX, maxY);
     }
    
-    [ContextMenu("Spawn")]
-    public void Spawn()
+    public void Spawn(int i, int j)
     {
-        DestroyChilds();
-        SetStartValues();
-        for (int j = 0; j < countY; j++)
-        { 
-            for (int i = 0; i < countX; i++)
-            {
-                obsObj = Instantiate(obsPb, transform) as GameObject;
-                obsObj.transform.localScale = new Vector3(objScaleX, objScaleY) / screenScale;
-                currentPos = startPos + new Vector3((obsObj.transform.localScale.x * i), 0);
-                obsObj.transform.localPosition = currentPos;
-            }
-            startPos -= new Vector3(0, (obsObj.transform.localScale.y));
-        }
+        obsObj = Instantiate(obsPb, transform) as GameObject;
+        obsObj.transform.localScale = new Vector3(objScaleX, objScaleY) / screenScale;
+        currentPos = startPos + new Vector3(obsObj.transform.localScale.x * i, 0);
+        currentPos -= new Vector3(0, obsObj.transform.localScale.y * j);
+        obsObj.transform.localPosition = currentPos;
     }
 
-
-    public void DestroyChilds()
+    public float GetBoxTime()
     {
-        if (transform.childCount > 0)
-            for (int i = transform.childCount; i > 0; --i)
-            {
-                DestroyImmediate(transform.GetChild(0).gameObject);
-            }
+       return obsPb.GetComponent<BoxObstacleComponent>().GetBoxTime();
     }
 }

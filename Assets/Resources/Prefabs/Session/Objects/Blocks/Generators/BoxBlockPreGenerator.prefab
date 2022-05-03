@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6922472498618293356}
   - component: {fileID: 6922472498618293357}
   - component: {fileID: 47728432}
+  - component: {fileID: 1487685308}
   m_Layer: 0
   m_Name: BoxBlockPreGenerator
   m_TagString: Untagged
@@ -59,5 +60,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff6208ab43b208469190c39e9ea1ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObstCount: 0
-  timing: []
+  ObstCount: 10
+  temp:
+  - 1
+  levels: {fileID: 1487685308}
+  boxPreGenerator: {fileID: 6922472498618293357}
+--- !u!114 &1487685308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6922472498618293358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d799c59dc8da476d908872a8c757b815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listBool:
+  - gridSize: {x: 5, y: 10}
+    cellSize: {x: 16, y: 16}
+    cells:
+    - row: 0101010101
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+  - gridSize: {x: 5, y: 10}
+    cellSize: {x: 16, y: 16}
+    cells:
+    - row: 0000000000
+    - row: 0101010101
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+  - gridSize: {x: 5, y: 10}
+    cellSize: {x: 16, y: 16}
+    cells:
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0000000000
+    - row: 0101010101
+    - row: 0101010101

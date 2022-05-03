@@ -6,13 +6,12 @@ public class BoxObstacleComponent : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private BoxCollider2D boxCollider;
-    private BoxTimeActivate BoxTimeActivate;
     [Header("Timings")]
-    [SerializeField] private float startTime;
-    [SerializeField] private float alertTime;
-    [SerializeField] private float changeColorTime;
-    [SerializeField] private float boopTime;
-    [SerializeField] private float disappearTime;
+    [SerializeField] private float startTemp;
+    [SerializeField] private float alertTemp;
+    [SerializeField] private float changeColorTemp;
+    [SerializeField] private float boopTemp;
+    [SerializeField] private float disappearTemp;
     [Header("Colors")]
     [SerializeField] private Color endColor;
     [SerializeField] private Color boopColor;
@@ -22,12 +21,35 @@ public class BoxObstacleComponent : MonoBehaviour
     private Color startColor;
     private Vector3 startScale;
 
+
+    private float startTime;
+    private float alertTime;
+    private float changeColorTime;
+    private float boopTime;
+    private float disappearTime;
+
+    public float TempToTiming(float _value)
+    {
+        return _value * (60f / 125f);
+    }
+
+    public float GetBoxTime()
+    {
+        return startTime + alertTime + changeColorTime; 
+    }
+
     public void Start()
     {
-        BoxTimeActivate = transform.parent.GetComponent<BoxTimeActivate>();
+        startTime = TempToTiming(startTemp);
+        alertTime = TempToTiming(alertTemp);
+        changeColorTime = TempToTiming(changeColorTemp);
+        boopTime = TempToTiming(boopTemp);
+        disappearTime = TempToTiming(disappearTemp);
+
         startColor = spriteRenderer.color;
         startScale = transform.localScale;
         boopScale = new Vector3(startScale.x * boopScale.x, startScale.y * boopScale.y);
+        Active();
     }
 
     public void Active()
@@ -52,10 +74,7 @@ public class BoxObstacleComponent : MonoBehaviour
         StartCoroutine(Scaling(Vector3.zero, disappearTime));
         boxCollider.enabled = false;
         yield return new WaitForSeconds(disappearTime);
-
-        spriteRenderer.color = startColor;
-        transform.localScale = startScale;
-        BoxTimeActivate.AddToList(transform.GetComponent<BoxObstacleComponent>());
+        Destroy(gameObject);
     }
 
     private IEnumerator Coloring(Color startColor, Color endColor, float time)

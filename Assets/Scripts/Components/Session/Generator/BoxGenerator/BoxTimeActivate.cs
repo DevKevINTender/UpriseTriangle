@@ -1,27 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
-using Array2DEditor;
 using UnityEngine;
+using DG.Tweening;
 
 public class BoxTimeActivate : MonoBehaviour
 {
-    [SerializeField] private int ObstCount;
     [SerializeField] private List<float> temp;
     [SerializeField] private Levels levels;
+    [SerializeField] private BoxPreGenerator boxPreGenerator;
     private List<float> timing;
     private bool canAction;
     private ElevatorComponent elevator;
-    [SerializeField] private List<BoxObstacleComponent> squares = new List<BoxObstacleComponent>();
     private int timingIndex;
-    int paintNum;
+    int paintNum; // индекс текущего рисунка из квадратов
+    float boxTime; // время когда box бупает(1,5 сек примерно)
 
 
     void Start()
     {
-        ObstCount = levels.listBool[0].GridSize.y * levels.listBool[0].GridSize.x;
+        boxTime = boxPreGenerator.GetBoxTime();
         elevator = transform.parent.GetComponent<ElevatorComponent>();
         elevator.BoxTimeActivate = this;
-        Invoke("AddSquaresToList", 0.2f);
         TempToTiming();
     }
 
@@ -47,24 +46,7 @@ public class BoxTimeActivate : MonoBehaviour
         canAction = false;
     }
 
-    public void DeleteFromList(BoxObstacleComponent box)
-    {
-        squares.Remove(box);
-    }
-
-    public void AddToList(BoxObstacleComponent box)
-    {
-        squares.Add(box);
-    }
-
-    public void AddSquaresToList()
-    {
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            squares.Add(transform.GetChild(i).GetComponent<BoxObstacleComponent>());
-        }
-    }
-
+    //итератор списка темпов с зацикливанием
     public void SetNextTiming()
     {    
         if (canAction)
@@ -77,40 +59,31 @@ public class BoxTimeActivate : MonoBehaviour
             else
             {
                 timingIndex = 0;
-                SetNextTiming();
+                StartCoroutine(SetActiveSquares(timing[timingIndex]));
             }
         }
     }
 
     public IEnumerator SetActiveSquares(float _timing)
     {
-        bool[] listObst = GetPaint(paintNum);
         yield return new WaitForSeconds(_timing);
-        for (int i = 0; i < ObstCount; i++)
+        for (int j = 0; j < levels.listBool[paintNum].GridSize.y; j++)
         {
-            if (listObst[i])
-            { 
-                squares[i].Active();
+            for (int i = 0; i < levels.listBool[paintNum].GridSize.x; i++)
+            {
+                if (levels.listBool[paintNum].GetCell(i, j))
+                    boxPreGenerator.Spawn(i, j); // спавн box'a если bool = true в листе рисунков
             }
         }
         paintNum++;
-        if (paintNum > levels.listBool.Count) paintNum = 0;
+        if (paintNum >= levels.listBool.Count) paintNum = 0; //зацикливание рисунков
         SetNextTiming();
+        Invoke("Shake", boxTime);
     }
 
-    public bool[] GetPaint(int paint)
+    public void Shake()
     {
-        int k = 0;
-        bool[] buf = new bool[ObstCount];
-        for (int j = 0; j < levels.listBool[paint].GridSize.y; j++)
-        {
-            for (int i = 0; i < levels.listBool[paint].GridSize.x; i++)
-            {
-                buf[k] = levels.listBool[paint].GetCell(i,j);
-                k++;
-            }
-        }
-        return buf;
+        //transform.parent.parent.transform.gameObject.GetComponent<ShakeAnimation>().DoShake();
+        transform.DOShakePosition(0.1f, 0.15f, 15, 0, false, true);
     }
-
 }
