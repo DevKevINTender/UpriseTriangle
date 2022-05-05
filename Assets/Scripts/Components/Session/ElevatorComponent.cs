@@ -9,11 +9,14 @@ public class ElevatorComponent : MonoBehaviour
     private bool canMove;
     [SerializeField] private float gameSpeed;
     [SerializeField] internal GameObject cursorAllignService;
+    private CoinDispenserController coinDispenserController;
     internal BoxTimeActivate BoxTimeActivate;
     private GameObject player;
 
     public void Start()
     {
+        if (transform.GetChild(0).GetComponent<CoinDispenserController>())
+            coinDispenserController = transform.GetChild(0).GetComponent<CoinDispenserController>();
         gameSpeed = ServiceScreenResolution.GetScaledGameSpeed();
         canMove = false;
     }
@@ -51,7 +54,8 @@ public class ElevatorComponent : MonoBehaviour
     {
         StartCoroutine(ElevatorTimeCur());
         if(BoxTimeActivate != null) BoxTimeActivate.StartAction();
-        if (cursorAllignService != null) cursorAllignService.SetActive(true);
+        if(cursorAllignService != null) cursorAllignService.SetActive(true);
+        if (coinDispenserController != null) coinDispenserController.StartAction();
     }
 
     private IEnumerator ElevatorTimeCur()
