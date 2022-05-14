@@ -10,7 +10,6 @@ public class BorderController : MonoBehaviour
 
     [SerializeField] private Transform leftCoinBorder;
     [SerializeField] private Transform rightCoinBorder;
-    [SerializeField] private Transform downCoinBorder;
 
     private float screenWidth;
     private float screenHeigth;
@@ -25,10 +24,7 @@ public class BorderController : MonoBehaviour
         SetPosition(ref topper, 0, screenHeigth + 0.2f);
 
         SetPosition(ref leftCoinBorder, -screenWidth, 0);
-        SetPosition(ref rightCoinBorder, screenWidth, 0);
-        Debug.Log(-screenHeigth);
-        SetPosition(ref downCoinBorder, 0, -5f);
-        
+        SetPosition(ref rightCoinBorder, screenWidth, 0);  
     }
 
 

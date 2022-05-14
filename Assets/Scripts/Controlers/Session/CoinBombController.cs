@@ -7,29 +7,43 @@ public class CoinBombController : MonoBehaviour
 {
     [SerializeField] private GameObject coinBombPb;
     [SerializeField] private float spawnRate;
+    private GameObject coinBombObj;
+    private float spawnCount;
 
     private float screenWidth;
     private float screenHeigth;
+
     private float lifeTime;
+    private Vector3 spawnPoint;
+    private float x;
+    private float y;
 
     private void Start()
     {
         lifeTime = transform.parent.transform.GetComponent<ElevatorComponent>().GetElevatorTime();
-        screenWidth = ScreenSize.GetScreenToWorldWidth / 2;
-        screenHeigth = ScreenSize.GetScreenToWorldHeight / 2;
+        spawnCount = lifeTime / spawnRate;
+        screenWidth = ScreenSize.GetScreenToWorldWidth / 2 - 1;
+        screenHeigth = 1.5f;
     }
 
     public void StartAction()
     {
-        StartCoroutine(SpawnDelay());
+        if(spawnCount > 1) //чтобы не было спавна на последней секунде лифта
+            StartCoroutine(SpawnDelay());
+
     }
 
 
     private IEnumerator SpawnDelay()
     {
-
-        Instantiate(coinBombPb, transform);
+        x = Random.Range(-screenWidth, screenWidth);
+        y = Random.Range(-screenHeigth, screenHeigth);
+        spawnPoint = new Vector3(x, y);
+        coinBombObj = Instantiate(coinBombPb, transform);
+        coinBombObj.transform.localPosition = spawnPoint;
+        spawnCount--;
         yield return new WaitForSeconds(spawnRate);
+        StartAction();
     }
 
 }
