@@ -53,6 +53,7 @@ public class ElevatorComponent : MonoBehaviour
             ActivateElevator();
             player = other.gameObject;
             player.transform.GetChild(0).GetComponent<PersonComponent>().inElevator = true;
+            player.transform.GetChild(0).GetComponent<PersonComponent>().EnterElevator();
         }
     }
 
@@ -75,6 +76,7 @@ public class ElevatorComponent : MonoBehaviour
     private void StopElevator()
     {
         player.transform.GetChild(0).GetComponent<PersonComponent>().inElevator = false;
+        player.transform.GetChild(0).GetComponent<PersonComponent>().ExitElevator();
         canMove = false;
     }
 }

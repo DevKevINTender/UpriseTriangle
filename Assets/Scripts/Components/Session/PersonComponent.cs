@@ -13,21 +13,18 @@ public class PersonComponent : MonoBehaviour
     private bool canMove;
     private bool isMove;
     internal bool inElevator;
-    [SerializeField] private Rigidbody2D personRb;
-    [SerializeField] private float moveToCenterTime;
-    [SerializeField] private GameObject crackLeft;
-    [SerializeField] private GameObject crackRight;
+    [SerializeField] private PersonParticleController personParticleController;
 
     float timer;
 
     private float vectroToRotate;
     private float targetvectroToRotate;
 
-    [SerializeField] private float maxX;
-    [SerializeField] private float minX;
+    private float maxX;
+    private float minX;
 
-    [SerializeField] private float maxY;
-    [SerializeField] private float minY;
+    private float maxY;
+    private float minY;
 
 
     
@@ -35,7 +32,17 @@ public class PersonComponent : MonoBehaviour
     {
         this.canMove = canMove;
     }
- 
+
+    public void EnterElevator()
+    {
+        personParticleController.StopParticle();
+    }
+
+    public void ExitElevator()
+    {
+        personParticleController.StartParticle();
+    }
+
     public void InitComponent(PersonDelegate personDeathTrigger, PersonDelegate personWinTrigger)
     {
         this.personDeathTrigger = personDeathTrigger;
@@ -54,14 +61,11 @@ public class PersonComponent : MonoBehaviour
         if (canMove)
         {
             vectroToRotate = vector.normalized.x * -15;
-
             transform.localPosition += vector;
-          
-        }
-       
+        }     
     }
 
-    private void Teleport()
+    private void CheckTeleport()
     {
        
         float distanceX = Math.Abs(maxX - minX);
@@ -125,13 +129,13 @@ public class PersonComponent : MonoBehaviour
             transform.localPosition += new Vector3(0,-speedMove   ,0);
         }
     }
+
     public void Update()
     {
         vectroToRotate = Mathf.MoveTowards(vectroToRotate, 0, Time.deltaTime * 60);
         targetvectroToRotate = Mathf.MoveTowards(targetvectroToRotate, vectroToRotate, Time.deltaTime * 60);
         transform.rotation = Quaternion.Euler( 0,0, targetvectroToRotate);
-        Teleport();
-       
+        CheckTeleport();      
     }
 
     public void OnTriggerEnter2D(Collider2D other)

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2244905699537897865}
+  - component: {fileID: 1915856044}
   m_Layer: 0
   m_Name: CoinBombController
   m_TagString: Untagged
@@ -30,3 +31,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1915856044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430387148874061273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a4d095a3972a247af028d1ae725f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinBombPb: {fileID: 8019844671365167398, guid: 35db0baf02296f541b1923c3d0b93ca4, type: 3}
+  spawnRate: 2
