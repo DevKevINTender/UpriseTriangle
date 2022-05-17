@@ -3,7 +3,7 @@ using Services;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinBombController : MonoBehaviour
+public class CoinBombController : ElevatorMarkComponent
 {
     [SerializeField] private GameObject coinBombPb;
     [SerializeField] private float spawnRate;
@@ -26,7 +26,7 @@ public class CoinBombController : MonoBehaviour
         screenHeigth = 1.5f;
     }
 
-    public void StartAction()
+    internal override void StartAction()
     {
         if(spawnCount > 1) //чтобы не было спавна на последней секунде лифта
             StartCoroutine(SpawnDelay());

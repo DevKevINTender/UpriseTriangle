@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3059308993587075516}
   - component: {fileID: 3059308993587075517}
-  - component: {fileID: 5360771597814711008}
+  - component: {fileID: 7229137883393928986}
   - component: {fileID: 5360771598520140652}
   m_Layer: 0
   m_Name: BoxBlockPreGeneratorStatic
@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1130d55246ca3a14e84865b04d9aeeb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obsPb: {fileID: 2776734189738326072, guid: 68b7d5c64e48e1442b412d14c6b224b3, type: 3}
+  obsPb: {fileID: 5926411499338167032, guid: 1a82a6af6fc3dff4fb55506b23fd3fc5, type: 3}
   countX: 5
   countY: 10
---- !u!114 &5360771597814711008
+--- !u!114 &7229137883393928986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3059308993587075518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ff6208ab43b208469190c39e9ea1ec0, type: 3}
+  m_Script: {fileID: 11500000, guid: 4579bd77ff3ec6444804c63e5b04f9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   temp:
@@ -81,38 +81,25 @@ MonoBehaviour:
     cellSize: {x: 16, y: 16}
     cells:
     - row: 0101010101
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
+    - row: 0100000001
+    - row: 0100000001
+    - row: 0100000001
+    - row: 0100000001
+    - row: 0100000001
+    - row: 0100000001
+    - row: 0100000001
+    - row: 0100000001
+    - row: 0101010101
   - gridSize: {x: 5, y: 10}
     cellSize: {x: 16, y: 16}
     cells:
     - row: 0000000000
-    - row: 0101010101
+    - row: 0001010100
+    - row: 0001010100
     - row: 0000000000
     - row: 0000000000
     - row: 0000000000
     - row: 0000000000
+    - row: 0001010100
+    - row: 0001010100
     - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-  - gridSize: {x: 5, y: 10}
-    cellSize: {x: 16, y: 16}
-    cells:
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0000000000
-    - row: 0101010101
-    - row: 0101010101

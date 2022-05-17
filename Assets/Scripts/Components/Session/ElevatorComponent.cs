@@ -8,20 +8,15 @@ public class ElevatorComponent : MonoBehaviour
     [SerializeField] private float elevatorTime;
     private bool canMove;
     [SerializeField] private float gameSpeed;
-    [SerializeField] internal GameObject cursorAllignService;
-    private CoinDispenserController coinDispenserController;
-    private CoinBombController coinBombController;
-    internal BoxTimeActivate BoxTimeActivate;
+    [SerializeField] internal List<ElevatorMarkComponent> elevatorUnits;
     private GameObject player;
 
     public void Start()
     {
         foreach (Transform child in transform)
         {
-            if (child.GetComponent<CoinDispenserController>())
-                coinDispenserController = transform.GetChild(0).GetComponent<CoinDispenserController>();
-            if (child.GetComponent<CoinBombController>())
-                coinBombController = transform.GetChild(0).GetComponent<CoinBombController>();
+            if(child.GetComponent<ElevatorMarkComponent>())
+            elevatorUnits.Add(child.GetComponent<ElevatorMarkComponent>());
         }
         gameSpeed = ServiceScreenResolution.GetScaledGameSpeed();
         canMove = false;
@@ -60,10 +55,10 @@ public class ElevatorComponent : MonoBehaviour
     private void ActivateElevator()
     {
         StartCoroutine(ElevatorTimeCur());
-        if(BoxTimeActivate != null) BoxTimeActivate.StartAction();
-        if(cursorAllignService != null) cursorAllignService.SetActive(true);
-        if(coinDispenserController != null) coinDispenserController.StartAction();
-        if(coinBombController != null) coinBombController.StartAction();
+        foreach (ElevatorMarkComponent elevatorUnit in elevatorUnits)
+        {
+            elevatorUnit.StartAction();
+        }
     }
 
     private IEnumerator ElevatorTimeCur()

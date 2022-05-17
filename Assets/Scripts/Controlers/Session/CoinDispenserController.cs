@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinDispenserController : MonoBehaviour
+public class CoinDispenserController : ElevatorMarkComponent
 {
     [SerializeField] private List<CoinDispenserComponent> coinDispenserComponents;
     [SerializeField] private float coinsCount;
@@ -10,7 +10,7 @@ public class CoinDispenserController : MonoBehaviour
 
     private float timeDelay;
 
-    public void StartAction()
+    internal override void StartAction()
     {
         StartCoroutine(StartSpawn());
     }

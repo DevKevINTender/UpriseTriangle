@@ -28,7 +28,7 @@ public class ShieldComponent : MonoBehaviour
     {
         if (other.GetComponent<ObstacleComponent>())
         {
-            Destroy(other.gameObject);
+            other.GetComponent<ObstacleComponent>().SelfDestroy();
             GameObject shieldAnimComp = Instantiate(shieldAnimPb, transform.parent.position, Quaternion.identity);
             substractBonus(1, 1);
         }

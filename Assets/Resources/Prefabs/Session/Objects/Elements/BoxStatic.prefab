@@ -109,17 +109,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9382fbf65e0b7d54ca46a55a3143383e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
-  boxCollider: {fileID: 0}
-  startTemp: 0
-  alertTemp: 0
-  changeColorTemp: 0
-  boopTemp: 0
-  disappearTemp: 0
-  endColor: {r: 0, g: 0, b: 0, a: 0}
-  boopColor: {r: 0, g: 0, b: 0, a: 0}
-  alertColor: {r: 0, g: 0, b: 0, a: 0}
-  boopScale: {x: 0, y: 0, z: 0}
+  spriteRenderer: {fileID: 6272806943137281482}
+  boxCollider: {fileID: 9105502494666567248}
+  startTemp: 0.25
+  alertTemp: 2
+  changeColorTemp: 1
+  boopTemp: 0.25
+  disappearTemp: 10
+  endColor: {r: 0.95294124, g: 0.14117648, b: 0.3803922, a: 1}
+  boopColor: {r: 1, g: 1, b: 1, a: 1}
+  alertColor: {r: 0.95294124, g: 0.14117648, b: 0.3803922, a: 0.29803923}
+  boopScale: {x: 1.2, y: 1.2, z: 0}
+  reloadTime: 1
 --- !u!61 &9105502494666567248
 BoxCollider2D:
   m_ObjectHideFlags: 0

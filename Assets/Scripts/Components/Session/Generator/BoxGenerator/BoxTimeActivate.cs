@@ -3,24 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class BoxTimeActivate : MonoBehaviour
+public class BoxTimeActivate : ElevatorMarkComponent
 {
-    [SerializeField] private List<float> temp;
-    [SerializeField] private Levels levels;
-    [SerializeField] private BoxPreGenerator boxPreGenerator;
-    private List<float> timing;
-    private bool canAction;
-    private ElevatorComponent elevator;
-    private int timingIndex;
-    int paintNum; // индекс текущего рисунка из квадратов
-    float boxTime; // время когда box бупает(1,5 сек примерно)
+    [SerializeField] private protected List<float> temp;
+    [SerializeField] private protected Levels levels;
+    [SerializeField] private protected BoxPreGenerator boxPreGenerator;
+    private protected List<float> timing;
+    private protected bool canAction;
+    private protected ElevatorComponent elevator;
+    private protected int timingIndex;
+    private protected int paintNum; // индекс текущего рисунка из квадратов
+    private protected float boxTime; // время когда box бупает(1,5 сек примерно)
 
 
     void Start()
     {
         boxTime = boxPreGenerator.GetBoxTime();
         elevator = transform.parent.GetComponent<ElevatorComponent>();
-        elevator.BoxTimeActivate = this;
         TempToTiming();
     }
 
@@ -33,7 +32,7 @@ public class BoxTimeActivate : MonoBehaviour
         }
     }
 
-    public void StartAction()
+    internal override void StartAction()
     {
         canAction = true;
         SetNextTiming();
@@ -64,7 +63,7 @@ public class BoxTimeActivate : MonoBehaviour
         }
     }
 
-    public IEnumerator SetActiveSquares(float _timing)
+    public virtual IEnumerator SetActiveSquares(float _timing)
     {
         yield return new WaitForSeconds(_timing);
         for (int j = 0; j < levels.listBool[paintNum].GridSize.y; j++)

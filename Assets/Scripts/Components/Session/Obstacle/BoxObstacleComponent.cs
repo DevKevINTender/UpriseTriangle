@@ -2,31 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoxObstacleComponent : MonoBehaviour
+public class BoxObstacleComponent : ObstacleComponent
 {
-    [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private BoxCollider2D boxCollider;
+    [SerializeField] internal SpriteRenderer spriteRenderer;
+    [SerializeField] internal BoxCollider2D boxCollider;
     [Header("Timings")]
-    [SerializeField] private float startTemp;
-    [SerializeField] private float alertTemp;
-    [SerializeField] private float changeColorTemp;
-    [SerializeField] private float boopTemp;
-    [SerializeField] private float disappearTemp;
+    [SerializeField] internal float startTemp;
+    [SerializeField] internal float alertTemp;
+    [SerializeField] internal float changeColorTemp;
+    [SerializeField] internal float boopTemp;
+    [SerializeField] internal float disappearTemp;
     [Header("Colors")]
-    [SerializeField] private Color endColor;
-    [SerializeField] private Color boopColor;
-    [SerializeField] private Color alertColor;
+    [SerializeField] internal Color endColor;
+    [SerializeField] internal Color boopColor;
+    [SerializeField] internal Color alertColor;
 
-    [SerializeField] Vector3 boopScale;
-    private Color startColor;
-    private Vector3 startScale;
+    [SerializeField] internal Vector3 boopScale;
+    internal Color startColor;
+    internal Vector3 startScale;
 
 
-    private float startTime;
-    private float alertTime;
-    private float changeColorTime;
-    private float boopTime;
-    private float disappearTime;
+    internal float startTime;
+    internal float alertTime;
+    internal float changeColorTime;
+    internal float boopTime;
+    internal float disappearTime;
 
     public float TempToTiming(float _value)
     {
@@ -57,7 +57,7 @@ public class BoxObstacleComponent : MonoBehaviour
         StartCoroutine(StartAction());
     }
 
-    private IEnumerator StartAction()
+    internal virtual IEnumerator StartAction()
     {
         StartCoroutine(Coloring(startColor, alertColor, startTime));
         yield return new WaitForSeconds(alertTime);
@@ -77,7 +77,7 @@ public class BoxObstacleComponent : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private IEnumerator Coloring(Color startColor, Color endColor, float time)
+    internal IEnumerator Coloring(Color startColor, Color endColor, float time)
     {
         float step = 0;
         while (step < 1)
@@ -88,7 +88,7 @@ public class BoxObstacleComponent : MonoBehaviour
         }     
     }
 
-    private IEnumerator Scaling(Vector3 boopScale, float time)
+    internal IEnumerator Scaling(Vector3 boopScale, float time)
     {
         float stepTime = 0;
         float stepScaleX = Time.deltaTime / (time / (boopScale.x - transform.localScale.x));
