@@ -8,20 +8,24 @@ public class BoxStaticObstacleComponent : BoxObstacleComponent
     [SerializeField] private float reloadTime;
     internal override IEnumerator StartAction()
     {
-        StartCoroutine(Coloring(startColor, alertColor, startTime));
+        Coloring(alertColor, startTime);
         yield return new WaitForSeconds(alertTime);
 
-        StartCoroutine(Coloring(alertColor, endColor, changeColorTime));
+        Coloring(endColor, changeColorTime);
         yield return new WaitForSeconds(changeColorTime);
 
-        StartCoroutine(Coloring(endColor, boopColor, boopTime));
-        StartCoroutine(Scaling(boopScale, boopTime));
+        Coloring(boopColor, boopTime);
+        Scalling(boopScale, boopTime);
         boxCollider.enabled = true;
         yield return new WaitForSeconds(boopTime);
 
-        StartCoroutine(Coloring(boopColor, endColor, boopTime));
-        StartCoroutine(Scaling(startScale, boopTime));
+        Coloring(endColor, boopTime);
+        Scalling(startScale, boopTime);
         yield return new WaitForSeconds(disappearTime);
+
+        boxCollider.enabled = false;
+        Scalling(Vector3.zero, boopTime);
+        yield return new WaitForSeconds(boopTime);
         Destroy(gameObject);
     }
 

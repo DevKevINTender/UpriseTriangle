@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class BoxObstacleComponent : ObstacleComponent
 {
@@ -59,53 +60,32 @@ public class BoxObstacleComponent : ObstacleComponent
 
     internal virtual IEnumerator StartAction()
     {
-        StartCoroutine(Coloring(startColor, alertColor, startTime));
+        Coloring(alertColor, startTime);
         yield return new WaitForSeconds(alertTime);
 
-        StartCoroutine(Coloring(alertColor, endColor, changeColorTime));
+        Coloring(endColor, changeColorTime);
         yield return new WaitForSeconds(changeColorTime);
 
-        StartCoroutine(Coloring(endColor, boopColor, boopTime));
-        StartCoroutine(Scaling(boopScale, boopTime));
+        Coloring(boopColor, boopTime);
+        Scalling(boopScale, boopTime);
         boxCollider.enabled = true;
         yield return new WaitForSeconds(boopTime);
 
-        StartCoroutine(Coloring(boopColor, startColor, disappearTime));
-        StartCoroutine(Scaling(Vector3.zero, disappearTime));
+        Coloring(startColor, disappearTime);
+        Scalling(Vector3.zero, disappearTime);
         boxCollider.enabled = false;
         yield return new WaitForSeconds(disappearTime);
         Destroy(gameObject);
     }
 
-    internal IEnumerator Coloring(Color startColor, Color endColor, float time)
+
+    internal void Scalling(Vector3 changeScale, float time)
     {
-        float step = 0;
-        while (step < 1)
-        {
-            spriteRenderer.color = Color.Lerp(startColor, endColor, step);
-            step += Time.deltaTime / time;
-            yield return null;
-        }     
+        transform.DOScale(changeScale, time);
     }
 
-    internal IEnumerator Scaling(Vector3 boopScale, float time)
+    internal void Coloring(Color endColor, float time)
     {
-        float stepTime = 0;
-        float stepScaleX = Time.deltaTime / (time / (boopScale.x - transform.localScale.x));
-        float stepScaleY = Time.deltaTime / (time / (boopScale.y - transform.localScale.y));
-        while (stepTime < 1)
-        {
-            if(Time.timeScale > 0)
-            if (transform.localScale.x + stepScaleX >= 0)
-            {
-                transform.localScale += new Vector3(stepScaleX, stepScaleY);                
-            }
-            else
-            {
-                transform.localScale = Vector3.zero;
-            }            
-            stepTime += Time.deltaTime / time;
-            yield return null;
-        }
+        spriteRenderer.DOColor(endColor, time);
     }
 }

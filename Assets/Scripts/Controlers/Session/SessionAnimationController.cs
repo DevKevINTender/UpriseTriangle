@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class SessionAnimationController : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class SessionAnimationController : MonoBehaviour
 
     public void Start()
     {
-        //StartCoroutine(WaitUntilStart(2));
+        DOTween.SetTweensCapacity(500, 50);
     }
 
     public void PersonWin()
