@@ -64,7 +64,7 @@ namespace Array2DEditor
             GetGridSizeProperty(property);
             GetCellSizeProperty(property);
             GetCellsProperty(property);
-
+            
             // Don't draw anything if we miss a property
             if (gridSizeProperty == null || cellSizeProperty == null || cellsProperty == null)
             {
@@ -252,6 +252,7 @@ namespace Array2DEditor
                         {
                             var objectType = match.Groups[1].ToString();
                             var assemblyName = "UnityEngine";
+                           
                             EditorGUI.ObjectField(pos, property, System.Type.GetType($"{assemblyName}.{objectType}, {assemblyName}"), GUIContent.none);
                         }
                     }

@@ -3,6 +3,7 @@
   <component name="ContentModelStore">
     <e p="C:\Unity_Git\UpriseTriangle" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -33,10 +34,10 @@
               <e p="Editor" t="Include">
                 <e p="Array2DExampleEnumDrawer.cs" t="Include" />
               </e>
-              <e p="ExampleEnum.cs" t="Include" />
               <e p="ExampleScript.cs" t="Include" />
               <e p="ExampleScript2.cs" t="Include" />
             </e>
+            <e p="GridEnum.cs" t="Include" />
             <e p="Scripts" t="Include">
               <e p="Array2D.cs" t="Include" />
               <e p="Array2DTypes" t="Include">
@@ -55,6 +56,7 @@
               <e p="CellRowTypes.cs" t="Include" />
               <e p="Consts.cs" t="Include" />
             </e>
+            <e p="StaticEnumField.cs" t="Include" />
           </e>
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -85,6 +87,10 @@
             <e p="Effect" t="Include">
               <e p="EffectListScrObj.cs" t="Include" />
               <e p="EffectScrObj.cs" t="Include" />
+            </e>
+            <e p="Person" t="Include">
+              <e p="PersonListScrObj.cs" t="Include" />
+              <e p="PersonScrObj.cs" t="Include" />
             </e>
             <e p="SessionLevel" t="Include">
               <e p="SessionLevelListScrObj.cs" t="Include" />
@@ -124,7 +130,9 @@
                   <e p="BoxTimeActivate.cs" t="Include" />
                 </e>
                 <e p="RotateBlockGenerator.cs" t="Include" />
+                <e p="RotateBlockPathernGenerator.cs" t="Include" />
                 <e p="StaticBlockGenerator.cs" t="Include" />
+                <e p="StaticBlockPathernGenerator.cs" t="Include" />
               </e>
               <e p="MovePointComponent.cs" t="Include" />
               <e p="Obstacle" t="Include">
@@ -144,6 +152,7 @@
               <e p="WayObstacleComponent.cs" t="Include" />
             </e>
             <e p="Test" t="Include">
+              <e p="Check.cs" t="Include" />
               <e p="EqualizerCopmonent.cs" t="Include" />
               <e p="Levels.cs" t="Include" />
             </e>
@@ -155,9 +164,13 @@
             <e p="Global" t="Include">
               <e p="CoinsControler.cs" t="Include" />
               <e p="DeathRegistrationControler.cs" t="Include" />
+              <e p="SegmentControler.cs" t="Include" />
             </e>
             <e p="LevelChoose" t="Include">
               <e p="LevelChooseControler.cs" t="Include" />
+            </e>
+            <e p="PersonStorage" t="Include">
+              <e p="PersonStorageContoler.cs" t="Include" />
             </e>
             <e p="Session" t="Include">
               <e p="AttempCounterController.cs" t="Include" />
@@ -175,6 +188,7 @@
             <e p="ChooseLevelCore.cs" t="Include" />
             <e p="EffectStorageCore.cs" t="Include" />
             <e p="MainMenuCore.cs" t="Include" />
+            <e p="PersonStorageCore.cs" t="Include" />
             <e p="SessionCore.cs" t="Include" />
           </e>
           <e p="DOTweenAnimation" t="Include">
@@ -187,6 +201,9 @@
               <e p="PausePanelAnimation.cs" t="Include" />
               <e p="WinnerPanelAnimation.cs" t="Include" />
             </e>
+          </e>
+          <e p="Editor" t="Include">
+            <e p="StaticEnumFieldDrawer.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
             <e p="AudioSspectrService.cs" t="Include" />
@@ -206,11 +223,19 @@
               <e p="InfoPanel" t="Include">
                 <e p="AlertPanelView.cs" t="Include" />
               </e>
+              <e p="RoboHelperView.cs" t="Include" />
+              <e p="SegmentStoreView.cs" t="Include" />
             </e>
             <e p="LevelChoose" t="Include">
               <e p="LSPageView.cs" t="Include" />
               <e p="LSPanelItemView.cs" t="Include" />
               <e p="LSPanelListView.cs" t="Include" />
+            </e>
+            <e p="PersonStorage" t="Include">
+              <e p="PageIndicatorPanelView.cs" t="Include" />
+              <e p="PersonItemView.cs" t="Include" />
+              <e p="PersonPageView.cs" t="Include" />
+              <e p="PSPanelView.cs" t="Include" />
             </e>
             <e p="Session" t="Include">
               <e p="Bonuses" t="Include">
