@@ -43,5 +43,18 @@ namespace Controlers
             Debug.Log("Cost " + cost);
             DecreaseCoins(cost);
         }
+
+        public static bool BuySegment(int cost)
+        {
+            if (StorageCoins >= cost)
+            {
+                DecreaseCoins(cost);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

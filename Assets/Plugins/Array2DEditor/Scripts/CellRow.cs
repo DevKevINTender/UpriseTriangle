@@ -1,13 +1,14 @@
-﻿using UnityEngine;
+﻿using Services;
+using UnityEngine;
 
 namespace Array2DEditor
 {
     [System.Serializable]
     public class CellRow<T>
     {
-        [SerializeField]
+        [SerializeField, StaticEnumField]
         private T[] row = new T[Consts.defaultGridSize];
-
+        
         public T this[int i]
         {
             get => row[i];
