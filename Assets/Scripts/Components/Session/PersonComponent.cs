@@ -35,11 +35,13 @@ public class PersonComponent : MonoBehaviour
 
     public void EnterElevator()
     {
+        inElevator = true;
         personParticleController.StopParticle();
     }
 
     public void ExitElevator()
     {
+        inElevator = false;
         personParticleController.StartParticle();
     }
 
