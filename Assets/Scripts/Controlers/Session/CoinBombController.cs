@@ -30,7 +30,6 @@ public class CoinBombController : ElevatorMarkComponent
     {
         if(spawnCount > 1) //чтобы не было спавна на последней секунде лифта
             StartCoroutine(SpawnDelay());
-
     }
 
 

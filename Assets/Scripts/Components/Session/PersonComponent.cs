@@ -48,12 +48,11 @@ public class PersonComponent : MonoBehaviour
         this.personDeathTrigger = personDeathTrigger;
         this.personWinTrigger = personWinTrigger;
 
-         maxX = 2.6f * ServiceScreenResolution.GetScreenScale().x;
-         minX = 2.45f * ServiceScreenResolution.GetScreenScale().x;
+        maxX = 2.6f * ServiceScreenResolution.GetScreenScale().x;
+        minX = 2.45f * ServiceScreenResolution.GetScreenScale().x;
             
-         maxY = 6.05f * ServiceScreenResolution.GetScreenScale().y;
-         minY= 5.9f * ServiceScreenResolution.GetScreenScale().y;
-
+        maxY = 6.05f * ServiceScreenResolution.GetScreenScale().y;
+        minY= 5.9f * ServiceScreenResolution.GetScreenScale().y;
     }
 
     public void Move(Vector3 vector)
@@ -78,56 +77,36 @@ public class PersonComponent : MonoBehaviour
         
         // условия изменения по скейлу
         if(Mathf.Abs(transform.localPosition.x) > minX && Mathf.Abs(transform.localPosition.x) < maxX)
-        {
-            transform.localScale = new Vector3(1,1,1) * ( (personDistX/stepX) / 100);
-        }
+            transform.localScale = Vector3.one * ( (personDistX / stepX) / 100);
 
         if(Mathf.Abs(transform.localPosition.y) > minY && Mathf.Abs(transform.localPosition.y) < maxY)
-        {
-            transform.localScale = new Vector3(1,1,1) * ( (personDistY/stepY) / 100);
-        }
-            
-        if(Mathf.Abs(transform.localPosition.y) < minY & Mathf.Abs(transform.localPosition.x) < minX)
-        {
-            transform.localScale = new Vector3(1,1,1);
-        }
+            transform.localScale = Vector3.one * ( (personDistY / stepY) / 100);
+
+        if (Mathf.Abs(transform.localPosition.y) < minY && Mathf.Abs(transform.localPosition.x) < minX)
+            transform.localScale = Vector3.one;
+
         // телепортация по оси X
         if (transform.localPosition.x > maxX)
-        {
-            transform.localPosition = new Vector3(-maxX + 0.5f , transform.localPosition.y,0);
-        }
+            transform.localPosition = new Vector3(-maxX + 0.5f , transform.localPosition.y);
         if (transform.localPosition.x < -maxX)
-        {
-            transform.localPosition = new Vector3(maxX - 0.5f, transform.localPosition.y,0);
-        }
+            transform.localPosition = new Vector3(maxX - 0.5f, transform.localPosition.y);
+
         // телепортация по оси Y    
         if (transform.localPosition.y > maxY)
-        {
-            transform.localPosition = new Vector3( transform.localPosition.x,-maxY + 0.5f  ,0);
-        }
+            transform.localPosition = new Vector3(transform.localPosition.x, -maxY + 0.5f);
         if (transform.localPosition.y < -maxY)
-        {
-            transform.localPosition = new Vector3(transform.localPosition.x,maxY - 0.5f,0);
-        }
+            transform.localPosition = new Vector3(transform.localPosition.x, maxY - 0.5f);
 
         float speedMove = Time.deltaTime / 2;
         if (transform.localPosition.x > minX)
-        {
-            transform.localPosition += new Vector3(speedMove  , 0,0);
-        }
+            transform.localPosition += new Vector3(speedMove, 0);
         if (transform.localPosition.x < -minX)
-        {
-            transform.localPosition += new Vector3(-speedMove   , 0,0);
-        }
+            transform.localPosition += new Vector3(-speedMove, 0);
         // телепортация по оси Y    
         if (transform.localPosition.y > minY)
-        {
-            transform.localPosition += new Vector3( 0,speedMove   ,0);
-        }
+            transform.localPosition += new Vector3(0, speedMove);
         if (transform.localPosition.y < -minY)
-        {
-            transform.localPosition += new Vector3(0,-speedMove   ,0);
-        }
+            transform.localPosition += new Vector3(0, -speedMove);
     }
 
     public void Update()
