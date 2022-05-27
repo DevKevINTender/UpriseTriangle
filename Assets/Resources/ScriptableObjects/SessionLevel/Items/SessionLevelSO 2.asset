@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627f4b4e347348ccb961126d2d0831c8, type: 3}
   m_Name: SessionLevelSO 2
   m_EditorClassIdentifier: 
-  LevelId: 2
+  Id: 7
   MusicName: Lustra
   MusicCreator: Dot Kirt
   MusicTime: 3:45
-  DeadCount: 25
+  DeadCount: 0
   CoinsCollectCount: 0
   CompletePercent: 0
   Cost: 600
-  SessionLevelPb: {fileID: 0}
+  SessionLevelPB: {fileID: 0}
+  SessionLevelBlockList: []
+  musicAudio: {fileID: 8300000, guid: 282b0893cbd32c14d873a1f9ca82bce0, type: 3}

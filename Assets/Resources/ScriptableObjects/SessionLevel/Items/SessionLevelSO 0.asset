@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627f4b4e347348ccb961126d2d0831c8, type: 3}
   m_Name: SessionLevelSO 0
   m_EditorClassIdentifier: 
-  LevelId: 0
+  Id: 0
   MusicName: Mistake
   MusicCreator: Alex job
   MusicTime: 2:23
-  DeadCount: 0
+  DeadCount: 25
   CoinsCollectCount: 0
-  CompletePercent: 0
+  CompletePercent: 76
   Cost: 500
   SessionLevelPB: {fileID: 2264854523134382543, guid: c6c745e333b50f147b0c8239046b93c2, type: 3}
   SessionLevelBlockList:
@@ -100,3 +100,4 @@ MonoBehaviour:
   - SpawnBlockPb: {fileID: 2748996559256731343, guid: 5294e6acc82f2a74086c3f65e5b3bbae, type: 3}
     SpawnPos: {x: 0, y: 6, z: 0}
     SpawnTime: 30
+  musicAudio: {fileID: 8300000, guid: 9826933adfa58404f9fb4c3ab2fde920, type: 3}

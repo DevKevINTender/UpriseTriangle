@@ -1,5 +1,6 @@
 ﻿using System;
 using Controlers;
+using DG.Tweening;
 using ScriptableObjects.SessionLevel;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,77 +9,102 @@ using Views.ChooseLevel;
 
 namespace Core
 {
+    public  delegate  void LSItemAction(int id);
+    public  delegate  void LSPageAction();
     public class ChooseLevelCore : MonoBehaviour
     {
+        [SerializeField] private LevelChooseAudioControler LevelChooseAudioControlerObj;
+        
+        [SerializeField] public Transform canvas;
+
+        [SerializeField] public SessionLevelListScrObj SessionLevelListSO;
+        [SerializeField] public Text StorageCoins;
+        [SerializeField] public LevelChoosePageView levelChoosePageViewPb;
+        [SerializeField] public LevelChoosePageView levelChoosePageViewCurrentObj;
+
+        [SerializeField] public LSPanelView LSPanelViewObj;
+        [SerializeField] private AlertPanelView alertPanelPb;
+        [SerializeField] private Transform infoPanelPos;
+
+        [SerializeField] private PageIndicatorPanelView PageIndicatorPanelViewObj;
+
         public int CurrentLevelShowId;
-        [SerializeField] private LSPageView lsPageViewObj;
-        [SerializeField] private SessionLevelListScrObj SessionLevelListSO;
-        [SerializeField] private LSPanelListView lsPanelListViewObj;
+        public double CurrentPageId;
+        public double PageCount;
 
-        [SerializeField] private AlertPanelView alertPanelViewPb;
-        [SerializeField] private Transform InfoPanelTarget;
-
-        [SerializeField] private Text StorageCoins;
         public void Start()
         {
+            CoinsControler.UpcreaseCoins(10000);
+            
+            StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";
+            
             SessionLevelListSO.Load();
             CurrentLevelShowId = SessionLevelListSO.CurrentSessionLevelId;
-            StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";
-            lsPanelListViewObj.InitView(SessionLevelListSO, this);
-            lsPageViewObj.InitView(SessionLevelListSO);
+            
+            CurrentPageId =  Math.Floor((double) CurrentLevelShowId / 3);
+            PageCount = Math.Ceiling((double) SessionLevelListSO.List.Count / 3);
+            
+            levelChoosePageViewCurrentObj = Instantiate(levelChoosePageViewPb,canvas);
+            
+            levelChoosePageViewCurrentObj.InitView(LevelChooseControler.GetSessionLevelsFromPage((int)CurrentPageId),BuyLevel, ChooseLevel, ShowNextPage, ShowPreviousPage);
+            LSPanelViewObj.InitView(this);
+            PageIndicatorPanelViewObj.InitView((int)PageCount);
+            PageIndicatorPanelViewObj.UpdateView((int)CurrentPageId);
         }
         
-        public void ShowNextLevel()
+        public void ShowNextPage()
         {
-            if (CurrentLevelShowId < SessionLevelListSO.List.Count - 1)
+            if (CurrentPageId < PageCount-1)
             {
-                CurrentLevelShowId++;
-                lsPageViewObj.UpdateView(CurrentLevelShowId);
-                lsPanelListViewObj.UpdateView(CurrentLevelShowId);
+                CurrentPageId++;
+                LevelChoosePageView previousPage = levelChoosePageViewCurrentObj;
+                levelChoosePageViewCurrentObj = Instantiate(levelChoosePageViewPb,canvas);
+                levelChoosePageViewCurrentObj.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(1500,0);
+                levelChoosePageViewCurrentObj.InitView(LevelChooseControler.GetSessionLevelsFromPage((int)CurrentPageId),BuyLevel, ChooseLevel, ShowNextPage, ShowPreviousPage);
+                previousPage.GetComponent<RectTransform>().DOAnchorPos(new Vector2(-1500, 0), 0.5f).SetEase(Ease.Linear).OnComplete(() => { Destroy(previousPage.gameObject);});
+                levelChoosePageViewCurrentObj.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 0), 0.5f).SetEase(Ease.Linear);
+                
+                PageIndicatorPanelViewObj.UpdateView((int)CurrentPageId);
             }
         }
 
-        public void ShowPreviousLevel()
+        public void ShowPreviousPage()
         {
-            if (CurrentLevelShowId > 0)
+            if (CurrentPageId > 0)
             {
-                CurrentLevelShowId--;
-                lsPageViewObj.UpdateView(CurrentLevelShowId);
-                lsPanelListViewObj.UpdateView(CurrentLevelShowId);
+                CurrentPageId--;
+                LevelChoosePageView previousPage = levelChoosePageViewCurrentObj;
+                levelChoosePageViewCurrentObj = Instantiate(levelChoosePageViewPb,canvas);
+                levelChoosePageViewCurrentObj.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(-1500,0);
+                levelChoosePageViewCurrentObj.InitView(LevelChooseControler.GetSessionLevelsFromPage((int)CurrentPageId),BuyLevel, ChooseLevel, ShowNextPage, ShowPreviousPage);
+                previousPage.GetComponent<RectTransform>().DOAnchorPos(new Vector2(1500, 0), 0.5f).SetEase(Ease.Linear).OnComplete(() => { Destroy(previousPage.gameObject);});
+                levelChoosePageViewCurrentObj.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 0), 0.5f).SetEase(Ease.Linear);
+                 
+                PageIndicatorPanelViewObj.UpdateView((int)CurrentPageId);
             }
         }
-        public void BuyLevel()
+
+        public void ChooseLevel(int id)
         {
-            if (CoinsControler.BuyEffect(SessionLevelListSO.List[CurrentLevelShowId].Cost))
+            if (LevelChooseControler.LevelIsOpened(id))
             {
-                LevelChooseControler.OpenLevel(CurrentLevelShowId);
+                LevelChooseControler.SetCurrentLevel(id);
+                LevelChooseAudioControlerObj.SetCurrentLevelMusic(id);
+            }
+        }
+
+        public void BuyLevel(int id)
+        {
+            if (CoinsControler.GetCoinsCount() >= LevelChooseControler.GetLevelById(id).Cost && !LevelChooseControler.LevelIsOpened(id))
+            {
+                CoinsControler.BuySegment(LevelChooseControler.GetLevelById(id).Cost);
                 
+                PersonStorageContoler.AddSegmentToPerson(id);
+                LevelChooseControler.OpenLevel(id);
                 StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";
-                
-                lsPageViewObj.UpdateView(CurrentLevelShowId);
-                lsPanelListViewObj.UpdateView(CurrentLevelShowId);
-            }
-            else
-            {
-                AlertPanelView newAlertPanel = Instantiate(alertPanelViewPb, InfoPanelTarget);
-                newAlertPanel.InitView("Cash", "You havent money");
             }
         }
-
-        public void StartSession()
-        {
-            if (LevelChooseControler.LevelIsOpened(CurrentLevelShowId))
-            {
-                LevelChooseControler.SetCurrentLevel(CurrentLevelShowId);
-                SceneManager.LoadScene(1);
-            }
-            else
-            {
-                AlertPanelView newAlertPanel = Instantiate(alertPanelViewPb, InfoPanelTarget);
-                newAlertPanel.InitView("Exist", "What you try to do ? Am ?");
-            }
-        }
-
+        
         public void BackToMenu()
         {
             SceneManager.LoadScene(0);

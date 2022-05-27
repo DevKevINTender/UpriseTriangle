@@ -58,11 +58,12 @@ namespace ScriptableObjects.SessionLevel
 
                 for (int i = 0; i < newSessionLevelListSave.List.Count; i++)
                 {
+                    List[i].Id = i;
                     List[i].DeadCount = newSessionLevelListSave.List[i].DeadCount;
                     List[i].CompletePercent = newSessionLevelListSave.List[i].CompletePercent;
                     List[i].CoinsCollectCount = newSessionLevelListSave.List[i].CoinsCollectCount;
                 }
-                
+
                 file.Close();
             }
         }

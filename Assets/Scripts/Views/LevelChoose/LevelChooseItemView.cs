@@ -8,20 +8,24 @@ using UnityEngine.UI;
 
 namespace Views.ChooseLevel
 {
-    public class LSPanelItemView : MonoBehaviour
+    public class LevelChooseItemView : MonoBehaviour
     {
-        [SerializeField] private GameObject choosen;
-        [SerializeField] private GameObject available;
-        [SerializeField] private GameObject choosenBorder;
-        [SerializeField] private GameObject segment;
-        [SerializeField] private Text segmentCount;
-        [SerializeField] private Image topBorderStatus;
+        [SerializeField] private GameObject choosenBtn;
+        [SerializeField] private GameObject availableBtn;
+        [SerializeField] private GameObject buyBtn;
 
-        [SerializeField] private GameObject CompleteSegmentPanel;
-        [SerializeField] private GameObject AddBuySegmentPanel;
-        [SerializeField] private Text segmentCountBuy;
+        [SerializeField] private GameObject selectGradient;
+        [SerializeField] private Image statusBorder;
+
+        [SerializeField] private Text attempCount;
+        [SerializeField] private Text coinCollectCount;
+        [SerializeField] private Text progressCount;
         
-        [SerializeField] 
+        [SerializeField] private Text LevelCost;
+        [SerializeField] private Text MusicInfo;
+        [SerializeField] private Text Id;
+        
+        
 
         private LSItemAction buyLevel;
         private LSItemAction chooseLevel;
@@ -43,86 +47,54 @@ namespace Views.ChooseLevel
             this.showPrevious = showPrevious;
             
             id = personScrObj.Id;
-            UpdateView(id);
+            UpdateView();
         }
 
         public void UpdateView()
         {
-            segment.SetActive(false);
-            available.SetActive(false);
-            choosen.SetActive(false);
+            SessionLevelScrObj levelScrObj = LevelChooseControler.GetLevelById(id);
             
-            if (PersonStorageContoler.ItemIsOpened(id))
+            choosenBtn.SetActive(false);
+            availableBtn.SetActive(false);
+            buyBtn.SetActive(false);
+            
+            MusicInfo.text = $"{levelScrObj.MusicName} / {levelScrObj.MusicCreator}";
+            LevelCost.text = $"{levelScrObj.Cost}";
+            Id.text = $"{levelScrObj.Id}";
+            
+            if (LevelChooseControler.LevelIsOpened(id))
             {
-                available.SetActive(true);
-                segment.SetActive(false);
-                topBorderStatus.color = new Color32(46,255,193,255);
+                if (LevelChooseControler.GetCurrentLevel() == id)
+                {
+                    selectGradient.SetActive(true);
+                    choosenBtn.SetActive(true);
+                }
+                else
+                {
+                    selectGradient.SetActive(false);
+                    availableBtn.SetActive(true);
+                }
+                statusBorder.color = new Color32(46,255,193,255);
+                attempCount.text = $"{levelScrObj.DeadCount}";
+                coinCollectCount.text = $"{levelScrObj.CoinsCollectCount}";
+                progressCount.text = $"{levelScrObj.CompletePercent}";
+
             }
             else
             {
-                PersonScrObj personScrObj = PersonStorageContoler.GetPersonById(id);
-                segment.SetActive(true);
-                segmentCount.text = $"{personScrObj.CurrentSegment}/{personScrObj.RequiredSegments}";
-                segmentCountBuy.text = $"{personScrObj.CurrentSegment}/{personScrObj.RequiredSegments}";
-            }
-            if (PersonStorageContoler.GetCurrentPerson() == id)
-            {
-                available.SetActive(false);
-                choosen.SetActive(true);
-            }
-        }
-        public void UpdateView(int id)
-        {
-            segment.SetActive(false);
-            available.SetActive(false);
-            choosen.SetActive(false);
-            
-            if (PersonStorageContoler.ItemIsOpened(id))
-            {
-                available.SetActive(true);
-                segment.SetActive(false);
-                topBorderStatus.color = new Color32(46,255,193,255);
-            }
-            else
-            {
-                PersonScrObj personScrObj = PersonStorageContoler.GetPersonById(id);
-                segment.SetActive(true);
-                segmentCount.text = $"{personScrObj.CurrentSegment}/{personScrObj.RequiredSegments}";
-                segmentCountBuy.text = $"{personScrObj.CurrentSegment}/{personScrObj.RequiredSegments}";
-            }
-            if (PersonStorageContoler.GetCurrentPerson() == id)
-            {
-                available.SetActive(false);
-                choosen.SetActive(true);
-            }
-        }
-        public void ShowBuySegmentPanel()
-        {
-            PersonScrObj personScrObj = PersonStorageContoler.GetPersonById(id);
-            if (personScrObj.CurrentSegment >= personScrObj.RequiredSegments)
-            {
-                CompleteSegmentPanel.SetActive(true);
-                AddBuySegmentPanel.SetActive(false);
-            }
-            else
-            {
-                CompleteSegmentPanel.SetActive(false);
-                AddBuySegmentPanel.SetActive(true);
+                buyBtn.SetActive(true);
             }
             
+            
         }
-        public void HideBuySegmentPanel()
-        {
-            CompleteSegmentPanel.SetActive(false);
-            AddBuySegmentPanel.SetActive(false);
-        }
-        public void BuySegment()
+
+        public void BuyLevel()
         {
             buyLevel?.Invoke(id);
             updateView?.Invoke();
         }
 
-        public void ChooseCurrentPerson()
+        public void ChooseCurrentLevel()
         {
             chooseLevel?.Invoke(id);
             updateView?.Invoke();

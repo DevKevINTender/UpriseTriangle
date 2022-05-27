@@ -8,10 +8,10 @@ using UnityEngine.UI;
 
 namespace Views.ChooseLevel
 {
-    public class LSPageView : MonoBehaviour
+    public class LevelChoosePageView : MonoBehaviour
     {
-        [SerializeField] private LSPanelItemView LSPanelItemViewPB;
-        [SerializeField] private List<LSPanelItemView> List = new List<LSPanelItemView>();
+        [SerializeField] private LevelChooseItemView levelChooseItemViewPb;
+        [SerializeField] private List<LevelChooseItemView> List = new List<LevelChooseItemView>();
         private List<SessionLevelScrObj> sessionLevelList = new List<SessionLevelScrObj>();
 
         private LSItemAction buyLevel;
@@ -27,8 +27,8 @@ namespace Views.ChooseLevel
 
             this.sessionLevelList = personList;
             foreach (var item in personList)
-            {
-                LSPanelItemView newItem = Instantiate(LSPanelItemViewPB, transform);
+            { 
+                LevelChooseItemView newItem = Instantiate(levelChooseItemViewPb, transform);
                 newItem.InitView(item, this.buyLevel, this.chooseLevel, UpdateView, showNext, showPrevious);
                 List.Add(newItem);
             }
@@ -39,17 +39,6 @@ namespace Views.ChooseLevel
             for (int i = 0; i < sessionLevelList.Count; i++)
             {
                 List[i].UpdateView();
-            }
-        }
-
-        public void UpdateViewItem(int id)
-        {
-            for (int i = 0; i < sessionLevelList.Count; i++)
-            {
-                if (sessionLevelList[i].Id == id)
-                {
-                    List[i].UpdateView(id);
-                }
             }
         }
     }

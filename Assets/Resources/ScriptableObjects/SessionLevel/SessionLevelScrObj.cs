@@ -8,7 +8,7 @@ namespace ScriptableObjects.SessionLevel
     [CreateAssetMenu(fileName = "SessionLevelSO", menuName = "ScrObj/new SessionLevelSO", order = 0)]
     public class SessionLevelScrObj : ScriptableObject
     {
-        public int LevelId;
+        public int Id;
         public string MusicName;
         public string MusicCreator;
         public string MusicTime;
@@ -20,6 +20,7 @@ namespace ScriptableObjects.SessionLevel
         public int Cost;
         public GameObject SessionLevelPB;
         public List<SessionLevelBlock> SessionLevelBlockList;
+        public AudioClip musicAudio;
     }
 
     [Serializable]
