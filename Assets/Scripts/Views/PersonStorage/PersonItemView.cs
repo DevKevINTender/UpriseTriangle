@@ -13,7 +13,8 @@ public class PersonItemView : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     [SerializeField] private GameObject choosenBorder;
     [SerializeField] private GameObject segment;
     [SerializeField] private Text segmentCount;
-    [SerializeField] private Image topBorderStatus;
+    [SerializeField] private Image borderStatus;
+    [SerializeField] private Text idText;
 
     [SerializeField] private GameObject CompleteSegmentPanel;
     [SerializeField] private GameObject AddBuySegmentPanel;
@@ -41,6 +42,7 @@ public class PersonItemView : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         this.showPrevious = showPrevious;
         
         id = personScrObj.Id;
+        idText.text = ""+id;
         UpdateView(id);
     }
 
@@ -54,7 +56,7 @@ public class PersonItemView : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         {
             available.SetActive(true);
             segment.SetActive(false);
-            topBorderStatus.color = new Color32(46,255,193,255);
+            borderStatus.color = new Color32(46,255,193,255);
         }
         else
         {
@@ -79,7 +81,7 @@ public class PersonItemView : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         {
             available.SetActive(true);
             segment.SetActive(false);
-            topBorderStatus.color = new Color32(46,255,193,255);
+            borderStatus.color = new Color32(46,255,193,255);
         }
         else
         {
