@@ -9,6 +9,9 @@ public class PersonComponent : MonoBehaviour
     public delegate void PersonDelegate();
     private PersonDelegate personDeathTrigger;
     private PersonDelegate personWinTrigger;
+    private PersonDelegate personEnterElevatorTrigger;
+    private PersonDelegate personExitElevatorTrigger;
+    
 
     private bool canMove;
     private bool isMove;
@@ -37,18 +40,23 @@ public class PersonComponent : MonoBehaviour
     {
         inElevator = true;
         personParticleController.StopParticle();
+        personEnterElevatorTrigger?.Invoke();
     }
 
     public void ExitElevator()
     {
         inElevator = false;
         personParticleController.StartParticle();
+        personExitElevatorTrigger?.Invoke();
     }
 
-    public void InitComponent(PersonDelegate personDeathTrigger, PersonDelegate personWinTrigger)
+    public void InitComponent(PersonDelegate personDeathTrigger, PersonDelegate personWinTrigger,
+        PersonDelegate  personEnterElevatorTrigger, PersonDelegate personExitElevatorTrigger)
     {
         this.personDeathTrigger = personDeathTrigger;
         this.personWinTrigger = personWinTrigger;
+        this.personEnterElevatorTrigger = personEnterElevatorTrigger;
+        this.personExitElevatorTrigger = personExitElevatorTrigger;
 
         maxX = 2.6f * ServiceScreenResolution.GetScreenScale().x;
         minX = 2.45f * ServiceScreenResolution.GetScreenScale().x;

@@ -6,11 +6,23 @@ using DG.Tweening;
 public class SessionAnimationController : MonoBehaviour
 {
     [SerializeField] private Animator panelAnimator, personAnimator;
+    [SerializeField] private ElevatorAnimationComponent elevatorAnimationComponent;
 
     public float GetPersonDeathAnimLength()
     {
         return personAnimator.runtimeAnimatorController.animationClips[0].length;
     }
+
+    public void PersonEnterElevator()
+    {
+        elevatorAnimationComponent.PersonEnterElevator();
+    }
+
+    public void PersoExitElevator()
+    {
+        elevatorAnimationComponent.PersoExitElevator();
+    }
+
 
     public void Start()
     {
