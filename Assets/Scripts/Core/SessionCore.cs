@@ -14,7 +14,7 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private SessionAudioController audioController; // ������ ������
     [SerializeField] private MovePointComponent movePointController;
     [SerializeField] private PersonComponent personComponent;
-    //[SerializeField] private SessionAnimationController animationController;
+    [SerializeField] private SessionAnimationController animationController;
     [SerializeField] private SessionUIController sessionUIController;
     [SerializeField] private AttempCounterController attempCounterController;
     [SerializeField] private BonusCollectorComponent bonusCollectorComponent;
@@ -50,7 +50,7 @@ public class SessionCore : MonoBehaviour
         TransitionPanelAnimation.gameObject.SetActive(true);
         TransitionPanelAnimation.OpenSessionScene();
         personComponent.SetCanMove(true); 
-        personComponent.InitComponent(PersonDeath, PersonWin); // �������� �� ������� ������ � �������� ������
+        personComponent.InitComponent(PersonDeath, PersonWin, PersonEnterElevator, PersonExitElevator); // �������� �� ������� ������ � �������� ������
         playerMovePanelView.Init(StartPause, EndPause);// �������� �� ������� �����
         bonusCollectorComponent.InitComponent(StartPause, EndPause);
         if (timeTransfer != 0)
@@ -72,6 +72,16 @@ public class SessionCore : MonoBehaviour
         Handheld.Vibrate();
         Time.timeScale = timeSlow;
         TransitionPanelAnimation.CloseScene(0, currentSession);
+    }
+
+    public void PersonEnterElevator()
+    {
+        animationController.PersonEnterElevator();
+    }
+
+    public void PersonExitElevator()
+    {
+        animationController.PersoExitElevator();
     }
 
     public void PersonWin()
