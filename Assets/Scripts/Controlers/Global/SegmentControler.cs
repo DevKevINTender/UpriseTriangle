@@ -20,15 +20,19 @@ namespace Controlers
             
         }
 
+        public static int GetSegmentCost()
+        {
+            return totalSegmentCost;
+        }
         public static int GetSegmentCount()
         {
             return StorageSegments;
         }
-        public static bool BuySegment()
+        public static bool BuySegment(int count)
         {
-            if (CoinsControler.BuySegment(totalSegmentCost))
+            if (CoinsControler.BuySegment(totalSegmentCost * count))
             {
-                UpcreaseSegment(1);
+                UpcreaseSegment(count);
                 return true;
             }
             else

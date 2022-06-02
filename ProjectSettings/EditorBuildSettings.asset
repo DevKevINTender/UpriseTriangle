@@ -5,12 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/LevelChoose.unity
-    guid: 15481840b3a27fe409a1947e99d8ecd6
   - enabled: 0
     path: Assets/Scenes/EffectStorage.unity
     guid: 72d01d3e209bc864780be6a3a087bb50
@@ -18,15 +12,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Session.unity
     guid: 6e6763a257b0e7446830e18735052f35
   - enabled: 0
-    path: Assets/Scenes/Test/LevelTest.unity
-    guid: fe37c0e91497bb340a88c341f2f5bf94
-  - enabled: 0
     path: Assets/Scenes/Test/PrototypeSession.unity
     guid: 0f1f6b8106685214fb5a821bfcf92ba0
   - enabled: 1
+    path: Assets/Scenes/Complete/MainMenu.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Test/LevelTest.unity
+    guid: fe37c0e91497bb340a88c341f2f5bf94
+  - enabled: 1
     path: Assets/Scenes/Test/PrefabsTest.unity
     guid: 3a4d60fe21330c541bc5e70ccfd688f4
-  - enabled: 0
-    path: Assets/Scenes/PersonStorage.unity
+  - enabled: 1
+    path: Assets/Scenes/Complete/PersonStorage.unity
     guid: 16b997ea2ee815d45a2e830fd8b7e066
+  - enabled: 1
+    path: Assets/Scenes/Complete/LevelChoose.unity
+    guid: 15481840b3a27fe409a1947e99d8ecd6
+  - enabled: 1
+    path: Assets/Scenes/Complete/SkillStorage.unity
+    guid: 1f9360bdc84f86f48a7ae77a240f7302
   m_configObjects: {}

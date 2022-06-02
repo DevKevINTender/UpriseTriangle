@@ -10,6 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using DG.Tweening;
+using DOTweenAnimation.Global;
 using Views.PersonStorage;
 using Random = UnityEngine.Random;
 
@@ -27,13 +28,14 @@ namespace Core
         [SerializeField] public Text StorageSegments;
         [SerializeField] public PersonPageView PersonPageViewPb;
         [SerializeField] public PersonPageView PersonPageViewCurrentObj;
-
+        
         [SerializeField] public PSPanelView PSPanelViewObj;
         [SerializeField] private AlertPanelView alertPanelPb;
         [SerializeField] private Transform infoPanelPos;
-
+        
+        [SerializeField] private SegmentStoreView SegmentStoreView;
         [SerializeField] private PageIndicatorPanelView PageIndicatorPanelViewObj;
-
+        [SerializeField] private TransitionAnimation TransitionAnimation;
         public int CurrentPersonShowId;
         public double CurrentPageId;
         public double PageCount;
@@ -43,6 +45,10 @@ namespace Core
         {
             SegmentControler.UpcreaseSegment(10);
             CoinsControler.UpcreaseCoins(10000);
+            
+            TransitionAnimation.gameObject.SetActive(true);
+            TransitionAnimation.OpenScene();
+            
             StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";
             StorageSegments.text = $"X{SegmentControler.GetSegmentCount()}";
             PersonListSO.Load();
@@ -117,6 +123,10 @@ namespace Core
                 SegmentControler.DecreaseSegment(1);
                 StorageSegments.text = $"X{SegmentControler.GetSegmentCount()}";
             }
+            else
+            {
+                SegmentStoreView.gameObject.SetActive(true);
+            }
         }
 
         public void ShowBuySegmentPanel()
@@ -156,7 +166,7 @@ namespace Core
         
         public void BackToMenu()
         {
-            SceneManager.LoadScene(0);
+            TransitionAnimation.CloseScene(0, "MainMenu");
         }
     }
 }
