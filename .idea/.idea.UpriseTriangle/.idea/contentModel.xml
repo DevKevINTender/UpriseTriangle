@@ -129,7 +129,11 @@
                 <e p="CoinComponent.cs" t="Include" />
               </e>
               <e p="DestroyerComponent.cs" t="Include" />
-              <e p="ElevatorComponent.cs" t="Include" />
+              <e p="Elevator" t="Include">
+                <e p="ElevatorAnimationComponent.cs" t="Include" />
+                <e p="ElevatorComponent.cs" t="Include" />
+                <e p="ElevatorErrorTextComponent.cs" t="Include" />
+              </e>
               <e p="FinishLineComponent.cs" t="Include" />
               <e p="Generator" t="Include">
                 <e p="ArrowBlockPreGenerator.cs" t="Include" />
@@ -160,6 +164,9 @@
                 <e p="StaticLinePreGenerator.cs" t="Include" />
                 <e p="StaticRainBlockGenerator.cs" t="Include" />
               </e>
+              <e p="UI" t="Include">
+                <e p="BeastFlashing.cs" t="Include" />
+              </e>
               <e p="WayObstacleComponent.cs" t="Include" />
             </e>
             <e p="Test" t="Include">
@@ -175,6 +182,9 @@
               <e p="CoinsControler.cs" t="Include" />
               <e p="DeathRegistrationControler.cs" t="Include" />
               <e p="SegmentControler.cs" t="Include" />
+              <e p="Settings" t="Include">
+                <e p="SettingsControler.cs" t="Include" />
+              </e>
             </e>
             <e p="LevelChoose" t="Include">
               <e p="LevelChooseAudioControler.cs" t="Include" />
@@ -249,6 +259,9 @@
               <e p="SegmentPanel" t="Include">
                 <e p="SegmentBuyPanelItemView.cs" t="Include" />
                 <e p="SegmentStoreView.cs" t="Include" />
+              </e>
+              <e p="Settings" t="Include">
+                <e p="SettingsPanelView.cs" t="Include" />
               </e>
             </e>
             <e p="LevelChoose" t="Include">

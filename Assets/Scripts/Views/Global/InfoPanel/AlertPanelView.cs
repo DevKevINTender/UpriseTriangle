@@ -17,8 +17,9 @@ public class AlertPanelView : MonoBehaviour
 
     public void ClosePanel()
     {
-        animator.Play("CloseAnim");
-        StartCoroutine(WaitAnimationStartEnd(animator.runtimeAnimatorController.animationClips[1].length));  
+        //animator.Play("CloseAnim");
+        //StartCoroutine(WaitAnimationStartEnd(animator.runtimeAnimatorController.animationClips[1].length)); 
+        Destroy(this.gameObject);
     }
 
     private IEnumerator WaitAnimationStartEnd(float _time)

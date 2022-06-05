@@ -1361,6 +1361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinCountText: {fileID: 5533056485481401260}
   segmentCountText: {fileID: 5533056484715463832}
+  boughtSegmentCountText: {fileID: 5533056484410681840}
   SegmentPanelPos: {fileID: 5533056484707197180}
   boughtSegmentPanel: {fileID: 5533056485856718015}
   PageIndicatorPanelView: {fileID: 5533056485268292463}
@@ -1369,6 +1370,7 @@ MonoBehaviour:
   - {fileID: 5918246101590965986, guid: 658d3f6af0d661545af3572425ec8b9a, type: 3}
   - {fileID: 5242942678738321241, guid: d9cdb2c4dcd408f488ccc42d6acd92a7, type: 3}
   currentPageObj: {fileID: 0}
+  AlertPanelViewPb: {fileID: 0}
   pageCount: 3
   startDragVector: {x: 0, y: 0, z: 0}
   endDragVector: {x: 0, y: 0, z: 0}
@@ -1390,7 +1392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5533056485856718014
 RectTransform:
   m_ObjectHideFlags: 0

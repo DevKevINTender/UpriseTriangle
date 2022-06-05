@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using  static SegmentStoreView;
 namespace Views.Global
 {
-    public class SegmentBuyPanelItemView : MonoBehaviour, IPointerDownHandler
+    public class SegmentBuyPanelItemView : MonoBehaviour, IPointerClickHandler
     {
         [SerializeField] private int segmentCount;
         [Header("Visual")]
@@ -21,7 +21,8 @@ namespace Views.Global
             segmentCostText.text = "" + SegmentControler.GetSegmentCost() * segmentCount;
 
         }
-        public void OnPointerDown(PointerEventData eventData)
+
+        public void OnPointerClick(PointerEventData eventData)
         {
             buySegment?.Invoke(segmentCount);
         }

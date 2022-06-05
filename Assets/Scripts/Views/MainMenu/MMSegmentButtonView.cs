@@ -7,7 +7,7 @@ using static MainMenuCore;
 
 namespace Views.MainMenu
 {
-    public class MMSegmentButtonView : MonoBehaviour, IPointerDownHandler
+    public class MMSegmentButtonView : MonoBehaviour, IPointerClickHandler
     {
         [SerializeField] private Text currentSegmentCountText;
         private buttonDelegate buttonPush;
@@ -18,7 +18,7 @@ namespace Views.MainMenu
             currentSegmentCountText.text = "x" + currenSegmentCount + "";
         }
 
-        public void OnPointerDown(PointerEventData eventData)
+        public void OnPointerClick(PointerEventData eventData)
         {
             buttonPush?.Invoke();
         }

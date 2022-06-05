@@ -232,6 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftPanel: {fileID: 725332104}
   centerImage: {fileID: 74124685}
+  currentLevelMusic: {fileID: 979484610}
   bgColor: {fileID: 725332102}
   red:
     serializedVersion: 2
@@ -1187,7 +1188,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0

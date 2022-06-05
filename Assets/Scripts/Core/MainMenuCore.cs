@@ -6,6 +6,7 @@ using DOTweenAnimation.Global;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Views.Global.Settings;
 using Views.MainMenu;
 
 public class MainMenuCore : MonoBehaviour
@@ -15,16 +16,20 @@ public class MainMenuCore : MonoBehaviour
     [SerializeField] private Text CoinsCountText;
     [SerializeField] private TransitionAnimation TransitionAnimation;
     [SerializeField] private SegmentStoreView SegmentStoreView;
+    [SerializeField] private SettingsPanelView SettingsPanelView;
     [Header("Buttons")]
     [SerializeField] private MMStartButtonView mmStartButtonViewObj;
+    [SerializeField] private MMStartButtonView mmStartSecondButtonViewObj;
     [SerializeField] private MMPersonButtonView mmPersonButtonViewObj;
     [SerializeField] private MMSkillButtonView mmSkillButtonViewObj;
     [SerializeField] private MMSegmentButtonView mmSegmentButtonViewObj;
     [SerializeField] private MMLevelsButtonView mmLevelsButtonViewObj;
     [SerializeField] private MMSettingsButtonView mmSettingsButtonView;
-    [Header("")]
+    [Header("InfoPanel")]
+    [SerializeField] private Transform AlertPanelPos;
+    
     AsyncOperation async;
-
+    
     [SerializeField] private List<RectTransform> pageList = new List<RectTransform>();
     [SerializeField] private int pageCount;
     private int currentPage;
@@ -40,6 +45,7 @@ public class MainMenuCore : MonoBehaviour
         PageIndicatorPanelView.UpdateView(currentPage);
         
         mmStartButtonViewObj.InitView(LoadSession,LevelChooseControler.GetCurrentLevel());
+        mmStartSecondButtonViewObj.InitView(LoadSession,LevelChooseControler.GetCurrentLevel());
         mmPersonButtonViewObj.InitView(LoadPersonStorage,PersonStorageContoler.GetPersonById(PersonStorageContoler.GetCurrentPerson()));
         mmSkillButtonViewObj.InitView(LoadSkillStorage,SkillStorageContoler.GetSkillById(SkillStorageContoler.GetCurrentSkill()));
         mmSegmentButtonViewObj.InitView(OpenSegmentPanel,SegmentControler.GetSegmentCount());
@@ -79,7 +85,8 @@ public class MainMenuCore : MonoBehaviour
     }
     public void OpenSettingsPanel()
     {
-        SegmentStoreView.gameObject.SetActive(true);
+        SettingsPanelView.gameObject.SetActive(true);
+        SettingsPanelView.InitView();
     }
     public void ShowPreviousPage()
     {

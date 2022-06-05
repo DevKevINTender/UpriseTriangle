@@ -6,7 +6,7 @@ using static MainMenuCore;
 
 namespace Views.MainMenu
 {
-    public class MMSkillButtonView : MonoBehaviour, IPointerDownHandler
+    public class MMSkillButtonView : MonoBehaviour, IPointerClickHandler
     {
         [SerializeField] private Text currentSkillIdText;
         private buttonDelegate buttonPush;
@@ -24,7 +24,7 @@ namespace Views.MainMenu
             }
         }
 
-        public void OnPointerDown(PointerEventData eventData)
+        public void OnPointerClick(PointerEventData eventData)
         {
             buttonPush?.Invoke();
         }

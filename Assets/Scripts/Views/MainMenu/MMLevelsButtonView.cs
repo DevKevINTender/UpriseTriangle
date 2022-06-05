@@ -4,7 +4,7 @@ using static MainMenuCore;
 
 namespace Views.MainMenu
 {
-    public class MMLevelsButtonView : MonoBehaviour, IPointerDownHandler
+    public class MMLevelsButtonView : MonoBehaviour, IPointerClickHandler
     {
         private buttonDelegate buttonPush;
     
@@ -13,7 +13,7 @@ namespace Views.MainMenu
             this.buttonPush = buttonPush;
         }
 
-        public void OnPointerDown(PointerEventData eventData)
+        public void OnPointerClick(PointerEventData eventData)
         {
             buttonPush?.Invoke();
         }
