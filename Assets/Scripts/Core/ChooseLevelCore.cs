@@ -1,6 +1,7 @@
 ﻿using System;
 using Controlers;
 using DG.Tweening;
+using DOTweenAnimation.Global;
 using ScriptableObjects.SessionLevel;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,6 +28,7 @@ namespace Core
         [SerializeField] private Transform infoPanelPos;
 
         [SerializeField] private PageIndicatorPanelView PageIndicatorPanelViewObj;
+        [SerializeField] private TransitionAnimation TransitionAnimation;
 
         public int CurrentLevelShowId;
         public double CurrentPageId;
@@ -36,6 +38,8 @@ namespace Core
         {
             CoinsControler.UpcreaseCoins(10000);
             
+            TransitionAnimation.gameObject.SetActive(true);
+            TransitionAnimation.OpenScene();
             StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";
             
             SessionLevelListSO.Load();
@@ -107,7 +111,7 @@ namespace Core
         
         public void BackToMenu()
         {
-            SceneManager.LoadScene(0);
+            TransitionAnimation.CloseScene(0,"MainMenu");
         }
     }
 }

@@ -49,6 +49,20 @@ namespace DOTweenAnimation.Global
             tPanelAnim.Append(centerImage.DOPunchScale(new Vector2(1.2f, 1.2f), 0.5f, 2)).OnComplete(() =>
             {
                 SceneManager.LoadScene(id); });
+        } 
+        public void CloseScene(float duration, string id)
+        {
+            bgColor.color = white;
+            centerImage.localScale = new Vector3(1,1,1);
+            tPanelAnim.Kill();
+            tPanelAnim = DOTween.Sequence();
+            tPanelAnim.AppendInterval(duration);
+            
+            tPanelAnim.Append(leftPanel.DOScaleY(1, 0.75f)).SetEase(Ease.OutCubic);
+            tPanelAnim.Append(centerImage.DOAnchorPos(Vector2.zero, 0.5f)).SetEase(Ease.OutCubic);
+            tPanelAnim.Append(centerImage.DOPunchScale(new Vector2(1.2f, 1.2f), 0.5f, 2)).OnComplete(() =>
+            {
+                SceneManager.LoadScene(id); });
         }
 
         public void OpenSessionScene()

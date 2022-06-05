@@ -20,58 +20,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LSPanelView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LSPanelView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LevelChooseItemView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LevelChoosePageView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentPanel.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentPanel/SegmentBuyPanelItemView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentPanel/SegmentBuyPanelItemView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentPanel/SegmentStoreView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMLevelsButtonView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMLevelsButtonView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMPersonButtonView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMPersonButtonView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMSegmentButtonView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMSegmentButtonView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMSettingsButtonView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMSettingsButtonView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMSkillButtonView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMSkillButtonView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MenuPanelView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MenuPanelView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Global/UI/PageIndicatorItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Global/UI/PageIndicatorItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/LevelChoose/UI/LevelPanelView.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/LevelChoose/UI/LevelPanelView.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PersonStorage/UI/PersonItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PersonStorage/UI/PersonItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 0.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO Test.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO Test.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListScrObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListScrObj.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/LevelChoose/UI/Ресурс 17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/LevelChoose/UI/Ресурс 17.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/LevelChoose/UI/Ресурс 18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/LevelChoose/UI/Ресурс 18.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/LevelChoose/UI/Ресурс 22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/LevelChoose/UI/Ресурс 22.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/LevelChoose/UI/Ресурс 23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/LevelChoose/UI/Ресурс 23.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/LevelChoose/UI/Ресурс 24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/LevelChoose/UI/Ресурс 24.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/LevelChoose/UI/Ресурс 25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/LevelChoose/UI/Ресурс 25.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 66.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 67.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 67.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 68.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 68.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 70.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelChoose.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelChoose.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersonStorage.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PersonStorage.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/LevelChoose/LevelChooseControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/LevelChoose/LevelChooseControler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/LevelChoose/UI/LevelChoosePage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/LevelChoose/UI/LevelChoosePage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 0.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/PersonListSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/PersonListSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelChoose.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelChoose.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersonStorage.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PersonStorage.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SkillStorage.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SkillStorage.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/SegmentControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/SegmentControler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/ChooseLevelCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ChooseLevelCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LSPageView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LSPageView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LevelChoosePageView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LSPanelItemView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LSPanelItemView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LevelChooseItemView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LSPanelListView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LSPanelListView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/PersonStorage/PageIndicatorPanelView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/PersonStorage/PageIndicatorPanelView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/PersonStorage/PersonItemView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/PersonStorage/PersonItemView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/PersonStorageCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/PersonStorageCore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SkillStorageCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SkillStorageCore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Global/TransitionAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Global/TransitionAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentStoreView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentStoreView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentPanel/SegmentStoreView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,6 +96,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/Obstacle/ObstacleComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/41/f0482457/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMStartButtonView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82C50397-7C53-47CF-82F4-4677F633FCF6/d0/85ed47d7/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/Obstacle/BoxObstacleComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/ShieldComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -119,23 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/EffectScrObj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/CoinsControler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/SegmentControler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/PersonStorage/EffectStorageContoler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/PersonScrObj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentStoreView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/PersonStorage/PageIndicatorPanelView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/PersonStorage/PersonStorageContoler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/PersonStorage/PersonPageView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/PersonStorageCore.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/PersonStorage/PSPanelView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Global/RoboHelperView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Generator/StaticBlockPathernGenerator1.cs" />
-        <option value="$PROJECT_DIR$/Assets/Plugins/Array2DEditor/Example/ExampleEnum.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/ColorProperty.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Services/RequierField.cs" />
-        <option value="$PROJECT_DIR$/Assets/Editor/ColorProperty.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/RequiredField.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/RequiredField.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ColorProperty.cs" />
@@ -158,7 +128,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LevelChooseItemView.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/LevelChoose/LevelChooseAudioControler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ChooseLevelCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/PersonStorage/PersonItemView.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/SkillsListScrObj.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/PersonListScrObj.cs" />
@@ -168,8 +137,26 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/SkillStorage/SkillPageView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/SkillStorage/SkillPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/SkillStorage/SkillItemView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/SkillStorageCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Global/PageIndicatorPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MainMenuButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMStartButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMPersonButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMSkillButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMSegmentButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MenuPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentStoreView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentBuyPanelItemView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/SegmentControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentPanel/SegmentBuyPanelItemView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentPanel/SegmentStoreView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Global/TransitionAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ChooseLevelCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/PersonStorageCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/SkillStorageCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMSettingsButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/MainMenu/MMLevelsButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" />
       </list>
     </option>
   </component>
@@ -273,6 +260,7 @@
       <workItem from="1652779708119" duration="23932000" />
       <workItem from="1653306470371" duration="10229000" />
       <workItem from="1653481297185" duration="6030000" />
+      <workItem from="1654148446141" duration="15577000" />
     </task>
     <servers />
   </component>

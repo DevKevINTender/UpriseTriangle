@@ -10,6 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using DG.Tweening;
+using DOTweenAnimation.Global;
 using Views.PersonStorage;
 using Random = UnityEngine.Random;
 
@@ -32,9 +33,12 @@ namespace Core
         [SerializeField] public SkillPanelView SkillPanelViewObj;
         [SerializeField] private AlertPanelView alertPanelPb;
         [SerializeField] private Transform infoPanelPos;
-
+        
+        [SerializeField] private SegmentStoreView SegmentStoreView;
         [SerializeField] private PageIndicatorPanelView PageIndicatorPanelViewObj;
-
+        [SerializeField] private TransitionAnimation TransitionAnimation;
+        
+        
         public int CurrentSkillShowId;
         public double CurrentPageId;
         public double PageCount;
@@ -43,7 +47,12 @@ namespace Core
         public void Start()
         {
             SegmentControler.UpcreaseSegment(10);
+            SegmentControler.DecreaseSegment(SegmentControler.GetSegmentCount());
             CoinsControler.UpcreaseCoins(10000);
+            
+            TransitionAnimation.gameObject.SetActive(true);
+            TransitionAnimation.OpenScene();
+            
             StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";
             StorageSegments.text = $"X{SegmentControler.GetSegmentCount()}";
             SkillListSO.Load();
@@ -111,12 +120,16 @@ namespace Core
         {
             if (SegmentControler.GetSegmentCount() > 0)
             {
-                List<PersonScrObj> list = PersonStorageContoler.GetNotOpenedPersons();
+                List<SkillScrObj> list = SkillStorageContoler.GetNotOpenedSkills();
                 int ChoosendId = Random.Range(0,list.Count);
-                PersonStorageContoler.AddSegmentToPerson(list[ChoosendId].Id);
+                SkillStorageContoler.AddSegmentToSkill(list[ChoosendId].Id);
                 SkillPageViewCurrentObj.UpdateViewItem(list[ChoosendId].Id);
                 SegmentControler.DecreaseSegment(1);
                 StorageSegments.text = $"X{SegmentControler.GetSegmentCount()}";
+            }
+            else
+            {
+                SegmentStoreView.gameObject.SetActive(true);
             }
         }
 
@@ -153,11 +166,12 @@ namespace Core
                 
                 ShowBuySegmentPanel();
             }
+
         }
         
         public void BackToMenu()
         {
-            SceneManager.LoadScene(0);
+            TransitionAnimation.CloseScene(0,"MainMenu");
         }
     }
 }
