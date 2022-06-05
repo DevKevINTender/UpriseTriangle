@@ -1,4 +1,5 @@
 ﻿using System;
+using Controlers.Settings;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,7 +10,8 @@ namespace DOTweenAnimation.Global
     {
         [SerializeField] private RectTransform leftPanel;
         [SerializeField] private RectTransform centerImage;
-
+        [SerializeField] private AudioSource currentLevelMusic;
+        
         [SerializeField] private Image bgColor;
         
         public Sequence tPanelAnim;
@@ -19,8 +21,11 @@ namespace DOTweenAnimation.Global
         [SerializeField] Color32 white = new Color32(255, 255, 255, 255);
         [SerializeField] Color32 greyDark = new Color32(26, 27, 23, 255);
 
+
+        [SerializeField] private float currentVolume;
         private void Start()
         {
+            
             DOTween.defaultTimeScaleIndependent = true;
         }
 
@@ -29,13 +34,15 @@ namespace DOTweenAnimation.Global
             bgColor.color = white;
             tPanelAnim.Kill();
             tPanelAnim = DOTween.Sequence();
-            tPanelAnim.AppendInterval(1.5f);
             
-            tPanelAnim.Append(centerImage.DOAnchorPos(new Vector2(0, 1500), 1f));
+            tPanelAnim.Append(centerImage.DOAnchorPos(new Vector2(0, 1500), 0.5f));
+            tPanelAnim.Append(leftPanel.DOScaleY(0, 0.5f)).SetEase(Ease.OutCubic);
+            tPanelAnim.Join(currentLevelMusic.DOFade(SettingsControler.GetMenuMusicVolume(), 5f)).SetEase(Ease.Linear);
+           
             
-            tPanelAnim.Append(leftPanel.DOScaleY(0, 0.75f)).SetEase(Ease.OutCubic);
         }
 
+        //from Session
         public void CloseScene(float duration, int id)
         {
             bgColor.color = white;
@@ -44,12 +51,13 @@ namespace DOTweenAnimation.Global
             tPanelAnim = DOTween.Sequence();
             tPanelAnim.AppendInterval(duration);
             
-            tPanelAnim.Append(leftPanel.DOScaleY(1, 0.75f)).SetEase(Ease.OutCubic);
+            tPanelAnim.Append(leftPanel.DOScaleY(1, 0.5f)).SetEase(Ease.OutCubic);
             tPanelAnim.Append(centerImage.DOAnchorPos(Vector2.zero, 0.5f)).SetEase(Ease.OutCubic);
-            tPanelAnim.Append(centerImage.DOPunchScale(new Vector2(1.2f, 1.2f), 0.5f, 2)).OnComplete(() =>
+            tPanelAnim.Append(centerImage.DOPunchScale(new Vector2(1.2f, 1.2f), 0.1f, 2)).OnComplete(() =>
             {
                 SceneManager.LoadScene(id); });
         } 
+        
         public void CloseScene(float duration, string id)
         {
             bgColor.color = white;
@@ -58,7 +66,9 @@ namespace DOTweenAnimation.Global
             tPanelAnim = DOTween.Sequence();
             tPanelAnim.AppendInterval(duration);
             
-            tPanelAnim.Append(leftPanel.DOScaleY(1, 0.75f)).SetEase(Ease.OutCubic);
+            tPanelAnim.Append(leftPanel.DOScaleY(1, 0.25f)).SetEase(Ease.OutCubic);
+            tPanelAnim.AppendCallback(() => { currentLevelMusic.GetComponent<LevelChooseAudioControler>().StopMusic();});
+            tPanelAnim.Join(currentLevelMusic.DOFade(0, 1f));
             tPanelAnim.Append(centerImage.DOAnchorPos(Vector2.zero, 0.5f)).SetEase(Ease.OutCubic);
             tPanelAnim.Append(centerImage.DOPunchScale(new Vector2(1.2f, 1.2f), 0.5f, 2)).OnComplete(() =>
             {

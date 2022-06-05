@@ -11,6 +11,7 @@ public class SegmentStoreView : MonoBehaviour, IBeginDragHandler, IDragHandler, 
 {
     [SerializeField] private Text coinCountText;
     [SerializeField] private Text segmentCountText;
+    [SerializeField] private Text boughtSegmentCountText;
 
     [SerializeField] private Transform SegmentPanelPos;
     [SerializeField] private GameObject boughtSegmentPanel;
@@ -18,6 +19,7 @@ public class SegmentStoreView : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     [SerializeField] private PageIndicatorPanelView PageIndicatorPanelView;
     [SerializeField] private List<RectTransform> pageList = new List<RectTransform>();
     [SerializeField] private RectTransform currentPageObj;
+    [SerializeField] private AlertPanelView AlertPanelViewPb;
     [SerializeField] private int pageCount;
     private int currentPage;
     
@@ -43,6 +45,12 @@ public class SegmentStoreView : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             coinCountText.text = "" +  CoinsControler.GetCoinsCount();
             segmentCountText.text = "" +  SegmentControler.GetSegmentCount();
             boughtSegmentPanel.SetActive(true);
+            boughtSegmentCountText.text = "x" + count;
+        }
+        else
+        {
+            AlertPanelView alert = Instantiate(AlertPanelViewPb, transform);
+            alert.InitView("Проблемка", "Где деньги Лебовски ?");
         }
     }
     public void ShowPreviousPage()

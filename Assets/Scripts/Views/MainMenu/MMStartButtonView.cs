@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static MainMenuCore;
 
-public class MMStartButtonView : MonoBehaviour, IPointerDownHandler
+public class MMStartButtonView : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private Text currentLevelText;
     private buttonDelegate buttonPush;
@@ -25,7 +25,7 @@ public class MMStartButtonView : MonoBehaviour, IPointerDownHandler
         
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
         buttonPush?.Invoke();
     }
