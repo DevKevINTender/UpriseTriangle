@@ -33,7 +33,7 @@ public class SessionCore : MonoBehaviour
     [Header("Animations")]
     [SerializeField] private PausePanelAnimation PausePanelAnimation;
     [SerializeField] private TransitionAnimation TransitionPanelAnimation;
-    [SerializeField] private WinnerPanelAnimation WinnerPanelAnimation;
+    [SerializeField] private WinnerPanelAnimationController WinnerPanelAnimation;
 
     public void SetGameSpeed()
     {
@@ -90,7 +90,6 @@ public class SessionCore : MonoBehaviour
         personComponent.SetCanMove(false);
         Time.timeScale = timeSlow;
         WinnerPanelAnimation.gameObject.SetActive(true);
-        WinnerPanelAnimation.OpenPanelAnim();
     }
 
     public void StartPause()

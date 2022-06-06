@@ -9,7 +9,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
-using UnityEditor;
 
 // генератор коридора 1 линия
 public class RotateBlockPathernGenerator : MonoBehaviour
