@@ -6,8 +6,6 @@ using UnityEngine;
 public class MagnetBonusPanelView : MonoBehaviour
 {
     public BonusPanelAnimation bonusPanelAnimation;
-    private int BonusId = 2;
-    private int BonusCount = 1;
     
     public delegate void GetBonusDel(int id, int count);
     public delegate void ClosePanelDel();

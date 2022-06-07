@@ -7,14 +7,15 @@ using DG.Tweening;
 public class BeastFlashing : MonoBehaviour
 {
     [SerializeField] private List<Image> beastParts;
-    private float delay;
-    private float coloringTime;
+    private WinnerPanelAnimationController winnerPanelAnimationController;
+
+
+    private float delay = 0.2f;
+    private float coloringTime = 0.3f;
 
     public void Start()
     {
-        delay = 0.2f;
-        coloringTime = 0.3f;
-        Action();
+        
     }
 
     public void InitChilds()
@@ -23,12 +24,12 @@ public class BeastFlashing : MonoBehaviour
             beastParts.Add(childImage.GetComponent<Image>());
     }
 
-    public void Action()
+    public void StartAction(WinnerPanelAnimationController winnerPanelAnimationController)
     {
+        this.winnerPanelAnimationController = winnerPanelAnimationController;
         TweenCallback callback = () => { BlackoutParts(); };
         InitChilds();
         Sequence beastAnim = DOTween.Sequence();
-        beastAnim.AppendInterval(5f);
         foreach (Image beastPart in beastParts)
         {
             beastAnim.Append(beastPart.DOColor(Color.white, coloringTime));
@@ -37,7 +38,7 @@ public class BeastFlashing : MonoBehaviour
             if (delay >= 0.1f) delay -= 0.05f;
         }
         beastAnim.AppendInterval(1f);
-        beastAnim.OnComplete(callback);
+        beastAnim.OnComplete(callback);      
     }
 
     public void BlackoutParts()
@@ -46,5 +47,6 @@ public class BeastFlashing : MonoBehaviour
         {
             beastPart.DOColor(new Color32(255, 255, 255, 0), 0.5f);
         }
+        winnerPanelAnimationController.BeastCallback();
     }
 }
