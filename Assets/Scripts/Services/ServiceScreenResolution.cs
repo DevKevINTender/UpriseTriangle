@@ -16,7 +16,7 @@ namespace Services
 
         public static float GetScaledGameSpeed()
         {
-            return 0 * (ScreenSize.GetScreenToWorldWidth / 5.625f);
+            return 5 * (ScreenSize.GetScreenToWorldWidth / 5.625f);
         }
     }
 }

@@ -2328,6 +2328,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1929925521}
     m_Modifications:
+    - target: {fileID: 1689702449282532025, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_ShowMaskGraphic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1849770030501454748, guid: 2899395f309767b4f8d8634351de7902, type: 3}
       propertyPath: m_Name
       value: Person
@@ -2416,6 +2420,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1849770030964584575, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909765898550891561, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909765898550891561, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909765898550891561, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139657895007309058, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863107061382092760, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6028328011889056707, guid: 2899395f309767b4f8d8634351de7902, type: 3}
       propertyPath: autoRandomSeed
       value: 1
@@ -2428,11 +2456,48 @@ PrefabInstance:
       propertyPath: UVModule.sprites.Array.data[0].sprite
       value: 
       objectReference: {fileID: 21300000, guid: b8d86eb969e879848a6cc46ba9e5617a, type: 3}
+    - target: {fileID: 6782738755516168375, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179105118567343021, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179105118567343021, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7179105118567343021, guid: 2899395f309767b4f8d8634351de7902, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15
+      value: 90
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7231781849254008184, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231781849254008184, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015785220104652748, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489060814412873071, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489060814412873071, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489060814412873071, guid: 2899395f309767b4f8d8634351de7902, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1689702449282532025, guid: 2899395f309767b4f8d8634351de7902, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2899395f309767b4f8d8634351de7902, type: 3}
 --- !u!224 &1095107700 stripped
 RectTransform:
