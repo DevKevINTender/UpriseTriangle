@@ -42,7 +42,7 @@ namespace Controlers
         {
             SkillListSO.Load();
             List<SkillScrObj> list = new List<SkillScrObj>();
-            for (int i = 0 + 9 * pageId; i < 9 + 9 * pageId; i++)
+            for (int i = 0 + 4 * pageId; i < 4 + 4 * pageId; i++)
             {
                 if (i < SkillListSO.List.Count)
                 {

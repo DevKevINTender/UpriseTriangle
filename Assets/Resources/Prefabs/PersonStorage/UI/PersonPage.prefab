@@ -97,7 +97,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 256, y: 388}
+  m_CellSize: {x: 378, y: 573}
   m_Spacing: {x: 25, y: 25}
   m_Constraint: 0
   m_ConstraintCount: 3
@@ -114,3 +114,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personItemViewPb: {fileID: 2535977839578021663, guid: e4b517e1b7224e74cb827500533b6124, type: 3}
+  List: []

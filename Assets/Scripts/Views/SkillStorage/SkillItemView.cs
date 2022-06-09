@@ -51,12 +51,13 @@ public class SkillItemView : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         segment.SetActive(false);
         available.SetActive(false);
         choosen.SetActive(false);
+        choosenBorder.SetActive(false);
         
         if (SkillStorageContoler.ItemIsOpened(id))
         {
             available.SetActive(true);
             segment.SetActive(false);
-            borderStatus.color = new Color32(46,255,193,255);
+            borderStatus.color = new Color32(255,255,255,255);
         }
         else
         {
@@ -67,8 +68,10 @@ public class SkillItemView : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         }
         if (SkillStorageContoler.GetCurrentSkill() == id)
         {
+            borderStatus.color = new Color32(46,255,193,255);
             available.SetActive(false);
             choosen.SetActive(true);
+            choosenBorder.SetActive(true);
         }
     }
     public void UpdateView(int id)
@@ -76,12 +79,13 @@ public class SkillItemView : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         segment.SetActive(false);
         available.SetActive(false);
         choosen.SetActive(false);
+        choosenBorder.SetActive(false);
         
         if (SkillStorageContoler.ItemIsOpened(id))
         {
             available.SetActive(true);
             segment.SetActive(false);
-            borderStatus.color = new Color32(46,255,193,255);
+            borderStatus.color = new Color32(255,255,255,255);
         }
         else
         {
@@ -92,8 +96,10 @@ public class SkillItemView : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         }
         if (SkillStorageContoler.GetCurrentSkill() == id)
         {
+            borderStatus.color = new Color32(46,255,193,255);
             available.SetActive(false);
             choosen.SetActive(true);
+            choosenBorder.SetActive(true);
         }
     }
     public void ShowBuySegmentPanel()

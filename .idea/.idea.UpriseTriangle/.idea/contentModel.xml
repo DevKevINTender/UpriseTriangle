@@ -230,7 +230,7 @@
               <e p="BonusPanelAnimation.cs" t="Include" />
               <e p="PausePanelAnimation.cs" t="Include" />
               <e p="ShakeAnimation.cs" t="Include" />
-              <e p="WinnerPanelAnimation.cs" t="Include" />
+              <e p="WinnerPanelAnimationController.cs" t="Include" />
             </e>
           </e>
           <e p="Editor" t="Include">

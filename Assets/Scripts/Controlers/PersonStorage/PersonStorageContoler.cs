@@ -42,7 +42,7 @@ namespace Controlers
         {
             PersonListSO.Load();
             List<PersonScrObj> list = new List<PersonScrObj>();
-            for (int i = 0 + 9 * pageId; i < 9 + 9 * pageId; i++)
+            for (int i = 0 + 4 * pageId; i < 4 + 4 * pageId; i++)
             {
                 if (i < PersonListSO.List.Count)
                 {

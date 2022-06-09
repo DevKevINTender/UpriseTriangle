@@ -57,8 +57,8 @@ namespace Core
             StorageSegments.text = $"X{SegmentControler.GetSegmentCount()}";
             SkillListSO.Load();
             CurrentSkillShowId = SkillListSO.CurrentSkillId;
-            CurrentPageId =  Math.Floor((double) CurrentSkillShowId / 9);
-            PageCount = Math.Ceiling((double) SkillListSO.List.Count / 9);
+            CurrentPageId =  Math.Floor((double) CurrentSkillShowId / 4);
+            PageCount = Math.Ceiling((double) SkillListSO.List.Count / 4);
             SkillPageViewCurrentObj = Instantiate(SkillPageViewPb,canvas);
             SkillPageViewCurrentObj.InitView(SkillStorageContoler.GetSkillItemForPage((int)CurrentPageId), BuySegment, ChoosePerson, ShowNextPage, ShowPreviousPage);
             SkillPanelViewObj.InitView(this);

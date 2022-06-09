@@ -53,8 +53,8 @@ namespace Core
             StorageSegments.text = $"X{SegmentControler.GetSegmentCount()}";
             PersonListSO.Load();
             CurrentPersonShowId = PersonListSO.CurrentPersonId;
-            CurrentPageId =  Math.Floor((double) CurrentPersonShowId / 9);
-            PageCount = Math.Ceiling((double) PersonListSO.List.Count / 9);
+            CurrentPageId =  Math.Floor((double) CurrentPersonShowId / 4);
+            PageCount = Math.Ceiling((double) PersonListSO.List.Count / 4);
             PersonPageViewCurrentObj = Instantiate(PersonPageViewPb,canvas);
             PersonPageViewCurrentObj.InitView(PersonStorageContoler.GetPersonItemForPage((int)CurrentPageId), BuySegment, ChoosePerson, ShowNextPage, ShowPreviousPage);
             PSPanelViewObj.InitView(this);
