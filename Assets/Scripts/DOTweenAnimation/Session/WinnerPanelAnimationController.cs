@@ -45,7 +45,6 @@ public class WinnerPanelAnimationController : MonoBehaviour
         ticket.DORotate(new Vector3(0, 0, 0), 1.3f);
         ticketAD.DORotate(new Vector3(0, 0, 0), 1.3f);
         ticket.DOScale(Vector3.one, 1.3f);
-        winnerPanelAnimSecond.Append(ticketAD.DOScale(Vector3.one, 1f))
-                             .Append(ticketAD.DOScale(Vector3.one * 1.3f, 0.5f).SetLoops(-1, LoopType.Yoyo));
+        winnerPanelAnimSecond.Append(ticketAD.DOScale(Vector3.one, 1f));                            
     }
 }
