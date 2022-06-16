@@ -15,6 +15,13 @@ MonoBehaviour:
   SavePath: PersonList
   CurrentPersonId: 0
   CurrentPageId: 0
-  CurrentSegmentListCount: 00000000
+  CurrentSegmentListCount: 0000000000000000000000000000000000000000000000000000000000000000
   List:
   - {fileID: 11400000, guid: 11484010870714443b5e0428d3a63a5a, type: 2}
+  - {fileID: 11400000, guid: 4c66aca25fce65c43831e3fdf7461b67, type: 2}
+  - {fileID: 11400000, guid: cef9aab2e1959c347918300d568baa71, type: 2}
+  - {fileID: 11400000, guid: 5f6337d15ea394f41ad1d0e35000a318, type: 2}
+  - {fileID: 11400000, guid: ba48a73dcd9652c46b917d50c173ff0c, type: 2}
+  - {fileID: 11400000, guid: 65510f061fdac9049996d65aa69e1c79, type: 2}
+  - {fileID: 11400000, guid: d9bdc48316460964ab29a8e52d58eb17, type: 2}
+  - {fileID: 11400000, guid: cf2716d51f3e080419495ea17119ca5d, type: 2}

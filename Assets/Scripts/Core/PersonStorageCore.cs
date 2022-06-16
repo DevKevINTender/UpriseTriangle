@@ -43,9 +43,6 @@ namespace Core
         
         public void Start()
         {
-            SegmentControler.UpcreaseSegment(10);
-            CoinsControler.UpcreaseCoins(10000);
-            
             TransitionAnimation.gameObject.SetActive(true);
             TransitionAnimation.OpenScene();
             

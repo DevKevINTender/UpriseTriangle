@@ -20,7 +20,8 @@ public class PersonItemView : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     [SerializeField] private GameObject AddBuySegmentPanel;
     [SerializeField] private Text segmentCountBuy;
     
-    [SerializeField] 
+    [SerializeField] private Image personSkin;
+    [SerializeField] private ParticleSystem effectSprite;
 
     private PersonItemAction buySegment;
     private PersonItemAction chooseSegment;
@@ -40,6 +41,10 @@ public class PersonItemView : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         this.updateView = updateView;
         this.showNext = showNext;
         this.showPrevious = showPrevious;
+
+        personSkin.sprite = personScrObj.PersonSkin;
+        personSkin.SetNativeSize();
+        effectSprite.textureSheetAnimation.SetSprite(0,personScrObj.Effect);
         
         id = personScrObj.Id;
         idText.text = ""+id;

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb413699cc75af4ea095b828ca7e23b, type: 3}
-  m_Name: PersonSO 0
+  m_Name: PersonSO 5
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: 5
   CurrentSegment: 0
-  RequiredSegments: 0
-  Effect: {fileID: 21300000, guid: 04d6af088b4b1dc4abc35004e05c6a67, type: 3}
-  PersonSkin: {fileID: 21300000, guid: 050dff9522b822a449f6448d5581b32e, type: 3}
-  PersonShield: {fileID: 21300000, guid: 98fcc4472fda83046bd496208d9e9e88, type: 3}
+  RequiredSegments: 25
+  Effect: {fileID: 21300000, guid: 116be297781932141b94ffdb82f1cf35, type: 3}
+  PersonSkin: {fileID: 21300000, guid: 03cd07fd294c0a2419680c01b90720b9, type: 3}
+  PersonShield: {fileID: 21300000, guid: 9eb6126fbdff019408e3cfc4c5fb6300, type: 3}

@@ -171,6 +171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPersonIdText: {fileID: 1849770029809856005}
+  personSkin: {fileID: 8015785220104652748}
+  effectSprite: {fileID: 6028328011889056707}
 --- !u!1 &1849770030964584574
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +276,7 @@ RectTransform:
   m_GameObject: {fileID: 4374409343803978128}
   m_LocalRotation: {x: 0.7071068, y: 0.000000014901163, z: 0.000000014901163, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 1849770030501454749}
   m_RootOrder: 1
