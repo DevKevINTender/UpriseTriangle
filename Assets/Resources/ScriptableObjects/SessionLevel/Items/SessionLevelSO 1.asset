@@ -16,10 +16,11 @@ MonoBehaviour:
   MusicName: Vevolo
   MusicCreator: Jon Martis
   MusicTime: 5:45
-  DeadCount: 0
-  CoinsCollectCount: 0
-  CompletePercent: 0
+  AttempCount: 123
+  CoinsCollectCount: 234
+  CompletePercent: 30
   Cost: 550
+  WinReward: 75
   SessionLevelPB: {fileID: 0}
   SessionLevelBlockList:
   - SpawnBlockPb: {fileID: 0}

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Services;
 using Controlers;
+using Controlers.Session;
 using DG.Tweening;
 using DOTweenAnimation.Global;
 using UnityEngine;
@@ -17,6 +18,7 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private SessionAnimationController animationController;
     [SerializeField] private SessionUIController sessionUIController;
     [SerializeField] private AttempCounterController attempCounterController;
+    [SerializeField] private WinnerPanelControler winnerPanelControler;
     [SerializeField] private BonusCollectorComponent bonusCollectorComponent;
 
     [Header("Game values")]
@@ -43,13 +45,16 @@ public class SessionCore : MonoBehaviour
 
     void Start()
     {
+        currentSession = LevelChooseControler.GetCurrentLevel();
         SetGameSpeed();
         DOTween.Init();
         sessionUIController.ActiveAttempText(attempCounterController.GetAttemps());
+        attempCounterController.InitControler(currentSession);
         audioController.Play(musicTimeStart);
         TransitionPanelAnimation.gameObject.SetActive(true);
         TransitionPanelAnimation.OpenSessionScene();
         personComponent.SetCanMove(true); 
+        
         personComponent.InitComponent(PersonDeath, PersonWin, PersonEnterElevator, PersonExitElevator); // �������� �� ������� ������ � �������� ������
         playerMovePanelView.Init(StartPause, EndPause);// �������� �� ������� �����
         bonusCollectorComponent.InitComponent(StartPause, EndPause);
@@ -71,7 +76,7 @@ public class SessionCore : MonoBehaviour
         DeathRegistrationControler.AddNewRecord(DateTime.Now,1);
         Handheld.Vibrate();
         Time.timeScale = timeSlow;
-        TransitionPanelAnimation.CloseScene(0, currentSession);
+        TransitionPanelAnimation.CloseSessionScene(0, "Session");
     }
 
     public void PersonEnterElevator()
@@ -90,6 +95,8 @@ public class SessionCore : MonoBehaviour
         personComponent.SetCanMove(false);
         Time.timeScale = timeSlow;
         WinnerPanelAnimation.gameObject.SetActive(true);
+        WinnerPanelAnimation.PersonWin();
+        winnerPanelControler.InitControler(currentSession);
     }
 
     public void StartPause()

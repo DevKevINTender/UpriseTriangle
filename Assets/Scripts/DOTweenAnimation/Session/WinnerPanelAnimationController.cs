@@ -12,14 +12,17 @@ public class WinnerPanelAnimationController : MonoBehaviour
     [SerializeField] private RectTransform Bottom;
     [SerializeField] private RectTransform ticket;
     [SerializeField] private RectTransform ticketAD;
-    [SerializeField] private BeastFlashing beastFlashing;
+    [SerializeField] private BeastFlashingAnimation beastFlashing;
 
     private Sequence winnerPanelAnim;
     private Sequence winnerPanelAnimSecond;
 
     public void Start()
     {
-        Invoke("PersonWin", 3f);
+        Top.anchoredPosition = new Vector2(0, 750);
+        Bottom.anchoredPosition = new Vector2(0, -750);
+        ticket.localScale = Vector3.zero;
+        ticketAD.localScale = Vector3.zero;
     }
 
     public void PersonWin()
@@ -40,11 +43,11 @@ public class WinnerPanelAnimationController : MonoBehaviour
     public void SecondPart()
     {
         winnerPanelAnimSecond = DOTween.Sequence();
-        Top.DOAnchorPosY(0, 1f).SetEase(Ease.OutBack);
-        Bottom.DOAnchorPosY(0, 1f).SetEase(Ease.OutBack);
-        ticket.DORotate(new Vector3(0, 0, 0), 1.3f);
-        ticketAD.DORotate(new Vector3(0, 0, 0), 1.3f);
-        ticket.DOScale(Vector3.one, 1.3f);
-        winnerPanelAnimSecond.Append(ticketAD.DOScale(Vector3.one, 1f));                            
+        winnerPanelAnimSecond.Join(Top.DOAnchorPosY(0, 1f).SetEase(Ease.OutBack));
+        winnerPanelAnimSecond.Join(Bottom.DOAnchorPosY(0, 1f).SetEase(Ease.OutBack));
+        winnerPanelAnimSecond.Join(ticket.DORotate(new Vector3(0, 0, 0), 1.3f));
+        winnerPanelAnimSecond.Join(ticketAD.DORotate(new Vector3(0, 0, 0), 1.3f));
+        winnerPanelAnimSecond.Join(ticket.DOScale(new Vector3(0.75f, 0.75f, 0.75f), 1f));
+        winnerPanelAnimSecond.Join(ticketAD.DOScale(new Vector3(0.75f, 0.75f, 0.75f), 1.3f));                            
     }
 }

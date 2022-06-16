@@ -61,7 +61,7 @@ public class MainMenuCore : MonoBehaviour
 
     public void LoadSession()
     {
-        TransitionAnimation.CloseScene(0, "LevelTest");
+        TransitionAnimation.CloseScene(0, "Session");
     }
     
     public void LoadLevelChoose()

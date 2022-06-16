@@ -9,6 +9,8 @@ public class CoinCollectorComponent : MonoBehaviour
 
     public int coinWithOutMultiplier;
     public int coinWithMultiplier;
+
+    public int SessionCointTotalCollect;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +29,19 @@ public class CoinCollectorComponent : MonoBehaviour
             if (BonusCollectorComponent.GetMultiplierBonusCount() > 0)
             {
                 CoinsControler.UpcreaseCoins(coinWithOutMultiplier);
+                SessionCointTotalCollect += coinWithOutMultiplier;
             }
             else
             {
                 CoinsControler.UpcreaseCoins(coinWithMultiplier);
+                SessionCointTotalCollect += coinWithOutMultiplier;
             }
             Destroy(other.gameObject);
         }
+    }
+
+    public int GetSessionCoinTotalCollect()
+    {
+        return SessionCointTotalCollect;
     }
 }

@@ -14,7 +14,7 @@ public class SessionUIController : MonoBehaviour
 
     public void ActiveAttempText(int attemps)
     {
-        attempText.text = "Attemp " + attemps;
+        attempText.text = "Попыток: " + attemps;
         attempText.gameObject.SetActive(true);
     }
 

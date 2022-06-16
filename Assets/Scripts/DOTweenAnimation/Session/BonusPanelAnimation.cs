@@ -3,9 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BonusPanelAnimation : MonoBehaviour
 {
+    public delegate void GetBonusDel(int id, int count,int type);
+    public delegate void ClosePanelDel();
+    
     // Start is called before the first frame update
     [SerializeField] private RectTransform mainPanel;
     [SerializeField] private RectTransform freeBonus;
@@ -14,22 +18,41 @@ public class BonusPanelAnimation : MonoBehaviour
     public void OpenPanelAnim()
     {
         transform.gameObject.SetActive(true);
-        mainPanel.anchoredPosition = new Vector2(Screen.currentResolution.width,0);
-        freeBonus.anchoredPosition = new Vector2(0,Screen.currentResolution.height * 1.25f);
-        adsBonus.anchoredPosition = new Vector2(0,Screen.currentResolution.height * 1.25f);
-        backBtn.anchoredPosition = new Vector2(0,-Screen.currentResolution.height * 1.25f);
-        
+        transform.localScale = Vector3.zero;
         DOTween.defaultTimeScaleIndependent = true;
-        Sequence openPanel = DOTween.Sequence();    
-        openPanel.Append( transform.DOLocalMove(Vector3.zero, 1));
-        openPanel.AppendInterval(0.25f);
-        openPanel.Append( freeBonus.DOLocalMove(Vector3.zero, 0.5f));
-        openPanel.Append( adsBonus.DOLocalMove(Vector3.zero, 0.5f));
-        openPanel.AppendInterval(0.5f);
-        openPanel.Append( backBtn.DOLocalMove(Vector3.zero, 0.5f));
+        Sequence openPanel = DOTween.Sequence();
+        openPanel.Append( transform.DOScale(Vector3.one, 0.5F)).SetEase(Ease.InCubic);
     }
 
-    public void ClosePanelAnim(MagnetBonusPanelView.ClosePanelDel closeVoid)
+   
+    
+    public void GetFreeBonusAnim(GetBonusDel getBonus)
+    {
+        TweenCallback callback = () => { getBonus?.Invoke(2,1, 0); };
+        
+        DOTween.defaultTimeScaleIndependent = true;
+        Sequence openPanel = DOTween.Sequence();
+        openPanel.Append( freeBonus.DOScale(new Vector3(1.1f,1.1f,1.1f), 0.25f));
+        openPanel.Join(adsBonus.GetComponent<Image>().DOColor(new Color32(46,255,193,50), 0.25f));
+        openPanel.Join( adsBonus.DOScale(new Vector3(0.9f,0.9f,0.9f), 0.25f));
+        openPanel.AppendInterval(0.25f);
+        openPanel.Append( transform.DOScale(new Vector3(0,0), 0.25f).OnComplete(callback));
+    }
+    
+    public void GetAdsBonusAnim(GetBonusDel getBonus)
+    {
+        TweenCallback callback = () => { getBonus?.Invoke(2,1, 1); };
+        
+        DOTween.defaultTimeScaleIndependent = true;
+        Sequence openPanel = DOTween.Sequence(); 
+        openPanel.Append( adsBonus.DOScale(new Vector3(1.1f,1.1f,1.1f), 0.25f));
+        openPanel.Join(freeBonus.GetComponent<Image>().DOColor(new Color32(255,255,255,50), 0.25f));
+        openPanel.Join( freeBonus.DOScale(new Vector3(0.9f,0.9f,0.9f), 0.25f));
+        openPanel.AppendInterval(0.25f);
+        openPanel.Append( transform.DOScale(new Vector3(0,0), 0.25f).OnComplete(callback));
+    }
+    
+    public void ClosePanelAnim(ClosePanelDel closeVoid)
     {
         
         TweenCallback callback = () =>
@@ -45,32 +68,6 @@ public class BonusPanelAnimation : MonoBehaviour
         openPanel.Join( adsBonus.DOLocalMove(new Vector3(0,Screen.currentResolution.height * 1.25f), 0.5f));
         openPanel.AppendInterval(0.25f);
         openPanel.Append( transform.DOLocalMove(new Vector3(Screen.currentResolution.width,0), 1).OnComplete(callback));
-    }
-    
-    public void GetFreeBonusAnim(MagnetBonusPanelView.ClosePanelDel closeVoid)
-    {
-        TweenCallback callback = () => { closeVoid?.Invoke(); };
-        
-        DOTween.defaultTimeScaleIndependent = true;
-        Sequence openPanel = DOTween.Sequence(); 
-        openPanel.Append( backBtn.DOLocalMove(new Vector3(0,-1500), 0.5f));
-        openPanel.Append( freeBonus.DOScale(new Vector3(0,0,0), 0.25f));
-        openPanel.Append( adsBonus.DOLocalMove(new Vector3(0,-1500), 0.5f));
-        openPanel.AppendInterval(0.25f);
-        openPanel.Append( transform.DOLocalMove(new Vector3(1500,0), 1).OnComplete(callback));
-    }
-    
-    public void GetAdsBonusAnim(MagnetBonusPanelView.ClosePanelDel closeVoid)
-    {
-        TweenCallback callback = () => { closeVoid?.Invoke(); };
-        
-        DOTween.defaultTimeScaleIndependent = true;
-        Sequence openPanel = DOTween.Sequence(); 
-        openPanel.Append( backBtn.DOLocalMove(new Vector3(0,-1500), 0.5f));
-        openPanel.Append( adsBonus.DOScale(new Vector3(0,0,0), 0.25f));
-        openPanel.Append( freeBonus.DOLocalMove(new Vector3(0,-1500), 0.5f));
-        openPanel.AppendInterval(0.25f);
-        openPanel.Append(transform.DOLocalMove(new Vector3(1500, 0), 1).OnComplete(callback));
     }
 
 }

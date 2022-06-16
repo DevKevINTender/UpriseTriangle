@@ -1,9 +1,15 @@
+using Controlers;
 using UnityEngine;
 
 public class AttempCounterController : MonoBehaviour
 {
+    [SerializeField] private int currentId;
     private int attemp;
 
+    public void InitControler(int id)
+    {
+        this.currentId = id;
+    }
     public void AddAttemp()
     {
         attemp = GetAttemps();
@@ -19,11 +25,11 @@ public class AttempCounterController : MonoBehaviour
 
     public void SaveAttemps(int attemps)
     {
-        PlayerPrefs.SetInt("attemps", attemps);
+        LevelChooseControler.SetSessionAttempCount(currentId, attemps);
     }
 
     public int GetAttemps()
     {
-        return PlayerPrefs.GetInt("attemps");
+        return LevelChooseControler.GetSessionAttempCount(currentId);
     }
 }

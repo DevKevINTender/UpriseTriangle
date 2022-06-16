@@ -75,7 +75,7 @@ namespace Views.ChooseLevel
                     availableBtn.SetActive(true);
                 }
                 statusBorder.color = new Color32(46,255,193,255);
-                attempCount.text = $"{levelScrObj.DeadCount}";
+                attempCount.text = $"{levelScrObj.AttempCount}";
                 coinCollectCount.text = $"{levelScrObj.CoinsCollectCount}";
                 progressCount.text = $"{levelScrObj.CompletePercent}";
 

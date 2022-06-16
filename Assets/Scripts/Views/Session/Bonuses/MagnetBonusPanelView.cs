@@ -2,13 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static BonusPanelAnimation;
 
 public class MagnetBonusPanelView : MonoBehaviour
 {
     public BonusPanelAnimation bonusPanelAnimation;
-    
-    public delegate void GetBonusDel(int id, int count);
-    public delegate void ClosePanelDel();
     
     public GetBonusDel getBonus;
     public ClosePanelDel closePanel;
@@ -21,22 +19,11 @@ public class MagnetBonusPanelView : MonoBehaviour
 
     public void GetFreeBonus()
     {
-        bonusPanelAnimation.GetFreeBonusAnim(BonusGeted);
+        bonusPanelAnimation.GetFreeBonusAnim(getBonus);
     }
     
     public void GetAdsBonus()
     {
-        bonusPanelAnimation.GetAdsBonusAnim(BonusGeted);
-    }
-    
-    public void BonusGeted()
-    {
-        closePanel?.Invoke();
-    }
- 
-
-    public void ClosePanel()
-    {
-        bonusPanelAnimation.ClosePanelAnim(closePanel);
+        bonusPanelAnimation.GetAdsBonusAnim(getBonus);
     }
 }

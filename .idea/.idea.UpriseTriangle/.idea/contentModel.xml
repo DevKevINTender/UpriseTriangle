@@ -106,7 +106,6 @@
           <e p="Components" t="Include">
             <e p="EffectStorageListComponent.cs" t="Include" />
             <e p="Session" t="Include">
-              <e p="BeatRingComponent.cs" t="Include" />
               <e p="Bonuses" t="Include">
                 <e p="BonusCollectorComponent.cs" t="Include" />
                 <e p="CoinBonusComponent.cs" t="Include" />
@@ -159,13 +158,14 @@
                 <e p="StaticComponent.cs" t="Include" />
               </e>
               <e p="PersonComponent.cs" t="Include" />
+              <e p="PersonFinishComponent.cs" t="Include" />
               <e p="PersonSkinComponent.cs" t="Include" />
               <e p="PreGenerator" t="Include">
                 <e p="StaticLinePreGenerator.cs" t="Include" />
                 <e p="StaticRainBlockGenerator.cs" t="Include" />
               </e>
               <e p="UI" t="Include">
-                <e p="BeastFlashing.cs" t="Include" />
+                <e p="BeastFlashingAnimation.cs" t="Include" />
               </e>
               <e p="WayObstacleComponent.cs" t="Include" />
             </e>
@@ -209,6 +209,7 @@
                 <e p="SessionBupTextController.cs" t="Include" />
                 <e p="SessionUIController.cs" t="Include" />
               </e>
+              <e p="WinnerPanelControler.cs" t="Include" />
             </e>
             <e p="SkillStorage" t="Include">
               <e p="SkillStorageContoler.cs" t="Include" />

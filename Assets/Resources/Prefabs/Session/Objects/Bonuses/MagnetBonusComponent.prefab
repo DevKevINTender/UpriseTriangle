@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e283b962ac5c84a46b571e64c180c129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MagnetFootprintPb: {fileID: 8850559595143613572, guid: a621e8525c2d7414a8e52095d9a16360, type: 3}
 --- !u!212 &168655215
 SpriteRenderer:
   m_ObjectHideFlags: 0

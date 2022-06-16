@@ -16,10 +16,11 @@ MonoBehaviour:
   MusicName: Mistake
   MusicCreator: Alex job
   MusicTime: 2:23
-  DeadCount: 25
+  AttempCount: 25
   CoinsCollectCount: 0
   CompletePercent: 76
   Cost: 500
+  WinReward: 75
   SessionLevelPB: {fileID: 2264854523134382543, guid: c6c745e333b50f147b0c8239046b93c2, type: 3}
   SessionLevelBlockList:
   - SpawnBlockPb: {fileID: 4575953252573043395, guid: dd4d16e542ea5974aba58ca6b843abe7, type: 3}

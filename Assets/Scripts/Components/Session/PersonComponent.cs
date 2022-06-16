@@ -11,13 +11,12 @@ public class PersonComponent : MonoBehaviour
     private PersonDelegate personWinTrigger;
     private PersonDelegate personEnterElevatorTrigger;
     private PersonDelegate personExitElevatorTrigger;
-    
 
     private bool canMove;
     private bool isMove;
     internal bool inElevator;
     [SerializeField] private PersonParticleController personParticleController;
-
+    [SerializeField] private PersonFinishComponent PersonFinishComponent;
     float timer;
 
     private float vectroToRotate;
@@ -58,6 +57,8 @@ public class PersonComponent : MonoBehaviour
         this.personEnterElevatorTrigger = personEnterElevatorTrigger;
         this.personExitElevatorTrigger = personExitElevatorTrigger;
 
+        PersonFinishComponent.InitComponent(personWinTrigger);
+        
         maxX = 2.6f * ServiceScreenResolution.GetScreenScale().x;
         minX = 2.45f * ServiceScreenResolution.GetScreenScale().x;
             
@@ -133,9 +134,6 @@ public class PersonComponent : MonoBehaviour
         {
             personDeathTrigger?.Invoke();
         }
-        if (other.GetComponent<FinishLineComponent>())
-        {
-            personWinTrigger?.Invoke();
-        }
+       
     }
 }

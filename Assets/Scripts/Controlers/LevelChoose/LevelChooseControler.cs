@@ -58,5 +58,22 @@ namespace Controlers
             SessionLevelListSO.Load();
             return SessionLevelListSO.List[id];
         }
+
+        public static int GetSessionAttempCount(int id)
+        {
+            SessionLevelListSO.Load();
+            return SessionLevelListSO.List[id].AttempCount;
+        }
+
+        public static int GetSessionWinReward(int id)
+        {
+            SessionLevelListSO.Load();
+            return SessionLevelListSO.List[id].WinReward;
+        }
+        public static void SetSessionAttempCount(int id, int count)
+        {
+            SessionLevelListSO.List[id].AttempCount = count;
+            SessionLevelListSO.Save();
+        }
     }
 }

@@ -35,7 +35,17 @@ public class BonusCollectorComponent : MonoBehaviour
     public Text shieldBonusText;
     public Text magnetBonusText;
     public Text multiplierBonusText;
-
+    [Header("BonusFootprints")] 
+    [SerializeField] private GameObject MagnetFootprintADPb;
+    [SerializeField] private GameObject MagnetFootprintPb;
+    [SerializeField] private GameObject MultiplierFootprintADPb;
+    [SerializeField] private GameObject MultiplierFootprintPb;
+    [SerializeField] private GameObject ShieldFootprintADPb;
+    [SerializeField] private GameObject ShieldFootprintPb;
+    [SerializeField] private GameObject CoinFootprintADPb;
+    [SerializeField] private GameObject CoinFootprintPb;
+    
+    
     private void Awake()
     {
         ShieldBonusCount = 10;
@@ -107,13 +117,21 @@ public class BonusCollectorComponent : MonoBehaviour
             }
         }
     }
-    public void AddBonus(int id, int count) // добавить бонус
+    public void AddBonus(int id, int count, int type) // добавить бонус
     {
         switch (id)
         {
             case 0: // бонусные монетки
             {
                 CoinsControler.UpcreaseCoins(count);
+                if (type == 0)
+                {
+                    Instantiate(CoinFootprintPb, transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(CoinFootprintADPb, transform.position, Quaternion.identity);
+                }
                 break;
             }
             case 1: // щиток
@@ -125,6 +143,14 @@ public class BonusCollectorComponent : MonoBehaviour
                 }
                 if(ShieldBonusCount < 99) ShieldBonusCount += count;
                 SaveBonusesCount();
+                if (type == 0)
+                {
+                    Instantiate(ShieldFootprintPb, transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(ShieldFootprintADPb, transform.position, Quaternion.identity);
+                }
                 break;
             }
             case 2: // магнит
@@ -132,6 +158,14 @@ public class BonusCollectorComponent : MonoBehaviour
                 if(MagnetBonusCount == 0) MagnetComponentObj = Instantiate(MagnetComponentPb, personObj);
                 if(MagnetBonusCount < 99) MagnetBonusCount += count;
                 SaveBonusesCount();
+                if (type == 0)
+                {
+                    Instantiate(MagnetFootprintPb, transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(MagnetFootprintADPb, transform.position, Quaternion.identity);
+                }
                 break;
             }
             case 3: // множитель монет
@@ -139,6 +173,14 @@ public class BonusCollectorComponent : MonoBehaviour
                 if(MultiplierBonusCount == 0) MultiplierComponentObj = Instantiate(MultiplierComponentPb, personObj);
                 if(MultiplierBonusCount < 99) MultiplierBonusCount += count;
                 SaveBonusesCount();
+                if (type == 0)
+                {
+                    Instantiate(MultiplierFootprintPb, transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(MultiplierFootprintADPb, transform.position, Quaternion.identity);
+                }
                 break;
             }
         } 

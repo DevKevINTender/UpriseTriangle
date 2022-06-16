@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class PlayerMovePanelView : MonoBehaviour, IDragHandler,IBeginDragHandler,IEndDragHandler
@@ -33,8 +34,23 @@ public class PlayerMovePanelView : MonoBehaviour, IDragHandler,IBeginDragHandler
     {
         if (Input.touchCount == 1)
         {
-            startPause?.Invoke();
+            StartCoroutine(pauseDelay());
         }
         personMoveController.SetTouchCount(0);
+    }
+
+    public IEnumerator pauseDelay()
+    {
+        float timer = 0.3f;
+        while (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+        if (Input.touchCount == 0)
+        {
+            startPause?.Invoke();
+        }
+        
     }
 }

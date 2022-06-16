@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Complete/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Session.unity
-    guid: 6e6763a257b0e7446830e18735052f35
-  - enabled: 1
     path: Assets/Scenes/Complete/PersonStorage.unity
     guid: 16b997ea2ee815d45a2e830fd8b7e066
   - enabled: 1
@@ -20,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Complete/SkillStorage.unity
     guid: 1f9360bdc84f86f48a7ae77a240f7302
+  - enabled: 1
+    path: Assets/Scenes/Complete/Session.unity
+    guid: 53487277f41cfda498458346f5fce304
   m_configObjects: {}

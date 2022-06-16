@@ -7,7 +7,7 @@ namespace Views.Session.Bonuses
         private int BonusId = 3;
         private int BonusCount = 1;
     
-        public delegate void GetBonusDel(int id, int count);
+        public delegate void GetBonusDel(int id, int count, int type);
         public delegate void ClosePanelDel();
     
         public GetBonusDel getBonus;
@@ -21,13 +21,13 @@ namespace Views.Session.Bonuses
         public void GetFreeBonus()
         {
             gameObject.SetActive(false);
-            getBonus?.Invoke(BonusId, BonusCount);
+            getBonus?.Invoke(BonusId, BonusCount, 0);
         }
 
         public void GetAdsBonus()
         {
             gameObject.SetActive(false);
-            getBonus?.Invoke(BonusId, BonusCount);
+            getBonus?.Invoke(BonusId, BonusCount, 1);
         }
 
         public void ClosePanel()

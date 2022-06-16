@@ -43,7 +43,7 @@ namespace DOTweenAnimation.Global
         }
 
         //from Session
-        public void CloseScene(float duration, int id)
+        public void CloseSessionScene(float duration, string id)
         {
             bgColor.color = white;
             centerImage.localScale = new Vector3(1,1,1);

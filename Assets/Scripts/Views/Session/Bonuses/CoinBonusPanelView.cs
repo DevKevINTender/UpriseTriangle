@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static BonusPanelAnimation;
 
 public class CoinBonusPanelView : MonoBehaviour
 {
-    private int BonusId = 2;
-    private int BonusCount = 100;
+    public BonusPanelAnimation bonusPanelAnimation;
     
-    public delegate void GetBonusDel(int id, int count);
-    public delegate void ClosePanelDel();
     
     public GetBonusDel getBonus;
     public ClosePanelDel closePanel;
@@ -20,19 +18,11 @@ public class CoinBonusPanelView : MonoBehaviour
 
     public void GetFreeBonus()
     {
-        gameObject.SetActive(false);
-        getBonus?.Invoke(BonusId, BonusCount);
+        bonusPanelAnimation.GetFreeBonusAnim(getBonus);;
     }
 
     public void GetAdsBonus()
     {
-        gameObject.SetActive(false);
-        getBonus?.Invoke(BonusId, BonusCount);
-    }
-
-    public void ClosePanel()
-    {
-        gameObject.SetActive(false);
-        closePanel?.Invoke();
+        bonusPanelAnimation.GetFreeBonusAnim(getBonus);;
     }
 }

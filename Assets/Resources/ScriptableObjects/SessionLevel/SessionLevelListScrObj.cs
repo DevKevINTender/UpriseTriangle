@@ -29,7 +29,7 @@ namespace ScriptableObjects.SessionLevel
             {
                 SessionLevelSave newSessionLevelSave = new SessionLevelSave();
                 newSessionLevelSave.CompletePercent = item.CompletePercent;
-                newSessionLevelSave.DeadCount = item.DeadCount;
+                newSessionLevelSave.DeadCount = item.AttempCount;
                 newSessionLevelSave.CoinsCollectCount = item.CoinsCollectCount;
                 newSessionLevelListSave.List.Add(newSessionLevelSave);
             }
@@ -59,7 +59,7 @@ namespace ScriptableObjects.SessionLevel
                 for (int i = 0; i < newSessionLevelListSave.List.Count; i++)
                 {
                     List[i].Id = i;
-                    List[i].DeadCount = newSessionLevelListSave.List[i].DeadCount;
+                    List[i].AttempCount = newSessionLevelListSave.List[i].DeadCount;
                     List[i].CompletePercent = newSessionLevelListSave.List[i].CompletePercent;
                     List[i].CoinsCollectCount = newSessionLevelListSave.List[i].CoinsCollectCount;
                 }
