@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Controlers;
+using ScriptableObjects;
 using UnityEngine;
 
 public class ShieldComponent : MonoBehaviour
@@ -13,6 +15,11 @@ public class ShieldComponent : MonoBehaviour
     public void InitComponent(BonusDel substractBonus)
     {
         this.substractBonus = substractBonus;
+        
+        PersonScrObj personInfo = PersonStorageContoler.GetPersonById(PersonStorageContoler.GetCurrentPerson());
+
+        transform.GetComponent<SpriteRenderer>().sprite = personInfo.PersonShield;
+        shieldAnimPb.GetComponentInChildren<SpriteRenderer>().sprite = transform.GetComponent<SpriteRenderer>().sprite;
         transform.parent.GetComponent<CircleCollider2D>().enabled = false;
         FindObjectOfType<PersonSkinComponent>().GetComponent<SpriteRenderer>().color = new Color32(36,38,46,255);
     }

@@ -15,5 +15,6 @@ MonoBehaviour:
   Id: 0
   CurrentSegment: 0
   RequiredSegments: 0
-  EffectSessionPb: {fileID: 0}
-  EffectStoragePb: {fileID: 0}
+  Effect: {fileID: 21300000, guid: 9abc9fb37ba8aae4886e096d04ddabba, type: 3}
+  PersonSkin: {fileID: 21300000, guid: 050dff9522b822a449f6448d5581b32e, type: 3}
+  PersonShield: {fileID: 21300000, guid: 98fcc4472fda83046bd496208d9e9e88, type: 3}

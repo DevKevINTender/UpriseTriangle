@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using Controlers;
+using ScriptableObjects;
 using Services;
 using Unity.Mathematics;
 using UnityEngine;
@@ -28,7 +30,8 @@ public class PersonComponent : MonoBehaviour
     private float maxY;
     private float minY;
 
-
+    [SerializeField] private SpriteRenderer personSkin;
+    [SerializeField] private ParticleSystem effectSprite;
     
     public void SetCanMove(bool canMove)
     {
@@ -64,6 +67,11 @@ public class PersonComponent : MonoBehaviour
             
         maxY = 6.05f * ServiceScreenResolution.GetScreenScale().y;
         minY= 5.9f * ServiceScreenResolution.GetScreenScale().y;
+
+        PersonScrObj personInfo = PersonStorageContoler.GetPersonById(PersonStorageContoler.GetCurrentPerson());
+
+        personSkin.sprite = personInfo.PersonSkin;
+        effectSprite.textureSheetAnimation.SetSprite(0,personInfo.Effect);
     }
 
     public void Move(Vector3 vector)

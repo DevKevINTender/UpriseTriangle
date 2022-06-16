@@ -8,7 +8,8 @@ namespace ScriptableObjects
         public int Id;
         public int CurrentSegment;
         public int RequiredSegments;
-        public GameObject EffectSessionPb;
-        public GameObject EffectStoragePb;
+        public Sprite Effect;
+        public Sprite PersonSkin;
+        public Sprite PersonShield;
     }
 }
