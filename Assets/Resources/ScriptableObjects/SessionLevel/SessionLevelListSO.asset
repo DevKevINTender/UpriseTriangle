@@ -14,17 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SavePath: SessionLevel.Json
   CurrentSessionLevelId: 0
-  OpenedSessionLevelIdList: 00000000
+  OpenedSessionLevelIdList: 00000000010000000400000003000000
   List:
   - {fileID: 11400000, guid: 786cbcf02440f974e82f82168a86d591, type: 2}
   - {fileID: 11400000, guid: eacbacd50d311914084e2a3754116b20, type: 2}
   - {fileID: 11400000, guid: a486993d57f7ed04d8d392c390027731, type: 2}
   - {fileID: 11400000, guid: baaa484f70da0b24d94fd241757540ed, type: 2}
-  - {fileID: 11400000, guid: 4ff95442f7115e34ab83f070f05509fb, type: 2}
-  - {fileID: 11400000, guid: 454480771c12b46419b1ce0b672cb551, type: 2}
-  - {fileID: 11400000, guid: 00b46a93f35115240be90c17b63038fd, type: 2}
-  - {fileID: 11400000, guid: e8a119693c984bc48830ccaf2a0ba673, type: 2}
-  - {fileID: 11400000, guid: c9c3adfbf12744b45887e8fde03727cf, type: 2}
-  - {fileID: 11400000, guid: ce956b5eb9c5ad64e978d98eb934cb26, type: 2}
-  - {fileID: 11400000, guid: 23683fc461b1dbf4a9eb5ae4ed69376e, type: 2}
-  - {fileID: 11400000, guid: 812533f8b442d5f49899e7524697984a, type: 2}

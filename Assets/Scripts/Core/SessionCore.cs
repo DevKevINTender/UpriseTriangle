@@ -5,6 +5,7 @@ using Controlers;
 using Controlers.Session;
 using DG.Tweening;
 using DOTweenAnimation.Global;
+using ScriptableObjects.SessionLevel;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,6 +21,7 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private AttempCounterController attempCounterController;
     [SerializeField] private WinnerPanelControler winnerPanelControler;
     [SerializeField] private BonusCollectorComponent bonusCollectorComponent;
+    [SerializeField] private BonusSpawnControler bonusSpawnControler;
 
     [Header("Game values")]
     [SerializeField] float musicTimeStart;
@@ -45,11 +47,14 @@ public class SessionCore : MonoBehaviour
 
     void Start()
     {
+       
         currentSession = LevelChooseControler.GetCurrentLevel();
         SetGameSpeed();
+        LoadSessionLevel();
         DOTween.Init();
         sessionUIController.ActiveAttempText(attempCounterController.GetAttemps());
         attempCounterController.InitControler(currentSession);
+        bonusSpawnControler.InitControler();
         audioController.Play(musicTimeStart);
         TransitionPanelAnimation.gameObject.SetActive(true);
         TransitionPanelAnimation.OpenSessionScene();
@@ -65,6 +70,11 @@ public class SessionCore : MonoBehaviour
         }        
     }
 
+    private void LoadSessionLevel()
+    {
+        SessionLevelScrObj level = LevelChooseControler.GetLevelById(LevelChooseControler.GetCurrentLevel());
+        Instantiate(level.SessionLevelPB, transform.position, Quaternion.identity);
+    }
     public void PersonDeath()
     {
         personDeath = true;

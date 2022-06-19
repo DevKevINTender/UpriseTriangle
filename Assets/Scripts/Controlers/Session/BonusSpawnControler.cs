@@ -9,15 +9,22 @@ public class BonusSpawnControler : MonoBehaviour
 {
     [SerializeField] private List<GameObject> checkPointList = new List<GameObject>();
     [SerializeField] private List<GameObject> bonusesList = new List<GameObject>();
+    [SerializeField] private GameObject shieldBonus;
     [SerializeField] private float coinPersent;
     [SerializeField] private float multiPercent;
     [SerializeField] private float magnetPercent;
-    void Start()
+
+    public void InitControler()
     {
+        CheckPointComponent[] list = FindObjectsOfType<CheckPointComponent>();
+        foreach (var item  in list)
+        {
+            checkPointList.Add(item.gameObject.transform.GetChild(2).gameObject);
+        }
+      
         SpawnShieldBonus();
         SpawnAnotherBonuses();
     }
-
     private void SpawnAnotherBonuses()
     {
         List<GameObject> freeCheckPointList = new List<GameObject>();
@@ -49,7 +56,7 @@ public class BonusSpawnControler : MonoBehaviour
         List<GameObject> freeCheckPointList = new List<GameObject>();
         freeCheckPointList = GetFreeCheckPoint();
         Transform checkPoint = freeCheckPointList[UnityEngine.Random.Range(0, freeCheckPointList.Count)].transform;
-        Instantiate(bonusesList[0], checkPoint);
+        Instantiate(shieldBonus, checkPoint);
     }
 
     public List<GameObject> GetFreeCheckPoint()

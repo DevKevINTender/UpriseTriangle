@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13bf24fa6e36f5c43bc2f75a51935fa6, type: 3}
   m_Name: SkillSO 1
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: 1
   CurrentSegment: 0
   RequiredSegments: 15
-  EffectSessionPb: {fileID: 0}
-  EffectStoragePb: {fileID: 0}
+  skillType: 0
+  skillValue: 10
+  skillDescription: "\u0411\u043E\u043B\u044C\u0448\u0435 \u043C\u043E\u043D\u0435\u0442
+    \u043F\u043E\u0441\u043B\u0435 \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F
+    \u0443\u0440\u043E\u0432\u043D\u044F"

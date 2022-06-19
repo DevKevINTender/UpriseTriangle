@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace ScriptableObjects
@@ -8,7 +9,15 @@ namespace ScriptableObjects
         public int Id;
         public int CurrentSegment;
         public int RequiredSegments;
-        public GameObject EffectSessionPb;
-        public GameObject EffectStoragePb;
+        public SkillType skillType;
+        public float skillValue;
+        public string skillDescription;
+        public enum SkillType
+        {
+            LevelCompleteIncreaseCoin,
+            AddCoinIfCollectCoin,
+            AddSegmentWhenCollectCoin,
+            ShieldProtect,
+        }
     }
 }

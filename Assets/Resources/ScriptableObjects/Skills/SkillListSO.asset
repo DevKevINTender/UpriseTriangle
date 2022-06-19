@@ -13,10 +13,23 @@ MonoBehaviour:
   m_Name: SkillListSO
   m_EditorClassIdentifier: 
   SavePath: SkillList.Json
-  CurrentSkillId: 0
+  CurrentSkillId: 12
   CurrentPageId: 0
-  CurrentSegmentListCount: 000000000000000000000000
+  CurrentSegmentListCount: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   List:
   - {fileID: 11400000, guid: 1a2fc7adf0f7cc743ace7a9bcbebc7bf, type: 2}
   - {fileID: 11400000, guid: b292ccd222ff96a4992fffb50315eabf, type: 2}
   - {fileID: 11400000, guid: 9103ea66d993aef41af5855ea36de46d, type: 2}
+  - {fileID: 11400000, guid: 694c630bdc8c6614ab07ef77f5d730ec, type: 2}
+  - {fileID: 11400000, guid: 46591f0f2a1096541a1aa136e48dcb50, type: 2}
+  - {fileID: 11400000, guid: 5ef36bdd0731ad0438077922d527e402, type: 2}
+  - {fileID: 11400000, guid: cf0a03fe80174e147afb490abb3f44a8, type: 2}
+  - {fileID: 11400000, guid: 9b6cb4b45ca587c4692c3dbf3f178ea8, type: 2}
+  - {fileID: 11400000, guid: 9de0ec33cfa30594cbaa0f7470465b6d, type: 2}
+  - {fileID: 11400000, guid: d9f2a60387a429f45be6b0bcce4b6ab5, type: 2}
+  - {fileID: 11400000, guid: 37e7d93ffa0eaf74ba55d495de25aa86, type: 2}
+  - {fileID: 11400000, guid: 63636be17dbf2c64685fd2a8ea4bb37b, type: 2}
+  - {fileID: 11400000, guid: 899ee0d5cfe31834aacb9bdb04e23b39, type: 2}
+  - {fileID: 11400000, guid: 148c8b9c0ce6f17449c4c797104dd542, type: 2}
+  - {fileID: 11400000, guid: 2425b3f64e9c8f848af37196a00fa17a, type: 2}
+  - {fileID: 11400000, guid: 43020e384f8c1784c941cfc0f16ffed5, type: 2}

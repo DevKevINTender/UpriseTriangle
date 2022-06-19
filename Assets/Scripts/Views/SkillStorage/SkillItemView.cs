@@ -19,8 +19,9 @@ public class SkillItemView : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     [SerializeField] private GameObject CompleteSegmentPanel;
     [SerializeField] private GameObject AddBuySegmentPanel;
     [SerializeField] private Text segmentCountBuy;
-    
-    [SerializeField] 
+
+    [SerializeField] private Text skillInfo;
+    [SerializeField] private Text skillValue;
 
     private SkillItemAction buySegment;
     private SkillItemAction chooseSegment;
@@ -40,6 +41,9 @@ public class SkillItemView : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         this.updateView = updateView;
         this.showNext = showNext;
         this.showPrevious = showPrevious;
+
+        skillInfo.text = skillScrObj.skillDescription;
+        skillValue.text = skillScrObj.skillValue + "%";
         
         id = skillScrObj.Id;
         idText.text = ""+id;

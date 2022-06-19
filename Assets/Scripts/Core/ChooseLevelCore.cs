@@ -36,8 +36,6 @@ namespace Core
 
         public void Start()
         {
-            CoinsControler.UpcreaseCoins(10000);
-            
             TransitionAnimation.gameObject.SetActive(true);
             TransitionAnimation.OpenScene();
             StorageCoins.text = $"{CoinsControler.GetCoinsCount()}";

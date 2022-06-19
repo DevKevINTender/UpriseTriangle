@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldAnimPb: {fileID: 8111961629053130803, guid: ebb323be246f23d4ab0bb33dea19d96f, type: 3}
+  shieldSaveAnimPb: {fileID: 8111961629053130803, guid: 33a5d3fe651d17b46a6cb9a50ba68dce, type: 3}
 --- !u!58 &5451595351272686144
 CircleCollider2D:
   m_ObjectHideFlags: 0

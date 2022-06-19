@@ -1,4 +1,5 @@
 ﻿using DOTweenAnimation.Global;
+using ScriptableObjects;
 using UnityEngine;
 
 namespace Controlers.Session
@@ -14,13 +15,14 @@ namespace Controlers.Session
         [SerializeField] private TransitionAnimation TransitionPanelAnimation;
         [SerializeField] private int adsMultiple;
         private int currentId;
-        
+        private SkillScrObj skillInfo;
         public void InitControler(int currentId)
         {
             this.currentId = currentId;
             
             attempCount = LevelChooseControler.GetSessionAttempCount(currentId);
             freeCoinCount = LevelChooseControler.GetSessionWinReward(currentId);
+            skillInfo = SkillStorageContoler.GetSkillById(SkillStorageContoler.GetCurrentSkill());
             adsCoinCount = freeCoinCount * adsMultiple;
             totalCoinCollect = coinCollectorComponent.GetSessionCoinTotalCollect();
             winnerPanelView.InitView(attempCount,freeCoinCount,adsCoinCount,totalCoinCollect,GetFreeBonus, GetAdBonus);
@@ -28,13 +30,29 @@ namespace Controlers.Session
 
         public void GetAdBonus()
         {
-            CoinsControler.UpcreaseCoins(adsCoinCount);
+            // Проверка на наличие активного скила
+            if (skillInfo.skillType == SkillScrObj.SkillType.LevelCompleteIncreaseCoin)
+            {
+                CoinsControler.UpcreaseCoins( (int)(adsCoinCount * skillInfo.skillValue));
+            }
+            else
+            {    
+                CoinsControler.UpcreaseCoins(adsCoinCount);
+            }
+        
             TransitionPanelAnimation.CloseSessionScene(0, "MainMenu");
         }
 
         public void GetFreeBonus()
         {
-            CoinsControler.UpcreaseCoins(freeCoinCount);
+            if (skillInfo.skillType == SkillScrObj.SkillType.LevelCompleteIncreaseCoin)
+            {
+                CoinsControler.UpcreaseCoins( (int)(freeCoinCount * skillInfo.skillValue));
+            }
+            else
+            {    
+                CoinsControler.UpcreaseCoins(freeCoinCount);
+            }
             TransitionPanelAnimation.CloseSessionScene(0, "MainMenu");
         }
     }

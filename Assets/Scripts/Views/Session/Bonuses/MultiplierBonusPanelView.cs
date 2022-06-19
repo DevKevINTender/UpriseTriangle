@@ -1,14 +1,10 @@
 ﻿using UnityEngine;
-
+using  static BonusPanelAnimation;
 namespace Views.Session.Bonuses
 {
     public class MultiplierBonusPanelView : MonoBehaviour
     {
-        private int BonusId = 3;
-        private int BonusCount = 1;
-    
-        public delegate void GetBonusDel(int id, int count, int type);
-        public delegate void ClosePanelDel();
+        public BonusPanelAnimation bonusPanelAnimation;
     
         public GetBonusDel getBonus;
         public ClosePanelDel closePanel;
@@ -16,24 +12,17 @@ namespace Views.Session.Bonuses
         {
             this.getBonus = getBonus;
             this.closePanel = closePanel;
+            bonusPanelAnimation.OpenPanelAnim();
         }
 
         public void GetFreeBonus()
         {
-            gameObject.SetActive(false);
-            getBonus?.Invoke(BonusId, BonusCount, 0);
+            bonusPanelAnimation.GetFreeBonusAnim(getBonus);
         }
-
+    
         public void GetAdsBonus()
         {
-            gameObject.SetActive(false);
-            getBonus?.Invoke(BonusId, BonusCount, 1);
-        }
-
-        public void ClosePanel()
-        {
-            gameObject.SetActive(false);
-            closePanel?.Invoke();
+            bonusPanelAnimation.GetAdsBonusAnim(getBonus);
         }
     }
 }

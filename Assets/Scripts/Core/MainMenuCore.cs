@@ -119,4 +119,20 @@ public class MainMenuCore : MonoBehaviour
                 .SetEase(Ease.Linear);
         }
     }
+
+    public void GetMoneyAndSegment()
+    {
+        if (CoinsControler.GetCoinsCount() > 1000 || SegmentControler.GetSegmentCount() > 250)
+        {
+            CoinsControler.DecreaseCoins(CoinsControler.GetCoinsCount());
+            SegmentControler.DecreaseSegment(SegmentControler.GetSegmentCount());
+        }
+        else
+        {
+            CoinsControler.UpcreaseCoins(1000);
+            SegmentControler.UpcreaseSegment(250);
+        }
+       
+    }
+    
 }
