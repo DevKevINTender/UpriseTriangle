@@ -123,7 +123,7 @@ public class BonusCollectorComponent : MonoBehaviour
         {
             case 0: // бонусные монетки
             {
-                CoinsControler.UpcreaseCoins(count);
+                CoinsControler.IncreaseCoins(count);
                 if (type == 0)
                 {
                     Instantiate(CoinFootprintPb, transform.position, Quaternion.identity);

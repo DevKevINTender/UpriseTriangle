@@ -1996,7 +1996,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuPanelView: {fileID: 742840720}
   PageIndicatorPanelView: {fileID: 389465398}
-  CoinsCountText: {fileID: 1295017869}
   TransitionAnimation: {fileID: 765170637}
   SegmentStoreView: {fileID: 2004853439}
   SettingsPanelView: {fileID: 847317424095519523}
@@ -2007,7 +2006,6 @@ MonoBehaviour:
   mmSegmentButtonViewObj: {fileID: 584979894}
   mmLevelsButtonViewObj: {fileID: 510532747}
   mmSettingsButtonView: {fileID: 1114570486}
-  AlertPanelPos: {fileID: 0}
   pageList:
   - {fileID: 1295192012}
   - {fileID: 2110408044}
@@ -3123,6 +3121,7 @@ GameObject:
   - component: {fileID: 1295017870}
   - component: {fileID: 1295017869}
   - component: {fileID: 1295017872}
+  - component: {fileID: 1295017873}
   m_Layer: 5
   m_Name: CoinsCount
   m_TagString: Untagged
@@ -3206,6 +3205,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 0
+--- !u!114 &1295017873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295017868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2691a6911d77c254bb2394cb70077dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsManipulatePB: {fileID: 4168104101446921868, guid: 7e0c7e6c4d6f043419a19c9fefef9f24, type: 3}
+  increaseColor:
+    serializedVersion: 2
+    rgba: 12713774
+  decreaseColor:
+    serializedVersion: 2
+    rgba: 6167551
 --- !u!1 &1295192011
 GameObject:
   m_ObjectHideFlags: 0
@@ -5941,11 +5959,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5533056484715463814, guid: 4c2a4b80ffcda8f45bfadd4729f8dbad, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 5533056485481401258, guid: 4c2a4b80ffcda8f45bfadd4729f8dbad, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 5533056485820486442, guid: 4c2a4b80ffcda8f45bfadd4729f8dbad, type: 3}
       propertyPath: m_Pivot.x

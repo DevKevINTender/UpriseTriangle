@@ -1,34 +1,41 @@
 ﻿using UnityEditor;
 using UnityEngine;
+using System;
 
 namespace Controlers
 {
     public class CoinsControler
     {
+        public delegate void AccountHandler(int coinCount);
+        public static event AccountHandler DecreaseCoinsEvent;
+        public static event AccountHandler IncreaseCoinsEvent;
+
         private static int StorageCoins = PlayerPrefs.GetInt("UserCoinsCount", 0);
         
-        public static void UpcreaseCoins(int count)
+        public static void IncreaseCoins(int count)
         {
             StorageCoins += count; 
             PlayerPrefs.SetInt("UserCoinsCount", StorageCoins);
+            IncreaseCoinsEvent?.Invoke(count);
         }
         
         public static void DecreaseCoins(int count)
         {
             StorageCoins -= count; 
             PlayerPrefs.SetInt("UserCoinsCount", StorageCoins);
-            
+            DecreaseCoinsEvent?.Invoke(count);
         }
 
         public static int GetCoinsCount()
         {
             return StorageCoins;
         }
+
+
         public static bool BuyEffect(int cost)
         {
             if (StorageCoins >= cost)
             {
-                Debug.Log("Cost " + cost);
                 DecreaseCoins(cost);
                 return true;
             }
@@ -40,7 +47,6 @@ namespace Controlers
         }
         public static void BuySessionLevel(int cost)
         {
-            Debug.Log("Cost " + cost);
             DecreaseCoins(cost);
         }
 

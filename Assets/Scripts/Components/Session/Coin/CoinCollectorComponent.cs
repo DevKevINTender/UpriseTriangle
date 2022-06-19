@@ -39,12 +39,12 @@ public class CoinCollectorComponent : MonoBehaviour
             }
             if (BonusCollectorComponent.GetMultiplierBonusCount() > 0)
             {
-                CoinsControler.UpcreaseCoins((coinWithOutMultiplier + increaseCoin));
+                CoinsControler.IncreaseCoins((coinWithOutMultiplier + increaseCoin));
                 SessionCointTotalCollect += (coinWithOutMultiplier + increaseCoin);
             }
             else
             {
-                CoinsControler.UpcreaseCoins((coinWithOutMultiplier + increaseCoin));
+                CoinsControler.IncreaseCoins((coinWithOutMultiplier + increaseCoin));
                 SessionCointTotalCollect += (coinWithOutMultiplier + increaseCoin);
             }
             Destroy(other.gameObject);

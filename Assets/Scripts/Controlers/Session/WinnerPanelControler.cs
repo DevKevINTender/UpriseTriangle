@@ -33,11 +33,11 @@ namespace Controlers.Session
             // Проверка на наличие активного скила
             if (skillInfo.skillType == SkillScrObj.SkillType.LevelCompleteIncreaseCoin)
             {
-                CoinsControler.UpcreaseCoins( (int)(adsCoinCount * skillInfo.skillValue));
+                CoinsControler.IncreaseCoins( (int)(adsCoinCount * skillInfo.skillValue));
             }
             else
             {    
-                CoinsControler.UpcreaseCoins(adsCoinCount);
+                CoinsControler.IncreaseCoins(adsCoinCount);
             }
         
             TransitionPanelAnimation.CloseSessionScene(0, "MainMenu");
@@ -47,11 +47,11 @@ namespace Controlers.Session
         {
             if (skillInfo.skillType == SkillScrObj.SkillType.LevelCompleteIncreaseCoin)
             {
-                CoinsControler.UpcreaseCoins( (int)(freeCoinCount * skillInfo.skillValue));
+                CoinsControler.IncreaseCoins( (int)(freeCoinCount * skillInfo.skillValue));
             }
             else
             {    
-                CoinsControler.UpcreaseCoins(freeCoinCount);
+                CoinsControler.IncreaseCoins(freeCoinCount);
             }
             TransitionPanelAnimation.CloseSessionScene(0, "MainMenu");
         }

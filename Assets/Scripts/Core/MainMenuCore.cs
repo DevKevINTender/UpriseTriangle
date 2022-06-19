@@ -1,11 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using Controlers;
 using DG.Tweening;
 using DOTweenAnimation.Global;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using Views.Global.Settings;
 using Views.MainMenu;
 
@@ -13,7 +10,6 @@ public class MainMenuCore : MonoBehaviour
 {
     [SerializeField] private MenuPanelView MenuPanelView;
     [SerializeField] private PageIndicatorPanelView PageIndicatorPanelView;
-    [SerializeField] private Text CoinsCountText;
     [SerializeField] private TransitionAnimation TransitionAnimation;
     [SerializeField] private SegmentStoreView SegmentStoreView;
     [SerializeField] private SettingsPanelView SettingsPanelView;
@@ -26,9 +22,7 @@ public class MainMenuCore : MonoBehaviour
     [SerializeField] private MMLevelsButtonView mmLevelsButtonViewObj;
     [SerializeField] private MMSettingsButtonView mmSettingsButtonView;
     [Header("InfoPanel")]
-    [SerializeField] private Transform AlertPanelPos;
     
-    AsyncOperation async;
     
     [SerializeField] private List<RectTransform> pageList = new List<RectTransform>();
     [SerializeField] private int pageCount;
@@ -39,7 +33,6 @@ public class MainMenuCore : MonoBehaviour
     {
         TransitionAnimation.gameObject.SetActive(true);
         TransitionAnimation.OpenScene();
-        CoinsCountText.text = $"{CoinsControler.GetCoinsCount()}";
         MenuPanelView.InitView(this);
         PageIndicatorPanelView.InitView(pageCount);
         PageIndicatorPanelView.UpdateView(currentPage);
@@ -51,14 +44,8 @@ public class MainMenuCore : MonoBehaviour
         mmSegmentButtonViewObj.InitView(OpenSegmentPanel,SegmentControler.GetSegmentCount());
         mmLevelsButtonViewObj.InitView(LoadLevelChoose);
         mmSettingsButtonView.InitView(OpenSettingsPanel);
-
     }
     
-    public void LoadScene(int id)
-    {
-        
-    }
-
     public void LoadSession()
     {
         TransitionAnimation.CloseScene(0, "Session");
@@ -129,7 +116,7 @@ public class MainMenuCore : MonoBehaviour
         }
         else
         {
-            CoinsControler.UpcreaseCoins(1000);
+            CoinsControler.IncreaseCoins(1000);
             SegmentControler.UpcreaseSegment(250);
         }
        
