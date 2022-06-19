@@ -30,20 +30,17 @@ public class SegmentStoreView : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     
     void Start()
     {
+        
         currentPageObj = Instantiate(pageList[currentPage], SegmentPanelPos);
         currentPageObj.GetComponent<SegmentBuyPanelItemView>().InitView(BuySegment);
-        coinCountText.text = "" +  CoinsControler.GetCoinsCount();
-        segmentCountText.text = "" +  SegmentControler.GetSegmentCount();
+        
         PageIndicatorPanelView.InitView(pageCount);
         PageIndicatorPanelView.UpdateView(currentPage);
     }
-
     public void BuySegment(int count)
     {
         if (SegmentControler.BuySegment(count))
         {
-            coinCountText.text = "" +  CoinsControler.GetCoinsCount();
-            segmentCountText.text = "" +  SegmentControler.GetSegmentCount();
             boughtSegmentPanel.SetActive(true);
             boughtSegmentCountText.text = "x" + count;
         }

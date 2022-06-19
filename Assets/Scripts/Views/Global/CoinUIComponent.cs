@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class CoinUIComponent : MonoBehaviour
     [SerializeField] private Color32 increaseColor;
     [SerializeField] private Color32 decreaseColor;
 
-    private Coroutine Increasecoroutine;
+    private Coroutine Increasecoroutine = null;
     private bool increaseDelayWorking;
     private int totalCoinsCount;
 
@@ -26,11 +27,17 @@ public class CoinUIComponent : MonoBehaviour
         CoinsControler.IncreaseCoinsEvent += CoinIncreaseView;
     }
 
+    private void OnDestroy()
+    {
+        CoinsControler.DecreaseCoinsEvent -= CoinDecreaseView;
+        CoinsControler.IncreaseCoinsEvent -= CoinIncreaseView;
+    }
+
     public void CoinIncreaseView(int coinsCount)
     {
-        if (increaseDelayWorking)
+        if (increaseDelayWorking )
         {
-            StopCoroutine(Increasecoroutine);
+           StopCoroutine(Increasecoroutine);
         }
         Increasecoroutine = StartCoroutine(IncreaseDelay(coinsCount));
     }

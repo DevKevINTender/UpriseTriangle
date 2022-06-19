@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class BonusPanelAnimation : MonoBehaviour
 {
+    [SerializeField] private int id;
+    [SerializeField] private int adsCount;
+    [SerializeField] private int freeCount;
     public delegate void GetBonusDel(int id, int count,int type);
     public delegate void ClosePanelDel();
     
@@ -28,7 +31,7 @@ public class BonusPanelAnimation : MonoBehaviour
     
     public void GetFreeBonusAnim(GetBonusDel getBonus)
     {
-        TweenCallback callback = () => { getBonus?.Invoke(2,1, 0); };
+        TweenCallback callback = () => { getBonus?.Invoke(id,freeCount, 0); };
         
         DOTween.defaultTimeScaleIndependent = true;
         Sequence openPanel = DOTween.Sequence();
@@ -41,7 +44,7 @@ public class BonusPanelAnimation : MonoBehaviour
     
     public void GetAdsBonusAnim(GetBonusDel getBonus)
     {
-        TweenCallback callback = () => { getBonus?.Invoke(2,1, 1); };
+        TweenCallback callback = () => { getBonus?.Invoke(id,adsCount, 1); };
         
         DOTween.defaultTimeScaleIndependent = true;
         Sequence openPanel = DOTween.Sequence(); 

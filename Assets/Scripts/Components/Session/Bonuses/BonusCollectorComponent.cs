@@ -44,13 +44,6 @@ public class BonusCollectorComponent : MonoBehaviour
     [SerializeField] private GameObject ShieldFootprintPb;
     [SerializeField] private GameObject CoinFootprintADPb;
     [SerializeField] private GameObject CoinFootprintPb;
-    
-    
-    private void Awake()
-    {
-        ShieldBonusCount = 10;
-        SaveBonusesCount();
-    }
 
     public int GetShieldBonusCount()
     {

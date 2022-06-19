@@ -1076,9 +1076,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 166500015}
   - {fileID: 48861209}
   - {fileID: 1970653405}
+  - {fileID: 166500015}
   - {fileID: 1946137946}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1428,7 +1428,7 @@ RectTransform:
   - {fileID: 885326755}
   - {fileID: 2069879231}
   m_Father: {fileID: 20220897}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1460,6 +1460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a0eb61f130a6d42b061f110f66c8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  adsCount: 100
+  freeCount: 25
   mainPanel: {fileID: 48861209}
   freeBonus: {fileID: 885326755}
   adsBonus: {fileID: 2069879231}
@@ -4563,7 +4566,7 @@ RectTransform:
   - {fileID: 1933325149}
   - {fileID: 1828099570}
   m_Father: {fileID: 20220897}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4633,6 +4636,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a0eb61f130a6d42b061f110f66c8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 2
+  adsCount: 2
+  freeCount: 1
   mainPanel: {fileID: 166500015}
   freeBonus: {fileID: 1933325149}
   adsBonus: {fileID: 1828099570}
@@ -12538,7 +12544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 42d441246c6efde4bb484e265d160864, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f84840d38767b874e9451f98bdbddba0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18288,7 +18294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18296,19 +18302,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: a8b24be15319f2d4185fa8eafe296d53, type: 3}
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 6
+    m_MaxSize: 60
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: '
+
+'
 --- !u!222 &708795760
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22270,7 +22278,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1970653406}
         m_TargetAssemblyTypeName: Views.Session.Bonuses.ShieldBonusPanelView, Assembly-CSharp
-        m_MethodName: GetFreeBonus
+        m_MethodName: GetAdsBonus
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33469,10 +33477,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BonusCollectorComponent: {fileID: 1220267344}
-  coinWithOutMultiplier: 1
-  coinWithMultiplier: 2
+  coinMultiplier: 2
   SessionCointTotalCollect: 0
   coinPrintPb: {fileID: 2196399565965950797, guid: 0c7f8ef2c540ad84caf26181fa679d0f, type: 3}
+  coinBonusPrintPb: {fileID: 2196399565965950797, guid: 5cf1048363b144a4c8c6df29ee66e5a7, type: 3}
+  segmentPrintPb: {fileID: 2196399565965950797, guid: 890ae2e745fea5040851d57401f74d3e, type: 3}
 --- !u!1 &1301764404
 GameObject:
   m_ObjectHideFlags: 0
@@ -33793,7 +33802,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 125}
-  m_SizeDelta: {x: 110, y: 117}
+  m_SizeDelta: {x: 119, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1312150824
 MonoBehaviour:
@@ -33815,7 +33824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 82966d81cf596fe499f0420ffcb8cf14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4783280de0e8d78429abd5ff1d302ebd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -33868,7 +33877,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 125}
-  m_SizeDelta: {x: 125, y: 129}
+  m_SizeDelta: {x: 145, y: 151}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1313087006
 MonoBehaviour:
@@ -33890,7 +33899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cb455dc582c18ee4a80c5f3a26d1affe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88925b1399c99a047b688f54587c5a6e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -37704,7 +37713,7 @@ MonoBehaviour:
   - {fileID: 6073737330044087458, guid: 9f9072e2f8516b34f985dbe5fea5cdfe, type: 3}
   - {fileID: 3925559836856115657, guid: d900a26fdae9cf549822d1f110698892, type: 3}
   - {fileID: 8204831033316294197, guid: f70d6bd685288dc45bad5c65a8897145, type: 3}
-  shieldBonus: {fileID: 1709933998999155566, guid: 855b5e1332be9744fb2c8ef43d10bbfa, type: 3}
+  shieldBonus: {fileID: 8204831033316294197, guid: f70d6bd685288dc45bad5c65a8897145, type: 3}
   coinPersent: 0
   multiPercent: 0
   magnetPercent: 0
@@ -45272,7 +45281,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f476465063a560b41b8b7d4c7fa03f83, type: 3}
+    m_Font: {fileID: 12800000, guid: a8b24be15319f2d4185fa8eafe296d53, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -50207,6 +50216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a0eb61f130a6d42b061f110f66c8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 3
+  adsCount: 2
+  freeCount: 1
   mainPanel: {fileID: 1946137946}
   freeBonus: {fileID: 1200616482}
   adsBonus: {fileID: 825554030}
@@ -51119,7 +51131,7 @@ RectTransform:
   - {fileID: 1188880827}
   - {fileID: 849651705}
   m_Father: {fileID: 20220897}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -51151,6 +51163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a0eb61f130a6d42b061f110f66c8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 1
+  adsCount: 3
+  freeCount: 1
   mainPanel: {fileID: 1970653405}
   freeBonus: {fileID: 1188880827}
   adsBonus: {fileID: 849651705}

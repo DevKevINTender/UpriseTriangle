@@ -19,9 +19,9 @@ public class MagnetComponent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<CoinComponent>())
+        if (other.transform.GetComponent<CoinComponent>())
         {
-            other.GetComponent<CoinComponent>().pointToMove = transform;
+            other.transform.GetComponent<CoinComponent>().pointToMove = transform;
         }
     }
 }

@@ -31,6 +31,8 @@ public class MainMenuCore : MonoBehaviour
     public delegate void buttonDelegate();
     void Start()
     {
+       
+        
         TransitionAnimation.gameObject.SetActive(true);
         TransitionAnimation.OpenScene();
         MenuPanelView.InitView(this);
@@ -45,7 +47,7 @@ public class MainMenuCore : MonoBehaviour
         mmLevelsButtonViewObj.InitView(LoadLevelChoose);
         mmSettingsButtonView.InitView(OpenSettingsPanel);
     }
-    
+   
     public void LoadSession()
     {
         TransitionAnimation.CloseScene(0, "Session");

@@ -7,11 +7,12 @@ using UnityEngine;
 public class CoinCollectorComponent : MonoBehaviour
 {
     public BonusCollectorComponent BonusCollectorComponent;
-
-    [SerializeField] private int coinWithOutMultiplier;
-    [SerializeField] private int coinWithMultiplier;
+    
+    [SerializeField] private int coinMultiplier;
     [SerializeField] private int SessionCointTotalCollect;
     [SerializeField] private GameObject coinPrintPb;
+    [SerializeField] private GameObject coinBonusPrintPb;
+    [SerializeField] private GameObject segmentPrintPb;
     
     private SkillScrObj skillInfo;
     private int increaseCoin;
@@ -25,27 +26,54 @@ public class CoinCollectorComponent : MonoBehaviour
     {
         if (other.GetComponent<CoinComponent>())
         {
-            Instantiate(coinPrintPb, other.transform.position, Quaternion.identity);
+            
             increaseCoin = 0;
-            if (skillInfo.skillType == SkillScrObj.SkillType.AddCoinIfCollectCoin)
+            switch (skillInfo.skillType)
             {
-                float rnd = Random.Range(0f, 100f);
-                if(rnd < skillInfo.skillValue) increaseCoin = 1;
+                case SkillScrObj.SkillType.AddCoinIfCollectCoin:
+                {
+                    float rnd = Random.Range(0f, 100f);
+                    if (rnd < skillInfo.skillValue)
+                    {
+                        increaseCoin = 1;
+                        Instantiate(coinBonusPrintPb, other.transform.position, Quaternion.identity);
+                    }
+                    else
+                    {
+                        Instantiate(coinPrintPb, other.transform.position, Quaternion.identity);
+                    }
+                    break;
+                }
+                case SkillScrObj.SkillType.AddSegmentWhenCollectCoin:
+                {
+                    float rnd = Random.Range(0f, 100f);
+                    if (rnd < skillInfo.skillValue)
+                    {
+                        Instantiate(segmentPrintPb, other.transform.position, Quaternion.identity);
+                        SegmentControler.UpcreaseSegment(1);
+                    }
+                    else
+                    {
+                        Instantiate(coinPrintPb, other.transform.position, Quaternion.identity);
+                    }
+                    break;
+                }
+                default:
+                {
+                    Instantiate(coinPrintPb, other.transform.position, Quaternion.identity);
+                    break;
+                }
             }
-            if (skillInfo.skillType == SkillScrObj.SkillType.AddSegmentWhenCollectCoin)
-            {
-                float rnd = Random.Range(0f, 100f);
-                if(rnd < skillInfo.skillValue) SegmentControler.UpcreaseSegment(1);
-            }
+     
             if (BonusCollectorComponent.GetMultiplierBonusCount() > 0)
             {
-                CoinsControler.IncreaseCoins((coinWithOutMultiplier + increaseCoin));
-                SessionCointTotalCollect += (coinWithOutMultiplier + increaseCoin);
+                CoinsControler.IncreaseCoins((1 + increaseCoin) * coinMultiplier);
+                SessionCointTotalCollect += ((1 + increaseCoin) * coinMultiplier);
             }
             else
             {
-                CoinsControler.IncreaseCoins((coinWithOutMultiplier + increaseCoin));
-                SessionCointTotalCollect += (coinWithOutMultiplier + increaseCoin);
+                CoinsControler.IncreaseCoins(1 + increaseCoin);
+                SessionCointTotalCollect += (1 + increaseCoin);
             }
             Destroy(other.gameObject);
         }

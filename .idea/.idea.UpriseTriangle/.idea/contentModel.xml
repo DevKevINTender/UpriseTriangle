@@ -225,6 +225,7 @@
           </e>
           <e p="DOTweenAnimation" t="Include">
             <e p="Global" t="Include">
+              <e p="CoinManipulateAnimation.cs" t="Include" />
               <e p="TransitionAnimation.cs" t="Include" />
             </e>
             <e p="Session" t="Include">
@@ -252,6 +253,7 @@
               <e p="ESPanelView.cs" t="Include" />
             </e>
             <e p="Global" t="Include">
+              <e p="CoinUIComponent.cs" t="Include" />
               <e p="InfoPanel" t="Include">
                 <e p="AlertPanelView.cs" t="Include" />
               </e>
@@ -261,6 +263,7 @@
                 <e p="SegmentBuyPanelItemView.cs" t="Include" />
                 <e p="SegmentStoreView.cs" t="Include" />
               </e>
+              <e p="SegmentUIComponent.cs" t="Include" />
               <e p="Settings" t="Include">
                 <e p="SettingsPanelView.cs" t="Include" />
               </e>

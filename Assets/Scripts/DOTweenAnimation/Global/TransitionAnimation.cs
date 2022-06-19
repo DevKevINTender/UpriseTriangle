@@ -55,6 +55,7 @@ namespace DOTweenAnimation.Global
             tPanelAnim.Append(centerImage.DOAnchorPos(Vector2.zero, 0.5f)).SetEase(Ease.OutCubic);
             tPanelAnim.Append(centerImage.DOPunchScale(new Vector2(1.2f, 1.2f), 0.1f, 2)).OnComplete(() =>
             {
+                DOTween.KillAll();
                 SceneManager.LoadScene(id); });
         } 
         
