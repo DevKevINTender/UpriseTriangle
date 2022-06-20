@@ -20,38 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentUIComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentUIComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Global/UI/CoinsManipulate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Global/UI/CoinsManipulate.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/CoinFootPrint AD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/CoinFootPrint AD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/CoinFootPrint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/CoinFootPrint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/MagnetFootPrint AD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/MagnetFootPrint AD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/MagnetFootPrint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/MagnetFootPrint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/MultiplyFootPrint AD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/MultiplyFootPrint AD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/MultiplyFootPrint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/MultiplyFootPrint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/ShieldFootPrint AD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/ShieldFootPrint AD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/ShieldFootPrint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/BonusFootPrint/ShieldFootPrint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/Coin/CoinPrint.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/Coin/CoinPrint.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/PersonComponent/MagnetComponent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Session/Objects/Bonuses/PersonComponent/MagnetComponent.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 8.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 12.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 31.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 31.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 35.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Menu/UI/Button/Ресурс 35.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Complete/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Complete/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Complete/Session.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Complete/Session.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/MagnetComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/MagnetComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/CoinCollectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/CoinCollectorComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/SegmentControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/SegmentControler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/MainMenuCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Global/TransitionAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Global/TransitionAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/BonusPanelAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/BonusPanelAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Global/CoinUIComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Global/CoinUIComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentPanel/SegmentStoreView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentPanel/SegmentStoreView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +94,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/CoinBonusPanelView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/WinnerPanelAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/PersonScrObj.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/PersonStorageCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/SkillStorageCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/PersonStorage/PersonItemView.cs" />
@@ -151,6 +120,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/Person/MagnetComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Coin/CoinCollectorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Global/TransitionAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" />
       </list>
     </option>
   </component>
@@ -262,6 +232,7 @@
       <workItem from="1655404922954" duration="1612000" />
       <workItem from="1655462897060" duration="10410000" />
       <workItem from="1655670586575" duration="8612000" />
+      <workItem from="1655721476127" duration="1731000" />
     </task>
     <servers />
   </component>
