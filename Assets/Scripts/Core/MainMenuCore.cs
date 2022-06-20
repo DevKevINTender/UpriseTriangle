@@ -118,8 +118,8 @@ public class MainMenuCore : MonoBehaviour
         }
         else
         {
-            CoinsControler.IncreaseCoins(1000);
-            SegmentControler.UpcreaseSegment(250);
+            CoinsControler.IncreaseCoins(3000);
+            //SegmentControler.UpcreaseSegment(250);
         }
        
     }

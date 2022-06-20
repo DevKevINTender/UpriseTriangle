@@ -2631,6 +2631,7 @@ GameObject:
   - component: {fileID: 2115350795}
   - component: {fileID: 2115350794}
   - component: {fileID: 2115350793}
+  - component: {fileID: 2115350796}
   m_Layer: 5
   m_Name: CoinsCount
   m_TagString: Untagged
@@ -2716,3 +2717,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115350791}
   m_CullTransparentMesh: 1
+--- !u!114 &2115350796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115350791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2691a6911d77c254bb2394cb70077dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsManipulatePB: {fileID: 4168104101446921868, guid: 7e0c7e6c4d6f043419a19c9fefef9f24, type: 3}
+  increaseColor:
+    serializedVersion: 2
+    rgba: 12713774
+  decreaseColor:
+    serializedVersion: 2
+    rgba: 6167551

@@ -246,6 +246,7 @@ MonoBehaviour:
   greyDark:
     serializedVersion: 2
     rgba: 4279704346
+  currentVolume: 0
 --- !u!114 &77058123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1285,6 +1286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevelMusic: {fileID: 979484610}
+  currentVolume: 0
 --- !u!1 &1234375200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,6 +1465,7 @@ GameObject:
   - component: {fileID: 1323613410}
   - component: {fileID: 1323613409}
   - component: {fileID: 1323613408}
+  - component: {fileID: 1323613411}
   m_Layer: 5
   m_Name: CoinsCount
   m_TagString: Untagged
@@ -1546,6 +1549,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323613406}
   m_CullTransparentMesh: 1
+--- !u!114 &1323613411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323613406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2691a6911d77c254bb2394cb70077dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsManipulatePB: {fileID: 4168104101446921868, guid: 7e0c7e6c4d6f043419a19c9fefef9f24, type: 3}
+  increaseColor:
+    serializedVersion: 2
+    rgba: 12713774
+  decreaseColor:
+    serializedVersion: 2
+    rgba: 6167551
 --- !u!1 &1334831135
 GameObject:
   m_ObjectHideFlags: 0

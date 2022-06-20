@@ -6034,14 +6034,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5533056484715463814, guid: 4c2a4b80ffcda8f45bfadd4729f8dbad, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 5533056485481401258, guid: 4c2a4b80ffcda8f45bfadd4729f8dbad, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 112
-      objectReference: {fileID: 0}
     - target: {fileID: 5533056485820486442, guid: 4c2a4b80ffcda8f45bfadd4729f8dbad, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6130,21 +6122,9 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 5533056485820486486, guid: 4c2a4b80ffcda8f45bfadd4729f8dbad, type: 3}
-      propertyPath: AlertPanelViewPb
-      value: 
-      objectReference: {fileID: 5622702848714025579, guid: 39261f34063ae6b428499533f800edfc, type: 3}
     - target: {fileID: 5533056485820486487, guid: 4c2a4b80ffcda8f45bfadd4729f8dbad, type: 3}
       propertyPath: m_Name
       value: BuySegementPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 5533056485820486487, guid: 4c2a4b80ffcda8f45bfadd4729f8dbad, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5533056485856718015, guid: 4c2a4b80ffcda8f45bfadd4729f8dbad, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c2a4b80ffcda8f45bfadd4729f8dbad, type: 3}

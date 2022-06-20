@@ -16,7 +16,9 @@ public class CoinUIComponent : MonoBehaviour
     [SerializeField] private Color32 decreaseColor;
 
     private Coroutine Increasecoroutine = null;
+    private Coroutine Decreasecoroutine = null;
     private bool increaseDelayWorking;
+    private bool decreaseDelayWorking;
     private int totalCoinsCount;
 
     void Start()
@@ -35,25 +37,47 @@ public class CoinUIComponent : MonoBehaviour
 
     public void CoinIncreaseView(int coinsCount)
     {
-        if (increaseDelayWorking )
+        if (transform.gameObject.activeInHierarchy)
         {
-           StopCoroutine(Increasecoroutine);
+            if (increaseDelayWorking)
+            {
+                StopCoroutine(Increasecoroutine);
+            }
+            Increasecoroutine = StartCoroutine(IncreaseDelay(coinsCount));
+            transform.GetComponent<Text>().text = $"{CoinsControler.GetCoinsCount()}";
         }
-        Increasecoroutine = StartCoroutine(IncreaseDelay(coinsCount));
     }
 
     public void CoinDecreaseView(int coinsCount)
     {
+        if (transform.gameObject.activeInHierarchy)
+        {
+            if (decreaseDelayWorking)
+            {
+                StopCoroutine(Decreasecoroutine);
+            }
+            Decreasecoroutine = StartCoroutine(DecreaseDelay(coinsCount));
+            transform.GetComponent<Text>().text = $"{CoinsControler.GetCoinsCount()}";
+        }
+    }
+
+    private IEnumerator DecreaseDelay(int coinsCount)
+    {
+        decreaseDelayWorking = true;
+        totalCoinsCount += coinsCount;
+        yield return new WaitForSeconds(0.3f);
         coinsManipulateText = SpawnCoinsChangeView();
         coinsManipulateText.color = decreaseColor;
-        coinsManipulateText.text = "-" + coinsCount;
+        coinsManipulateText.text = "-" + totalCoinsCount;
+        decreaseDelayWorking = false;
+        totalCoinsCount = 0;
     }
 
     private IEnumerator IncreaseDelay(int coinsCount)
     {
         increaseDelayWorking = true;
         totalCoinsCount += coinsCount;
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
         coinsManipulateText = SpawnCoinsChangeView();
         coinsManipulateText.color = increaseColor;
         coinsManipulateText.text = "+" + totalCoinsCount;
