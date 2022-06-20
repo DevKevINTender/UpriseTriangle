@@ -61,12 +61,14 @@ public class PersonComponent : MonoBehaviour
         this.personExitElevatorTrigger = personExitElevatorTrigger;
 
         PersonFinishComponent.InitComponent(personWinTrigger);
-        
-        maxX = 2.6f * ServiceScreenResolution.GetScreenScale().x;
+
+        maxX = (ScreenSize.GetScreenToWorldWidth / 2) - 0.25f;
+        Debug.Log("maxX" + maxX);
         minX = 2.45f * ServiceScreenResolution.GetScreenScale().x;
             
-        maxY = 6.05f * ServiceScreenResolution.GetScreenScale().y;
-        minY= 5.9f * ServiceScreenResolution.GetScreenScale().y;
+        maxY = (ScreenSize.GetScreenToWorldHeight / 2) - 0.25f;
+        Debug.Log("maxY" + maxY);
+        minY= 4.75f * ServiceScreenResolution.GetScreenScale().y;
 
         PersonScrObj personInfo = PersonStorageContoler.GetPersonById(PersonStorageContoler.GetCurrentPerson());
 
@@ -128,12 +130,34 @@ public class PersonComponent : MonoBehaviour
             transform.localPosition += new Vector3(0, -speedMove);
     }
 
+    private void CheckBarier()
+    {
+        float distanceX = Math.Abs(maxX - minX);
+        float stepX = distanceX / 100;
+        float personDistX = maxX - Mathf.Abs(transform.localPosition.x);
+            
+        float distanceY = Math.Abs(maxY - minY);
+        float stepY = distanceY / 100;
+        float personDistY = maxY - Mathf.Abs(transform.localPosition.y);
+        
+        if (transform.localPosition.x > maxX)
+            transform.localPosition = new Vector3(maxX , transform.localPosition.y);
+        if (transform.localPosition.x < -maxX)
+            transform.localPosition = new Vector3(-maxX , transform.localPosition.y);
+        
+        if (transform.localPosition.y > maxY)
+            transform.localPosition = new Vector3(transform.localPosition.x, maxY);
+        if (transform.localPosition.y < -maxY)
+            transform.localPosition = new Vector3(transform.localPosition.x, -maxY);
+    }
+   
     public void Update()
     {
         vectroToRotate = Mathf.MoveTowards(vectroToRotate, 0, Time.deltaTime * 60);
         targetvectroToRotate = Mathf.MoveTowards(targetvectroToRotate, vectroToRotate, Time.deltaTime * 60);
         transform.rotation = Quaternion.Euler( 0,0, targetvectroToRotate);
-        CheckTeleport();      
+        //CheckTeleport();
+        CheckBarier();
     }
 
     public void OnTriggerEnter2D(Collider2D other)
