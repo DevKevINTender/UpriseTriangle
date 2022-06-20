@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 
 public class CoinBombComponent : MonoBehaviour
@@ -35,7 +32,6 @@ public class CoinBombComponent : MonoBehaviour
             speed = Random.Range(minSpeed, maxSpeed);
             coinObj.GetComponent<Rigidbody2D>().AddForce(new Vector2(x, y) * speed);
             coinObj.transform.localScale = Vector3.zero;
-            coinObj.transform.DOScale(Vector3.one, 0.2f);
         }
-    }
+    }   
 }

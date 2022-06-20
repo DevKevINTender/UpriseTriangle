@@ -39,8 +39,9 @@ public class BoxStaticObstacleComponent : BoxObstacleComponent
         boxCollider.enabled = true;
     }
 
-    internal override void SelfDestroy()
+    public override void SelfDestroy()
     {
+        Debug.Log("Reload");
         StartCoroutine(Reload());
     }
 }

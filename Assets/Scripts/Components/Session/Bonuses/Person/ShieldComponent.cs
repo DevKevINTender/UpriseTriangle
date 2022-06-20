@@ -40,21 +40,17 @@ public class ShieldComponent : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.GetComponent<ObstacleComponent>())
-        {
-            other.GetComponent<ObstacleComponent>().SelfDestroy();
-           
+        {      
             if (skillInfo.skillType == SkillScrObj.SkillType.ShieldProtect)
             {
                 float rnd = Random.Range(0f, 100f);
                 if (rnd < skillInfo.skillValue)
                 {
-                    other.GetComponent<ObstacleComponent>().SelfDestroy();
                     shieldAnimComp = Instantiate(shieldSaveAnimPb, transform.parent.position, Quaternion.identity);
                     Debug.Log("State 1");
                 }
                 else
                 {
-                    other.GetComponent<ObstacleComponent>().SelfDestroy();
                     shieldAnimComp = Instantiate(shieldAnimPb, transform.parent.position, Quaternion.identity);
                     substractBonus(1, 1);
                     Debug.Log("State 2");
@@ -62,11 +58,11 @@ public class ShieldComponent : MonoBehaviour
             }
             else
             {
-                other.GetComponent<ObstacleComponent>().SelfDestroy();
                 shieldAnimComp = Instantiate(shieldAnimPb, transform.parent.position, Quaternion.identity);
                 substractBonus(1, 1);
                 Debug.Log("State 3");
             }
-        }
+            other.GetComponent<ObstacleComponent>().SelfDestroy();
+        }       
     }
 }

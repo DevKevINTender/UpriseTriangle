@@ -134,6 +134,7 @@ namespace Core
         
         public void HideBuySegmentPanel()
         {
+            StorageSegments.text = $"X{SegmentControler.GetSegmentCount()}";
             PersonPageViewCurrentObj.HideBuySegmentPanel();
             PageState = 0;
         }

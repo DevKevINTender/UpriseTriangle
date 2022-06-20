@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SessionLevelListSO
   m_EditorClassIdentifier: 
   SavePath: SessionLevel.Json
-  CurrentSessionLevelId: 0
-  OpenedSessionLevelIdList: 00000000010000000400000003000000
+  CurrentSessionLevelId: 5
+  OpenedSessionLevelIdList: 0000000001000000040000000300000005000000
   List:
   - {fileID: 11400000, guid: 786cbcf02440f974e82f82168a86d591, type: 2}
   - {fileID: 11400000, guid: eacbacd50d311914084e2a3754116b20, type: 2}

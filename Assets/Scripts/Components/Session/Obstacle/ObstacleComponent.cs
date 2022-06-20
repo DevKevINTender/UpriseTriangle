@@ -3,8 +3,9 @@ using UnityEngine;
 [SelectionBase]
 public class ObstacleComponent : MonoBehaviour
 {
-    internal virtual void SelfDestroy()
+    public virtual void SelfDestroy()
     {
+        Debug.Log("Destroy");
         Destroy(gameObject);
     }
 }

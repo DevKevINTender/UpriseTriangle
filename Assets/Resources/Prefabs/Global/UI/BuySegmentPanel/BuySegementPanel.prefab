@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 5533056484715463814}
   - component: {fileID: 5533056484715463835}
   - component: {fileID: 5533056484715463832}
+  - component: {fileID: 3255385711113915659}
   - component: {fileID: 5533056484715463833}
   m_Layer: 5
   m_Name: SegmentCount
@@ -421,7 +422,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 65.000015, y: 0}
-  m_SizeDelta: {x: 0, y: 65.74}
+  m_SizeDelta: {x: 28, y: 65.74}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &5533056484715463835
 CanvasRenderer:
@@ -465,6 +466,25 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
+--- !u!114 &3255385711113915659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5533056484715463815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c397b6629d42aeb6c2b3126fa89cb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segmentsManipulatePB: {fileID: 2368424103121935894, guid: 5689d4ae28963f041b085acc1cb76dd3, type: 3}
+  increaseColor:
+    serializedVersion: 2
+    rgba: 12713774
+  decreaseColor:
+    serializedVersion: 2
+    rgba: 6167551
 --- !u!114 &5533056484715463833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1189,7 +1209,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -15, y: 0}
-  m_SizeDelta: {x: 0, y: 65.74}
+  m_SizeDelta: {x: 112, y: 65.74}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &5533056485481401263
 CanvasRenderer:
@@ -1285,7 +1305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5533056485820486442
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1390,7 +1410,7 @@ MonoBehaviour:
   - {fileID: 5918246101590965986, guid: 658d3f6af0d661545af3572425ec8b9a, type: 3}
   - {fileID: 5242942678738321241, guid: d9cdb2c4dcd408f488ccc42d6acd92a7, type: 3}
   currentPageObj: {fileID: 0}
-  AlertPanelViewPb: {fileID: 0}
+  AlertPanelViewPb: {fileID: 5622702848714025579, guid: 39261f34063ae6b428499533f800edfc, type: 3}
   pageCount: 3
   startDragVector: {x: 0, y: 0, z: 0}
   endDragVector: {x: 0, y: 0, z: 0}
