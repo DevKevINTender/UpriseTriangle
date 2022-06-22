@@ -8,6 +8,8 @@ using DOTweenAnimation.Global;
 using ScriptableObjects.SessionLevel;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using AppodealAds.Unity.Api;
+using AppodealAds.Unity.Common;
 
 public class SessionCore : MonoBehaviour
 {
@@ -48,6 +50,8 @@ public class SessionCore : MonoBehaviour
     void Start()
     {
        
+        Appodeal.initialize("b80f8019ac0cc44cfbb1e31c31c7e59f13dc2a850a6ab8e4", Appodeal.REWARDED_VIDEO, false);
+        Appodeal.cache(Appodeal.REWARDED_VIDEO);
         currentSession = LevelChooseControler.GetCurrentLevel();
         SetGameSpeed();
         LoadSessionLevel();
