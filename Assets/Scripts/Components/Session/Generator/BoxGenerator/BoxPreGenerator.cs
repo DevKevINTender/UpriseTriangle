@@ -53,6 +53,16 @@ public class BoxPreGenerator : MonoBehaviour
         obsObj.transform.localPosition = currentPos;
     }
 
+    public void Spawn(int i, int j, float time)
+    {
+        obsObj = Instantiate(obsPb, transform) as GameObject;
+        obsObj.transform.GetComponent<BoxStaticObstacleComponent>().disappearTemp = time / (60f / 125f);
+        obsObj.transform.localScale = new Vector3(objScaleX, objScaleY) / screenScale;
+        currentPos = startPos + new Vector3(obsObj.transform.localScale.x * i, 0);
+        currentPos -= new Vector3(0, obsObj.transform.localScale.y * j);
+        obsObj.transform.localPosition = currentPos;
+    }
+
     public float GetBoxTime()
     {
        return obsPb.GetComponent<BoxObstacleComponent>().GetBoxTime();

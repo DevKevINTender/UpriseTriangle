@@ -29,6 +29,12 @@ public class ArrowBlockPreGenerator : ElevatorMarkComponent
     private ArrowObstacleComponent cursor;
     [SerializeField] private ElevatorComponent elevator;
 
+
+    public void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     internal override void StartAction()
     {
         MoveAtStart();
@@ -44,9 +50,8 @@ public class ArrowBlockPreGenerator : ElevatorMarkComponent
     public void MoveAtStart()
     {
         StartValues();
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            Transform child = transform.GetChild(i);
+        foreach (Transform child in transform)
+        { 
             if (child.localPosition.y == height)
             {
                 child.localPosition = new Vector3(child.localPosition.x, scaleHeight, 0);
@@ -55,6 +60,8 @@ public class ArrowBlockPreGenerator : ElevatorMarkComponent
             {
                 child.localPosition = new Vector3(child.localPosition.x, -scaleHeight, 0);
             }
+            child.GetComponent<ArrowObstacleComponent>().target = player;
+            child.GetComponent<ArrowObstacleComponent>().startAction();
         }
     }
 
