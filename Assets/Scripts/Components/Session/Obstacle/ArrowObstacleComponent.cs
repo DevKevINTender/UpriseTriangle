@@ -6,7 +6,7 @@ public class ArrowObstacleComponent : MonoBehaviour
 {
     [SerializeField] private float bpm = 125;
     [SerializeField] private GameObject waySprite;
-    [SerializeField] internal GameObject target; // ����� ������ ��� ��� ��������� �����������
+    [SerializeField] public GameObject target; // ����� ������ ��� ��� ��������� �����������
     [Header("Render")]
     private SpriteRenderer spriteRenderer;
     [SerializeField] internal Sprite spriteActive;
@@ -14,6 +14,7 @@ public class ArrowObstacleComponent : MonoBehaviour
     [Header("Start")]
     [SerializeField] internal float startDelay; // ����� ������� ������� ������������� �����������
     [SerializeField] private CircleCollider2D circleCollider;
+
 
     private float appearTime = 1;
     internal float rotateDuration = 2;
@@ -24,12 +25,14 @@ public class ArrowObstacleComponent : MonoBehaviour
 
     private Vector3 attachedTarget;
 
-    void Start()
+
+    public void startAction()
     {
         rotateDuration = TempToTime(rotateDuration);
         appearTime = TempToTime(appearTime);
         attackDelay = TempToTime(attackDelay);
         spriteRenderer = transform.GetComponent<SpriteRenderer>();
+        spriteRenderer.color = Color.white;
         StartCoroutine(StartDelay());
     }
 

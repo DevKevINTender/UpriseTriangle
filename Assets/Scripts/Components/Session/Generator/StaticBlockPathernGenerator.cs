@@ -63,13 +63,13 @@ public class StaticBlockPathernGenerator : MonoBehaviour
                     case GridEnum.Static:
                     {
                         obsObj = PrefabUtility.InstantiatePrefab(blockPbList[0], transform) as GameObject;
-                        obsObj.transform.position = new Vector2(x * 0.6f - 1.8f, curLenght);
+                        obsObj.transform.position = new Vector2(x * 0.6f - 2.4f, curLenght);
                         break;
                     } 
                     case GridEnum.Coin:
                     {
                         obsObj = PrefabUtility.InstantiatePrefab(blockPbList[1], transform) as GameObject;
-                        obsObj.transform.position = new Vector2(x * 0.6f - 1.8f, curLenght);
+                        obsObj.transform.position = new Vector2(x * 0.6f - 2.4f, curLenght);
                         break;
                     }
                         

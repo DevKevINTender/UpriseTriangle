@@ -12,7 +12,7 @@ public class BoxTimeActiveStatic : BoxTimeActivate
             for (int i = 0; i < levels.listBool[paintNum].GridSize.x; i++)
             {
                 if (levels.listBool[paintNum].GetCell(i, j))
-                    boxPreGenerator.Spawn(i, j); // спавн box'a если bool = true в листе рисунков
+                    boxPreGenerator.Spawn(i, j, elevator.GetElevatorTime() - 2f); // спавн box'a если bool = true в листе рисунков
             }
         }
         paintNum++;

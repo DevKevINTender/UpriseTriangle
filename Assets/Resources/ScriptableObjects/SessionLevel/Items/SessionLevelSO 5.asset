@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627f4b4e347348ccb961126d2d0831c8, type: 3}
-  m_Name: SessionLevelSO 4
+  m_Name: SessionLevelSO 5
   m_EditorClassIdentifier: 
-  Id: 4
+  Id: 5
   MusicName: Lustra
   MusicCreator: Dot Kirt
-  MusicTime: 3
+  MusicTime: 3:45
   AttempCount: 25
   CoinsCollectCount: 0
   CompletePercent: 0
   Cost: 600
   WinReward: 115
-  SessionLevelPB: {fileID: 6507842927406111708, guid: 501498fff6ccc8048b731288995b5c30, type: 3}
+  SessionLevelPB: {fileID: 1614468978251923632, guid: 26df9c6f11e316f42a27a841a12eb502, type: 3}
   SessionLevelBlockList: []
   musicAudio: {fileID: 8300000, guid: 282b0893cbd32c14d873a1f9ca82bce0, type: 3}
-  audioDelay: 0

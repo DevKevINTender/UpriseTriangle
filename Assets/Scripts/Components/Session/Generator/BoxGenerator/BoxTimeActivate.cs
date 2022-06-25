@@ -8,6 +8,7 @@ public class BoxTimeActivate : ElevatorMarkComponent
     [SerializeField] private protected List<float> temp;
     [SerializeField] private protected Levels levels;
     [SerializeField] private protected BoxPreGenerator boxPreGenerator;
+    [SerializeField] private protected bool shaked = true;
     private protected List<float> timing;
     private protected bool canAction;
     private protected ElevatorComponent elevator;
@@ -77,7 +78,7 @@ public class BoxTimeActivate : ElevatorMarkComponent
         paintNum++;
         if (paintNum >= levels.listBool.Count) paintNum = 0; //зацикливание рисунков
         SetNextTiming();
-        Invoke("Shake", boxTime);
+        if(shaked) Invoke("Shake", boxTime);
     }
 
     public void Shake()
