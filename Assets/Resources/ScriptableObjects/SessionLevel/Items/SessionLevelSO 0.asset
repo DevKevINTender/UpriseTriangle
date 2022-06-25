@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: SessionLevelSO 0
   m_EditorClassIdentifier: 
   Id: 0
-  MusicName: Mistake
-  MusicCreator: Alex job
+  MusicName: Slap House
+  MusicCreator: Franz & Alex
   MusicTime: 138
-  AttempCount: 34
+  AttempCount: 0
   CoinsCollectCount: 0
-  CompletePercent: 4
-  Cost: 500
-  WinReward: 75
+  CompletePercent: 0
+  levelComplexity: 0
+  Cost: 0
+  WinReward: 50
   SessionLevelPB: {fileID: 6820151829927504990, guid: 83b6739476f35604c851b9568cec0c2c, type: 3}
   SessionLevelBlockList:
   - SpawnBlockPb: {fileID: 4575953252573043395, guid: dd4d16e542ea5974aba58ca6b843abe7, type: 3}

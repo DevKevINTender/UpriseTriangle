@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SkillListSO
   m_EditorClassIdentifier: 
   SavePath: SkillList.Json
-  CurrentSkillId: 12
+  CurrentSkillId: 4
   CurrentPageId: 0
   CurrentSegmentListCount: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   List:

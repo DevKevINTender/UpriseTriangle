@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: SessionLevelSO 5
   m_EditorClassIdentifier: 
   Id: 5
-  MusicName: Lustra
-  MusicCreator: Dot Kirt
-  MusicTime: 3:45
-  AttempCount: 25
+  MusicName: Hard Sport
+  MusicCreator: Alex
+  MusicTime: 127
+  AttempCount: 0
   CoinsCollectCount: 0
   CompletePercent: 0
-  Cost: 600
-  WinReward: 115
+  levelComplexity: 2
+  Cost: 1000
+  WinReward: 250
   SessionLevelPB: {fileID: 1614468978251923632, guid: 26df9c6f11e316f42a27a841a12eb502, type: 3}
   SessionLevelBlockList: []
   musicAudio: {fileID: 8300000, guid: 282b0893cbd32c14d873a1f9ca82bce0, type: 3}
+  audioDelay: 0

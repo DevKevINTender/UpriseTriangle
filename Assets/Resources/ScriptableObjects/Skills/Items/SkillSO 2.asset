@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 2
   CurrentSegment: 0
-  RequiredSegments: 25
+  RequiredSegments: 30
   skillType: 0
-  skillValue: 15
+  skillValue: 25
   skillDescription: "\u0411\u043E\u043B\u044C\u0448\u0435 \u043C\u043E\u043D\u0435\u0442
     \u043F\u043E\u0441\u043B\u0435 \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F
     \u0443\u0440\u043E\u0432\u043D\u044F"

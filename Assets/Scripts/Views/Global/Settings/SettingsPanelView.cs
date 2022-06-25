@@ -7,7 +7,7 @@ namespace Views.Global.Settings
 {
     public class SettingsPanelView : MonoBehaviour
     {
-        private int Sensetive;
+        private float Sensetive;
         private float MenuMusicValume;
         private int SessionMusicValume;
 
@@ -30,7 +30,7 @@ namespace Views.Global.Settings
 
         public void SensetiveChanged()
         {
-            SettingsControler.SetSensetive((int)SensetiveScrBar.value);
+            SettingsControler.SetSensetive(SensetiveScrBar.value);
         }
         
         public void MenuMusicVolumeChanged()

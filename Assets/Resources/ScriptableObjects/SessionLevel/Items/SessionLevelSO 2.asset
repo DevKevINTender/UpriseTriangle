@@ -13,19 +13,16 @@ MonoBehaviour:
   m_Name: SessionLevelSO 2
   m_EditorClassIdentifier: 
   Id: 2
-  MusicName: Lustra
-  MusicCreator: Dot Kirt
-  MusicTime: 3
-  AttempCount: 25
+  MusicName: Slap House
+  MusicCreator: Franz & Alex
+  MusicTime: 138
+  AttempCount: 0
   CoinsCollectCount: 0
   CompletePercent: 0
-  Cost: 600
-  WinReward: 75
+  levelComplexity: 2
+  Cost: 1000
+  WinReward: 250
   SessionLevelPB: {fileID: 7053356965885935669, guid: 7a7d83da2dbf64742b9adf8526f3761f, type: 3}
   SessionLevelBlockList: []
-<<<<<<< HEAD
-  musicAudio: {fileID: 8300000, guid: 282b0893cbd32c14d873a1f9ca82bce0, type: 3}
-  audioDelay: 0
-=======
   musicAudio: {fileID: 8300000, guid: 9826933adfa58404f9fb4c3ab2fde920, type: 3}
->>>>>>> origin/Animation_and_Painting
+  audioDelay: 0

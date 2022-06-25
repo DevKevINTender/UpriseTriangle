@@ -4587,6 +4587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bonusPanelAnimation: {fileID: 166500019}
   info: {fileID: 142088817}
+  AdsBonus: {fileID: 1828099571}
   isLookFull: 0
 --- !u!114 &166500017
 MonoBehaviour:
@@ -31188,6 +31189,7 @@ MonoBehaviour:
   ShieldFootprintPb: {fileID: 7493794038422282002, guid: 95890a460c2533242bc044e8479b6466, type: 3}
   CoinFootprintADPb: {fileID: 4476026972682176894, guid: 01b2ceb4d5d019a40a5cbbd1fa3a9ef3, type: 3}
   CoinFootprintPb: {fileID: 4476026972682176894, guid: 2081ee60edb007f419c3c2550fdb3ab8, type: 3}
+  footPrintSpawnPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1224674452
 GameObject:
   m_ObjectHideFlags: 0
@@ -52299,6 +52301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audiosource: {fileID: 2008286104}
+  musicVolume: 0
 --- !u!1 &2009385311
 GameObject:
   m_ObjectHideFlags: 0

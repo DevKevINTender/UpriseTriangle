@@ -49,7 +49,7 @@ public class SessionCore : MonoBehaviour
 
     void Start()
     {
-        Appodeal.setTesting(true);
+        //Appodeal.setTesting(true);
         Appodeal.initialize("b80f8019ac0cc44cfbb1e31c31c7e59f13dc2a850a6ab8e4", Appodeal.REWARDED_VIDEO, true);
         Appodeal.cache(Appodeal.REWARDED_VIDEO);
         

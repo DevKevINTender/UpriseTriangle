@@ -20,479 +20,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3130e42-5e8b-4907-8c62-e2bef36a8763" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UpriseTriangle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Api/Appodeal/Appodeal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Api/Appodeal/Appodeal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Api/Appodeal/Appodeal.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Api/Appodeal/Appodeal.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Api/ConsentManager/ConsentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Api/ConsentManager/ConsentManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Api/ConsentManager/ConsentManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Api/ConsentManager/ConsentManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IAppodealAdsClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IAppodealAdsClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IAppodealAdsClient.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IAppodealAdsClient.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IBannerAdListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IBannerAdListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IBannerAdListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IBannerAdListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IInterstitialAdListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IInterstitialAdListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IInterstitialAdListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IInterstitialAdListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IMrecAdListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IMrecAdListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IMrecAdListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IMrecAdListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IRewardedVideoAdListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IRewardedVideoAdListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IRewardedVideoAdListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/Appodeal/IRewardedVideoAdListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/ConsentManager/IConsentFormListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/ConsentManager/IConsentFormListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/ConsentManager/IConsentFormListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/ConsentManager/IConsentFormListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/ConsentManager/IConsentInfoUpdateListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/ConsentManager/IConsentInfoUpdateListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/ConsentManager/IConsentInfoUpdateListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/ConsentManager/IConsentInfoUpdateListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/ConsentManager/IConsentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/ConsentManager/IConsentManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Common/ConsentManager/IConsentManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Common/ConsentManager/IConsentManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Demo/Scenes/AppodealDemoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Demo/Scenes/AppodealDemoScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Demo/Scenes/AppodealDemoScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Demo/Scenes/AppodealDemoScene.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Demo/Scripts/AppodealDemo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Demo/Scripts/AppodealDemo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Demo/Scripts/AppodealDemo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Demo/Scripts/AppodealDemo.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/Checkers/CheckerWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/Checkers/CheckerWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/Checkers/MultidexActivator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/Checkers/MultidexActivator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/InternalResources/AppodealSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/InternalResources/AppodealSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/InternalResources/AppodealSettings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/InternalResources/AppodealSettings.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/InternalResources/remove_list.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/InternalResources/remove_list.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/AdColonyDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/AdColonyDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/AdColonyDependencies.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/AdColonyDependencies.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/AppLovinDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/AppLovinDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/AppLovinDependencies.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/AppLovinDependencies.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/AppodealDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/AppodealDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/AppodealDependencies.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/AppodealDependencies.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/BidMachineDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/BidMachineDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/BidMachineDependencies.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/BidMachineDependencies.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/GoogleAdMobDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/GoogleAdMobDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/GoogleAdMobDependencies.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/GoogleAdMobDependencies.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/IronSourceDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/IronSourceDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/IronSourceDependencies.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/IronSourceDependencies.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/MyTargetDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/MyTargetDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/MyTargetDependencies.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/MyTargetDependencies.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/UnityDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/UnityDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/UnityDependencies.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/UnityDependencies.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/VungleDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/VungleDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/VungleDependencies.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/VungleDependencies.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/YandexDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/YandexDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/YandexDependencies.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworkConfigs/YandexDependencies.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/AppodealAdapterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/AppodealAdapterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/AppodealAdapterManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/AppodealAdapterManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/AppodealDependencyUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/AppodealDependencyUtils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/AppodealDependencyUtils.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/AppodealDependencyUtils.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/Data/AppodealUnityPlugin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/Data/AppodealUnityPlugin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/Data/AppodealUnityPlugin.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/Data/AppodealUnityPlugin.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/Data/NetworkDependency.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/Data/NetworkDependency.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/Data/NetworkDependency.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/Data/NetworkDependency.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/EditorCoroutineExtensions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/EditorCoroutineExtensions.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/EditorCoroutines.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/EditorCoroutines.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/XmlUtilities.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/NetworksManager/XmlUtilities.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/AppodealEditorSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/AppodealEditorSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/AppodealEditorSettings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/AppodealEditorSettings.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/AppodealInternalSettings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/AppodealInternalSettings.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/AppodealPostProcess.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/AppodealPostProcess.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/AppodealPreProcess.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/AppodealPreProcess.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/AppodealUnityUtils.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/AppodealUnityUtils.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/RemoveHelper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/RemoveHelper.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/iOSPostprocessUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/iOSPostprocessUtils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/iOSPostprocessUtils.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Editor/Utils/iOSPostprocessUtils.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AndroidAppodealClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AndroidAppodealClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AndroidAppodealClient.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AndroidAppodealClient.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealBannerCallbacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealBannerCallbacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealBannerCallbacks.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealBannerCallbacks.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealInterstitialCallbacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealInterstitialCallbacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealInterstitialCallbacks.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealInterstitialCallbacks.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealMrecCallbacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealMrecCallbacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealMrecCallbacks.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealMrecCallbacks.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealRewardedVideoCallbacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealRewardedVideoCallbacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealRewardedVideoCallbacks.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Android/AppodealRewardedVideoCallbacks.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/AppodealAdsClientFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/AppodealAdsClientFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/AppodealAdsClientFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/AppodealAdsClientFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Dummy/DummyClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Dummy/DummyClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Dummy/DummyClient.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/Dummy/DummyClient.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/iOS/AppodealAdsClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/iOS/AppodealAdsClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/iOS/AppodealAdsClient.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/iOS/AppodealAdsClient.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/iOS/AppodealObjCBridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/iOS/AppodealObjCBridge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/iOS/AppodealObjCBridge.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/Appodeal/iOS/AppodealObjCBridge.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Android/AndroidConsentManagerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Android/AndroidConsentManagerClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Android/AndroidConsentManagerClient.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Android/AndroidConsentManagerClient.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Android/ConsentFormCallbacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Android/ConsentFormCallbacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Android/ConsentFormCallbacks.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Android/ConsentFormCallbacks.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Android/ConsentInfoUpdateCallbacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Android/ConsentInfoUpdateCallbacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Android/ConsentInfoUpdateCallbacks.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Android/ConsentInfoUpdateCallbacks.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/ConsentManagerClientFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/ConsentManagerClientFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/ConsentManagerClientFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/ConsentManagerClientFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Dummy/Dummy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Dummy/Dummy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Dummy/Dummy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/Dummy/Dummy.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/iOS/ConsentManagerObjCBridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/iOS/ConsentManagerObjCBridge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/iOS/ConsentManagerObjCBridge.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/iOS/ConsentManagerObjCBridge.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/iOS/iOSConsentManagerClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/iOS/iOSConsentManagerClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/iOS/iOSConsentManagerClient.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Appodeal/Platforms/ConsentManager/iOS/iOSConsentManagerClient.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.169/Google.IOSResolver.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.169/Google.IOSResolver.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.169/Google.JarResolver.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.169/Google.JarResolver.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.169/Google.PackageManagerResolver.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.169/Google.PackageManagerResolver.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.169/Google.VersionHandlerImpl.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/1.2.169/Google.VersionHandlerImpl.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/CHANGELOG.md.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/LICENSE.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/LICENSE.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/README.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/README.md.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.169_manifest.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.169_manifest.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.activity.activity-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.activity.activity-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.annotation.annotation-1.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.annotation.annotation-1.3.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.annotation.annotation-experimental-1.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.annotation.annotation-experimental-1.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.appcompat.appcompat-1.2.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.appcompat.appcompat-1.2.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.appcompat.appcompat-resources-1.2.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.appcompat.appcompat-resources-1.2.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-common-2.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-common-2.1.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-runtime-2.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-runtime-2.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.asynclayoutinflater.asynclayoutinflater-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.asynclayoutinflater.asynclayoutinflater-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.browser.browser-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.browser.browser-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.collection.collection-1.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.collection.collection-1.1.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.concurrent.concurrent-futures-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.concurrent.concurrent-futures-1.0.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.coordinatorlayout.coordinatorlayout-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.coordinatorlayout.coordinatorlayout-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.core.core-1.7.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.core.core-1.7.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.core.core-ktx-1.7.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.core.core-ktx-1.7.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.cursoradapter.cursoradapter-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.cursoradapter.cursoradapter-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.customview.customview-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.customview.customview-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.documentfile.documentfile-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.documentfile.documentfile-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.drawerlayout.drawerlayout-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.drawerlayout.drawerlayout-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.exifinterface.exifinterface-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.exifinterface.exifinterface-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.fragment.fragment-1.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.fragment.fragment-1.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.interpolator.interpolator-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.interpolator.interpolator-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-core-ui-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-core-ui-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-core-utils-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-core-utils-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.3.1.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-2.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-2.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-core-2.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-core-2.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.3.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.3.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-service-2.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-service-2.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-viewmodel-2.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-viewmodel-2.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.loader.loader-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.loader.loader-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.localbroadcastmanager.localbroadcastmanager-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.localbroadcastmanager.localbroadcastmanager-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.print.print-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.print.print-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.recyclerview.recyclerview-1.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.recyclerview.recyclerview-1.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.room.room-common-2.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.room.room-common-2.2.5.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.room.room-runtime-2.2.5.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.room.room-runtime-2.2.5.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.savedstate.savedstate-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.savedstate.savedstate-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.slidingpanelayout.slidingpanelayout-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.slidingpanelayout.slidingpanelayout-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.sqlite.sqlite-2.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.sqlite.sqlite-2.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.sqlite.sqlite-framework-2.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.sqlite.sqlite-framework-2.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.swiperefreshlayout.swiperefreshlayout-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.swiperefreshlayout.swiperefreshlayout-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.tracing.tracing-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.tracing.tracing-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.transition.transition-1.2.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.transition.transition-1.2.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.vectordrawable.vectordrawable-1.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.vectordrawable.vectordrawable-1.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.vectordrawable.vectordrawable-animated-1.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.vectordrawable.vectordrawable-animated-1.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.1.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.1.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.viewpager2.viewpager2-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.viewpager2.viewpager2-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/appodeal.androidlib/AndroidManifest.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/appodeal.androidlib/AndroidManifest.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/appodeal.androidlib/project.properties.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/appodeal.androidlib/project.properties.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/appodeal.androidlib/res/xml/network_security_config.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/appodeal.androidlib/res/xml/network_security_config.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/co.ogury.module.ogury-ads-4.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/co.ogury.module.ogury-ads-4.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/co.ogury.module.ogury-choice-manager-3.2.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/co.ogury.module.ogury-choice-manager-3.2.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/co.ogury.module.ogury-core-1.0.9.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/co.ogury.module.ogury-core-1.0.9.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/co.ogury.ogury-sdk-5.2.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/co.ogury.ogury-sdk-5.2.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.adcolony.sdk-4.7.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.adcolony.sdk-4.7.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.amazon.android.aps-sdk-9.2.2.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.amazon.android.aps-sdk-9.2.2.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.android.installreferrer.installreferrer-2.2.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.android.installreferrer.installreferrer-2.2.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.applovin.applovin-sdk-11.3.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.applovin.applovin-sdk-11.3.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.core-2.11.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.core-2.11.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.a4g-2.11.1.17.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.a4g-2.11.1.17.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.adcolony-2.11.1.22.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.adcolony-2.11.1.22.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.admob-2.11.1.18.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.admob-2.11.1.18.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.applovin-2.11.1.24.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.applovin-2.11.1.24.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.appodeal-2.11.1.3.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.appodeal-2.11.1.3.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.bidmachine-2.11.1.21.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.bidmachine-2.11.1.21.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.facebook-2.11.1.23.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.facebook-2.11.1.23.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.ironsource-2.11.1.21.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.ironsource-2.11.1.21.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.mraid-2.11.1.5.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.mraid-2.11.1.5.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.my_target-2.11.1.22.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.my_target-2.11.1.22.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.nast-2.11.1.3.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.nast-2.11.1.3.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.notsy-2.11.1.3.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.notsy-2.11.1.3.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.ogury-2.11.1.12.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.ogury-2.11.1.12.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.unity_ads-2.11.1.17.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.unity_ads-2.11.1.17.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.vast-2.11.1.5.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.vast-2.11.1.5.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.vungle-2.11.1.14.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.vungle-2.11.1.14.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.yandex-2.11.1.16.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.networks.yandex-2.11.1.16.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.services.crash_hunter-2.11.1.4.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.services.crash_hunter-2.11.1.4.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.services.event_service-2.11.1.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.ads.sdk.services.event_service-2.11.1.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.protobuf-models-1.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.appodeal.protobuf-models-1.3.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.criteo.publisher.criteo-publisher-sdk-4.6.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.criteo.publisher.criteo-publisher-sdk-4.6.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.explorestack.consent-1.0.5.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.explorestack.consent-1.0.5.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.explorestack.consent-models-1.0.3.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.explorestack.consent-models-1.0.3.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.explorestack.iab-0.9.6.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.explorestack.iab-0.9.6.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.explorestack.protobuf-java-3.16.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.explorestack.protobuf-java-3.16.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.explorestack.protobuf-models-1.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.explorestack.protobuf-models-1.2.5.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.facebook.android.audience-network-sdk-6.8.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.facebook.android.audience-network-sdk-6.8.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-common-2.16.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-common-2.16.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-core-2.16.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-core-2.16.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-database-2.16.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-database-2.16.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-datasource-2.16.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-datasource-2.16.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-decoder-2.16.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-decoder-2.16.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-extractor-2.16.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-extractor-2.16.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-hls-2.16.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.exoplayer.exoplayer-hls-2.16.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-20.6.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-20.6.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-20.6.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-20.6.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-18.0.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-18.0.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-20.6.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-20.6.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-appset-16.0.2.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-appset-16.0.2.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-base-18.0.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-base-18.0.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-basement-18.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-basement-18.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-18.0.3.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-18.0.3.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-18.0.3.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-18.0.3.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-tasks-18.0.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-tasks-18.0.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.ump.user-messaging-platform-1.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.ump.user-messaging-platform-1.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.auto.value.auto-value-annotations-1.7.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.auto.value.auto-value-annotations-1.7.2.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.code.gson.gson-2.8.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.code.gson.gson-2.8.6.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.guava.failureaccess-1.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.guava.failureaccess-1.0.1.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.guava.guava-27.1-android.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.guava.guava-27.1-android.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.guava.listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.guava.listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.ironsource.sdk.mediationsdk-7.2.1.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.ironsource.sdk.mediationsdk-7.2.1.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.my.target.mytarget-sdk-5.15.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.my.target.mytarget-sdk-5.15.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.my.tracker.mytracker-sdk-3.0.6.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.my.tracker.mytracker-sdk-3.0.6.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.pangle.global.ads-sdk-4.2.5.2.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.pangle.global.ads-sdk-4.2.5.2.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.pangle.global.crash_monitor-1.3.8.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.pangle.global.crash_monitor-1.3.8.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.pangle.global.encryptor-0.0.9-rc.2-private.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.pangle.global.encryptor-0.0.9-rc.2-private.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.ryanharter.auto.value.auto-value-gson-runtime-1.3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.ryanharter.auto.value.auto-value-gson-runtime-1.3.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.squareup.okhttp3.okhttp-3.12.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.squareup.okhttp3.okhttp-3.12.12.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.squareup.okio.okio-1.15.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.squareup.okio.okio-1.15.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.squareup.picasso.picasso-2.8.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.squareup.picasso.picasso-2.8.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.squareup.tape-1.2.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.squareup.tape-1.2.3.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.unity3d.ads.unity-ads-4.1.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.unity3d.ads.unity-ads-4.1.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.vungle.publisher-sdk-android-6.10.5.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.vungle.publisher-sdk-android-6.10.5.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.yandex.android.mobileads-5.0.0.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.yandex.android.mobileads-5.0.0.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.yandex.android.mobmetricalib-4.1.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.yandex.android.mobmetricalib-4.1.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads-1.9.3.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads-1.9.3.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.adcolony-1.9.3.10.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.adcolony-1.9.3.10.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.amazon-1.9.3.6.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.amazon-1.9.3.6.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.criteo-1.9.3.10.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.criteo-1.9.3.10.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.facebook-1.9.3.11.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.facebook-1.9.3.11.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.my_target-1.9.3.8.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.my_target-1.9.3.8.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.pangle-1.9.3.3.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.pangle-1.9.3.3.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.vungle-1.9.3.1.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.ads.networks.vungle-1.9.3.1.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.libs.omsdk-1.3.15.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.libs.omsdk-1.3.15.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.protobuf-models-1.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.bidmachine.protobuf-models-1.2.5.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.sweers.autotransient.autotransient-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/io.sweers.autotransient.autotransient-1.0.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/javax.inject.javax.inject-1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/javax.inject.javax.inject-1.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle.DISABLED" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle.DISABLED.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/org.jetbrains.annotations-13.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/org.jetbrains.annotations-13.0.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-android-extensions-runtime-1.5.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-android-extensions-runtime-1.5.10.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-1.5.31.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-1.5.31.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-common-1.5.31.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-common-1.5.31.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-jdk7-1.5.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-jdk7-1.5.10.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-jdk8-1.5.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-jdk8-1.5.10.jar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerDelegate.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerDelegate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerDelegate.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerDelegate.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerDelegate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerDelegate.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerDelegate.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerViewDelegate.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerViewDelegate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerViewDelegate.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerViewDelegate.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerViewDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerViewDelegate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerViewDelegate.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealBannerViewDelegate.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealInterstitialDelegate.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealInterstitialDelegate.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealInterstitialDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealInterstitialDelegate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealInterstitialDelegate.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealInterstitialDelegate.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealMrecViewDelegate.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealMrecViewDelegate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealMrecViewDelegate.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealMrecViewDelegate.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealMrecViewDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealMrecViewDelegate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealMrecViewDelegate.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealMrecViewDelegate.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealObjCBridge.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealObjCBridge.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealObjCBridge.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealObjCBridge.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealRewardedVideoDelegate.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealRewardedVideoDelegate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealRewardedVideoDelegate.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealRewardedVideoDelegate.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealRewardedVideoDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealRewardedVideoDelegate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealRewardedVideoDelegate.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealRewardedVideoDelegate.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityBannerView.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityBannerView.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityBannerView.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityBannerView.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityBannerView.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityBannerView.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityBannerView.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityBannerView.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityMrecView.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityMrecView.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityMrecView.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityMrecView.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityMrecView.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityMrecView.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityMrecView.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/AppodealUnityMrecView.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/Dummy.swift.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/Appodeal/Dummy.swift.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentBridge.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentBridge.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentBridge.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentBridge.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentBridge.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentBridge.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentBridge.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentBridge.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentForm.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentForm.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentForm.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentForm.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentForm.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentForm.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentForm.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentForm.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManager.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManager.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerBridge.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerBridge.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerBridge.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerBridge.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerBridge.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerBridge.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerBridge.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerBridge.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerErrorBridge.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerErrorBridge.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerErrorBridge.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerErrorBridge.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerErrorBridge.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerErrorBridge.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerErrorBridge.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/ConsentManagerErrorBridge.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/VendorBridge.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/VendorBridge.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/VendorBridge.h.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/VendorBridge.h.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/VendorBridge.m" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/VendorBridge.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/VendorBridge.m.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/ConsentManager/VendorBridge.m.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/LevelChoose/UI/LevelChoseItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/LevelChoose/UI/LevelChoseItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/appodeal.androidlib/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/appodeal.androidlib/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Person/Items/PersonSO 7.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 0.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 2.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 3.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 5.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelListSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 0.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 10.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 10.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 11.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 11.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 12.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 12.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 13.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 13.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 14.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 14.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 15.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 15.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 8.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 9.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/Items/SkillSO 9.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/SkillListSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/Skills/SkillListSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Complete/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Complete/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Complete/Session.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Complete/Session.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/MagnetBonusComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/MagnetBonusComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/LevelChoose/LevelChooseControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/LevelChoose/LevelChooseControler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/AttempCounterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/LevelStatsCounterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/AttempCounterController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/LevelStatsCounterController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/Settings/SettingsControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/Settings/SettingsControler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/PersonMoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/PersonMoveController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/SessionAudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/SessionAudioController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/BonusPanelAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/BonusPanelAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LevelChooseItemView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LevelChooseItemView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Global/Settings/SettingsPanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Global/Settings/SettingsPanelView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -543,11 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Global/SegmentPanel/SegmentBuyPanelItemView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/Settings/SettingsControler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Global/Settings/SettingsPanelView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/LevelChoose/LevelChooseAudioControler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/PersonStorage/PersonStorageContoler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/SkillStorage/SkillStorageContoler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/UI/BeastFlashing.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/UI/BeastFlashingAnimation.cs" />
@@ -584,16 +148,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Global/TransitionAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/PersonComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/SessionAudioController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/LevelChoose/LevelChooseControler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/LevelStatsCounterController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/MagnetBonusComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DOTweenAnimation/Session/BonusPanelAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/LevelChoose/LevelChooseItemView.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/SessionLevelScrObj.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 1.asset" />
+        <option value="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/SessionLevel/Items/SessionLevelSO 2.asset" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Global/Settings/SettingsPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/PersonMoveController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Global/Settings/SettingsControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controlers/Session/SessionAudioController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/SessionCore.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Session/Bonuses/BonusCollectorComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Session/Bonuses/MagnetBonusPanelView.cs" />
       </list>
     </option>
   </component>
@@ -711,6 +280,9 @@
       <workItem from="1656071017843" duration="8599000" />
       <workItem from="1656087667294" duration="12000" />
       <workItem from="1656087911163" duration="3139000" />
+      <workItem from="1656156917204" duration="2851000" />
+      <workItem from="1656170508794" duration="2145000" />
+      <workItem from="1656172723710" duration="1436000" />
     </task>
     <servers />
   </component>

@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using Controlers;
+using Controlers.Settings;
 using UnityEngine;
 
 public class SessionAudioController : MonoBehaviour
 {
     [SerializeField] private AudioSource audiosource;
 
-    private float musicVolume;
+    [SerializeField] private float musicVolume;
     void Awake()
     {
-        musicVolume = audiosource.volume;
+        
     }
     public void Play(float _delay)
     {
+        audiosource.volume = 1 * (SettingsControler.GetSessionMusicVolume() / 10f);
+        musicVolume =  SettingsControler.GetSessionMusicVolume() / 10f;
         StartCoroutine(WaitToStartMusic(_delay));
     }
 

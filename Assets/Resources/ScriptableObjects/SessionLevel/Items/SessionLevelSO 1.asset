@@ -13,22 +13,19 @@ MonoBehaviour:
   m_Name: SessionLevelSO 1
   m_EditorClassIdentifier: 
   Id: 1
-  MusicName: Vevolo
-  MusicCreator: Jon Martis
-  MusicTime: 5
-  AttempCount: 139
+  MusicName: Slap House
+  MusicCreator: Franz & Alex
+  MusicTime: 138
+  AttempCount: 0
   CoinsCollectCount: 0
   CompletePercent: 0
-  Cost: 550
-  WinReward: 75
+  levelComplexity: 1
+  Cost: 750
+  WinReward: 125
   SessionLevelPB: {fileID: 7142633489975063188, guid: 7cb89a94885c25f44aa9d8e650616951, type: 3}
   SessionLevelBlockList:
   - SpawnBlockPb: {fileID: 0}
     SpawnPos: {x: 0, y: 0, z: 0}
     SpawnTime: 0
-<<<<<<< HEAD
-  musicAudio: {fileID: 8300000, guid: 282b0893cbd32c14d873a1f9ca82bce0, type: 3}
-  audioDelay: 0
-=======
   musicAudio: {fileID: 8300000, guid: 9826933adfa58404f9fb4c3ab2fde920, type: 3}
->>>>>>> origin/Animation_and_Painting
+  audioDelay: 0

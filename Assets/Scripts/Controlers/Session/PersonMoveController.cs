@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Controlers.Settings;
+using UnityEngine;
 
 public class PersonMoveController : MonoBehaviour
 { 
@@ -22,6 +23,7 @@ public class PersonMoveController : MonoBehaviour
     public void Start()
     {
         curTouchCount = 0;
+        sensitivity = SettingsControler.GetSensetive();
         resolution = (MainCamera.pixelHeight / (2 * MainCamera.orthographicSize));
     }
 

@@ -298,6 +298,6 @@ public class BonusCollectorComponent : MonoBehaviour
 
     private void ClosePanel() // закрытие панели бонусов
     {
-        EndPause();
+        //EndPause();
     }
 }

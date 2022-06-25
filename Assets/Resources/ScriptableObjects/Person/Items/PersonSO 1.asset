@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PersonSO 1
   m_EditorClassIdentifier: 
   Id: 1
-  CurrentSegment: 10
-  RequiredSegments: 10
+  CurrentSegment: 0
+  RequiredSegments: 25
   Effect: {fileID: 21300000, guid: 116be297781932141b94ffdb82f1cf35, type: 3}
   PersonSkin: {fileID: 21300000, guid: 050dff9522b822a449f6448d5581b32e, type: 3}
   PersonShield: {fileID: 21300000, guid: 98fcc4472fda83046bd496208d9e9e88, type: 3}

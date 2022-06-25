@@ -4,31 +4,31 @@ namespace Controlers.Settings
 {
     public static class SettingsControler
     {
-        private static int Sensetive;
+        private static float Sensetive;
         private static float MenuMusicVolume;
         private static int SessionMusicVolume;
 
-        public static int GetSensetive()
+        public static float GetSensetive()
         {
-            Sensetive = PlayerPrefs.GetInt("Sensetive", 0);
+            Sensetive = PlayerPrefs.GetFloat("Sensetive", 1);
             return Sensetive;
         }
 
         public static float GetMenuMusicVolume()
         {
-            MenuMusicVolume = PlayerPrefs.GetFloat("MenuMusicVolume", 0f) ;
+            MenuMusicVolume = PlayerPrefs.GetFloat("MenuMusicVolume", 1f) ;
             return MenuMusicVolume;
         }
 
         public static int GetSessionMusicVolume()
         {
-            SessionMusicVolume = PlayerPrefs.GetInt("SessionMusicVolume", 0);
+            SessionMusicVolume = PlayerPrefs.GetInt("SessionMusicVolume", 10);
             return SessionMusicVolume;
         }
-        public static void SetSensetive(int newSensetive)
+        public static void SetSensetive(float newSensetive)
         {
             Sensetive = newSensetive;
-            PlayerPrefs.SetInt("Sensetive", newSensetive);
+            PlayerPrefs.SetFloat("Sensetive", newSensetive);
         }
 
         public static void SetMenuMusicVolume(float newMenuMusicVolume)
