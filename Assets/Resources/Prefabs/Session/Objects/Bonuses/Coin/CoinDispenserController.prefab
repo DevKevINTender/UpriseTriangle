@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c59dfd3963be2b44a897bc2f16155f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPb: {fileID: 2196399565965950797, guid: bdcbf4360132c4449aab57a5d62df4bc, type: 3}
+  coinPb: {fileID: 2196399565965950797, guid: 252ea539ff750ad49875cca39e3a80f8, type: 3}
 --- !u!58 &396732276
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c59dfd3963be2b44a897bc2f16155f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPb: {fileID: 2196399565965950797, guid: bdcbf4360132c4449aab57a5d62df4bc, type: 3}
+  coinPb: {fileID: 2196399565965950797, guid: 252ea539ff750ad49875cca39e3a80f8, type: 3}
 --- !u!58 &727360048
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c59dfd3963be2b44a897bc2f16155f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPb: {fileID: 2196399565965950797, guid: bdcbf4360132c4449aab57a5d62df4bc, type: 3}
+  coinPb: {fileID: 2196399565965950797, guid: 252ea539ff750ad49875cca39e3a80f8, type: 3}
 --- !u!58 &1555421233
 CircleCollider2D:
   m_ObjectHideFlags: 0

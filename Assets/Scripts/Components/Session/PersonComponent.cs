@@ -63,11 +63,9 @@ public class PersonComponent : MonoBehaviour
         PersonFinishComponent.InitComponent(personWinTrigger);
 
         maxX = (ScreenSize.GetScreenToWorldWidth / 2) - 0.25f;
-        Debug.Log("maxX" + maxX);
         minX = 2.45f * ServiceScreenResolution.GetScreenScale().x;
             
         maxY = (ScreenSize.GetScreenToWorldHeight / 2) - 0.25f;
-        Debug.Log("maxY" + maxY);
         minY= 4.75f * ServiceScreenResolution.GetScreenScale().y;
 
         PersonScrObj personInfo = PersonStorageContoler.GetPersonById(PersonStorageContoler.GetCurrentPerson());

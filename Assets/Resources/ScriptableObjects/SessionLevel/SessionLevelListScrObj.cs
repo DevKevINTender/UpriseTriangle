@@ -18,8 +18,6 @@ namespace ScriptableObjects.SessionLevel
         [ContextMenu("Save")]
         public void Save()
         {
-            Debug.Log("saved");
-            
             SessionLevelListSave newSessionLevelListSave = new SessionLevelListSave();
             newSessionLevelListSave.CurrentSessionLevelId = CurrentSessionLevelId;
             newSessionLevelListSave.OpenedSessionLevelIdList = OpenedSessionLevelIdList;
@@ -44,7 +42,6 @@ namespace ScriptableObjects.SessionLevel
         [ContextMenu("Load")]
         public void Load()
         {
-            Debug.Log("loaded");
             SessionLevelListSave newSessionLevelListSave = new SessionLevelListSave();
             if (File.Exists(string.Concat(Application.persistentDataPath,"/",SavePath)))
             {

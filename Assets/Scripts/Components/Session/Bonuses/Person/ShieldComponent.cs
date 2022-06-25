@@ -47,20 +47,17 @@ public class ShieldComponent : MonoBehaviour
                 if (rnd < skillInfo.skillValue)
                 {
                     shieldAnimComp = Instantiate(shieldSaveAnimPb, transform.parent.position, Quaternion.identity);
-                    Debug.Log("State 1");
                 }
                 else
                 {
                     shieldAnimComp = Instantiate(shieldAnimPb, transform.parent.position, Quaternion.identity);
                     substractBonus(1, 1);
-                    Debug.Log("State 2");
                 }
             }
             else
             {
                 shieldAnimComp = Instantiate(shieldAnimPb, transform.parent.position, Quaternion.identity);
                 substractBonus(1, 1);
-                Debug.Log("State 3");
             }
             other.GetComponent<ObstacleComponent>().SelfDestroy();
         }       
