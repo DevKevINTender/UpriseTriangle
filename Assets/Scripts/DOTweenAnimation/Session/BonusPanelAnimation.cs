@@ -22,6 +22,10 @@ public class BonusPanelAnimation : MonoBehaviour
     {
         transform.gameObject.SetActive(true);
         transform.localScale = Vector3.zero;
+        freeBonus.localScale = Vector3.one;
+        adsBonus.localScale = Vector3.one;
+        freeBonus.GetComponent<Image>().color = new Color32(255,255,255,255);
+        adsBonus.GetComponent<Image>().color = new Color32(46, 255, 193, 255);
         DOTween.defaultTimeScaleIndependent = true;
         Sequence openPanel = DOTween.Sequence();
         openPanel.Append( transform.DOScale(Vector3.one, 0.5F)).SetEase(Ease.InCubic);

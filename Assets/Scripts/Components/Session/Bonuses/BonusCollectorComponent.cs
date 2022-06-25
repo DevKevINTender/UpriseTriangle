@@ -45,6 +45,8 @@ public class BonusCollectorComponent : MonoBehaviour
     [SerializeField] private GameObject CoinFootprintADPb;
     [SerializeField] private GameObject CoinFootprintPb;
 
+    [SerializeField] private Vector3 footPrintSpawnPos;
+    
     public int GetShieldBonusCount()
     {
         return ShieldBonusCount;
@@ -119,11 +121,11 @@ public class BonusCollectorComponent : MonoBehaviour
                 CoinsControler.IncreaseCoins(count);
                 if (type == 0)
                 {
-                    Instantiate(CoinFootprintPb, transform.position, Quaternion.identity);
+                    Instantiate(CoinFootprintPb, footPrintSpawnPos, Quaternion.identity);
                 }
                 else
                 {
-                    Instantiate(CoinFootprintADPb, transform.position, Quaternion.identity);
+                    Instantiate(CoinFootprintADPb, footPrintSpawnPos, Quaternion.identity);
                 }
                 break;
             }
@@ -138,11 +140,11 @@ public class BonusCollectorComponent : MonoBehaviour
                 SaveBonusesCount();
                 if (type == 0)
                 {
-                    Instantiate(ShieldFootprintPb, transform.position, Quaternion.identity);
+                    Instantiate(ShieldFootprintPb, footPrintSpawnPos, Quaternion.identity);
                 }
                 else
                 {
-                    Instantiate(ShieldFootprintADPb, transform.position, Quaternion.identity);
+                    Instantiate(ShieldFootprintADPb, footPrintSpawnPos, Quaternion.identity);
                 }
                 break;
             }
@@ -153,11 +155,11 @@ public class BonusCollectorComponent : MonoBehaviour
                 SaveBonusesCount();
                 if (type == 0)
                 {
-                    Instantiate(MagnetFootprintPb, transform.position, Quaternion.identity);
+                    Instantiate(MagnetFootprintPb, footPrintSpawnPos, Quaternion.identity);
                 }
                 else
                 {
-                    Instantiate(MagnetFootprintADPb, transform.position, Quaternion.identity);
+                    Instantiate(MagnetFootprintADPb, footPrintSpawnPos, Quaternion.identity);
                 }
                 break;
             }
@@ -168,11 +170,11 @@ public class BonusCollectorComponent : MonoBehaviour
                 SaveBonusesCount();
                 if (type == 0)
                 {
-                    Instantiate(MultiplierFootprintPb, transform.position, Quaternion.identity);
+                    Instantiate(MultiplierFootprintPb, footPrintSpawnPos, Quaternion.identity);
                 }
                 else
                 {
-                    Instantiate(MultiplierFootprintADPb, transform.position, Quaternion.identity);
+                    Instantiate(MultiplierFootprintADPb, footPrintSpawnPos, Quaternion.identity);
                 }
                 break;
             }
@@ -239,24 +241,32 @@ public class BonusCollectorComponent : MonoBehaviour
         {
             MagnetBonusPanelObj.gameObject.SetActive(true);
             MagnetBonusPanelObj.InitView(AddBonus, ClosePanel);
+            footPrintSpawnPos = other.transform.position;
+            Destroy(other.transform.gameObject);
             StartPause();
         }
         if (other.GetComponent<ShieldBonusComponent>())
         {
             ShieldBonusPanelObj.gameObject.SetActive(true);
             ShieldBonusPanelObj.InitView(AddBonus, ClosePanel);
+            footPrintSpawnPos = other.transform.position;
+            Destroy(other.transform.gameObject);
             StartPause();
         }
         if (other.GetComponent<MultiplierBonusComponent>())
         {
             MultiplierBonusPanelObj.gameObject.SetActive(true);
             MultiplierBonusPanelObj.InitView(AddBonus, ClosePanel);
+            footPrintSpawnPos = other.transform.position;
+            Destroy(other.transform.gameObject);
             StartPause();
         }
         if (other.GetComponent<CoinBonusComponent>())
         {
             CoinBonusPanelObj.gameObject.SetActive(true);
             CoinBonusPanelObj.InitView(AddBonus, ClosePanel);
+            footPrintSpawnPos = other.transform.position;
+            Destroy(other.transform.gameObject);
             StartPause();
         }
     }

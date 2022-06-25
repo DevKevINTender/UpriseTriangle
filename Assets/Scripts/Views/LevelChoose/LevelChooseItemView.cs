@@ -19,11 +19,12 @@ namespace Views.ChooseLevel
 
         [SerializeField] private Text attempCount;
         [SerializeField] private Text coinCollectCount;
-        [SerializeField] private Text progressCount;
+        [SerializeField] private Text completePercent;
         
         [SerializeField] private Text LevelCost;
         [SerializeField] private Text MusicInfo;
         [SerializeField] private Text Id;
+        [SerializeField] private Text Complexity;
         
         
 
@@ -60,6 +61,8 @@ namespace Views.ChooseLevel
             
             MusicInfo.text = $"{levelScrObj.MusicName} / {levelScrObj.MusicCreator}";
             LevelCost.text = $"{levelScrObj.Cost}";
+            Complexity.text = $"ур. сложности - {levelScrObj.levelComplexity}";
+            
             Id.text = $"{levelScrObj.Id}";
             
             if (LevelChooseControler.LevelIsOpened(id))
@@ -77,7 +80,7 @@ namespace Views.ChooseLevel
                 statusBorder.color = new Color32(46,255,193,255);
                 attempCount.text = $"{levelScrObj.AttempCount}";
                 coinCollectCount.text = $"{levelScrObj.CoinsCollectCount}";
-                progressCount.text = $"{levelScrObj.CompletePercent}";
+                completePercent.text = $"{levelScrObj.CompletePercent}%";
 
             }
             else

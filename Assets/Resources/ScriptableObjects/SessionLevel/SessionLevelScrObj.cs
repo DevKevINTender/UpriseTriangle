@@ -11,17 +11,20 @@ namespace ScriptableObjects.SessionLevel
         public int Id;
         public string MusicName;
         public string MusicCreator;
-        public string MusicTime;
+        public float MusicTime;
 
         public int AttempCount;
         public int CoinsCollectCount;
         public int CompletePercent;
 
+        public Complexity levelComplexity;
+        
         public int Cost;
         public int WinReward;
         public GameObject SessionLevelPB;
         public List<SessionLevelBlock> SessionLevelBlockList;
         public AudioClip musicAudio;
+        public float audioDelay;
     }
 
     [Serializable]
@@ -30,5 +33,12 @@ namespace ScriptableObjects.SessionLevel
         public GameObject SpawnBlockPb;
         public Vector3 SpawnPos;
         public float SpawnTime;
+    }
+
+    public enum Complexity
+    {
+        low,
+        medium,
+        high,
     }
 }

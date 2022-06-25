@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: 3
   MusicName: Lustra
   MusicCreator: Dot Kirt
-  MusicTime: 3:45
+  MusicTime: 3
   AttempCount: 25
   CoinsCollectCount: 0
   CompletePercent: 0
@@ -24,3 +24,4 @@ MonoBehaviour:
   SessionLevelPB: {fileID: 7036651694627846183, guid: 8309c84288a6bc94bbca0ad3733a5ebf, type: 3}
   SessionLevelBlockList: []
   musicAudio: {fileID: 8300000, guid: 282b0893cbd32c14d873a1f9ca82bce0, type: 3}
+  audioDelay: 0

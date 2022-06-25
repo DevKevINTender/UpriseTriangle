@@ -20,7 +20,7 @@ public class SessionCore : MonoBehaviour
     [SerializeField] private PersonComponent personComponent;
     [SerializeField] private SessionAnimationController animationController;
     [SerializeField] private SessionUIController sessionUIController;
-    [SerializeField] private AttempCounterController attempCounterController;
+    [SerializeField] private LevelStatsCounterController levelStatsCounterController;
     [SerializeField] private WinnerPanelControler winnerPanelControler;
     [SerializeField] private BonusCollectorComponent bonusCollectorComponent;
     [SerializeField] private BonusSpawnControler bonusSpawnControler;
@@ -49,15 +49,17 @@ public class SessionCore : MonoBehaviour
 
     void Start()
     {
-       
-        Appodeal.initialize("b80f8019ac0cc44cfbb1e31c31c7e59f13dc2a850a6ab8e4", Appodeal.REWARDED_VIDEO, false);
+        Appodeal.setTesting(true);
+        Appodeal.initialize("b80f8019ac0cc44cfbb1e31c31c7e59f13dc2a850a6ab8e4", Appodeal.REWARDED_VIDEO, true);
         Appodeal.cache(Appodeal.REWARDED_VIDEO);
+        
         currentSession = LevelChooseControler.GetCurrentLevel();
+        
         SetGameSpeed();
         LoadSessionLevel();
         DOTween.Init();
-        sessionUIController.ActiveAttempText(attempCounterController.GetAttemps());
-        attempCounterController.InitControler(currentSession);
+        sessionUIController.ActiveAttempText(levelStatsCounterController.GetAttemps());
+        levelStatsCounterController.InitControler(currentSession);
         bonusSpawnControler.InitControler();
         audioController.Play(musicTimeStart);
         TransitionPanelAnimation.gameObject.SetActive(true);
@@ -82,14 +84,16 @@ public class SessionCore : MonoBehaviour
     public void PersonDeath()
     {
         personDeath = true;
-        attempCounterController.AddAttemp();
+        levelStatsCounterController.ChangeLevelStats();
         //animationController.PersonDeath();
         audioController.PersonDeath();
         bonusCollectorComponent.PersonDeath();
         personComponent.SetCanMove(false);
-        DeathRegistrationControler.AddNewRecord(DateTime.Now,1);
+        //DeathRegistrationControler.AddNewRecord(DateTime.Now,1);
+
         Handheld.Vibrate();
         Time.timeScale = timeSlow;
+        
         TransitionPanelAnimation.CloseSessionScene(0, "Session");
     }
 

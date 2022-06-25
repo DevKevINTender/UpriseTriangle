@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Controlers;
 using UnityEngine;
 
 public class SessionAudioController : MonoBehaviour
@@ -42,7 +43,12 @@ public class SessionAudioController : MonoBehaviour
 
     public IEnumerator WaitToStartMusic(float _delay)
     {
-        yield return new WaitForSecondsRealtime(_delay);
+        int id = LevelChooseControler.GetCurrentLevel();
+        float audioDelay = LevelChooseControler.GetLevelById(id).audioDelay;
+        
+        yield return new WaitForSecondsRealtime(_delay + audioDelay);
+        
+        audiosource.clip = LevelChooseControler.GetLevelById(id).musicAudio;
         audiosource.Play();
     }
 }

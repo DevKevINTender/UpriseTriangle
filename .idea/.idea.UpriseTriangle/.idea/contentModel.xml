@@ -19,7 +19,10 @@
           <e p="Common" t="Include">
             <e p="Appodeal" t="Include">
               <e p="IAppodealAdsClient.cs" t="Include" />
+              <e p="IAppodealInitializationListener.cs" t="Include" />
               <e p="IBannerAdListener.cs" t="Include" />
+              <e p="IInAppPurchase.cs" t="Include" />
+              <e p="IInAppPurchaseValidationListener.cs" t="Include" />
               <e p="IInterstitialAdListener.cs" t="Include" />
               <e p="IMrecAdListener.cs" t="Include" />
               <e p="INonSkippableVideoAdListener.cs" t="Include" />
@@ -50,15 +53,22 @@
             </e>
             <e p="NetworkConfigs" t="Include">
               <e p="AdColonyDependencies.xml" t="Include" />
+              <e p="AdjustDependencies.xml" t="Include" />
               <e p="AmazonAdsDependencies.xml" t="Include" />
               <e p="AppLovinDependencies.xml" t="Include" />
               <e p="AppodealDependencies.xml" t="Include" />
+              <e p="AppsFlyerDependencies.xml" t="Include" />
               <e p="BidMachineDependencies.xml" t="Include" />
               <e p="FacebookAudienceDependencies.xml" t="Include" />
+              <e p="FirebaseDependencies.xml" t="Include" />
               <e p="GoogleAdMobDependencies.xml" t="Include" />
+              <e p="IABDependencies.xml" t="Include" />
               <e p="IronSourceDependencies.xml" t="Include" />
+              <e p="MetaAudienceNetworkDependencies.xml" t="Include" />
+              <e p="MetaDependencies.xml" t="Include" />
               <e p="MyTargetDependencies.xml" t="Include" />
               <e p="OguryDependencies.xml" t="Include" />
+              <e p="StackAnalyticsDependencies.xml" t="Include" />
               <e p="UnityDependencies.xml" t="Include" />
               <e p="VungleDependencies.xml" t="Include" />
               <e p="YandexDependencies.xml" t="Include" />
@@ -88,19 +98,27 @@
             <e p="Appodeal" t="Include">
               <e p="Android" t="Include">
                 <e p="AndroidAppodealClient.cs" t="Include" />
+                <e p="AndroidPlayStoreInAppPurchase.cs" t="Include" />
+                <e p="AndroidPlayStoreInAppPurchaseBuilder.cs" t="Include" />
                 <e p="AppodealBannerCallbacks.cs" t="Include" />
+                <e p="AppodealInitializationCallback.cs" t="Include" />
                 <e p="AppodealInterstitialCallbacks.cs" t="Include" />
                 <e p="AppodealMrecCallbacks.cs" t="Include" />
                 <e p="AppodealNonSkippableVideoCallbacks.cs" t="Include" />
                 <e p="AppodealRewardedVideoCallbacks.cs" t="Include" />
+                <e p="InAppPurchaseValidationCallbacks.cs" t="Include" />
               </e>
               <e p="AppodealAdsClientFactory.cs" t="Include" />
               <e p="Dummy" t="Include">
+                <e p="DummyAppStoreInAppPurchaseBuilder.cs" t="Include" />
                 <e p="DummyClient.cs" t="Include" />
+                <e p="DummyPlayStoreInAppPurchaseBuilder.cs" t="Include" />
               </e>
               <e p="iOS" t="Include">
                 <e p="AppodealAdsClient.cs" t="Include" />
                 <e p="AppodealObjCBridge.cs" t="Include" />
+                <e p="IosAppStoreInAppPurchase.cs" t="Include" />
+                <e p="IosAppStoreInAppPurchaseBuilder.cs" t="Include" />
               </e>
             </e>
             <e p="ConsentManager" t="Include">
@@ -127,6 +145,7 @@
         </e>
         <e p="Plugins" t="Include">
           <e p="Android" t="Include">
+            <e p="AndroidManifest.xml" t="Include" />
             <e p="appodeal.androidlib" t="Include">
               <e p="AndroidManifest.xml" t="Include" />
               <e p="res" t="Include">
@@ -322,11 +341,11 @@
               <e p="PersonStorageContoler.cs" t="Include" />
             </e>
             <e p="Session" t="Include">
-              <e p="AttempCounterController.cs" t="Include" />
               <e p="BonusSpawnControler.cs" t="Include" />
               <e p="BorderController.cs" t="Include" />
               <e p="CoinBombController.cs" t="Include" />
               <e p="CoinDispenserController.cs" t="Include" />
+              <e p="LevelStatsCounterController.cs" t="Include" />
               <e p="Person" t="Include">
                 <e p="PersonParticleController.cs" t="Include" />
               </e>

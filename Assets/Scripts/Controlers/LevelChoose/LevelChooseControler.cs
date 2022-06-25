@@ -58,22 +58,46 @@ namespace Controlers
             SessionLevelListSO.Load();
             return SessionLevelListSO.List[id];
         }
-
-        public static int GetSessionAttempCount(int id)
-        {
-            SessionLevelListSO.Load();
-            return SessionLevelListSO.List[id].AttempCount;
-        }
-
+        
         public static int GetSessionWinReward(int id)
         {
             SessionLevelListSO.Load();
             return SessionLevelListSO.List[id].WinReward;
         }
+        
+        public static int GetSessionAttempCount(int id)
+        {
+            SessionLevelListSO.Load();
+            return SessionLevelListSO.List[id].AttempCount;
+        }
+        
         public static void SetSessionAttempCount(int id, int count)
         {
             SessionLevelListSO.List[id].AttempCount = count;
             SessionLevelListSO.Save();
+        }
+        
+        public static void SetSessionCompletePercent(int id, float percent)
+        {
+            SessionLevelListSO.List[id].CompletePercent = (int)percent;
+            SessionLevelListSO.Save();
+        }
+        public static float GetSessionCompletePercent(int id)
+        {
+            SessionLevelListSO.Load();
+            return SessionLevelListSO.List[id].CompletePercent;
+        }
+        
+        public static void SetSessionCoinsCollectCount(int id, int count)
+        {
+            SessionLevelListSO.List[id].CoinsCollectCount += count;
+            SessionLevelListSO.Save();
+        }
+        
+        public static float GetSessionCoinsCollectCount(int id)
+        {
+            SessionLevelListSO.Load();
+            return SessionLevelListSO.List[id].CoinsCollectCount;
         }
     }
 }

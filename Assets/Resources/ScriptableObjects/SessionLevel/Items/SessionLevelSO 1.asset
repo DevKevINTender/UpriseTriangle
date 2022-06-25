@@ -15,10 +15,10 @@ MonoBehaviour:
   Id: 1
   MusicName: Vevolo
   MusicCreator: Jon Martis
-  MusicTime: 5:45
+  MusicTime: 5
   AttempCount: 139
-  CoinsCollectCount: 234
-  CompletePercent: 30
+  CoinsCollectCount: 0
+  CompletePercent: 0
   Cost: 550
   WinReward: 75
   SessionLevelPB: {fileID: 839759605013385791, guid: 7cb89a94885c25f44aa9d8e650616951, type: 3}
@@ -27,3 +27,4 @@ MonoBehaviour:
     SpawnPos: {x: 0, y: 0, z: 0}
     SpawnTime: 0
   musicAudio: {fileID: 8300000, guid: 282b0893cbd32c14d873a1f9ca82bce0, type: 3}
+  audioDelay: 0
